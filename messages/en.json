@@ -1106,25 +1106,85 @@
   "AILandscapePage": {
     "title": "AI Landscape Design",
     "description": "Transform landscape sketches into photorealistic renderings in seconds",
-    "subtitle": "Upload your sketch or model, add a description, and watch AI bring your landscape vision to life",
-    "badge": "AI-Powered Rendering",
-    "uploadPlaceholder": "Drop your sketch or model image here, or click to browse",
-    "promptPlaceholder": "Describe your landscape vision (e.g., modern zen garden with water features and natural stone pathways)",
-    "generateButton": "Generate Rendering",
-    "generating": "Generating...",
+    "metadata": {
+      "title": "AI Landscape Design - ArchiQuill",
+      "description": "Transform landscape sketches into photorealistic renderings in seconds with AI"
+    },
+    "upload": {
+      "title": "Upload Your Sketch",
+      "description": "Drag & drop or click to upload (JPEG, PNG, WebP, max 10MB)",
+      "button": "Choose File"
+    },
+    "styles": {
+      "title": "Select Rendering Style",
+      "photorealistic": {
+        "label": "Photorealistic",
+        "description": "Ultra-realistic rendering with natural lighting and textures"
+      },
+      "artistic": {
+        "label": "Artistic",
+        "description": "Painterly style with atmospheric mood and composition"
+      },
+      "conceptual": {
+        "label": "Conceptual",
+        "description": "Modern design visualization with clean presentation"
+      },
+      "technical": {
+        "label": "Technical",
+        "description": "Precise technical drawing with clear details"
+      }
+    },
+    "prompt": {
+      "label": "Describe Your Vision",
+      "placeholder": "Describe your landscape design (e.g., modern zen garden with water features and natural stone pathways)",
+      "hint": "Press Enter to generate, Shift+Enter for new line",
+      "suggestions": {
+        "title": "Suggestions",
+        "refresh": "Refresh"
+      },
+      "submit": "Generate Rendering",
+      "generating": "Generating..."
+    },
+    "result": {
+      "title": "Generated Rendering",
+      "generating": "Creating your landscape rendering...",
+      "error": "Failed to generate rendering",
+      "timing": "Generated in {seconds}s",
+      "share": "Share",
+      "download": "Download"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Upload Sketch",
+        "description": "Upload your landscape sketch or hand-drawn concept"
+      },
+      "step2": {
+        "title": "Choose Style & Describe",
+        "description": "Select a rendering style and describe your vision"
+      },
+      "step3": {
+        "title": "Generate",
+        "description": "AI transforms your sketch into a professional rendering"
+      }
+    },
     "features": {
       "title": "Why Architects Choose ArchiQuill",
       "feature1": {
         "title": "Lightning Fast",
-        "description": "Generate professional renderings in seconds, not hours"
+        "description": "Generate professional renderings in seconds"
       },
       "feature2": {
         "title": "Photorealistic Quality",
-        "description": "AI-powered rendering delivers stunning, presentation-ready results"
+        "description": "AI-powered rendering delivers stunning results"
       },
       "feature3": {
         "title": "Design Control",
-        "description": "Your design intent is preserved while AI enhances the visualization"
+        "description": "Your design intent is preserved and enhanced"
+      },
+      "feature4": {
+        "title": "Cost Effective",
+        "description": "Save hours of rendering time and costs"
       }
     }
   },

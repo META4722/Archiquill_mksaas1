@@ -1106,25 +1106,85 @@
   "AILandscapePage": {
     "title": "AI 景观设计",
     "description": "在几秒内将景观草图转化为逼真的渲染效果图",
-    "subtitle": "上传您的草图或模型，添加描述，观看 AI 将您的景观愿景变为现实",
-    "badge": "AI 驱动渲染",
-    "uploadPlaceholder": "将草图或模型图片拖放到此处，或点击浏览",
-    "promptPlaceholder": "描述您的景观愿景（例如：现代禅意花园，配有水景和天然石板路径）",
-    "generateButton": "生成渲染图",
-    "generating": "生成中...",
+    "metadata": {
+      "title": "AI 景观设计 - ArchiQuill",
+      "description": "使用 AI 在几秒内将景观草图转化为逼真的渲染效果图"
+    },
+    "upload": {
+      "title": "上传您的草图",
+      "description": "拖放或点击上传（JPEG、PNG、WebP，最大10MB）",
+      "button": "选择文件"
+    },
+    "styles": {
+      "title": "选择渲染风格",
+      "photorealistic": {
+        "label": "逼真风格",
+        "description": "超逼真渲染，自然光照和材质"
+      },
+      "artistic": {
+        "label": "艺术风格",
+        "description": "绘画风格，富有氛围感和构图美感"
+      },
+      "conceptual": {
+        "label": "概念风格",
+        "description": "现代设计可视化，清晰呈现"
+      },
+      "technical": {
+        "label": "技术风格",
+        "description": "精确的技术图纸，清晰细节"
+      }
+    },
+    "prompt": {
+      "label": "描述您的愿景",
+      "placeholder": "描述您的景观设计（例如：现代禅意花园，配有水景和天然石板路径）",
+      "hint": "按 Enter 生成，Shift+Enter 换行",
+      "suggestions": {
+        "title": "建议",
+        "refresh": "刷新"
+      },
+      "submit": "生成渲染图",
+      "generating": "生成中..."
+    },
+    "result": {
+      "title": "生成的渲染图",
+      "generating": "正在创建您的景观渲染图...",
+      "error": "生成渲染图失败",
+      "timing": "生成用时 {seconds} 秒",
+      "share": "分享",
+      "download": "下载"
+    },
+    "howItWorks": {
+      "title": "如何使用",
+      "step1": {
+        "title": "上传草图",
+        "description": "上传您的景观草图或手绘概念图"
+      },
+      "step2": {
+        "title": "选择风格并描述",
+        "description": "选择渲染风格并描述您的愿景"
+      },
+      "step3": {
+        "title": "生成",
+        "description": "AI 将您的草图转化为专业渲染图"
+      }
+    },
     "features": {
       "title": "为什么建筑师选择 ArchiQuill",
       "feature1": {
         "title": "闪电般快速",
-        "description": "在几秒内生成专业渲染图，而非数小时"
+        "description": "在几秒内生成专业渲染图"
       },
       "feature2": {
         "title": "逼真质量",
-        "description": "AI 驱动的渲染提供惊人的、可供演示的结果"
+        "description": "AI 驱动的渲染提供惊人的效果"
       },
       "feature3": {
         "title": "设计控制",
-        "description": "您的设计意图得以保留，同时 AI 增强可视化效果"
+        "description": "您的设计意图得以保留和增强"
+      },
+      "feature4": {
+        "title": "性价比高",
+        "description": "节省数小时的渲染时间和成本"
       }
     }
   },

@@ -187,38 +187,41 @@
 }
 
 :root {
-  --background: oklch(1.0 0 0);
-  --foreground: oklch(0.1448 0 0);
-  --card: oklch(1.0 0 0);
-  --card-foreground: oklch(0.1448 0 0);
-  --popover: oklch(1.0 0 0);
-  --popover-foreground: oklch(0.1448 0 0);
-  --primary: oklch(0.6271 0.1699 149.2138);
-  --primary-foreground: oklch(0.9851 0 0);
-  --secondary: oklch(0.9702 0 0);
-  --secondary-foreground: oklch(0.2046 0 0);
-  --muted: oklch(0.9702 0 0);
-  --muted-foreground: oklch(0.5555 0 0);
-  --accent: oklch(0.9819 0.0181 155.8263);
-  --accent-foreground: oklch(0.4479 0.1083 151.3277);
-  --destructive: oklch(0.5771 0.2152 27.325);
-  --destructive-foreground: oklch(0.9851 0 0);
-  --border: oklch(0.9219 0 0);
-  --input: oklch(0.9219 0 0);
-  --ring: oklch(0.7227 0.192 149.5793);
-  --chart-1: oklch(0.7227 0.192 149.5793);
-  --chart-2: oklch(0.5555 0 0);
-  --chart-3: oklch(0.1448 0 0);
-  --chart-4: oklch(0.7155 0 0);
-  --chart-5: oklch(0.9219 0 0);
-  --sidebar: oklch(0.9702 0 0);
-  --sidebar-foreground: oklch(0.5555 0 0);
-  --sidebar-primary: oklch(0.6271 0.1699 149.2138);
-  --sidebar-primary-foreground: oklch(0.9851 0 0);
-  --sidebar-accent: oklch(0.9819 0.0181 155.8263);
-  --sidebar-accent-foreground: oklch(0.4479 0.1083 151.3277);
-  --sidebar-border: oklch(0.9219 0 0);
-  --sidebar-ring: oklch(0.7227 0.192 149.5793);
+  /* ArchiQuill Color Scheme - Light Mode Only */
+  /* Primary: #E9E5D9 (Beige Background), #A98950 (Gold Accent), #3C4242 (Dark Gray) */
+
+  --background: oklch(0.92 0.015 85);  /* #E9E5D9 - Warm beige */
+  --foreground: oklch(0.29 0.01 240);   /* #3C4242 - Dark gray text */
+  --card: oklch(0.95 0.01 85);          /* Slightly lighter beige for cards */
+  --card-foreground: oklch(0.29 0.01 240);
+  --popover: oklch(0.98 0.005 85);
+  --popover-foreground: oklch(0.29 0.01 240);
+  --primary: oklch(0.62 0.08 75);       /* #A98950 - Gold */
+  --primary-foreground: oklch(0.98 0.005 85);  /* Light text on gold */
+  --secondary: oklch(0.88 0.015 85);    /* Muted beige */
+  --secondary-foreground: oklch(0.29 0.01 240);
+  --muted: oklch(0.88 0.015 85);
+  --muted-foreground: oklch(0.45 0.01 240);
+  --accent: oklch(0.62 0.08 75);        /* Gold accent */
+  --accent-foreground: oklch(0.98 0.005 85);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 85);
+  --border: oklch(0.82 0.02 85);        /* Subtle border */
+  --input: oklch(0.82 0.02 85);
+  --ring: oklch(0.62 0.08 75);          /* Gold ring */
+  --chart-1: oklch(0.62 0.08 75);       /* Gold */
+  --chart-2: oklch(0.45 0.01 240);      /* Dark gray */
+  --chart-3: oklch(0.72 0.06 75);       /* Light gold */
+  --chart-4: oklch(0.35 0.01 240);      /* Medium gray */
+  --chart-5: oklch(0.88 0.015 85);      /* Beige */
+  --sidebar: oklch(0.95 0.01 85);
+  --sidebar-foreground: oklch(0.35 0.01 240);
+  --sidebar-primary: oklch(0.62 0.08 75);
+  --sidebar-primary-foreground: oklch(0.98 0.005 85);
+  --sidebar-accent: oklch(0.88 0.015 85);
+  --sidebar-accent-foreground: oklch(0.29 0.01 240);
+  --sidebar-border: oklch(0.82 0.02 85);
+  --sidebar-ring: oklch(0.62 0.08 75);
   --font-sans: var(--font-noto-sans);
   --font-serif: var(--font-noto-serif);
   --font-mono: var(--font-noto-sans-mono);
@@ -238,7 +241,8 @@
   --shadow-2xl: 0px 4px 8px 0px hsl(0 0% 0% / 0.13);
 }
 
-.dark {
+/* Dark mode disabled for ArchiQuill - Light mode only */
+/* .dark {
   --background: oklch(0.1591 0 0);
   --foreground: oklch(0.9702 0 0);
   --card: oklch(0.2046 0 0);
@@ -288,7 +292,7 @@
   --shadow-xl: 0px 4px 8px 0px hsl(0 0% 0% / 0.1), 0px 8px 10px -1px
     hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0px 4px 8px 0px hsl(0 0% 0% / 0.25);
-}
+} */
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,

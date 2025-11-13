@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "MkSaaS Demo",
-    "title": "MkSaaS - The Best AI SaaS Boilerplate",
-    "description": "MkSaaS is the best AI SaaS boilerplate. Make AI SaaS in days, simply and effortlessly"
+    "name": "ArchiQuill",
+    "title": "ArchiQuill - Design Returns to Design",
+    "description": "Transform architectural sketches into professional renderings in seconds. AI-powered rendering tool for architects."
   },
   "Common": {
     "premium": "Premium",
@@ -330,6 +330,14 @@
       "ai": {
         "title": "AI Tools",
         "items": {
+          "landscape": {
+            "title": "AI Landscape Design",
+            "description": "Transform landscape sketches into photorealistic renderings"
+          },
+          "garden": {
+            "title": "AI Garden Design",
+            "description": "Generate beautiful garden visualizations from your concepts"
+          },
           "text": {
             "title": "AI Text",
             "description": "Show how to use AI to write stunning text"
@@ -785,14 +793,14 @@
     }
   },
   "HomePage": {
-    "title": "MkSaaS",
-    "description": "Make AI SaaS in days, simply and effortlessly",
+    "title": "ArchiQuill - Design Returns to Design",
+    "description": "Transform architectural sketches into professional renderings in seconds. AI-powered rendering tool for architects.",
     "hero": {
-      "title": "Make AI SaaS in days, simply and effortlessly",
-      "description": "The is a demo website built with MkSaaS, a Next.js SaaS boilerplate to help you build your AI SaaS faster and better.",
-      "introduction": "Introducing MkSaaS Boilerplate",
-      "primary": "Get Started",
-      "secondary": "See Demo"
+      "title": "ArchiQuill - Design Returns to Design",
+      "description": "In seconds, transform architectural sketches into professional renderings. Unleash architects' creativity, focus on design itself.",
+      "introduction": "AI-Powered Architectural Rendering",
+      "primary": "Start Free Trial",
+      "secondary": "View Examples"
     },
     "logocloud": {
       "title": "Your favorite companies are our partners"
@@ -837,24 +845,24 @@
     },
     "features": {
       "title": "Features",
-      "subtitle": "The features of your product",
-      "description": "Write the description of your product here",
+      "subtitle": "Why Architects Choose ArchiQuill",
+      "description": "Transform your architectural workflow with AI-powered rendering that saves time and impresses clients",
       "items": {
         "item-1": {
-          "title": "Product Feature One",
-          "description": "Please write the detailed description of feature one here, make it as detailed as possible, make it more attractive to users"
+          "title": "Lightning-Fast Rendering",
+          "description": "Generate photorealistic renderings from sketches or 3D models in seconds, not hours. Spend more time designing, less time waiting for renders to complete."
         },
         "item-2": {
-          "title": "Product Feature Two",
-          "description": "Please write the detailed description of feature two here, make it as detailed as possible, make it more attractive to users"
+          "title": "Multiple Design Scenarios",
+          "description": "Explore landscape, garden, exterior, and interior design scenarios. Support for various architectural styles from modern to classical, helping you visualize every possibility."
         },
         "item-3": {
-          "title": "Product Feature Three",
-          "description": "Please write the detailed description of feature three here, make it as detailed as possible, make it more attractive to users"
+          "title": "Preserve Design Intent",
+          "description": "Our AI understands architectural language and preserves your design intent while enhancing visualization quality. Your vision stays intact while presentation quality soars."
         },
         "item-4": {
-          "title": "Product Feature Four",
-          "description": "Please write the detailed description of feature four here, make it as detailed as possible, make it more attractive to users"
+          "title": "Image + Text Input",
+          "description": "Upload your sketches or 3D model screenshots, then refine with text descriptions. The perfect combination of visual and textual guidance for precise results."
         }
       }
     },
@@ -908,24 +916,24 @@
       "subtitle": "Frequently Asked Questions",
       "items": {
         "item-1": {
-          "question": "Do you offer a free trial?",
-          "answer": "Yes, we offer a 7-day free trial."
+          "question": "What types of input images does ArchiQuill support?",
+          "answer": "ArchiQuill supports hand-drawn sketches, CAD drawings, 3D model screenshots, and concept diagrams. JPG, PNG, and most common image formats work perfectly."
         },
         "item-2": {
-          "question": "How do I cancel my subscription?",
-          "answer": "You can cancel your subscription by visiting the billing page."
+          "question": "How long does it take to generate a rendering?",
+          "answer": "Most renderings are generated in 10-30 seconds depending on complexity and server load. Much faster than traditional rendering software."
         },
         "item-3": {
-          "question": "Can I change my plan?",
-          "answer": "Yes, you can change your plan at any time by visiting the billing page."
+          "question": "Can I specify architectural styles and materials?",
+          "answer": "Yes! Use text descriptions to specify materials (stone, wood, glass), styles (modern, classical, minimalist), lighting conditions, and landscape features for precise control."
         },
         "item-4": {
-          "question": "What is the refund policy?",
-          "answer": "We offer a 30-day money-back guarantee if you are not happy with our product."
+          "question": "What scenarios does ArchiQuill cover?",
+          "answer": "Currently: Landscape Design and Garden Design. Coming soon: Exterior Architecture and Interior Design. More scenarios will be added based on user feedback."
         },
         "item-5": {
-          "question": "Can't find what you're looking for?",
-          "answer": "Please contact our customer support team at support@mksaas.com"
+          "question": "Need help or have suggestions?",
+          "answer": "Please contact our support team at support@archiquill.com. We'd love to hear your feedback!"
         }
       }
     },
@@ -1008,26 +1016,26 @@
       }
     },
     "stats": {
-      "title": "Stats",
-      "subtitle": "MkSaaS in numbers",
-      "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
+      "title": "ArchiQuill in Numbers",
+      "subtitle": "Trusted by Architects Worldwide",
+      "description": "Join thousands of architects who have transformed their workflow with AI-powered rendering",
       "items": {
         "item-1": {
-          "title": "Stars on GitHub"
+          "title": "Architects Using ArchiQuill"
         },
         "item-2": {
-          "title": "Active Users"
+          "title": "Average Rendering Time (seconds)"
         },
         "item-3": {
-          "title": "Powered Apps"
+          "title": "Renderings Generated"
         }
       }
     },
     "calltoaction": {
-      "title": "Start Building",
-      "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly",
-      "primaryButton": "Get Started",
-      "secondaryButton": "See Demo"
+      "title": "Ready to Transform Your Workflow?",
+      "description": "Join architects worldwide who are saving hours on rendering and impressing clients with ArchiQuill",
+      "primaryButton": "Start Free Trial",
+      "secondaryButton": "View Examples"
     }
   },
   "AITextPage": {
@@ -1094,5 +1102,55 @@
   "AIAudioPage": {
     "title": "AI Audio",
     "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly"
+  },
+  "AILandscapePage": {
+    "title": "AI Landscape Design",
+    "description": "Transform landscape sketches into photorealistic renderings in seconds",
+    "subtitle": "Upload your sketch or model, add a description, and watch AI bring your landscape vision to life",
+    "badge": "AI-Powered Rendering",
+    "uploadPlaceholder": "Drop your sketch or model image here, or click to browse",
+    "promptPlaceholder": "Describe your landscape vision (e.g., modern zen garden with water features and natural stone pathways)",
+    "generateButton": "Generate Rendering",
+    "generating": "Generating...",
+    "features": {
+      "title": "Why Architects Choose ArchiQuill",
+      "feature1": {
+        "title": "Lightning Fast",
+        "description": "Generate professional renderings in seconds, not hours"
+      },
+      "feature2": {
+        "title": "Photorealistic Quality",
+        "description": "AI-powered rendering delivers stunning, presentation-ready results"
+      },
+      "feature3": {
+        "title": "Design Control",
+        "description": "Your design intent is preserved while AI enhances the visualization"
+      }
+    }
+  },
+  "AIGardenPage": {
+    "title": "AI Garden Design",
+    "description": "Create beautiful garden visualizations from your concepts in seconds",
+    "subtitle": "Upload your garden sketch or plan, describe your vision, and generate photorealistic renderings",
+    "badge": "AI-Powered Garden Rendering",
+    "uploadPlaceholder": "Drop your garden sketch here, or click to browse",
+    "promptPlaceholder": "Describe your garden design (e.g., English cottage garden with perennial borders and climbing roses)",
+    "generateButton": "Generate Garden Rendering",
+    "generating": "Generating...",
+    "features": {
+      "title": "Perfect for Garden Designers",
+      "feature1": {
+        "title": "Instant Visualization",
+        "description": "Show clients stunning garden concepts in seconds"
+      },
+      "feature2": {
+        "title": "Seasonal Variations",
+        "description": "Generate different seasonal views of your garden design"
+      },
+      "feature3": {
+        "title": "Plant Library",
+        "description": "AI understands hundreds of plant species and their characteristics"
+      }
+    }
   }
 }

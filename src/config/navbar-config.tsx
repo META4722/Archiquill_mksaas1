@@ -30,6 +30,7 @@ import {
   SquareKanbanIcon,
   SquarePenIcon,
   ThumbsUpIcon,
+  TreesIcon,
   UserPlusIcon,
   UsersIcon,
   WandSparklesIcon,
@@ -82,27 +83,43 @@ export function useNavbarLinks(): NestedMenuItem[] {
     {
       title: t('ai.title'),
       items: [
+        // ArchiQuill AI Features
         {
-          title: t('ai.items.text.title'),
-          description: t('ai.items.text.description'),
-          icon: <SquarePenIcon className="size-4 shrink-0" />,
-          href: Routes.AIText,
+          title: t('ai.items.landscape.title'),
+          description: t('ai.items.landscape.description'),
+          icon: <TreesIcon className="size-4 shrink-0" />,
+          href: Routes.AILandscape,
           external: false,
         },
         {
-          title: t('ai.items.image.title'),
-          description: t('ai.items.image.description'),
+          title: t('ai.items.garden.title'),
+          description: t('ai.items.garden.description'),
           icon: <ImageIcon className="size-4 shrink-0" />,
-          href: Routes.AIImage,
+          href: Routes.AIGarden,
           external: false,
         },
-        {
-          title: t('ai.items.chat.title'),
-          description: t('ai.items.chat.description'),
-          icon: <MessageCircleIcon className="size-4 shrink-0" />,
-          href: Routes.AIChat,
-          external: false,
-        },
+        // Original AI features - commented out
+        // {
+        //   title: t('ai.items.text.title'),
+        //   description: t('ai.items.text.description'),
+        //   icon: <SquarePenIcon className="size-4 shrink-0" />,
+        //   href: Routes.AIText,
+        //   external: false,
+        // },
+        // {
+        //   title: t('ai.items.image.title'),
+        //   description: t('ai.items.image.description'),
+        //   icon: <ImageIcon className="size-4 shrink-0" />,
+        //   href: Routes.AIImage,
+        //   external: false,
+        // },
+        // {
+        //   title: t('ai.items.chat.title'),
+        //   description: t('ai.items.chat.description'),
+        //   icon: <MessageCircleIcon className="size-4 shrink-0" />,
+        //   href: Routes.AIChat,
+        //   external: false,
+        // },
         // {
         //   title: t('ai.items.video.title'),
         //   description: t('ai.items.video.description'),

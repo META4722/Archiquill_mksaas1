@@ -11,11 +11,11 @@ export const websiteConfig: WebsiteConfig = {
   ui: {
     theme: {
       defaultTheme: 'default',
-      enableSwitch: true,
+      enableSwitch: false, // Disabled for ArchiQuill
     },
     mode: {
-      defaultMode: 'dark',
-      enableSwitch: true,
+      defaultMode: 'light', // ArchiQuill - Light mode only
+      enableSwitch: false,  // Disabled for ArchiQuill
     },
   },
   metadata: {
@@ -25,13 +25,13 @@ export const websiteConfig: WebsiteConfig = {
       logoDark: '/logo-dark.png',
     },
     social: {
-      github: 'https://github.com/MkSaaSHQ',
-      twitter: 'https://mksaas.link/twitter',
-      blueSky: 'https://mksaas.link/bsky',
-      discord: 'https://mksaas.link/discord',
-      mastodon: 'https://mksaas.link/mastodon',
-      linkedin: 'https://mksaas.link/linkedin',
-      youtube: 'https://mksaas.link/youtube',
+      github: 'https://github.com/ArchiQuill',
+      twitter: 'https://twitter.com/ArchiQuill',
+      blueSky: 'https://bsky.app/profile/archiquill.com',
+      discord: 'https://discord.gg/archiquill',
+      mastodon: 'https://mastodon.social/@archiquill',
+      linkedin: 'https://linkedin.com/company/archiquill',
+      youtube: 'https://youtube.com/@archiquill',
     },
   },
   features: {
@@ -80,8 +80,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'MkSaaS <support@mksaas.com>',
-    supportEmail: 'MkSaaS <support@mksaas.com>',
+    fromEmail: 'ArchiQuill <support@archiquill.com>',
+    supportEmail: 'ArchiQuill <support@archiquill.com>',
   },
   newsletter: {
     enable: true,

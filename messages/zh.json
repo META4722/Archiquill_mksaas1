@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "MkSaaS Demo",
-    "title": "MkSaaS - 最好的 AI SaaS 模板",
-    "description": "MkSaaS 是构建 AI SaaS 的最佳模板，使用 MkSaaS 可以在几天内轻松构建您的 AI SaaS，简单且毫不费力。"
+    "name": "ArchiQuill",
+    "title": "ArchiQuill - 让设计回归设计",
+    "description": "在几秒内，将建筑草图转化为专业效果图。为建筑师打造的 AI 渲染工具。"
   },
   "Common": {
     "premium": "付费文章",
@@ -330,6 +330,14 @@
       "ai": {
         "title": "AI 工具",
         "items": {
+          "landscape": {
+            "title": "AI 景观设计",
+            "description": "将景观草图转化为逼真的渲染效果图"
+          },
+          "garden": {
+            "title": "AI 花园设计",
+            "description": "从概念图生成精美的花园可视化效果"
+          },
           "text": {
             "title": "AI 文本",
             "description": "展示如何使用 AI 生成精彩文本"
@@ -785,14 +793,14 @@
     }
   },
   "HomePage": {
-    "title": "MkSaaS",
-    "description": "使用 MkSaaS 在几天内轻松构建您的 AI SaaS 产品",
+    "title": "ArchiQuill - 让设计回归设计",
+    "description": "在几秒内，将建筑草图转化为专业效果图。为建筑师打造的 AI 渲染工具。",
     "hero": {
-      "title": "使用 MkSaaS 轻松构建您的 AI SaaS 产品",
-      "description": "MkSaaS 是构建 AI SaaS 的最佳模板，内置 AI、身份验证、全球支付、博客、文档、邮件订阅、SEO、多彩主题、丰富组件等。",
-      "introduction": "介绍 MkSaaS 模板",
-      "primary": "开始使用",
-      "secondary": "查看演示"
+      "title": "ArchiQuill - 让设计回归设计",
+      "description": "在几秒内，将建筑草图转化为专业效果图。释放建筑师的创造力，专注于设计本身。",
+      "introduction": "AI 驱动的建筑渲染",
+      "primary": "开始免费试用",
+      "secondary": "查看案例"
     },
     "logocloud": {
       "title": "您最爱公司都是我们的合作伙伴"
@@ -836,25 +844,25 @@
       "secondaryButton": "查看演示"
     },
     "features": {
-      "title": "功能",
-      "subtitle": "您的 SaaS 产品功能",
-      "description": "请在这里介绍您的 SaaS 产品的特色功能的信息",
+      "title": "功能特色",
+      "subtitle": "为什么建筑师选择 ArchiQuill",
+      "description": "借助 AI 驱动的渲染，转变您的建筑工作流程，节省时间并打动客户",
       "items": {
         "item-1": {
-          "title": "产品特色功能一",
-          "description": "请在这里详细描述您的产品特色功能一，尽可能详细，使其更吸引用户，提高落地页的转化率"
+          "title": "闪电般快速渲染",
+          "description": "从草图或 3D 模型生成逼真渲染图仅需几秒，而非几小时。将更多时间用于设计，而非等待渲染完成。"
         },
         "item-2": {
-          "title": "产品特色功能二",
-          "description": "请在这里详细描述您的产品特色功能二，尽可能详细，使其更吸引用户，提高落地页的转化率"
+          "title": "多种设计场景",
+          "description": "探索景观、花园、外立面和室内设计场景。支持从现代到古典的各种建筑风格，帮助您可视化每一种可能性。"
         },
         "item-3": {
-          "title": "产品特色功能三",
-          "description": "请在这里详细描述您的产品特色功能三，尽可能详细，使其更吸引用户，提高落地页的转化率"
+          "title": "保留设计意图",
+          "description": "我们的 AI 理解建筑语言，在提升可视化质量的同时保留您的设计意图。您的愿景保持完整，演示质量飙升。"
         },
         "item-4": {
-          "title": "产品特色功能四",
-          "description": "请在这里详细描述您的产品特色功能四，尽可能详细，使其更吸引用户，提高落地页的转化率"
+          "title": "图像 + 文本输入",
+          "description": "上传您的草图或 3D 模型截图，然后用文字描述进行细化。视觉与文字指导的完美结合，实现精确结果。"
         }
       }
     },
@@ -908,24 +916,24 @@
       "subtitle": "如果您有任何问题，请随时联系我们",
       "items": {
         "item-1": {
-          "question": "你们提供免费试用吗？",
-          "answer": "是的，我们提供7天的免费试用。"
+          "question": "ArchiQuill 支持哪些类型的输入图像？",
+          "answer": "ArchiQuill 支持手绘草图、CAD 图纸、3D 模型截图和概念图。JPG、PNG 及大多数常见图像格式都可以完美使用。"
         },
         "item-2": {
-          "question": "如何取消我的订阅？",
-          "answer": "您可以通过访问账单页面取消您的订阅。"
+          "question": "生成一张渲染图需要多长时间？",
+          "answer": "根据复杂度和服务器负载，大多数渲染图在 10-30 秒内生成。比传统渲染软件快得多。"
         },
         "item-3": {
-          "question": "我可以更改我的计划吗？",
-          "answer": "是的，您可以随时通过访问账单页面更改您的计划。"
+          "question": "我可以指定建筑风格和材质吗？",
+          "answer": "当然可以！使用文字描述来指定材质（石材、木材、玻璃）、风格（现代、古典、极简）、光照条件和景观特征，实现精确控制。"
         },
         "item-4": {
-          "question": "你们的退款政策是什么？",
-          "answer": "是的，我们提供30天的退款保证。"
+          "question": "ArchiQuill 涵盖哪些场景？",
+          "answer": "目前支持：景观设计和花园设计。即将推出：外立面建筑和室内设计。更多场景将根据用户反馈添加。"
         },
         "item-5": {
-          "question": "找不到您想问的问题？",
-          "answer": "请联系我们的客户支持团队，邮箱地址：support@mksaas.com"
+          "question": "需要帮助或有建议？",
+          "answer": "请联系我们的支持团队，邮箱：support@archiquill.com。我们期待您的反馈！"
         }
       }
     },
@@ -1008,26 +1016,26 @@
       }
     },
     "stats": {
-      "title": "统计",
-      "subtitle": "MkSaaS 相关的数字",
-      "description": "MkSaaS 可让您在几天内轻松构建您的 AI SaaS",
+      "title": "ArchiQuill 数据统计",
+      "subtitle": "深受全球建筑师信赖",
+      "description": "加入成千上万使用 AI 渲染转变工作流程的建筑师行列",
       "items": {
         "item-1": {
-          "title": "GitHub 上的星星"
+          "title": "使用 ArchiQuill 的建筑师"
         },
         "item-2": {
-          "title": "使用 MkSaaS 的活跃用户"
+          "title": "平均渲染时间（秒）"
         },
         "item-3": {
-          "title": "使用 MkSaaS 启动的应用"
+          "title": "已生成的渲染图"
         }
       }
     },
     "calltoaction": {
-      "title": "开始构建",
-      "description": "MkSaaS 可让您在几天内轻松构建您的 AI SaaS",
-      "primaryButton": "开始使用",
-      "secondaryButton": "查看演示"
+      "title": "准备好转变您的工作流程了吗？",
+      "description": "加入全球建筑师的行列，使用 ArchiQuill 节省数小时渲染时间，打动客户",
+      "primaryButton": "开始免费试用",
+      "secondaryButton": "查看案例"
     }
   },
   "AITextPage": {
@@ -1094,5 +1102,55 @@
   "AIAudioPage": {
     "title": "AI 音频",
     "description": "MkSaaS 让您在几天内轻松构建您的 AI SaaS，简单且毫不费力"
+  },
+  "AILandscapePage": {
+    "title": "AI 景观设计",
+    "description": "在几秒内将景观草图转化为逼真的渲染效果图",
+    "subtitle": "上传您的草图或模型，添加描述，观看 AI 将您的景观愿景变为现实",
+    "badge": "AI 驱动渲染",
+    "uploadPlaceholder": "将草图或模型图片拖放到此处，或点击浏览",
+    "promptPlaceholder": "描述您的景观愿景（例如：现代禅意花园，配有水景和天然石板路径）",
+    "generateButton": "生成渲染图",
+    "generating": "生成中...",
+    "features": {
+      "title": "为什么建筑师选择 ArchiQuill",
+      "feature1": {
+        "title": "闪电般快速",
+        "description": "在几秒内生成专业渲染图，而非数小时"
+      },
+      "feature2": {
+        "title": "逼真质量",
+        "description": "AI 驱动的渲染提供惊人的、可供演示的结果"
+      },
+      "feature3": {
+        "title": "设计控制",
+        "description": "您的设计意图得以保留，同时 AI 增强可视化效果"
+      }
+    }
+  },
+  "AIGardenPage": {
+    "title": "AI 花园设计",
+    "description": "在几秒内从概念创建精美的花园可视化效果",
+    "subtitle": "上传您的花园草图或平面图，描述您的愿景，生成逼真的渲染图",
+    "badge": "AI 驱动花园渲染",
+    "uploadPlaceholder": "将花园草图拖放到此处，或点击浏览",
+    "promptPlaceholder": "描述您的花园设计（例如：英式乡村花园，配有多年生植物边界和攀缘玫瑰）",
+    "generateButton": "生成花园渲染图",
+    "generating": "生成中...",
+    "features": {
+      "title": "完美适合花园设计师",
+      "feature1": {
+        "title": "即时可视化",
+        "description": "在几秒内向客户展示惊人的花园概念"
+      },
+      "feature2": {
+        "title": "季节变化",
+        "description": "生成您花园设计的不同季节视图"
+      },
+      "feature3": {
+        "title": "植物库",
+        "description": "AI 了解数百种植物物种及其特征"
+      }
+    }
   }
 }

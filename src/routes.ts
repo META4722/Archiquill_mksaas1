@@ -9,8 +9,8 @@ export enum Routes {
   // marketing pages
   FAQ = '/#faq',
   Features = '/#features',
-  Pricing = '/pricing', // change to /#pricing if you want to use the pricing section in homepage
-  Blog = '/blog',
+  Pricing = '/#pricing', // change to /#pricing if you want to use the pricing section in homepage
+  Blog = '/#blog',
   Docs = '/docs',
   About = '/about',
   Contact = '/contact',
@@ -29,6 +29,7 @@ export enum Routes {
   ResetPassword = '/auth/reset-password',
 
   // dashboard routes
+  Home = '/home',
   Dashboard = '/dashboard',
   AdminUsers = '/admin/users',
   SettingsProfile = '/settings/profile',
@@ -80,6 +81,7 @@ export const routesNotAllowedByLoggedInUsers = [Routes.Login, Routes.Register];
  * The routes that are protected and require authentication
  */
 export const protectedRoutes = [
+  Routes.Home,
   Routes.Dashboard,
   Routes.AdminUsers,
   Routes.SettingsProfile,

@@ -72,32 +72,46 @@
   "PricePlans": {
     "free": {
       "name": "免费版",
-      "description": "适用于个人使用的基本功能",
+      "description": "体验尝鲜",
       "features": {
-        "feature-1": "最多3个项目",
-        "feature-2": "1GB存储空间",
-        "feature-3": "基础分析功能",
+        "feature-1": "2 张免费图片",
+        "feature-2": "登录送 20 点",
+        "feature-3": "10 点 / 张",
         "feature-4": "社区支持"
       },
       "limits": {
-        "limit-1": "不支持自定义域名",
-        "limit-2": "不支持自定义品牌",
-        "limit-3": "不支持终身更新"
+        "limit-1": "生成次数有限",
+        "limit-2": "标准画质",
+        "limit-3": "基础功能"
+      }
+    },
+    "basic": {
+      "name": "基础版",
+      "description": "日常使用",
+      "features": {
+        "feature-1": "350 张图片/月",
+        "feature-2": "含 3500 点数",
+        "feature-3": "10 点 / 张",
+        "feature-4": "优先支持"
+      },
+      "limits": {
+        "limit-1": "每月点数限制",
+        "limit-2": "标准画质"
       }
     },
     "pro": {
       "name": "专业版",
-      "description": "专业人士的高级功能",
+      "description": "真正无限生图",
       "features": {
-        "feature-1": "无限项目",
-        "feature-2": "10GB存储空间",
-        "feature-3": "高级分析功能",
-        "feature-4": "优先支持",
-        "feature-5": "自定义域名"
+        "feature-1": "无限生成图片",
+        "feature-2": "无点数限制",
+        "feature-3": "最高优先级",
+        "feature-4": "专属客服",
+        "feature-5": "高级功能"
       },
       "limits": {
-        "limit-1": "不支持自定义品牌",
-        "limit-2": "不支持终身更新"
+        "limit-1": "无月度限制",
+        "limit-2": "最高品质"
       }
     },
     "lifetime": {

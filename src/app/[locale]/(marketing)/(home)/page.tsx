@@ -1,4 +1,6 @@
+import BlogPreviewSection from '@/components/blocks/blog-preview/blog-preview';
 import CallToActionSection from '@/components/blocks/calltoaction/calltoaction';
+import DesignSoftwareSection from '@/components/blocks/design-software/design-software';
 import FaqSection from '@/components/blocks/faqs/faqs';
 import FeaturesSection from '@/components/blocks/features/features';
 import Features2Section from '@/components/blocks/features/features2';
@@ -6,10 +8,7 @@ import Features3Section from '@/components/blocks/features/features3';
 import HeroSection from '@/components/blocks/hero/hero';
 import IntegrationSection from '@/components/blocks/integration/integration';
 import Integration2Section from '@/components/blocks/integration/integration2';
-import LogoCloud from '@/components/blocks/logo-cloud/logo-cloud';
 import PricingSection from '@/components/blocks/pricing/pricing';
-import StatsSection from '@/components/blocks/stats/stats';
-import TestimonialsSection from '@/components/blocks/testimonials/testimonials';
 import CrispChat from '@/components/layout/crisp-chat';
 import { NewsletterCard } from '@/components/newsletter/newsletter-card';
 import { constructMetadata } from '@/lib/metadata';
@@ -50,9 +49,7 @@ export default async function HomePage(props: HomePageProps) {
       <div className="flex flex-col">
         <HeroSection />
 
-        <LogoCloud />
-
-        <StatsSection />
+        <DesignSoftwareSection />
 
         <IntegrationSection />
 
@@ -68,9 +65,9 @@ export default async function HomePage(props: HomePageProps) {
 
         <FaqSection />
 
-        <CallToActionSection />
+        <BlogPreviewSection />
 
-        <TestimonialsSection />
+        <CallToActionSection />
 
         <NewsletterCard />
 

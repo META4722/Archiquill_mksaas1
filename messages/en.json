@@ -72,32 +72,46 @@
   "PricePlans": {
     "free": {
       "name": "Free",
-      "description": "Basic features for personal use",
+      "description": "Perfect for trying out",
       "features": {
-        "feature-1": "Up to 3 projects",
-        "feature-2": "1 GB storage",
-        "feature-3": "Basic analytics",
+        "feature-1": "2 free images",
+        "feature-2": "20 credits on login",
+        "feature-3": "10 credits per image",
         "feature-4": "Community support"
       },
       "limits": {
-        "limit-1": "Custom domains",
-        "limit-2": "Custom branding",
-        "limit-3": "Lifetime updates"
+        "limit-1": "Limited generations",
+        "limit-2": "Standard quality",
+        "limit-3": "Basic features"
+      }
+    },
+    "basic": {
+      "name": "Basic",
+      "description": "For regular users",
+      "features": {
+        "feature-1": "350 images per month",
+        "feature-2": "3500 credits included",
+        "feature-3": "10 credits per image",
+        "feature-4": "Priority support"
+      },
+      "limits": {
+        "limit-1": "Monthly credit limit",
+        "limit-2": "Standard quality"
       }
     },
     "pro": {
       "name": "Pro",
-      "description": "Advanced features for professionals",
+      "description": "True unlimited generation",
       "features": {
-        "feature-1": "Unlimited projects",
-        "feature-2": "10 GB storage",
-        "feature-3": "Advanced analytics",
-        "feature-4": "Priority support",
-        "feature-5": "Custom domains"
+        "feature-1": "Unlimited image generation",
+        "feature-2": "No credit limits",
+        "feature-3": "Highest priority",
+        "feature-4": "Premium support",
+        "feature-5": "Advanced features"
       },
       "limits": {
-        "limit-1": "Custom branding",
-        "limit-2": "Lifetime updates"
+        "limit-1": "No monthly limits",
+        "limit-2": "Highest quality"
       }
     },
     "lifetime": {

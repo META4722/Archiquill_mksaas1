@@ -76,7 +76,7 @@ export const websiteConfig: WebsiteConfig = {
     relatedPostsSize: 3,
   },
   docs: {
-    enable: true,
+    enable: false,
   },
   mail: {
     provider: 'resend',
@@ -104,7 +104,26 @@ export const websiteConfig: WebsiteConfig = {
         isLifetime: false,
         credits: {
           enable: true,
-          amount: 50,
+          amount: 20,
+        },
+      },
+      basic: {
+        id: 'basic',
+        prices: [
+          {
+            type: PaymentTypes.SUBSCRIPTION,
+            priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC_MONTHLY!,
+            amount: 2900,
+            currency: 'USD',
+            interval: PlanIntervals.MONTH,
+          },
+        ],
+        isFree: false,
+        isLifetime: false,
+        popular: false,
+        credits: {
+          enable: true,
+          amount: 3500,
           expireDays: 30,
         },
       },
@@ -114,29 +133,21 @@ export const websiteConfig: WebsiteConfig = {
           {
             type: PaymentTypes.SUBSCRIPTION,
             priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO_MONTHLY!,
-            amount: 990,
+            amount: 6900,
             currency: 'USD',
             interval: PlanIntervals.MONTH,
-          },
-          {
-            type: PaymentTypes.SUBSCRIPTION,
-            priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO_YEARLY!,
-            amount: 9900,
-            currency: 'USD',
-            interval: PlanIntervals.YEAR,
           },
         ],
         isFree: false,
         isLifetime: false,
         popular: true,
         credits: {
-          enable: true,
-          amount: 1000,
-          expireDays: 30,
+          enable: false,
         },
       },
       lifetime: {
         id: 'lifetime',
+        disabled: true,
         prices: [
           {
             type: PaymentTypes.ONE_TIME,
@@ -161,58 +172,8 @@ export const websiteConfig: WebsiteConfig = {
     enablePackagesForFreePlan: false,
     registerGiftCredits: {
       enable: true,
-      amount: 50,
-      expireDays: 30,
+      amount: 20,
     },
-    packages: {
-      basic: {
-        id: 'basic',
-        popular: false,
-        amount: 100,
-        expireDays: 30,
-        price: {
-          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_CREDITS_BASIC!,
-          amount: 990,
-          currency: 'USD',
-          allowPromotionCode: true,
-        },
-      },
-      standard: {
-        id: 'standard',
-        popular: true,
-        amount: 200,
-        expireDays: 30,
-        price: {
-          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_CREDITS_STANDARD!,
-          amount: 1490,
-          currency: 'USD',
-          allowPromotionCode: true,
-        },
-      },
-      premium: {
-        id: 'premium',
-        popular: false,
-        amount: 500,
-        expireDays: 30,
-        price: {
-          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_CREDITS_PREMIUM!,
-          amount: 3990,
-          currency: 'USD',
-          allowPromotionCode: true,
-        },
-      },
-      enterprise: {
-        id: 'enterprise',
-        popular: false,
-        amount: 1000,
-        expireDays: 30,
-        price: {
-          priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_CREDITS_ENTERPRISE!,
-          amount: 6990,
-          currency: 'USD',
-          allowPromotionCode: true,
-        },
-      },
-    },
+    packages: {},
   },
 };

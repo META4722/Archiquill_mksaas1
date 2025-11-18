@@ -56,7 +56,7 @@ export function InfiniteSlider({
         ease: 'linear',
         duration: duration,
         repeat: Number.POSITIVE_INFINITY,
-        repeatType: 'loop',
+        repeatType: 'loop' as const,
         repeatDelay: 0,
         onRepeat: () => {
           translation.set(from);

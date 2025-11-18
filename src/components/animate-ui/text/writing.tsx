@@ -24,7 +24,7 @@ function WritingText({
   inViewOnce = true,
   spacing = 5,
   text,
-  transition = { type: 'spring', bounce: 0, duration: 2, delay: 0.5 },
+  transition = { type: 'spring' as const, bounce: 0, duration: 2, delay: 0.5 },
   ...props
 }: WritingTextProps) {
   const localRef = React.useRef<HTMLSpanElement>(null);

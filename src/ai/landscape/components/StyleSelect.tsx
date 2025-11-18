@@ -1,10 +1,10 @@
 'use client';
 
-import { RENDERING_STYLES, type RenderingStyle } from '../lib/landscape-types';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
+import { RENDERING_STYLES, type RenderingStyle } from '../lib/landscape-types';
 
 interface StyleSelectProps {
   selectedStyle: RenderingStyle;
@@ -21,9 +21,7 @@ export function StyleSelect({
 
   return (
     <div className="space-y-3">
-      <Label className="text-sm font-medium">
-        {t('title')}
-      </Label>
+      <Label className="text-sm font-medium">{t('title')}</Label>
       <RadioGroup
         value={selectedStyle}
         onValueChange={(value) => onStyleChange(value as RenderingStyle)}

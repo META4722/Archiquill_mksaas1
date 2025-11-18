@@ -342,7 +342,7 @@ function HoleBackground({
           'dark:[background:linear-gradient(20deg,#00f8f1,#ffbd1e20_16.5%,#fe848f_33%,#fe848f20_49.5%,#00f8f1_66%,#00f8f160_85.5%,#ffbd1e_100%)_0_100%_/_100%_200%] [background:linear-gradient(20deg,#00f8f1,#ffbd1e40_16.5%,#fe848f_33%,#fe848f40_49.5%,#00f8f1_66%,#00f8f180_85.5%,#ffbd1e_100%)_0_100%_/_100%_200%]',
         )}
         animate={{ backgroundPosition: '0% 300%' }}
-        transition={{ duration: 5, ease: 'linear', repeat: Infinity }}
+        transition={{ duration: 5, ease: 'linear' as const, repeat: Infinity }}
       />
       <div className="absolute top-0 left-0 z-[7] size-full dark:[background:repeating-linear-gradient(transparent,transparent_1px,white_1px,white_2px)] mix-blend-overlay opacity-50" />
     </div>

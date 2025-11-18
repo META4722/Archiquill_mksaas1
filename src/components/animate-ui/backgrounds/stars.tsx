@@ -32,7 +32,7 @@ function generateStars(count: number, starColor: string) {
 function StarLayer({
   count = 1000,
   size = 1,
-  transition = { repeat: Infinity, duration: 50, ease: 'linear' },
+  transition = { repeat: Infinity, duration: 50, ease: 'linear' as const },
   starColor = '#fff',
   className,
   ...props
@@ -124,7 +124,7 @@ function StarsBackground({
         <StarLayer
           count={1000}
           size={1}
-          transition={{ repeat: Infinity, duration: speed, ease: 'linear' }}
+          transition={{ repeat: Infinity, duration: speed, ease: 'linear' as const }}
           starColor={starColor}
         />
         <StarLayer
@@ -133,7 +133,7 @@ function StarsBackground({
           transition={{
             repeat: Infinity,
             duration: speed * 2,
-            ease: 'linear',
+            ease: 'linear' as const,
           }}
           starColor={starColor}
         />
@@ -143,7 +143,7 @@ function StarsBackground({
           transition={{
             repeat: Infinity,
             duration: speed * 3,
-            ease: 'linear',
+            ease: 'linear' as const,
           }}
           starColor={starColor}
         />

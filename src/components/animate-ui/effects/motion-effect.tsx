@@ -39,7 +39,7 @@ function MotionEffect({
   ref,
   children,
   className,
-  transition = { type: 'spring', stiffness: 200, damping: 20 },
+  transition = { type: 'spring' as const, stiffness: 200, damping: 20 },
   delay = 0,
   inView = false,
   inViewMargin = '0px',

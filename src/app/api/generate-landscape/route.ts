@@ -35,10 +35,7 @@ const getStylePrompt = (
   const baseNegative =
     'low quality, blurry, distorted, ugly, bad anatomy, watermark, text';
 
-  const styleConfigs: Record<
-    string,
-    { suffix: string; negative: string }
-  > = {
+  const styleConfigs: Record<string, { suffix: string; negative: string }> = {
     photorealistic: {
       suffix:
         'professional architectural photography, ultra realistic, high detail, natural lighting, 8k resolution, photorealistic rendering',
@@ -77,7 +74,8 @@ export async function POST(req: NextRequest) {
     const { prompt, sourceImage, style } = body;
 
     if (!prompt || !sourceImage || !style) {
-      const error = 'Missing required parameters: prompt, sourceImage, or style';
+      const error =
+        'Missing required parameters: prompt, sourceImage, or style';
       console.error(`${error} [requestId=${requestId}]`);
       return NextResponse.json({ error }, { status: 400 });
     }
@@ -125,7 +123,8 @@ export async function POST(req: NextRequest) {
     );
 
     // Use Replicate's SDXL image-to-image model
-    const modelId = 'stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b';
+    const modelId =
+      'stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b';
 
     const generatePromise = generateImage({
       model: replicate.image(modelId),

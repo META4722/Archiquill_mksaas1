@@ -1203,27 +1203,92 @@
     }
   },
   "AIGardenPage": {
-    "title": "AI Garden Design",
-    "description": "Create beautiful garden visualizations from your concepts in seconds",
-    "subtitle": "Upload your garden sketch or plan, describe your vision, and generate photorealistic renderings",
-    "badge": "AI-Powered Garden Rendering",
-    "uploadPlaceholder": "Drop your garden sketch here, or click to browse",
-    "promptPlaceholder": "Describe your garden design (e.g., English cottage garden with perennial borders and climbing roses)",
-    "generateButton": "Generate Garden Rendering",
-    "generating": "Generating...",
+    "metadata": {
+      "title": "AI Garden Design - ArchiQuill",
+      "description": "Create beautiful garden visualizations from your concepts in seconds with AI"
+    },
+    "hero": {
+      "badge": "AI-Powered Garden Design",
+      "title": "AI Garden Design",
+      "description": "Transform your garden concepts into stunning visualizations with multiple style options",
+      "features": {
+        "fast": "Generate in Seconds",
+        "ai": "AI-Powered",
+        "quality": "Professional Quality"
+      }
+    },
+    "playground": {
+      "title": "Create Your Garden",
+      "generate": "Generate Design",
+      "generating": "Generating...",
+      "credits": "Credits"
+    },
+    "styleSelect": {
+      "title": "Garden Style",
+      "selected": "Selected"
+    },
+    "upload": {
+      "label": "Reference Image",
+      "optional": "Optional",
+      "title": "Upload Reference Image",
+      "description": "Drag & drop or click to upload (JPEG, PNG, WebP, max 10MB)",
+      "button": "Choose File"
+    },
+    "aspectRatio": {
+      "label": "Aspect Ratio"
+    },
+    "prompt": {
+      "label": "Describe Your Garden",
+      "placeholder": "Describe your garden design (e.g., Japanese zen garden with rocks, raked gravel, and minimal plants)",
+      "hint": "Press Enter to generate, Shift+Enter for new line"
+    },
+    "display": {
+      "generating": "Generating your garden design...",
+      "pleaseWait": "This may take 30-60 seconds",
+      "empty": {
+        "title": "No Design Yet",
+        "description": "Select a style, add a description, and generate your garden design"
+      },
+      "generated": "{count, plural, =1 {1 design generated} other {# designs generated}}",
+      "timing": "Generated in {seconds}s",
+      "download": "Download"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": {
+        "1": {
+          "title": "Choose Style",
+          "description": "Select from 6 beautiful garden styles"
+        },
+        "2": {
+          "title": "Describe Vision",
+          "description": "Add reference image (optional) and describe your garden"
+        },
+        "3": {
+          "title": "Generate",
+          "description": "AI creates professional garden visualization in seconds"
+        }
+      }
+    },
     "features": {
       "title": "Perfect for Garden Designers",
-      "feature1": {
-        "title": "Instant Visualization",
-        "description": "Show clients stunning garden concepts in seconds"
-      },
-      "feature2": {
-        "title": "Seasonal Variations",
-        "description": "Generate different seasonal views of your garden design"
-      },
-      "feature3": {
-        "title": "Plant Library",
-        "description": "AI understands hundreds of plant species and their characteristics"
+      "items": {
+        "0": {
+          "title": "Multiple Styles",
+          "description": "Choose from Japanese Zen, English Cottage, Modern, Tropical, Mediterranean, and Desert styles"
+        },
+        "1": {
+          "title": "Instant Visualization",
+          "description": "Show clients stunning garden concepts in seconds"
+        },
+        "2": {
+          "title": "Plant Library",
+          "description": "AI understands hundreds of plant species and their characteristics"
+        },
+        "3": {
+          "title": "Cost Effective",
+          "description": "Save hours of design time and visualization costs"
+        }
       }
     }
   }

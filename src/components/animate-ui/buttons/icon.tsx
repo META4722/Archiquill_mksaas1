@@ -21,12 +21,12 @@ const animations = {
   pulse: {
     initial: { scale: 1.2, opacity: 0 },
     animate: { scale: [1.2, 1.8, 1.2], opacity: [0, 0.3, 0] },
-    transition: { duration: 1.2, ease: 'easeInOut' },
+    transition: { duration: 1.2, ease: 'easeInOut' as const },
   },
   glow: {
     initial: { scale: 1, opacity: 0 },
     animate: { scale: [1, 1.5], opacity: [0.8, 0] },
-    transition: { duration: 0.8, ease: 'easeOut' },
+    transition: { duration: 0.8, ease: 'easeOut' as const },
   },
   particle: (index: number) => ({
     initial: { x: '50%', y: '50%', scale: 0, opacity: 0 },
@@ -36,7 +36,7 @@ const animations = {
       scale: [0, 1, 0],
       opacity: [0, 1, 0],
     },
-    transition: { duration: 0.8, delay: index * 0.05, ease: 'easeOut' },
+    transition: { duration: 0.8, delay: index * 0.05, ease: 'easeOut' as const },
   }),
 };
 
@@ -57,7 +57,7 @@ function IconButton({
   animate = true,
   size = 'default',
   color = [59, 130, 246],
-  transition = { type: 'spring', stiffness: 300, damping: 15 },
+  transition = { type: 'spring' as const, stiffness: 300, damping: 15 },
   ...props
 }: IconButtonProps) {
   return (

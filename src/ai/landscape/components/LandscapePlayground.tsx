@@ -1,5 +1,7 @@
 'use client';
 
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useState } from 'react';
 import { useLandscapeGeneration } from '../hooks/use-landscape-generation';
 import type { RenderingStyle } from '../lib/landscape-types';
 import { getRandomSuggestions } from '../lib/suggestions';
@@ -7,7 +9,8 @@ import { ImageUpload } from './ImageUpload';
 import { LandscapeDisplay } from './LandscapeDisplay';
 import { PromptInput } from './PromptInput';
 import { StyleSelect } from './StyleSelect';
-import { useState } from 'react';
+
+type GenerationMode = 'image_to_image' | 'text_to_image';
 
 interface LandscapePlaygroundProps {
   initialSuggestions: string[];
@@ -16,6 +19,7 @@ interface LandscapePlaygroundProps {
 export function LandscapePlayground({
   initialSuggestions,
 }: LandscapePlaygroundProps) {
+  const [mode, setMode] = useState<GenerationMode>('image_to_image');
   const [sourceImage, setSourceImage] = useState<string>('');
   const [selectedStyle, setSelectedStyle] =
     useState<RenderingStyle>('photorealistic');
@@ -25,14 +29,15 @@ export function LandscapePlayground({
     useLandscapeGeneration();
 
   const handlePromptSubmit = async (prompt: string) => {
-    if (!sourceImage) {
+    // For text_to_image mode, sourceImage is not required
+    if (mode === 'image_to_image' && !sourceImage) {
       return;
     }
 
     reset();
     await startGeneration({
       prompt,
-      sourceImage,
+      sourceImage: mode === 'image_to_image' ? sourceImage : undefined,
       style: selectedStyle,
     });
   };
@@ -45,11 +50,27 @@ export function LandscapePlayground({
     <div className="grid gap-8 lg:grid-cols-2">
       {/* Left Column - Input Controls */}
       <div className="space-y-6">
-        <ImageUpload
-          onImageSelect={setSourceImage}
-          selectedImage={sourceImage}
-          disabled={isLoading}
-        />
+        {/* Mode Tabs */}
+        <div className="rounded-lg border bg-card p-4">
+          <Tabs
+            value={mode}
+            onValueChange={(value) => setMode(value as GenerationMode)}
+          >
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="image_to_image">Image to Image</TabsTrigger>
+              <TabsTrigger value="text_to_image">Text to Image</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
+
+        {/* Image Upload - Only show for Image to Image mode */}
+        {mode === 'image_to_image' && (
+          <ImageUpload
+            onImageSelect={setSourceImage}
+            selectedImage={sourceImage}
+            disabled={isLoading}
+          />
+        )}
 
         <StyleSelect
           selectedStyle={selectedStyle}
@@ -59,7 +80,7 @@ export function LandscapePlayground({
 
         <PromptInput
           onSubmit={handlePromptSubmit}
-          disabled={isLoading || !sourceImage}
+          disabled={isLoading || (mode === 'image_to_image' && !sourceImage)}
           suggestions={suggestions}
           onRefreshSuggestions={handleRefreshSuggestions}
         />

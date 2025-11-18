@@ -1,11 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import type {
   GenerateLandscapeRequest,
   GenerateLandscapeResponse,
 } from '../lib/api-types';
 import type { LandscapeError, LandscapeResult } from '../lib/landscape-types';
-import { useState } from 'react';
 
 /**
  * Custom hook for managing landscape generation state and API calls
@@ -25,19 +25,27 @@ export function useLandscapeGeneration() {
     const startTime = performance.now();
 
     try {
-      const response = await fetch('/api/generate-landscape', {
+      // Use unified API
+      const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(request),
+        body: JSON.stringify({
+          type: 'landscape',
+          prompt: request.prompt,
+          style: request.style,
+          imageUrls: request.sourceImage ? [request.sourceImage] : undefined,
+          aspectRatio: '16:9',
+          enhancePrompt: true,
+        }),
       });
 
       const endTime = performance.now();
       const timeTaken = Math.round(endTime - startTime);
       setTiming(timeTaken);
 
-      const data: GenerateLandscapeResponse = await response.json();
+      const data = await response.json();
 
       if (!response.ok) {
         throw new Error(data.error || 'Generation failed');
@@ -49,11 +57,11 @@ export function useLandscapeGeneration() {
           error: data.error,
         });
         setResult({ error: data.error });
-      } else if (data.image) {
+      } else if (data.images && data.images.length > 0) {
         setResult({
           landscape: {
             id: `landscape-${Date.now()}`,
-            image: data.image,
+            image: data.images[0].url,
             modelId: request.modelId || 'default',
             prompt: request.prompt,
             sourceImage: request.sourceImage,

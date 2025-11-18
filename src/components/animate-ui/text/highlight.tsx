@@ -25,7 +25,7 @@ function HighlightText({
   className,
   inView = false,
   inViewMargin = '0px',
-  transition = { duration: 2, ease: 'easeInOut' },
+  transition = { duration: 2, ease: 'easeInOut' as const },
   ...props
 }: HighlightTextProps) {
   const localRef = React.useRef<HTMLSpanElement>(null);

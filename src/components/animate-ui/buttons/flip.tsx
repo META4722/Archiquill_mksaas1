@@ -27,7 +27,7 @@ const DEFAULT_SPAN_CLASS_NAME =
 function FlipButton({
   frontText,
   backText,
-  transition = { type: 'spring', stiffness: 280, damping: 20 },
+  transition = { type: 'spring' as const, stiffness: 280, damping: 20 },
   className,
   frontClassName,
   backClassName,

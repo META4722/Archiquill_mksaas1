@@ -15,7 +15,7 @@ export const websiteConfig: WebsiteConfig = {
     },
     mode: {
       defaultMode: 'light', // ArchiQuill - Light mode only
-      enableSwitch: false,  // Disabled for ArchiQuill
+      enableSwitch: false, // Disabled for ArchiQuill
     },
   },
   metadata: {
@@ -143,6 +143,7 @@ export const websiteConfig: WebsiteConfig = {
         popular: true,
         credits: {
           enable: false,
+          amount: 0,
         },
       },
       lifetime: {

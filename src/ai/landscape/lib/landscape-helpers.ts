@@ -33,11 +33,44 @@ export async function fileToBase64(file: File): Promise<string> {
  * Share or download landscape image
  */
 export async function shareOrDownload(
-  base64Image: string,
+  imageSource: string,
   fileName: string,
   title: string
 ): Promise<void> {
-  const blob = base64ToBlob(base64Image);
+  let blob: Blob;
+
+  // Check if it's a URL or base64
+  if (imageSource.startsWith('http://') || imageSource.startsWith('https://')) {
+    // It's a URL, fetch the image
+    try {
+      const response = await fetch(imageSource, {
+        mode: 'cors',
+        credentials: 'omit',
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch image');
+      }
+
+      blob = await response.blob();
+    } catch (error) {
+      console.error('Download failed, trying direct link:', error);
+      // Fallback: open in new tab
+      const a = document.createElement('a');
+      a.href = imageSource;
+      a.download = fileName;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      return;
+    }
+  } else {
+    // It's base64
+    blob = base64ToBlob(imageSource);
+  }
+
   const file = new File([blob], fileName, { type: 'image/png' });
 
   // Try Web Share API first (mobile-friendly)
@@ -78,7 +111,10 @@ export function generateLandscapeFileName(style: string): string {
 /**
  * Validate image file
  */
-export function validateImageFile(file: File): { valid: boolean; error?: string } {
+export function validateImageFile(file: File): {
+  valid: boolean;
+  error?: string;
+} {
   const maxSize = 10 * 1024 * 1024; // 10MB
   const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
 

@@ -1203,27 +1203,92 @@
     }
   },
   "AIGardenPage": {
-    "title": "AI 花园设计",
-    "description": "在几秒内从概念创建精美的花园可视化效果",
-    "subtitle": "上传您的花园草图或平面图，描述您的愿景，生成逼真的渲染图",
-    "badge": "AI 驱动花园渲染",
-    "uploadPlaceholder": "将花园草图拖放到此处，或点击浏览",
-    "promptPlaceholder": "描述您的花园设计（例如：英式乡村花园，配有多年生植物边界和攀缘玫瑰）",
-    "generateButton": "生成花园渲染图",
-    "generating": "生成中...",
+    "metadata": {
+      "title": "AI 花园设计 - ArchiQuill",
+      "description": "使用 AI 在几秒内从概念创建精美的花园可视化效果"
+    },
+    "hero": {
+      "badge": "AI 驱动花园设计",
+      "title": "AI 花园设计",
+      "description": "将您的花园概念转化为令人惊艳的可视化效果，支持多种风格选项",
+      "features": {
+        "fast": "秒级生成",
+        "ai": "AI 驱动",
+        "quality": "专业品质"
+      }
+    },
+    "playground": {
+      "title": "创建您的花园",
+      "generate": "生成设计",
+      "generating": "生成中...",
+      "credits": "积分"
+    },
+    "styleSelect": {
+      "title": "花园风格",
+      "selected": "已选择"
+    },
+    "upload": {
+      "label": "参考图片",
+      "optional": "可选",
+      "title": "上传参考图片",
+      "description": "拖放或点击上传（JPEG、PNG、WebP，最大 10MB）",
+      "button": "选择文件"
+    },
+    "aspectRatio": {
+      "label": "宽高比"
+    },
+    "prompt": {
+      "label": "描述您的花园",
+      "placeholder": "描述您的花园设计（例如：日式禅意花园，配有岩石、耙纹砾石和简约植物）",
+      "hint": "按 Enter 生成，Shift+Enter 换行"
+    },
+    "display": {
+      "generating": "正在生成您的花园设计...",
+      "pleaseWait": "这可能需要 30-60 秒",
+      "empty": {
+        "title": "尚无设计",
+        "description": "选择风格，添加描述，然后生成您的花园设计"
+      },
+      "generated": "{count, plural, other {已生成 # 个设计}}",
+      "timing": "耗时 {seconds} 秒",
+      "download": "下载"
+    },
+    "howItWorks": {
+      "title": "如何使用",
+      "steps": {
+        "1": {
+          "title": "选择风格",
+          "description": "从 6 种精美花园风格中选择"
+        },
+        "2": {
+          "title": "描述愿景",
+          "description": "添加参考图片（可选）并描述您的花园"
+        },
+        "3": {
+          "title": "生成",
+          "description": "AI 在几秒内创建专业花园可视化效果"
+        }
+      }
+    },
     "features": {
       "title": "完美适合花园设计师",
-      "feature1": {
-        "title": "即时可视化",
-        "description": "在几秒内向客户展示惊人的花园概念"
-      },
-      "feature2": {
-        "title": "季节变化",
-        "description": "生成您花园设计的不同季节视图"
-      },
-      "feature3": {
-        "title": "植物库",
-        "description": "AI 了解数百种植物物种及其特征"
+      "items": {
+        "0": {
+          "title": "多种风格",
+          "description": "选择日式禅意、英式庭院、现代简约、热带天堂、地中海和沙漠景观等风格"
+        },
+        "1": {
+          "title": "即时可视化",
+          "description": "在几秒内向客户展示惊人的花园概念"
+        },
+        "2": {
+          "title": "植物库",
+          "description": "AI 了解数百种植物物种及其特征"
+        },
+        "3": {
+          "title": "成本效益",
+          "description": "节省数小时的设计时间和可视化成本"
+        }
       }
     }
   }

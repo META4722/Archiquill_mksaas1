@@ -190,30 +190,30 @@
   /* ArchiQuill Color Scheme - Light Mode Only */
   /* Primary: #E9E5D9 (Beige Background), #A98950 (Gold Accent), #3C4242 (Dark Gray) */
 
-  --background: oklch(0.92 0.015 85);  /* #E9E5D9 - Warm beige */
-  --foreground: oklch(0.29 0.01 240);   /* #3C4242 - Dark gray text */
-  --card: oklch(0.95 0.01 85);          /* Slightly lighter beige for cards */
+  --background: oklch(0.92 0.015 85); /* #E9E5D9 - Warm beige */
+  --foreground: oklch(0.29 0.01 240); /* #3C4242 - Dark gray text */
+  --card: oklch(0.95 0.01 85); /* Slightly lighter beige for cards */
   --card-foreground: oklch(0.29 0.01 240);
   --popover: oklch(0.98 0.005 85);
   --popover-foreground: oklch(0.29 0.01 240);
-  --primary: oklch(0.62 0.08 75);       /* #A98950 - Gold */
-  --primary-foreground: oklch(0.98 0.005 85);  /* Light text on gold */
-  --secondary: oklch(0.88 0.015 85);    /* Muted beige */
+  --primary: oklch(0.62 0.08 75); /* #A98950 - Gold */
+  --primary-foreground: oklch(0.98 0.005 85); /* Light text on gold */
+  --secondary: oklch(0.88 0.015 85); /* Muted beige */
   --secondary-foreground: oklch(0.29 0.01 240);
   --muted: oklch(0.88 0.015 85);
   --muted-foreground: oklch(0.45 0.01 240);
-  --accent: oklch(0.62 0.08 75);        /* Gold accent */
+  --accent: oklch(0.62 0.08 75); /* Gold accent */
   --accent-foreground: oklch(0.98 0.005 85);
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.98 0.005 85);
-  --border: oklch(0.82 0.02 85);        /* Subtle border */
+  --border: oklch(0.82 0.02 85); /* Subtle border */
   --input: oklch(0.82 0.02 85);
-  --ring: oklch(0.62 0.08 75);          /* Gold ring */
-  --chart-1: oklch(0.62 0.08 75);       /* Gold */
-  --chart-2: oklch(0.45 0.01 240);      /* Dark gray */
-  --chart-3: oklch(0.72 0.06 75);       /* Light gold */
-  --chart-4: oklch(0.35 0.01 240);      /* Medium gray */
-  --chart-5: oklch(0.88 0.015 85);      /* Beige */
+  --ring: oklch(0.62 0.08 75); /* Gold ring */
+  --chart-1: oklch(0.62 0.08 75); /* Gold */
+  --chart-2: oklch(0.45 0.01 240); /* Dark gray */
+  --chart-3: oklch(0.72 0.06 75); /* Light gold */
+  --chart-4: oklch(0.35 0.01 240); /* Medium gray */
+  --chart-5: oklch(0.88 0.015 85); /* Beige */
   --sidebar: oklch(0.95 0.01 85);
   --sidebar-foreground: oklch(0.35 0.01 240);
   --sidebar-primary: oklch(0.62 0.08 75);

@@ -15,9 +15,7 @@ export default function BlogPreviewSection() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             {t('title')}
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t('subtitle')}
-          </p>
+          <p className="mt-4 text-lg text-muted-foreground">{t('subtitle')}</p>
         </div>
 
         <div className="flex justify-center">

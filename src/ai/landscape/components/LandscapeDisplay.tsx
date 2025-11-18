@@ -1,10 +1,5 @@
 'use client';
 
-import type { LandscapeResult } from '../lib/landscape-types';
-import {
-  generateLandscapeFileName,
-  shareOrDownload,
-} from '../lib/landscape-helpers';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -22,6 +17,11 @@ import {
   ShareIcon,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import {
+  generateLandscapeFileName,
+  shareOrDownload,
+} from '../lib/landscape-helpers';
+import type { LandscapeResult } from '../lib/landscape-types';
 
 interface LandscapeDisplayProps {
   result: LandscapeResult | null;
@@ -63,9 +63,7 @@ export function LandscapeDisplay({
           <div className="flex aspect-video w-full items-center justify-center rounded-lg bg-muted">
             <div className="flex flex-col items-center gap-3 text-center">
               <LoaderIcon className="size-8 animate-spin text-primary" />
-              <p className="text-sm text-muted-foreground">
-                {t('generating')}
-              </p>
+              <p className="text-sm text-muted-foreground">{t('generating')}</p>
             </div>
           </div>
         )}
@@ -86,9 +84,11 @@ export function LandscapeDisplay({
           <div className="space-y-3">
             <div className="overflow-hidden rounded-lg border">
               <img
-                src={result.landscape.image.startsWith('data:')
-                  ? result.landscape.image
-                  : `data:image/png;base64,${result.landscape.image}`}
+                src={
+                  result.landscape.image.startsWith('data:')
+                    ? result.landscape.image
+                    : `data:image/png;base64,${result.landscape.image}`
+                }
                 alt="Generated landscape"
                 className="h-full w-full object-contain"
               />

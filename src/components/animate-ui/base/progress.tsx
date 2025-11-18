@@ -48,7 +48,7 @@ type ProgressTrackProps = React.ComponentProps<
 
 function ProgressTrack({
   className,
-  transition = { type: 'spring', stiffness: 100, damping: 30 },
+  transition = { type: 'spring' as const, stiffness: 100, damping: 30 },
   ...props
 }: ProgressTrackProps) {
   const { value } = useProgress();

@@ -1,11 +1,11 @@
 'use client';
 
-import { fileToBase64, validateImageFile } from '../lib/landscape-helpers';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ImageIcon, UploadIcon, XIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useRef, useState } from 'react';
+import { fileToBase64, validateImageFile } from '../lib/landscape-helpers';
 
 interface ImageUploadProps {
   onImageSelect: (base64: string) => void;
@@ -125,9 +125,7 @@ export function ImageUpload({
               <ImageIcon className="size-8 text-muted-foreground" />
             </div>
             <div className="space-y-1">
-              <p className="text-sm font-medium">
-                {t('upload.title')}
-              </p>
+              <p className="text-sm font-medium">{t('upload.title')}</p>
               <p className="text-xs text-muted-foreground">
                 {t('upload.description')}
               </p>
@@ -155,9 +153,7 @@ export function ImageUpload({
         />
       </div>
 
-      {error && (
-        <p className="text-sm text-destructive">{error}</p>
-      )}
+      {error && <p className="text-sm text-destructive">{error}</p>}
     </div>
   );
 }

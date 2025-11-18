@@ -57,9 +57,7 @@ export function PromptInput({
           disabled={disabled}
           className="min-h-[100px] resize-none"
         />
-        <p className="text-xs text-muted-foreground">
-          {t('hint')}
-        </p>
+        <p className="text-xs text-muted-foreground">{t('hint')}</p>
       </div>
 
       {suggestions.length > 0 && (
@@ -97,7 +95,11 @@ export function PromptInput({
         </div>
       )}
 
-      <Button type="submit" disabled={disabled || !prompt.trim()} className="w-full">
+      <Button
+        type="submit"
+        disabled={disabled || !prompt.trim()}
+        className="w-full"
+      >
         {disabled ? t('generating') : t('submit')}
       </Button>
     </form>

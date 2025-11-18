@@ -1,0 +1,165 @@
+'use client';
+
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { Switch } from '@/components/ui/switch';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Textarea } from '@/components/ui/textarea';
+import { AlertCircle, Sparkles } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { useGardenGeneration } from '../hooks/use-garden-generation';
+import { GardenDisplay } from './GardenDisplay';
+import { ImageUpload } from './ImageUpload';
+
+type GenerationMode = 'image_to_image' | 'text_to_image';
+
+export function GardenPlayground() {
+	const t = useTranslations('AIGardenPage');
+	const { images, isLoading, error, timing, generateGarden } =
+		useGardenGeneration();
+
+	const [mode, setMode] = useState<GenerationMode>('text_to_image');
+	const [prompt, setPrompt] = useState('');
+	const [selectedImage, setSelectedImage] = useState('');
+	const [translatePrompt, setTranslatePrompt] = useState(false);
+
+	const handleGenerate = async () => {
+		if (!prompt.trim()) {
+			return;
+		}
+
+		try {
+			await generateGarden({
+				prompt: prompt.trim(),
+				style: 'modern',
+				imageUrl: selectedImage || undefined,
+				aspectRatio: '1:1',
+				enhancePrompt: true,
+			});
+		} catch (err) {
+			console.error('Generation failed:', err);
+		}
+	};
+
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+		if (e.key === 'Enter' && !e.shiftKey) {
+			e.preventDefault();
+			if (prompt.trim() && !isLoading) {
+				handleGenerate();
+			}
+		}
+	};
+
+	return (
+		<div className="grid gap-8 lg:grid-cols-2">
+			{/* Left Panel - Controls */}
+			<div className="space-y-6">
+				<div className="rounded-lg border bg-card p-6 shadow-sm">
+					{/* Mode Tabs */}
+					<Tabs
+						value={mode}
+						onValueChange={(value) => setMode(value as GenerationMode)}
+						className="mb-6"
+					>
+						<TabsList className="grid w-full grid-cols-2">
+							<TabsTrigger value="image_to_image">Image to Image</TabsTrigger>
+							<TabsTrigger value="text_to_image">Text to Image</TabsTrigger>
+						</TabsList>
+					</Tabs>
+
+					<h2 className="mb-6 text-xl font-bold">
+						{mode === 'image_to_image' ? 'Image to Image' : 'Text to Image'}
+					</h2>
+
+					<div className="space-y-6">
+						{/* Prompt Input - Moved to top */}
+						<div className="space-y-3">
+							<div className="flex items-center justify-between">
+								<Label htmlFor="prompt" className="text-sm font-medium">
+									Prompt
+								</Label>
+								<div className="flex items-center gap-2">
+									<Label
+										htmlFor="translate"
+										className="text-xs text-muted-foreground"
+									>
+										Translate Prompt
+									</Label>
+									<Switch
+										id="translate"
+										checked={translatePrompt}
+										onCheckedChange={setTranslatePrompt}
+										disabled={isLoading}
+									/>
+								</div>
+							</div>
+							<Textarea
+								id="prompt"
+								value={prompt}
+								onChange={(e) => setPrompt(e.target.value)}
+								onKeyDown={handleKeyDown}
+								placeholder="What do you want to create?"
+								disabled={isLoading}
+								className="min-h-[120px] resize-none"
+								maxLength={1500}
+							/>
+							<div className="flex items-center justify-between text-xs text-muted-foreground">
+								<span>{t('prompt.hint')}</span>
+								<span>{prompt.length} / 1500</span>
+							</div>
+						</div>
+
+						{/* Image Upload - Only for Image to Image mode */}
+						{mode === 'image_to_image' && (
+							<div className="space-y-3">
+								<Label className="text-sm font-medium">
+									{t('upload.label')}
+								</Label>
+								<ImageUpload
+									onImageSelect={setSelectedImage}
+									selectedImage={selectedImage}
+									disabled={isLoading}
+								/>
+							</div>
+						)}
+
+						{/* Error Display */}
+						{error && (
+							<Alert variant="destructive">
+								<AlertCircle className="size-4" />
+								<AlertDescription>{error}</AlertDescription>
+							</Alert>
+						)}
+
+						{/* Generate Button */}
+						<Button
+							onClick={handleGenerate}
+							disabled={isLoading || !prompt.trim()}
+							className="w-full"
+							size="lg"
+						>
+							{isLoading ? (
+								<>
+									<div className="mr-2 size-4 animate-spin rounded-full border-2 border-background border-t-transparent" />
+									{t('playground.generating')}
+								</>
+							) : (
+								<>
+									<Sparkles className="mr-2 size-4" />
+									{t('playground.generate')} (5 {t('playground.credits')})
+								</>
+							)}
+						</Button>
+					</div>
+				</div>
+			</div>
+
+			{/* Right Panel - Display */}
+			<div className="lg:sticky lg:top-6 lg:h-fit">
+				<GardenDisplay images={images} timing={timing} isLoading={isLoading} />
+			</div>
+		</div>
+	);
+}

@@ -81,7 +81,9 @@ export default async function AILandscapePage({ params }: Props) {
 
         {/* Features Section */}
         <div className="mt-12 space-y-6">
-          <h2 className="text-2xl font-semibold text-center">{t('features.title')}</h2>
+          <h2 className="text-2xl font-semibold text-center">
+            {t('features.title')}
+          </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-lg border bg-card p-4 text-center">
               <h3 className="font-medium">{t('features.feature1.title')}</h3>

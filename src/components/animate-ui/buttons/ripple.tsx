@@ -72,7 +72,7 @@ function RippleButton({
   variant,
   size,
   scale = 10,
-  transition = { duration: 0.6, ease: 'easeOut' },
+  transition = { duration: 0.6, ease: 'easeOut' as const },
   ...props
 }: RippleButtonProps) {
   const [ripples, setRipples] = React.useState<Ripple[]>([]);

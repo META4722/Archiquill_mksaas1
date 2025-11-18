@@ -1,13 +1,10 @@
+import AIToolsSection from '@/components/blocks/ai-tools/ai-tools';
 import BlogPreviewSection from '@/components/blocks/blog-preview/blog-preview';
 import CallToActionSection from '@/components/blocks/calltoaction/calltoaction';
 import DesignSoftwareSection from '@/components/blocks/design-software/design-software';
 import FaqSection from '@/components/blocks/faqs/faqs';
 import FeaturesSection from '@/components/blocks/features/features';
-import Features2Section from '@/components/blocks/features/features2';
-import Features3Section from '@/components/blocks/features/features3';
 import HeroSection from '@/components/blocks/hero/hero';
-import IntegrationSection from '@/components/blocks/integration/integration';
-import Integration2Section from '@/components/blocks/integration/integration2';
 import PricingSection from '@/components/blocks/pricing/pricing';
 import CrispChat from '@/components/layout/crisp-chat';
 import { NewsletterCard } from '@/components/newsletter/newsletter-card';
@@ -51,15 +48,9 @@ export default async function HomePage(props: HomePageProps) {
 
         <DesignSoftwareSection />
 
-        <IntegrationSection />
+        <AIToolsSection />
 
         <FeaturesSection />
-
-        <Features2Section />
-
-        <Features3Section />
-
-        <Integration2Section />
 
         <PricingSection />
 

@@ -103,6 +103,7 @@
     "dotted-map": "^2.2.3",
     "drizzle-orm": "^0.39.3",
     "embla-carousel-react": "^8.5.2",
+    "framer-motion": "^12.23.24",
     "fumadocs-core": "^16.0.4",
     "fumadocs-mdx": "^13.0.2",
     "fumadocs-ui": "^16.0.4",

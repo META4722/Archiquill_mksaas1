@@ -87,11 +87,32 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
       </Container>
 
       <div className="border-t py-8">
-        <Container className="px-4 flex items-center justify-between gap-x-4">
-          <span className="text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} {t('Metadata.name')} All Rights
-            Reserved.
-          </span>
+        <Container className="px-4 flex flex-col gap-y-4 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+            <span>
+              &copy; {new Date().getFullYear()} {t('Metadata.name')} All Rights
+              Reserved.
+            </span>
+            <span className="hidden md:inline">•</span>
+            <a
+              href="https://aitoolcenter.com/"
+              title="AI Tool Center"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              AI Tool Center
+            </a>
+            <span className="hidden md:inline">•</span>
+            <a
+              href="https://www.aimonstr.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              AIMonstr
+            </a>
+          </div>
 
           <div className="flex items-center gap-x-4">
             <ModeSwitcherHorizontal />

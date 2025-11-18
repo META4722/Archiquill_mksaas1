@@ -6,7 +6,7 @@ import type { RenderingStyle } from './landscape-types';
 
 export interface GenerateLandscapeRequest {
   prompt: string;
-  sourceImage: string; // base64 encoded
+  sourceImage?: string; // base64 encoded or URL (optional)
   style: RenderingStyle;
   modelId?: string;
 }

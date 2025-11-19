@@ -1,6 +1,6 @@
 import { GardenPlayground } from '@/ai/garden';
 import Container from '@/components/layout/container';
-import { CheckCircle2, ImageIcon, SparklesIcon, ZapIcon } from 'lucide-react';
+import { CheckCircle2, ImageIcon, SparklesIcon, TreesIcon, ZapIcon } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 interface PageProps {
@@ -147,6 +147,61 @@ export default async function GardenPage({ params }: PageProps) {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Popular Garden Types Section */}
+      <section className="border-t bg-muted/30 py-16">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-4 text-center text-3xl font-bold">
+              {t('gardenTypes.title')}
+            </h2>
+            <p className="mb-12 text-center text-muted-foreground">
+              {t('gardenTypes.description')}
+            </p>
+            <div className="space-y-8">
+              {['small', 'shade', 'cottage', 'rock', 'zen'].map((type) => (
+                <div key={type} className="rounded-lg border bg-card p-6">
+                  <h3 className="mb-3 text-xl font-semibold">
+                    {t(`gardenTypes.types.${type}.title`)}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {t(`gardenTypes.types.${type}.description`)}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* AI Workflow Enhancement Section */}
+      <section className="border-t py-16">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-4 text-center text-3xl font-bold">
+              {t('workflow.title')}
+            </h2>
+            <p className="mb-12 text-center text-muted-foreground">
+              {t('workflow.description')}
+            </p>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[0, 1, 2].map((i) => (
+                <div key={i} className="rounded-lg border bg-card p-6">
+                  <div className="mb-4 inline-flex size-12 items-center justify-center rounded-full bg-primary/10">
+                    <TreesIcon className="size-6 text-primary" />
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold">
+                    {t(`workflow.items.${i}.title`)}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {t(`workflow.items.${i}.description`)}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>

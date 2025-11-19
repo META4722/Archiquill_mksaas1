@@ -2,6 +2,7 @@ import { LandscapePlayground } from '@/ai/landscape/components/LandscapePlaygrou
 import { getRandomSuggestions } from '@/ai/landscape/lib/suggestions';
 import Container from '@/components/layout/container';
 import { constructMetadata } from '@/lib/metadata';
+import { TreesIcon } from 'lucide-react';
 import type { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
@@ -109,6 +110,31 @@ export default async function AILandscapePage({ params }: Props) {
                 {t('features.feature4.description')}
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* AI Workflow Enhancement Section */}
+        <div className="mt-12 space-y-6">
+          <h2 className="text-2xl font-semibold text-center">
+            {t('workflow.title')}
+          </h2>
+          <p className="text-center text-muted-foreground">
+            {t('workflow.description')}
+          </p>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="rounded-lg border bg-card p-6">
+                <div className="mb-4 inline-flex size-12 items-center justify-center rounded-full bg-primary/10">
+                  <TreesIcon className="size-6 text-primary" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold">
+                  {t(`workflow.items.${i}.title`)}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {t(`workflow.items.${i}.description`)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

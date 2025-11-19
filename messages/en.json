@@ -1118,11 +1118,11 @@
     "description": "MkSaaS lets you make AI SaaS in days, simply and effortlessly"
   },
   "AILandscapePage": {
-    "title": "AI Landscape Design",
-    "description": "Transform landscape sketches into photorealistic renderings in seconds",
+    "title": "Free AI Landscape Generator",
+    "description": "Transform landscape sketches into photorealistic renderings in seconds. Free to use, no login required.",
     "metadata": {
-      "title": "AI Landscape Design - ArchiQuill",
-      "description": "Transform landscape sketches into photorealistic renderings in seconds with AI"
+      "title": "Free AI Landscape Design Generator | No Login Required",
+      "description": "Generate photorealistic landscape renderings for free. No login required. Transform sketches into professional designs instantly."
     },
     "upload": {
       "title": "Upload Your Sketch",
@@ -1200,17 +1200,35 @@
         "title": "Cost Effective",
         "description": "Save hours of rendering time and costs"
       }
+    },
+    "workflow": {
+      "title": "Other Ways AI Can Enhance Your Design Workflow",
+      "description": "Discover our complete suite of AI design tools for comprehensive project visualization",
+      "items": {
+        "0": {
+          "title": "AI Garden Design",
+          "description": "Create stunning garden designs with AI assistance. Perfect for residential landscaping, garden planning, and outdoor space visualization with multiple style options."
+        },
+        "1": {
+          "title": "AI Exterior Design",
+          "description": "Generate photorealistic building exteriors and facade renderings. Ideal for architectural presentations, material selection, and showcasing design concepts to clients."
+        },
+        "2": {
+          "title": "AI Interior Design",
+          "description": "Transform interior concepts into beautiful visualizations. Perfect for space planning, furniture arrangements, and creating compelling interior design presentations."
+        }
+      }
     }
   },
   "AIGardenPage": {
     "metadata": {
-      "title": "AI Garden Design - ArchiQuill",
-      "description": "Create beautiful garden visualizations from your concepts in seconds with AI"
+      "title": "Free AI Garden Design Generator | No Login Required",
+      "description": "Create stunning garden designs instantly with our free AI generator. No login required. Transform ideas into beautiful visualizations."
     },
     "hero": {
       "badge": "AI-Powered Garden Design",
-      "title": "AI Garden Design",
-      "description": "Transform your garden concepts into stunning visualizations with multiple style options",
+      "title": "Free AI Garden Generator",
+      "description": "Transform your garden concepts into stunning visualizations with multiple style options. Free to use, no login required.",
       "features": {
         "fast": "Generate in Seconds",
         "ai": "AI-Powered",
@@ -1288,6 +1306,50 @@
         "3": {
           "title": "Cost Effective",
           "description": "Save hours of design time and visualization costs"
+        }
+      }
+    },
+    "gardenTypes": {
+      "title": "Popular Garden Types",
+      "description": "Explore different garden design styles with our AI garden design generator",
+      "types": {
+        "small": {
+          "title": "Small Gardens",
+          "description": "Create beautiful small garden designs perfect for compact spaces. Our AI garden generator helps you maximize every inch with clever layouts, vertical elements, and space-saving plant selections."
+        },
+        "shade": {
+          "title": "Shade Gardens",
+          "description": "Design stunning shade gardens with AI assistance. Generate realistic renderings featuring shade-loving plants, hostas, ferns, and forest-floor aesthetics perfect for low-light areas."
+        },
+        "cottage": {
+          "title": "Cottage Gardens",
+          "description": "Bring English cottage garden charm to life with our AI design tool. Generate romantic, informal layouts with mixed borders, climbing roses, and traditional cottage garden plants."
+        },
+        "rock": {
+          "title": "Rock Gardens",
+          "description": "Design alpine and rock gardens with natural stone features. Our AI generator creates authentic rock garden designs with drought-tolerant plants, gravel paths, and dramatic boulder arrangements."
+        },
+        "zen": {
+          "title": "Zen Gardens",
+          "description": "Create tranquil Japanese zen gardens with our AI design generator. Generate minimalist designs featuring raked gravel, carefully placed rocks, bamboo, and meditation spaces."
+        }
+      }
+    },
+    "workflow": {
+      "title": "Other Ways AI Can Enhance Your Design Workflow",
+      "description": "Explore our complete suite of AI design tools for every aspect of your projects",
+      "items": {
+        "0": {
+          "title": "AI Landscape Design",
+          "description": "Transform landscape sketches into photorealistic renderings. Perfect for large-scale landscape architecture projects, site planning, and outdoor space visualization."
+        },
+        "1": {
+          "title": "AI Exterior Rendering",
+          "description": "Generate stunning exterior building renderings from sketches. Ideal for architectural presentations, facade design, and client visualizations with realistic materials and lighting."
+        },
+        "2": {
+          "title": "AI Interior Design",
+          "description": "Create beautiful interior design visualizations instantly. Perfect for room layouts, furniture placement, and presenting design concepts to clients with photorealistic quality."
         }
       }
     }

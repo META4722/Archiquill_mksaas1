@@ -1150,7 +1150,7 @@
     },
     "prompt": {
       "label": "Describe Your Vision",
-      "placeholder": "Describe your landscape design (e.g., modern zen garden with water features and natural stone pathways)",
+      "placeholder": "Example: A serene landscape with rolling green hills, a winding stone pathway leading to a small pond, surrounded by mature oak trees and colorful wildflower meadows",
       "hint": "Press Enter to generate, Shift+Enter for new line",
       "suggestions": {
         "title": "Suggestions",
@@ -1239,7 +1239,7 @@
     },
     "prompt": {
       "label": "Describe Your Garden",
-      "placeholder": "Describe your garden design (e.g., Japanese zen garden with rocks, raked gravel, and minimal plants)",
+      "placeholder": "Example: A modern Japanese zen garden with smooth white pebbles, carefully raked patterns, minimalist rock arrangements, and a small bamboo water feature in the corner",
       "hint": "Press Enter to generate, Shift+Enter for new line"
     },
     "display": {

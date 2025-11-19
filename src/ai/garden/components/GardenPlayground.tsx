@@ -100,7 +100,7 @@ export function GardenPlayground() {
 								value={prompt}
 								onChange={(e) => setPrompt(e.target.value)}
 								onKeyDown={handleKeyDown}
-								placeholder="What do you want to create?"
+								placeholder="Example: A modern Japanese zen garden with smooth white pebbles, carefully raked patterns, minimalist rock arrangements, and a small bamboo water feature in the corner"
 								disabled={isLoading}
 								className="min-h-[120px] resize-none"
 								maxLength={1500}

@@ -83,6 +83,7 @@ export function LandscapePlayground({
           disabled={isLoading || (mode === 'image_to_image' && !sourceImage)}
           suggestions={suggestions}
           onRefreshSuggestions={handleRefreshSuggestions}
+          mode={mode}
         />
       </div>
 

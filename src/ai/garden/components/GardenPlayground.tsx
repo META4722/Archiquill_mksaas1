@@ -148,7 +148,10 @@ export function GardenPlayground() {
 							) : (
 								<>
 									<Sparkles className="mr-2 size-4" />
-									{t('playground.generate')} (5 {t('playground.credits')})
+									{mode === 'text_to_image'
+										? `${t('playground.generate')} (Free)`
+										: `${t('playground.generate')} (5 ${t('playground.credits')})`
+									}
 								</>
 							)}
 						</Button>

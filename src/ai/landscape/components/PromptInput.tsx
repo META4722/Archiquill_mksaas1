@@ -12,6 +12,7 @@ interface PromptInputProps {
   disabled?: boolean;
   suggestions?: string[];
   onRefreshSuggestions?: () => void;
+  mode?: 'image_to_image' | 'text_to_image';
 }
 
 export function PromptInput({
@@ -19,6 +20,7 @@ export function PromptInput({
   disabled,
   suggestions = [],
   onRefreshSuggestions,
+  mode = 'image_to_image',
 }: PromptInputProps) {
   const t = useTranslations('AILandscapePage.prompt');
   const [prompt, setPrompt] = useState('');
@@ -100,7 +102,12 @@ export function PromptInput({
         disabled={disabled || !prompt.trim()}
         className="w-full"
       >
-        {disabled ? t('generating') : t('submit')}
+        {disabled
+          ? t('generating')
+          : mode === 'text_to_image'
+            ? `${t('submit')} (Free)`
+            : `${t('submit')} (5 Credits)`
+        }
       </Button>
     </form>
   );

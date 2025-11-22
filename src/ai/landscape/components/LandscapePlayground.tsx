@@ -1,6 +1,8 @@
 'use client';
 
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useLandscapeGeneration } from '../hooks/use-landscape-generation';
 import type { RenderingStyle } from '../lib/landscape-types';
@@ -19,6 +21,10 @@ interface LandscapePlaygroundProps {
 export function LandscapePlayground({
   initialSuggestions,
 }: LandscapePlaygroundProps) {
+  const router = useRouter();
+  const { data: session } = authClient.useSession();
+  const isLoggedIn = !!session?.user;
+
   const [mode, setMode] = useState<GenerationMode>('image_to_image');
   const [sourceImage, setSourceImage] = useState<string>('');
   const [selectedStyle, setSelectedStyle] =
@@ -29,9 +35,16 @@ export function LandscapePlayground({
     useLandscapeGeneration();
 
   const handlePromptSubmit = async (prompt: string) => {
-    // For text_to_image mode, sourceImage is not required
-    if (mode === 'image_to_image' && !sourceImage) {
-      return;
+    // For image_to_image mode, require login
+    if (mode === 'image_to_image') {
+      if (!isLoggedIn) {
+        // Redirect to login page
+        router.push('/auth/login');
+        return;
+      }
+      if (!sourceImage) {
+        return;
+      }
     }
 
     reset();
@@ -84,6 +97,7 @@ export function LandscapePlayground({
           suggestions={suggestions}
           onRefreshSuggestions={handleRefreshSuggestions}
           mode={mode}
+          isLoggedIn={isLoggedIn}
         />
       </div>
 

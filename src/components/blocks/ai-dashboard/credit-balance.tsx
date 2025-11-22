@@ -1,41 +1,23 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Routes } from '@/routes';
-import { CoinsIcon, PlusIcon } from 'lucide-react';
+import { CoinsIcon } from 'lucide-react';
 import Link from 'next/link';
 
 interface CreditBalanceProps {
   credits: number;
-  showAddButton?: boolean;
 }
 
-export function CreditBalance({
-  credits,
-  showAddButton = true,
-}: CreditBalanceProps) {
+export function CreditBalance({ credits }: CreditBalanceProps) {
   return (
-    <div className="rounded-xl border bg-gradient-to-br from-primary/10 to-background p-6 shadow-sm">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div className="flex size-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <CoinsIcon className="size-6" />
-          </div>
-          <div>
-            <p className="text-sm text-muted-foreground">可用积分</p>
-            <p className="text-3xl font-bold">{credits.toLocaleString()}</p>
-          </div>
-        </div>
-
-        {showAddButton && (
-          <Button size="sm" asChild>
-            <Link href={Routes.SettingsCredits}>
-              <PlusIcon className="mr-2 size-4" />
-              购买积分
-            </Link>
-          </Button>
-        )}
+    <Link
+      href={Routes.SettingsCredits}
+      className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-card px-3 py-2 text-sm shadow-sm transition-colors hover:bg-accent"
+    >
+      <div className="flex items-center gap-1.5">
+        <span className="font-medium">{credits}</span>
+        <CoinsIcon className="size-3.5" />
       </div>
-    </div>
+    </Link>
   );
 }

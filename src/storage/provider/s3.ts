@@ -123,11 +123,11 @@ export class S3Provider implements StorageProvider {
         url = `${publicUrl.replace(/\/$/, '')}/${key}`;
         console.log('uploadFile, public url', url);
       } else {
-        // For s3mini, we construct the URL manually
-        // Since bucket is included in endpoint, we just append the key
+        // For R2 without custom domain, construct the public URL
+        // Format: https://<account-id>.r2.cloudflarestorage.com/<bucket>/<key>
         const baseUrl = this.config.endpoint?.replace(/\/$/, '') || '';
-        url = `${baseUrl}/${key}`;
-        console.log('uploadFile, constructed url', url);
+        url = `${baseUrl}/${this.config.bucketName}/${key}`;
+        console.log('uploadFile, constructed R2 url', url);
       }
 
       return { url, key };

@@ -1,7 +1,4 @@
-import {
-  consumeCredits,
-  hasEnoughCredits,
-} from '@/credits/credits';
+import { consumeCredits, hasEnoughCredits } from '@/credits/credits';
 import { auth } from '@/lib/auth';
 import { type NextRequest, NextResponse } from 'next/server';
 
@@ -122,7 +119,9 @@ async function pollTaskStatus(taskId: string): Promise<EvolinkTaskResponse> {
     }
 
     const taskData: EvolinkTaskResponse = await response.json();
-    console.log(`Polling attempt ${attempt + 1}: Status=${taskData.status}, Progress=${taskData.progress}`);
+    console.log(
+      `Polling attempt ${attempt + 1}: Status=${taskData.status}, Progress=${taskData.progress}`
+    );
 
     if (taskData.status === 'completed') {
       console.log('Task completed, returning data');
@@ -142,19 +141,7 @@ async function pollTaskStatus(taskId: string): Promise<EvolinkTaskResponse> {
 
 export async function POST(req: NextRequest) {
   try {
-    // 1. Authenticate user
-    const session = await auth.api.getSession({
-      headers: req.headers,
-    });
-
-    if (!session?.user?.id) {
-      return NextResponse.json(
-        { error: 'Unauthorized. Please log in.' },
-        { status: 401 }
-      );
-    }
-
-    // 2. Parse request body
+    // 1. Parse request body first to determine if it's a free request
     const body: GenerateImageRequest = await req.json();
     const { type, prompt, style, imageUrls, aspectRatio, enhancePrompt } = body;
 
@@ -173,21 +160,39 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 3. Check credit balance
-    const requiredCredits = CREDIT_COSTS[type];
-    const hasCredits = await hasEnoughCredits({
-      userId: session.user.id,
-      requiredCredits,
+    // Determine if this is a free text-to-image request (no imageUrls provided)
+    const isFreeTextToImage = !imageUrls || imageUrls.length === 0;
+
+    // 2. Authenticate user (only required for image-to-image)
+    const session = await auth.api.getSession({
+      headers: req.headers,
     });
 
-    if (!hasCredits) {
+    // For image-to-image (paid), require authentication
+    if (!isFreeTextToImage && !session?.user?.id) {
       return NextResponse.json(
-        {
-          error: 'Insufficient credits',
-          required: requiredCredits,
-        },
-        { status: 402 }
+        { error: 'Unauthorized. Please log in to use Image to Image.' },
+        { status: 401 }
       );
+    }
+
+    // 3. Check credit balance (only for image-to-image)
+    if (!isFreeTextToImage && session?.user?.id) {
+      const requiredCredits = CREDIT_COSTS[type];
+      const hasCredits = await hasEnoughCredits({
+        userId: session.user.id,
+        requiredCredits,
+      });
+
+      if (!hasCredits) {
+        return NextResponse.json(
+          {
+            error: 'Insufficient credits',
+            required: requiredCredits,
+          },
+          { status: 402 }
+        );
+      }
     }
 
     // 4. Enhance prompt if requested
@@ -212,7 +217,8 @@ export async function POST(req: NextRequest) {
         model: EVOLINK_MODEL,
         prompt: finalPrompt,
         size: mapAspectRatio(aspectRatio),
-        ...(validImageUrls && validImageUrls.length > 0 && { image_urls: validImageUrls }),
+        ...(validImageUrls &&
+          validImageUrls.length > 0 && { image_urls: validImageUrls }),
       }),
     });
 
@@ -235,21 +241,30 @@ export async function POST(req: NextRequest) {
     const completedTask = await pollTaskStatus(taskData.id);
 
     // Log the full response to debug
-    console.log('Completed task response:', JSON.stringify(completedTask, null, 2));
+    console.log(
+      'Completed task response:',
+      JSON.stringify(completedTask, null, 2)
+    );
 
     // Check for images in either results array or result.images
-    const generatedImageUrls = completedTask.results || completedTask.result?.images?.map(img => img.url) || [];
+    const generatedImageUrls =
+      completedTask.results ||
+      completedTask.result?.images?.map((img) => img.url) ||
+      [];
 
     if (generatedImageUrls.length === 0) {
       throw new Error('No images returned from generation');
     }
 
-    // 8. Consume credits after successful generation
-    await consumeCredits({
-      userId: session.user.id,
-      amount: requiredCredits,
-      description: `${type.charAt(0).toUpperCase() + type.slice(1)} image generation`,
-    });
+    // 8. Consume credits after successful generation (only for image-to-image)
+    const creditsUsed = isFreeTextToImage ? 0 : CREDIT_COSTS[type];
+    if (!isFreeTextToImage && session?.user?.id) {
+      await consumeCredits({
+        userId: session.user.id,
+        amount: CREDIT_COSTS[type],
+        description: `${type.charAt(0).toUpperCase() + type.slice(1)} image generation`,
+      });
+    }
 
     // 9. Return generated images
     return NextResponse.json({
@@ -262,7 +277,7 @@ export async function POST(req: NextRequest) {
         prompt: finalPrompt,
         style,
         aspectRatio: mapAspectRatio(aspectRatio),
-        creditsUsed: requiredCredits,
+        creditsUsed,
         createdAt: new Date().toISOString(),
       },
     });

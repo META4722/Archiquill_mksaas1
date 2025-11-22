@@ -509,12 +509,94 @@
     },
     "avatar": {
       "dashboard": "Dashboard",
+      "profile": "Profile",
       "billing": "Billing",
       "credits": "Credits",
-      "settings": "Settings"
+      "settings": "Settings",
+      "logout": "Log out"
     }
   },
   "Dashboard": {
+    "home": {
+      "title": "Home",
+      "welcome": "Welcome back, {name}",
+      "description": "Start creating beautiful designs with AI tools",
+      "aiTools": {
+        "title": "AI Design Tools",
+        "subtitle": "Choose an AI tool to start your creative journey",
+        "landscape": {
+          "title": "AI Landscape Design",
+          "description": "Transform sketches into professional landscape renderings"
+        },
+        "garden": {
+          "title": "AI Garden Design",
+          "description": "Generate beautiful garden designs in various styles"
+        },
+        "more": {
+          "title": "More AI Tools",
+          "description": "Stay tuned for more exciting AI design features"
+        }
+      },
+      "credits": {
+        "available": "Available Credits",
+        "buy": "Buy Credits"
+      },
+      "stats": {
+        "generatedThisMonth": "Generated This Month",
+        "creditsUsed": "Credits Used",
+        "savedWorks": "Saved Works"
+      },
+      "aiToolCard": {
+        "comingSoon": "Coming Soon",
+        "credits": "credits",
+        "startCreating": "Start Creating"
+      },
+      "unifiedGeneration": {
+        "toolGrid": {
+          "title": "AI Design Tools",
+          "subtitle": "Select a tool to start creating",
+          "exterior": "Exterior",
+          "interior": "Interior",
+          "landscape": "Landscape",
+          "garden": "Garden"
+        },
+        "styles": {
+          "photorealistic": "Photorealistic",
+          "artistic": "Artistic",
+          "conceptual": "Conceptual",
+          "technical": "Technical"
+        },
+        "controls": {
+          "styleLabel": "Rendering Style",
+          "uploadLabel": "Upload Image (Optional for Image-to-Image)",
+          "uploadTitle": "Click or drag to upload",
+          "uploadDescription": "JPEG, PNG, or WebP (max 10MB)",
+          "uploadButton": "Choose File",
+          "uploading": "Uploading...",
+          "promptLabel": "Describe your design",
+          "promptPlaceholder": {
+            "default": "Select a tool to start...",
+            "exterior": "Describe the exterior design you want to create (e.g., modern villa with glass facade, minimalist entrance...)",
+            "interior": "Describe the interior design you want to create (e.g., cozy living room with warm lighting, modern kitchen...)",
+            "landscape": "Describe the landscape design you want to create (e.g., zen garden with water features, modern park with pathways...)",
+            "garden": "Describe the garden design you want to create (e.g., colorful flower garden, vegetable garden with raised beds...)"
+          },
+          "aspectRatioLabel": "Aspect Ratio",
+          "generateButton": "Generate ({credits} credits)",
+          "generateButtonFree": "Generate (Free)",
+          "generating": "Generating...",
+          "selectToolFirst": "Please select a tool above to start"
+        },
+        "display": {
+          "loading": "Generating your design...",
+          "empty": "Your generated image will appear here",
+          "emptyDescription": "Select a tool and click generate to start creating",
+          "timing": "Generated in {time}s",
+          "download": "Download",
+          "share": "Share"
+        }
+      }
+    },
     "dashboard": {
       "title": "Dashboard"
     },

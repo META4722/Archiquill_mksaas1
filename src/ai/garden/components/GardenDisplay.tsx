@@ -18,38 +18,17 @@ export function GardenDisplay({
   const t = useTranslations('AIGardenPage.display');
 
   const handleDownload = async (imageUrl: string, index: number) => {
-    try {
-      // Try to fetch with cors mode first
-      const response = await fetch(imageUrl, {
-        mode: 'cors',
-        credentials: 'omit',
-      });
+    const filename = `garden-design-${Date.now()}-${index + 1}.png`;
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch image');
-      }
-
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `garden-design-${Date.now()}-${index + 1}.png`;
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-    } catch (error) {
-      console.error('Download failed, trying direct link:', error);
-      // Fallback: open image in new tab for manual download
-      const a = document.createElement('a');
-      a.href = imageUrl;
-      a.download = `garden-design-${Date.now()}-${index + 1}.png`;
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    }
+    // Direct download approach - works better with R2 CDN
+    const a = document.createElement('a');
+    a.href = imageUrl;
+    a.download = filename;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   };
 
   if (isLoading) {

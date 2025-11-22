@@ -13,6 +13,7 @@ interface PromptInputProps {
   suggestions?: string[];
   onRefreshSuggestions?: () => void;
   mode?: 'image_to_image' | 'text_to_image';
+  isLoggedIn?: boolean;
 }
 
 export function PromptInput({
@@ -21,6 +22,7 @@ export function PromptInput({
   suggestions = [],
   onRefreshSuggestions,
   mode = 'image_to_image',
+  isLoggedIn = false,
 }: PromptInputProps) {
   const t = useTranslations('AILandscapePage.prompt');
   const [prompt, setPrompt] = useState('');
@@ -106,8 +108,9 @@ export function PromptInput({
           ? t('generating')
           : mode === 'text_to_image'
             ? `${t('submit')} (Free)`
-            : `${t('submit')} (5 Credits)`
-        }
+            : isLoggedIn
+              ? `${t('submit')} (5 Credits)`
+              : t('submit')}
       </Button>
     </form>
   );

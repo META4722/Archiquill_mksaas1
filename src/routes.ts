@@ -28,9 +28,8 @@ export enum Routes {
   ForgotPassword = '/auth/forgot-password',
   ResetPassword = '/auth/reset-password',
 
-  // dashboard routes
+  // protected routes
   Home = '/home',
-  Dashboard = '/dashboard',
   AdminUsers = '/admin/users',
   SettingsProfile = '/settings/profile',
   SettingsBilling = '/settings/billing',
@@ -82,7 +81,6 @@ export const routesNotAllowedByLoggedInUsers = [Routes.Login, Routes.Register];
  */
 export const protectedRoutes = [
   Routes.Home,
-  Routes.Dashboard,
   Routes.AdminUsers,
   Routes.SettingsProfile,
   Routes.SettingsBilling,
@@ -96,4 +94,4 @@ export const protectedRoutes = [
  * The default redirect path after logging in
  */
 export const DEFAULT_LOGIN_REDIRECT =
-  websiteConfig.routes.defaultLoginRedirect ?? Routes.Dashboard;
+  websiteConfig.routes.defaultLoginRedirect ?? Routes.Home;

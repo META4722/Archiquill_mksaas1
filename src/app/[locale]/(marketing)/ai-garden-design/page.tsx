@@ -1,6 +1,12 @@
 import { GardenPlayground } from '@/ai/garden';
 import Container from '@/components/layout/container';
-import { CheckCircle2, ImageIcon, SparklesIcon, TreesIcon, ZapIcon } from 'lucide-react';
+import {
+  CheckCircle2,
+  ImageIcon,
+  SparklesIcon,
+  TreesIcon,
+  ZapIcon,
+} from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 interface PageProps {
@@ -29,10 +35,10 @@ export default async function GardenPage({ params }: PageProps) {
   return (
     <div className="flex flex-col">
       {/* Hero Section - Compact */}
-      <section className="border-b bg-gradient-to-b from-background to-muted/20 py-8">
+      <section className="border-b bg-gradient-to-b from-background to-muted/20 py-12 sm:py-16">
         <Container>
           <div className="text-center">
-            <h1 className="mb-3 text-3xl font-bold tracking-tight sm:text-4xl">
+            <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
               {t('hero.title')}
             </h1>
             <p className="text-base text-muted-foreground sm:text-lg">
@@ -43,7 +49,7 @@ export default async function GardenPage({ params }: PageProps) {
       </section>
 
       {/* Playground Section */}
-      <section className="py-12">
+      <section className="py-12 sm:py-16">
         <Container>
           <GardenPlayground />
         </Container>
@@ -163,16 +169,18 @@ export default async function GardenPage({ params }: PageProps) {
               {t('gardenTypes.description')}
             </p>
             <div className="space-y-8">
-              {['small', 'shade', 'cottage', 'rock', 'zen'].map((type) => (
-                <div key={type} className="rounded-lg border bg-card p-6">
-                  <h3 className="mb-3 text-xl font-semibold">
-                    {t(`gardenTypes.types.${type}.title`)}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {t(`gardenTypes.types.${type}.description`)}
-                  </p>
-                </div>
-              ))}
+              {(['small', 'shade', 'cottage', 'rock', 'zen'] as const).map(
+                (type) => (
+                  <div key={type} className="rounded-lg border bg-card p-6">
+                    <h3 className="mb-3 text-xl font-semibold">
+                      {t(`gardenTypes.types.${type}.title` as any)}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {t(`gardenTypes.types.${type}.description` as any)}
+                    </p>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </Container>
@@ -189,16 +197,16 @@ export default async function GardenPage({ params }: PageProps) {
               {t('workflow.description')}
             </p>
             <div className="grid gap-6 md:grid-cols-3">
-              {[0, 1, 2].map((i) => (
+              {([0, 1, 2] as const).map((i) => (
                 <div key={i} className="rounded-lg border bg-card p-6">
                   <div className="mb-4 inline-flex size-12 items-center justify-center rounded-full bg-primary/10">
                     <TreesIcon className="size-6 text-primary" />
                   </div>
                   <h3 className="mb-2 text-lg font-semibold">
-                    {t(`workflow.items.${i}.title`)}
+                    {t(`workflow.items.${i}.title` as any)}
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    {t(`workflow.items.${i}.description`)}
+                    {t(`workflow.items.${i}.description` as any)}
                   </p>
                 </div>
               ))}

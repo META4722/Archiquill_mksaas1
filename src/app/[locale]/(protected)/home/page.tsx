@@ -1,4 +1,7 @@
 import { AIDashboard } from '@/components/blocks/ai-dashboard';
+import { CreditBalance } from '@/components/blocks/ai-dashboard/credit-balance';
+import { UserMenu } from '@/components/dashboard/user-menu';
+import LocaleSwitcher from '@/components/layout/locale-switcher';
 import Container from '@/components/layout/container';
 import { getUserCredits } from '@/credits/credits';
 import { auth } from '@/lib/auth';
@@ -38,16 +41,19 @@ export default async function HomePage() {
   const credits = await getUserCredits(session.user.id);
 
   return (
-    <Container className="py-12">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold">
-          👋 欢迎回来, {session.user.name || session.user.email}
-        </h1>
-        <p className="mt-2 text-muted-foreground">
-          开始使用 AI 工具创作精美的设计作品
-        </p>
+    <Container className="py-8">
+      {/* Top Navigation Bar */}
+      <div className="mb-6 flex items-center justify-end gap-3">
+        <CreditBalance credits={credits} />
+        <LocaleSwitcher />
+        <UserMenu
+          userName={session.user.name}
+          userEmail={session.user.email}
+          userImage={session.user.image}
+        />
       </div>
 
+      {/* Main Content */}
       <AIDashboard userCredits={credits} />
     </Container>
   );

@@ -2,13 +2,14 @@
 
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { ImageIcon, UploadIcon, XIcon } from 'lucide-react';
+import { uploadBase64FromBrowser } from '@/storage/client';
+import { ImageIcon, Loader2Icon, UploadIcon, XIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useRef, useState } from 'react';
 import { fileToBase64, validateImageFile } from '../lib/landscape-helpers';
 
 interface ImageUploadProps {
-  onImageSelect: (base64: string) => void;
+  onImageSelect: (imageUrl: string) => void;
   selectedImage?: string;
   disabled?: boolean;
 }
@@ -21,23 +22,42 @@ export function ImageUpload({
   const t = useTranslations('AILandscapePage');
   const [isDragging, setIsDragging] = useState(false);
   const [error, setError] = useState<string>('');
+  const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFile = async (file: File) => {
     setError('');
+    setIsUploading(true);
 
     const validation = validateImageFile(file);
     if (!validation.valid) {
       setError(validation.error || 'Invalid file');
+      setIsUploading(false);
       return;
     }
 
     try {
+      // Convert file to base64 first
       const base64 = await fileToBase64(file);
-      onImageSelect(base64);
+
+      // Upload to R2 and get the URL
+      const uploadResult = await uploadBase64FromBrowser(base64, {
+        folder: 'landscape-sketches',
+        filename: file.name,
+      });
+
+      // Pass the R2 URL to parent component
+      onImageSelect(uploadResult.url);
+      console.log('Image uploaded to R2:', uploadResult.url);
     } catch (err) {
-      setError('Failed to process image. Please try again.');
+      const errorMessage =
+        err instanceof Error
+          ? err.message
+          : 'Failed to process image. Please try again.';
+      setError(errorMessage);
       console.error('Image processing error:', err);
+    } finally {
+      setIsUploading(false);
     }
   };
 
@@ -99,9 +119,16 @@ export function ImageUpload({
         onDrop={handleDrop}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
-        onClick={selectedImage ? undefined : handleClick}
+        onClick={selectedImage || isUploading ? undefined : handleClick}
       >
-        {selectedImage ? (
+        {isUploading ? (
+          <div className="flex flex-col items-center gap-2 text-center">
+            <div className="rounded-full bg-muted p-3">
+              <Loader2Icon className="size-8 text-muted-foreground animate-spin" />
+            </div>
+            <p className="text-sm font-medium">上传中...</p>
+          </div>
+        ) : selectedImage ? (
           <>
             <img
               src={selectedImage}

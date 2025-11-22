@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ArrowRightIcon, LockIcon } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
@@ -25,6 +26,7 @@ export function AIToolCard({
   comingSoon = false,
   className,
 }: AIToolCardProps) {
+  const t = useTranslations('Dashboard.home.aiToolCard');
   const CardContent = (
     <div
       className={cn(
@@ -48,11 +50,11 @@ export function AIToolCard({
           {comingSoon ? (
             <div className="flex items-center gap-1 rounded-full bg-muted px-3 py-1 text-xs font-medium">
               <LockIcon className="size-3" />
-              <span>即将推出</span>
+              <span>{t('comingSoon')}</span>
             </div>
           ) : (
             <div className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-              {credits} 积分
+              {credits} {t('credits')}
             </div>
           )}
         </div>
@@ -72,7 +74,7 @@ export function AIToolCard({
             asChild
           >
             <div>
-              <span>开始创作</span>
+              <span>{t('startCreating')}</span>
               <ArrowRightIcon className="size-4 transition-transform group-hover/btn:translate-x-1" />
             </div>
           </Button>

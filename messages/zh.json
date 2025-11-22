@@ -509,12 +509,94 @@
     },
     "avatar": {
       "dashboard": "工作台",
+      "profile": "个人资料",
       "billing": "账单",
       "credits": "积分",
-      "settings": "设置"
+      "settings": "设置",
+      "logout": "退出登录"
     }
   },
   "Dashboard": {
+    "home": {
+      "title": "主页",
+      "welcome": "欢迎回来，{name}",
+      "description": "开始使用 AI 工具创作精美的设计作品",
+      "aiTools": {
+        "title": "AI 设计工具",
+        "subtitle": "选择一个 AI 工具开始你的创作之旅",
+        "landscape": {
+          "title": "AI 景观设计",
+          "description": "将草图转换为专业的景观设计渲染图"
+        },
+        "garden": {
+          "title": "AI 花园设计",
+          "description": "生成多种风格的精美花园设计方案"
+        },
+        "more": {
+          "title": "更多 AI 工具",
+          "description": "敬请期待更多精彩的 AI 设计功能"
+        }
+      },
+      "credits": {
+        "available": "可用积分",
+        "buy": "购买积分"
+      },
+      "stats": {
+        "generatedThisMonth": "本月生成",
+        "creditsUsed": "积分消耗",
+        "savedWorks": "收藏作品"
+      },
+      "aiToolCard": {
+        "comingSoon": "即将推出",
+        "credits": "积分",
+        "startCreating": "开始创作"
+      },
+      "unifiedGeneration": {
+        "toolGrid": {
+          "title": "AI 设计工具",
+          "subtitle": "选择一个工具开始创作",
+          "exterior": "外观设计",
+          "interior": "室内设计",
+          "landscape": "景观设计",
+          "garden": "花园设计"
+        },
+        "styles": {
+          "photorealistic": "照片级写实",
+          "artistic": "艺术风格",
+          "conceptual": "概念设计",
+          "technical": "技术图纸"
+        },
+        "controls": {
+          "styleLabel": "渲染风格",
+          "uploadLabel": "上传图片（可选，用于图生图）",
+          "uploadTitle": "点击或拖拽上传",
+          "uploadDescription": "支持 JPEG、PNG 或 WebP（最大 10MB）",
+          "uploadButton": "选择文件",
+          "uploading": "上传中...",
+          "promptLabel": "描述你的设计",
+          "promptPlaceholder": {
+            "default": "请先选择一个工具...",
+            "exterior": "描述你想要创建的外观设计（例如：现代别墅，玻璃幕墙，简约入口...）",
+            "interior": "描述你想要创建的室内设计（例如：温馨客厅，暖色灯光，现代厨房...）",
+            "landscape": "描述你想要创建的景观设计（例如：禅意花园，水景特色，现代公园步道...）",
+            "garden": "描述你想要创建的花园设计（例如：色彩缤纷的花园，抬高式菜园...）"
+          },
+          "aspectRatioLabel": "图片比例",
+          "generateButton": "生成（{credits} 积分）",
+          "generateButtonFree": "生成（免费）",
+          "generating": "生成中...",
+          "selectToolFirst": "请先在上方选择一个工具"
+        },
+        "display": {
+          "loading": "正在生成你的设计...",
+          "empty": "生成的图片将显示在这里",
+          "emptyDescription": "选择一个工具并点击生成开始创作",
+          "timing": "生成用时 {time} 秒",
+          "download": "下载",
+          "share": "分享"
+        }
+      }
+    },
     "dashboard": {
       "title": "仪表盘"
     },

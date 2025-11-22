@@ -122,16 +122,16 @@ export default async function AILandscapePage({ params }: Props) {
             {t('workflow.description')}
           </p>
           <div className="grid gap-6 md:grid-cols-3">
-            {[0, 1, 2].map((i) => (
+            {([0, 1, 2] as const).map((i) => (
               <div key={i} className="rounded-lg border bg-card p-6">
                 <div className="mb-4 inline-flex size-12 items-center justify-center rounded-full bg-primary/10">
                   <TreesIcon className="size-6 text-primary" />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold">
-                  {t(`workflow.items.${i}.title`)}
+                  {t(`workflow.items.${i}.title` as any)}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  {t(`workflow.items.${i}.description`)}
+                  {t(`workflow.items.${i}.description` as any)}
                 </p>
               </div>
             ))}

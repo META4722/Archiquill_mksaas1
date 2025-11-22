@@ -1,5 +1,8 @@
 import { consumeCredits, hasEnoughCredits } from '@/credits/credits';
+import { getDb } from '@/db';
+import { userGeneration } from '@/db/schema';
 import { auth } from '@/lib/auth';
+import { nanoid } from 'nanoid';
 import { type NextRequest, NextResponse } from 'next/server';
 
 // Evolink AI API configuration
@@ -266,7 +269,29 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // 9. Return generated images
+    // 9. Save generation to database (only for logged-in users)
+    if (session?.user?.id) {
+      const db = await getDb();
+      const firstImageUrl = generatedImageUrls[0];
+      const sourceImageUrl =
+        validImageUrls && validImageUrls.length > 0
+          ? validImageUrls[0]
+          : undefined;
+
+      await db.insert(userGeneration).values({
+        id: nanoid(),
+        userId: session.user.id,
+        imageUrl: typeof firstImageUrl === 'string' ? firstImageUrl : firstImageUrl,
+        prompt: finalPrompt,
+        toolType: type,
+        style: style || 'realistic',
+        aspectRatio: mapAspectRatio(aspectRatio),
+        sourceImageUrl,
+        creditsUsed,
+      });
+    }
+
+    // 10. Return generated images
     return NextResponse.json({
       success: true,
       images: generatedImageUrls.map((url) => ({

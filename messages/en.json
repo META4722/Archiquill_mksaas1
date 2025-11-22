@@ -600,6 +600,12 @@
     "dashboard": {
       "title": "Dashboard"
     },
+    "create": {
+      "title": "Create"
+    },
+    "gallery": {
+      "title": "Gallery"
+    },
     "admin": {
       "title": "Admin",
       "users": {
@@ -1435,5 +1441,65 @@
         }
       }
     }
+  },
+  "Navigation": {
+    "home": "Home",
+    "create": "Create",
+    "gallery": "Gallery"
+  },
+  "DashboardHome": {
+    "title": "AI Design Tools",
+    "subtitle": "Choose a tool to get started with your architectural design",
+    "startCreating": "Start Creating",
+    "tools": {
+      "exterior": {
+        "title": "Exterior Rendering",
+        "description": "Transform building facades into photorealistic renderings",
+        "features": {
+          "0": "Professional facade visualization",
+          "1": "Realistic materials and lighting",
+          "2": "Perfect for client presentations"
+        }
+      },
+      "interior": {
+        "title": "Interior Design",
+        "description": "Create stunning interior space visualizations",
+        "features": {
+          "0": "Room layout and furniture placement",
+          "1": "Photorealistic interior renders",
+          "2": "Multiple design style options"
+        }
+      },
+      "landscape": {
+        "title": "Landscape Design",
+        "description": "Design beautiful outdoor spaces and gardens",
+        "features": {
+          "0": "Outdoor space visualization",
+          "1": "Plant and terrain rendering",
+          "2": "Seasonal variation support"
+        }
+      },
+      "garden": {
+        "title": "Garden Design",
+        "description": "Create lush garden and planting designs",
+        "features": {
+          "0": "Detailed garden layouts",
+          "1": "Plant species visualization",
+          "2": "Garden style customization"
+        }
+      }
+    }
+  },
+  "Gallery": {
+    "title": "My Creations",
+    "subtitle": "Browse and manage your AI-generated designs",
+    "empty": {
+      "title": "No creations yet",
+      "description": "Start creating stunning architectural renderings with our AI tools"
+    },
+    "generatedAt": "Generated {date}",
+    "downloadImage": "Download Image",
+    "deleteImage": "Delete",
+    "confirmDelete": "Are you sure you want to delete this image?"
   }
 }

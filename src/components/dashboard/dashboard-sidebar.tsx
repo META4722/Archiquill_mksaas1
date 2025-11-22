@@ -1,85 +1,67 @@
 'use client';
 
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '@/components/ui/collapsible';
+import { SidebarMain } from '@/components/dashboard/sidebar-main';
+import { SidebarUser } from '@/components/dashboard/sidebar-user';
 import {
   Sidebar,
   SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
+  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
   SidebarRail,
+  useSidebar,
 } from '@/components/ui/sidebar';
 import { useSidebarLinks } from '@/config/sidebar-config';
-import { websiteConfig } from '@/config/website';
 import { LocaleLink } from '@/i18n/navigation';
 import { authClient } from '@/lib/auth-client';
-import { cn } from '@/lib/utils';
 import { Routes } from '@/routes';
-import type { NestedMenuItem } from '@/types';
-import { ChevronRightIcon, LogOutIcon } from 'lucide-react';
-import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
-import type { ComponentProps } from 'react';
+import { useTranslations } from 'next-intl';
+import type * as React from 'react';
+import { useEffect, useState } from 'react';
+import { Logo } from '../layout/logo';
+import { UpgradeCard } from './upgrade-card';
 
-export function DashboardSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
-  const pathname = usePathname();
-  const router = useRouter();
-  const { data: session } = authClient.useSession();
+/**
+ * Dashboard sidebar
+ */
+export function DashboardSidebar({
+  ...props
+}: React.ComponentProps<typeof Sidebar>) {
+  const t = useTranslations();
+  const [mounted, setMounted] = useState(false);
+  const { data: session, isPending } = authClient.useSession();
+  const currentUser = session?.user;
+  const { state } = useSidebar();
+  // console.log('sidebar currentUser:', currentUser);
+
   const sidebarLinks = useSidebarLinks();
-
-  const handleSignOut = async () => {
-    await authClient.signOut({
-      fetchOptions: {
-        onSuccess: () => {
-          router.push('/');
-        },
-      },
-    });
-  };
-
-  // Filter links based on user role
-  const filteredLinks = sidebarLinks.filter((link) => {
-    if (!link.authorizeOnly) return true;
-    const userRole = session?.user?.role || 'user';
-    return link.authorizeOnly.includes(userRole);
+  const filteredSidebarLinks = sidebarLinks.filter((link) => {
+    if (link.authorizeOnly) {
+      return link.authorizeOnly.includes(currentUser?.role || '');
+    }
+    return true;
   });
 
-  const isActive = (href?: string) => {
-    if (!href) return false;
-    return pathname.includes(href);
-  };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <Sidebar collapsible="icon" className="overflow-hidden" {...props}>
+    <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
+            <SidebarMenuButton
+              asChild
+              className="data-[slot=sidebar-menu-button]:!p-1.5"
+            >
               <LocaleLink href={Routes.Root}>
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg">
-                  {websiteConfig.metadata.images?.logoLight && (
-                    <Image
-                      src={websiteConfig.metadata.images.logoLight}
-                      alt="ArchiQuill Logo"
-                      width={32}
-                      height={32}
-                      className="size-6"
-                    />
-                  )}
-                </div>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">ArchiQuill</span>
-                </div>
+                <Logo className="size-5" />
+                <span className="truncate font-semibold text-base">
+                  {t('Metadata.name')}
+                </span>
               </LocaleLink>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -87,95 +69,24 @@ export function DashboardSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
 
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupContent className="px-2">
-            <SidebarMenu>
-              {filteredLinks.map((item) => (
-                <NavItem key={item.title} item={item} isActive={isActive} />
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        {/* Sign Out */}
-        <SidebarGroup className="mt-auto">
-          <SidebarGroupContent className="px-2">
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton
-                  onClick={handleSignOut}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <LogOutIcon className="size-4" />
-                  <span>Sign Out</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        {!isPending && mounted && <SidebarMain items={filteredSidebarLinks} />}
       </SidebarContent>
 
+      <SidebarFooter className="flex flex-col gap-4">
+        {/* Only show UI components when not in loading state */}
+        {!isPending && mounted && (
+          <>
+            {/* show upgrade card if user is not a member, and sidebar is not collapsed */}
+            {currentUser && state !== 'collapsed' && <UpgradeCard />}
+
+            {/* show user profile if user is logged in */}
+            {currentUser && <SidebarUser user={currentUser} />}
+          </>
+        )}
+      </SidebarFooter>
+
+      {/* Rail for collapsing/expanding sidebar */}
       <SidebarRail />
     </Sidebar>
-  );
-}
-
-function NavItem({
-  item,
-  isActive,
-}: {
-  item: NestedMenuItem;
-  isActive: (href?: string) => boolean;
-}) {
-  if (item.items && item.items.length > 0) {
-    return (
-      <Collapsible asChild defaultOpen className="group/collapsible">
-        <SidebarMenuItem>
-          <CollapsibleTrigger asChild>
-            <SidebarMenuButton>
-              {item.icon}
-              <span>{item.title}</span>
-              <ChevronRightIcon className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
-            </SidebarMenuButton>
-          </CollapsibleTrigger>
-          <CollapsibleContent>
-            <SidebarMenuSub>
-              {item.items.map((subItem) => (
-                <SidebarMenuSubItem key={subItem.title}>
-                  <SidebarMenuSubButton
-                    asChild
-                    className={cn(
-                      isActive(subItem.href) &&
-                        'bg-accent text-accent-foreground'
-                    )}
-                  >
-                    <LocaleLink href={subItem.href || '#'}>
-                      {subItem.icon}
-                      <span>{subItem.title}</span>
-                    </LocaleLink>
-                  </SidebarMenuSubButton>
-                </SidebarMenuSubItem>
-              ))}
-            </SidebarMenuSub>
-          </CollapsibleContent>
-        </SidebarMenuItem>
-      </Collapsible>
-    );
-  }
-
-  return (
-    <SidebarMenuItem>
-      <SidebarMenuButton
-        asChild
-        className={cn(
-          isActive(item.href) && 'bg-accent text-accent-foreground'
-        )}
-      >
-        <LocaleLink href={item.href || '#'}>
-          {item.icon}
-          <span>{item.title}</span>
-        </LocaleLink>
-      </SidebarMenuButton>
-    </SidebarMenuItem>
   );
 }

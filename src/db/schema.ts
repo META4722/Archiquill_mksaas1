@@ -123,3 +123,21 @@ export const creditTransaction = pgTable("credit_transaction", {
 	creditTransactionUserIdIdx: index("credit_transaction_user_id_idx").on(table.userId),
 	creditTransactionTypeIdx: index("credit_transaction_type_idx").on(table.type),
 }));
+
+export const userGeneration = pgTable("user_generation", {
+	id: text("id").primaryKey(),
+	userId: text("user_id").notNull().references(() => user.id, { onDelete: 'cascade' }),
+	imageUrl: text("image_url").notNull(),
+	prompt: text("prompt").notNull(),
+	toolType: text("tool_type").notNull(), // 'exterior' | 'interior' | 'landscape' | 'garden'
+	style: text("style").notNull(), // 'photorealistic' | 'artistic' | 'conceptual' | 'technical'
+	aspectRatio: text("aspect_ratio").notNull(), // '1:1' | '4:3' | '3:4' | '16:9' | '9:16'
+	sourceImageUrl: text("source_image_url"), // Optional: for image-to-image generations
+	creditsUsed: integer("credits_used").notNull().default(0),
+	createdAt: timestamp("created_at").notNull().defaultNow(),
+	updatedAt: timestamp("updated_at").notNull().defaultNow(),
+}, (table) => ({
+	userGenerationUserIdIdx: index("user_generation_user_id_idx").on(table.userId),
+	userGenerationToolTypeIdx: index("user_generation_tool_type_idx").on(table.toolType),
+	userGenerationCreatedAtIdx: index("user_generation_created_at_idx").on(table.createdAt),
+}));

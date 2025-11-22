@@ -10,7 +10,7 @@ import React from 'react';
 export default function HeroSection() {
   const { data: session } = authClient.useSession();
   const isLoggedIn = !!session?.user;
-  const linkPrimary = isLoggedIn ? Routes.Home : Routes.Register;
+  const linkPrimary = isLoggedIn ? Routes.Create : Routes.Register;
 
   // Animation variants for the text content
   const FADE_IN_ANIMATION_VARIANTS = {

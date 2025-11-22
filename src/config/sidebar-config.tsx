@@ -8,10 +8,13 @@ import {
   CircleUserRoundIcon,
   CoinsIcon,
   CreditCardIcon,
+  HomeIcon,
+  ImageIcon,
   LockKeyholeIcon,
   Settings2Icon,
   SettingsIcon,
   UsersRoundIcon,
+  WandIcon,
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { websiteConfig } from './website';
@@ -33,6 +36,24 @@ export function useSidebarLinks(): NestedMenuItem[] {
   const isDemo = isDemoWebsite();
 
   return [
+    {
+      title: t('home.title'),
+      icon: <HomeIcon className="size-4 shrink-0" />,
+      href: Routes.Home,
+      external: false,
+    },
+    {
+      title: t('create.title'),
+      icon: <WandIcon className="size-4 shrink-0" />,
+      href: Routes.Create,
+      external: false,
+    },
+    {
+      title: t('gallery.title'),
+      icon: <ImageIcon className="size-4 shrink-0" />,
+      href: Routes.Gallery,
+      external: false,
+    },
     {
       title: t('admin.title'),
       icon: <SettingsIcon className="size-4 shrink-0" />,

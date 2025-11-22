@@ -600,6 +600,12 @@
     "dashboard": {
       "title": "仪表盘"
     },
+    "create": {
+      "title": "创作"
+    },
+    "gallery": {
+      "title": "作品集"
+    },
     "admin": {
       "title": "系统管理",
       "users": {
@@ -1435,5 +1441,65 @@
         }
       }
     }
+  },
+  "Navigation": {
+    "home": "首页",
+    "create": "创作",
+    "gallery": "画廊"
+  },
+  "DashboardHome": {
+    "title": "AI 设计工具",
+    "subtitle": "选择一个工具开始您的建筑设计之旅",
+    "startCreating": "开始创作",
+    "tools": {
+      "exterior": {
+        "title": "外观渲染",
+        "description": "将建筑外立面转换为逼真的渲染图",
+        "features": {
+          "0": "专业的外立面可视化",
+          "1": "逼真的材质和灯光",
+          "2": "完美的客户演示效果"
+        }
+      },
+      "interior": {
+        "title": "室内设计",
+        "description": "创建令人惊艳的室内空间可视化",
+        "features": {
+          "0": "房间布局和家具摆放",
+          "1": "照片级室内渲染",
+          "2": "多种设计风格选项"
+        }
+      },
+      "landscape": {
+        "title": "景观设计",
+        "description": "设计美丽的户外空间和花园",
+        "features": {
+          "0": "户外空间可视化",
+          "1": "植物和地形渲染",
+          "2": "支持季节变化"
+        }
+      },
+      "garden": {
+        "title": "花园设计",
+        "description": "创建郁郁葱葱的花园和种植设计",
+        "features": {
+          "0": "详细的花园布局",
+          "1": "植物物种可视化",
+          "2": "花园风格定制"
+        }
+      }
+    }
+  },
+  "Gallery": {
+    "title": "我的作品",
+    "subtitle": "浏览和管理您的 AI 生成设计",
+    "empty": {
+      "title": "还没有作品",
+      "description": "使用我们的 AI 工具开始创建令人惊艳的建筑渲染图"
+    },
+    "generatedAt": "生成于 {date}",
+    "downloadImage": "下载图片",
+    "deleteImage": "删除",
+    "confirmDelete": "确定要删除这张图片吗？"
   }
 }

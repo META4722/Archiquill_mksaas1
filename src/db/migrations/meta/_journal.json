@@ -50,6 +50,13 @@
       "when": 1758338199045,
       "tag": "0006_ambitious_annihilus",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1763798412928,
+      "tag": "0007_last_warbird",
+      "breakpoints": true
     }
   ]
 }

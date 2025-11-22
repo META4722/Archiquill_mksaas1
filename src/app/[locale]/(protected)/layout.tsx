@@ -9,6 +9,7 @@ import type { PropsWithChildren } from 'react';
 export default function DashboardLayout({ children }: PropsWithChildren) {
   return (
     <SidebarProvider
+      defaultOpen={false}
       style={
         {
           '--sidebar-width': 'calc(var(--spacing) * 72)',

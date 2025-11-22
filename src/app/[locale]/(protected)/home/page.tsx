@@ -112,7 +112,7 @@ export default async function HomePage() {
                         className="flex items-start gap-2 text-muted-foreground"
                       >
                         <span className="mt-0.5 text-primary">•</span>
-                        <span>{t(`tools.${tool.id}.features.${index}`)}</span>
+                        <span>{t(`tools.${tool.id}.features.${index}` as Parameters<typeof t>[0])}</span>
                       </li>
                     ))}
                   </ul>

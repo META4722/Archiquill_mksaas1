@@ -112,6 +112,20 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               AIMonstr
             </a>
+            <span className="hidden md:inline">•</span>
+            <a
+              href="https://askaiforit.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="https://askaiforit.com/badges/badge-3.svg"
+                alt="Listed on Ask AI For IT"
+                width="150"
+                className="h-auto"
+              />
+            </a>
           </div>
 
           <div className="flex items-center gap-x-4">

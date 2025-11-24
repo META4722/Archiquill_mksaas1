@@ -105,6 +105,7 @@ export const websiteConfig: WebsiteConfig = {
         credits: {
           enable: true,
           amount: 20,
+          expireDays: 30,
         },
       },
       basic: {

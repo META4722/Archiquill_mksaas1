@@ -71,15 +71,21 @@ export const auth = betterAuth({
       const locale = getLocaleFromRequest(request);
       const localizedUrl = getUrlWithLocaleInCallbackUrl(url, locale);
 
-      await sendEmail({
-        to: user.email,
-        template: 'verifyEmail',
-        context: {
-          url: localizedUrl,
-          name: user.name,
-        },
-        locale,
-      });
+      try {
+        await sendEmail({
+          to: user.email,
+          template: 'verifyEmail',
+          context: {
+            url: localizedUrl,
+            name: user.name,
+          },
+          locale,
+        });
+      } catch (error) {
+        console.error('Failed to send verification email:', error);
+        // Don't throw - allow registration to continue even if email fails
+        // User can request a new verification email later
+      }
     },
   },
   socialProviders: {

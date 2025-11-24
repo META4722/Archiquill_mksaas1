@@ -161,7 +161,10 @@ export const RegisterForm = ({
           // console.error('register, error:', ctx.error);
 
           // If user already exists, redirect to login page with the email pre-filled
-          if (ctx.error.status === 'UNPROCESSABLE_ENTITY' && ctx.error.message?.toLowerCase().includes('already exists')) {
+          if (
+            ctx.error.status === 422 &&
+            ctx.error.message?.toLowerCase().includes('already exists')
+          ) {
             // Redirect to login page with email parameter
             const loginUrl = getUrlWithLocale(Routes.Login, locale);
             const loginWithEmail = `${loginUrl}?email=${encodeURIComponent(values.email)}${callbackUrl ? `&callbackUrl=${encodeURIComponent(callbackUrl)}` : ''}`;

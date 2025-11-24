@@ -46,7 +46,8 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
     // https://www.better-auth.com/docs/concepts/email#2-require-email-verification
-    requireEmailVerification: true,
+    // Disable email verification in development if RESEND_API_KEY is not configured
+    requireEmailVerification: process.env.NODE_ENV === 'production' || !!process.env.RESEND_API_KEY,
     // https://www.better-auth.com/docs/authentication/email-password#forget-password
     async sendResetPassword({ user, url }, request) {
       const locale = getLocaleFromRequest(request);

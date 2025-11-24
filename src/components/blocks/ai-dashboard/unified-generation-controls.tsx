@@ -344,7 +344,7 @@ export function UnifiedGenerationControls({
             ) : (
               <>
                 <SparklesIcon className="mr-2 size-4" />
-                {uploadedImage ? t('generateButton') : t('generateButtonFree')}
+                {uploadedImage ? t('generateButton', { credits: 10 }) : t('generateButtonFree')}
               </>
             )}
           </Button>

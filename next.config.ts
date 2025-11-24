@@ -56,6 +56,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'tempfile.aiquickdraw.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.archiquill.com',
+      },
     ],
   },
 };

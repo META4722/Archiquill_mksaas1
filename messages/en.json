@@ -241,7 +241,8 @@
       "emailRequired": "Please enter your email",
       "passwordRequired": "Please enter your password",
       "captchaInvalid": "Captcha verification failed",
-      "captchaError": "Captcha verification error"
+      "captchaError": "Captcha verification error",
+      "emailAlreadyExists": "This email is already registered. Please login with your password."
     },
     "register": {
       "title": "Register",

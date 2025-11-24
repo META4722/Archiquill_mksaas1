@@ -43,6 +43,7 @@ export const LoginForm = ({
   const searchParams = useSearchParams();
   const urlError = searchParams.get('error');
   const paramCallbackUrl = searchParams.get('callbackUrl');
+  const emailParam = searchParams.get('email'); // Get email from URL params
   // Use prop callback URL or param callback URL if provided, otherwise use the default login redirect
   const locale = useLocale();
   const defaultCallbackUrl = getUrlWithLocale(DEFAULT_LOGIN_REDIRECT, locale);
@@ -57,6 +58,9 @@ export const LoginForm = ({
   const [isPending, setIsPending] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const captchaRef = useRef<any>(null);
+
+  // Show message if redirected from registration page due to existing email
+  const showExistingEmailMessage = !!emailParam;
 
   // Check if credential login is enabled
   const credentialLoginEnabled = websiteConfig.auth.enableCredentialLogin;
@@ -82,7 +86,7 @@ export const LoginForm = ({
   const form = useForm<z.infer<typeof LoginSchema>>({
     resolver: zodResolver(LoginSchema),
     defaultValues: {
-      email: '',
+      email: emailParam || '', // Pre-fill email if provided in URL
       password: '',
       captchaToken: '',
     },
@@ -249,6 +253,9 @@ export const LoginForm = ({
                 )}
               />
             </div>
+            {showExistingEmailMessage && (
+              <FormSuccess message={t('emailAlreadyExists')} />
+            )}
             <FormError message={error || urlError || undefined} />
             <FormSuccess message={success} />
             {captchaConfigured && (

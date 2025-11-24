@@ -241,7 +241,8 @@
       "emailRequired": "请输入邮箱",
       "passwordRequired": "请输入密码",
       "captchaInvalid": "验证码验证失败",
-      "captchaError": "验证码验证出错"
+      "captchaError": "验证码验证出错",
+      "emailAlreadyExists": "该邮箱已注册，请使用密码登录。"
     },
     "register": {
       "title": "注册",

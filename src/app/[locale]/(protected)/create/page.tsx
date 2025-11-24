@@ -1,8 +1,8 @@
 import { AIDashboard } from '@/components/blocks/ai-dashboard';
 import { CreditBalance } from '@/components/blocks/ai-dashboard/credit-balance';
 import { UserMenu } from '@/components/dashboard/user-menu';
-import LocaleSwitcher from '@/components/layout/locale-switcher';
 import Container from '@/components/layout/container';
+import LocaleSwitcher from '@/components/layout/locale-switcher';
 import { getUserCredits } from '@/credits/credits';
 import { auth } from '@/lib/auth';
 import { constructMetadata } from '@/lib/metadata';

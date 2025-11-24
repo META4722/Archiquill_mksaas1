@@ -158,12 +158,12 @@
   },
   "AboutPage": {
     "title": "关于我们",
-    "description": "MkSaaS 是一个使用最先进的技术栈构建的 AI SaaS 模板，它可以帮助你更快更好地构建你的 SaaS。如果你有任何问题，欢迎联系我。",
-    "authorName": "MkSaaS",
-    "authorBio": "最好的 AI SaaS 模板",
-    "introduction": "👋 你好，这里是 MkSaaS，一个使用最先进的技术栈构建的 AI SaaS 模板，它可以帮助你更快更好地构建你的 SaaS。如果你有任何问题，欢迎联系我。",
-    "talkWithMe": "联系我",
-    "followMe": "关注我"
+    "description": "ArchiQuill 使用AI技术将建筑草图在几秒钟内转换为专业渲染图。",
+    "authorName": "ArchiQuill",
+    "authorBio": "AI驱动的建筑渲染平台",
+    "introduction": "ArchiQuill 是一个AI驱动的建筑渲染平台，可以将草图转换为逼真的可视化图像。我们通过自动化渲染过程帮助建筑师专注于设计，将数小时的工作缩短为几秒钟。",
+    "talkWithMe": "联系我们",
+    "followMe": "关注我们"
   },
   "ChangelogPage": {
     "title": "更新日志",

@@ -153,13 +153,14 @@ export function useNavbarLinks(): NestedMenuItem[] {
           href: Routes.Contact,
           external: false,
         },
-        {
-          title: t('pages.items.waitlist.title'),
-          description: t('pages.items.waitlist.description'),
-          icon: <MailboxIcon className="size-4 shrink-0" />,
-          href: Routes.Waitlist,
-          external: false,
-        },
+        // Hidden: Waitlist page
+        // {
+        //   title: t('pages.items.waitlist.title'),
+        //   description: t('pages.items.waitlist.description'),
+        //   icon: <MailboxIcon className="size-4 shrink-0" />,
+        //   href: Routes.Waitlist,
+        //   external: false,
+        // },
         {
           title: t('pages.items.roadmap.title'),
           description: t('pages.items.roadmap.description'),
@@ -167,13 +168,14 @@ export function useNavbarLinks(): NestedMenuItem[] {
           href: Routes.Roadmap,
           external: false,
         },
-        {
-          title: t('pages.items.changelog.title'),
-          description: t('pages.items.changelog.description'),
-          icon: <ListChecksIcon className="size-4 shrink-0" />,
-          href: Routes.Changelog,
-          external: false,
-        },
+        // Hidden: Changelog page
+        // {
+        //   title: t('pages.items.changelog.title'),
+        //   description: t('pages.items.changelog.description'),
+        //   icon: <ListChecksIcon className="size-4 shrink-0" />,
+        //   href: Routes.Changelog,
+        //   external: false,
+        // },
         {
           title: t('pages.items.cookiePolicy.title'),
           description: t('pages.items.cookiePolicy.description'),

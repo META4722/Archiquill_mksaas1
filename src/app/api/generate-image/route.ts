@@ -281,7 +281,8 @@ export async function POST(req: NextRequest) {
       await db.insert(userGeneration).values({
         id: nanoid(),
         userId: session.user.id,
-        imageUrl: typeof firstImageUrl === 'string' ? firstImageUrl : firstImageUrl,
+        imageUrl:
+          typeof firstImageUrl === 'string' ? firstImageUrl : firstImageUrl,
         prompt: finalPrompt,
         toolType: type,
         style: style || 'realistic',

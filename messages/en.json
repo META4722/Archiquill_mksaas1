@@ -158,12 +158,12 @@
   },
   "AboutPage": {
     "title": "About",
-    "description": "This is MkSaaS, an AI SaaS template built with modern technologies, helping you build your SaaS faster and better.",
-    "authorName": "MkSaaS",
-    "authorBio": "AI SaaS Boilerplate",
-    "introduction": "👋 Hi there! This is MkSaaS, an AI SaaS template built with modern technologies, helping you build your SaaS faster and better. If you have any questions, welcome to contact me.",
-    "talkWithMe": "Talk with me",
-    "followMe": "Follow me on X"
+    "description": "ArchiQuill transforms architectural sketches into professional renderings in seconds using AI technology.",
+    "authorName": "ArchiQuill",
+    "authorBio": "AI-Powered Architectural Rendering",
+    "introduction": "ArchiQuill is an AI-powered architectural rendering platform that transforms sketches into photorealistic visualizations. We help architects focus on design by automating the rendering process, turning hours of work into seconds.",
+    "talkWithMe": "Contact Us",
+    "followMe": "Follow us on X"
   },
   "ChangelogPage": {
     "title": "Changelog",

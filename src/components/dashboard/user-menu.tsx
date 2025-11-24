@@ -9,9 +9,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Routes } from '@/routes';
 import { authClient } from '@/lib/auth-client';
-import { CreditCardIcon, LogOutIcon, SettingsIcon, UserIcon } from 'lucide-react';
+import { Routes } from '@/routes';
+import {
+  CreditCardIcon,
+  LogOutIcon,
+  SettingsIcon,
+  UserIcon,
+} from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -39,11 +44,7 @@ export function UserMenu({ userName, userEmail, userImage }: UserMenuProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="sm"
-          className="size-8 rounded-full p-0"
-        >
+        <Button variant="ghost" size="sm" className="size-8 rounded-full p-0">
           <UserAvatar
             name={userName || 'User'}
             image={userImage}

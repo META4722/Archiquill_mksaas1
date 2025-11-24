@@ -60,11 +60,12 @@ export function useFooterLinks(): NestedMenuItem[] {
               },
             ]
           : []),
-        {
-          title: t('resources.items.changelog'),
-          href: Routes.Changelog,
-          external: false,
-        },
+        // Hidden: Changelog page
+        // {
+        //   title: t('resources.items.changelog'),
+        //   href: Routes.Changelog,
+        //   external: false,
+        // },
         {
           title: t('resources.items.roadmap'),
           href: Routes.Roadmap,
@@ -85,11 +86,12 @@ export function useFooterLinks(): NestedMenuItem[] {
           href: Routes.Contact,
           external: false,
         },
-        {
-          title: t('company.items.waitlist'),
-          href: Routes.Waitlist,
-          external: false,
-        },
+        // Hidden: Waitlist page
+        // {
+        //   title: t('company.items.waitlist'),
+        //   href: Routes.Waitlist,
+        //   external: false,
+        // },
       ],
     },
     {

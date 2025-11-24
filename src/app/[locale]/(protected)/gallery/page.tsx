@@ -1,11 +1,11 @@
-import { UserMenu } from '@/components/dashboard/user-menu';
-import LocaleSwitcher from '@/components/layout/locale-switcher';
-import Container from '@/components/layout/container';
+import { getUserGenerations } from '@/actions/generations';
 import { CreditBalance } from '@/components/blocks/ai-dashboard/credit-balance';
+import { UserMenu } from '@/components/dashboard/user-menu';
+import Container from '@/components/layout/container';
+import LocaleSwitcher from '@/components/layout/locale-switcher';
 import { getUserCredits } from '@/credits/credits';
 import { auth } from '@/lib/auth';
 import { constructMetadata } from '@/lib/metadata';
-import { getUserGenerations } from '@/actions/generations';
 import type { Metadata } from 'next';
 import type { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -66,9 +66,7 @@ export default async function GalleryPage() {
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
             {t('title')}
           </h1>
-          <p className="mt-3 text-lg text-muted-foreground">
-            {t('subtitle')}
-          </p>
+          <p className="mt-3 text-lg text-muted-foreground">{t('subtitle')}</p>
         </div>
 
         {/* Gallery Grid */}

@@ -101,8 +101,23 @@ export function CheckoutButton({
       if (result?.data?.success && result.data.data?.url) {
         window.location.href = result.data.data?.url;
       } else {
-        console.error('Create checkout session error, result:', result);
-        toast.error(t('checkoutFailed'));
+        // 🔍 Enhanced error logging for production debugging
+        console.error('=== Stripe Checkout Error Details ===');
+        console.error('Full result:', JSON.stringify(result, null, 2));
+        console.error('Success:', result?.data?.success);
+        console.error('Error message:', result?.data?.error);
+        console.error('Server error:', result?.serverError);
+        console.error('Validation errors:', result?.validationErrors);
+        console.error('Plan ID:', planId);
+        console.error('Price ID:', priceId);
+        console.error('User ID:', userId);
+        console.error('====================================');
+
+        // Show user-friendly error message with specific details when available
+        const errorMessage = result?.data?.error ||
+                           result?.serverError?.message ||
+                           t('checkoutFailed');
+        toast.error(errorMessage);
       }
     } catch (error) {
       console.error('Create checkout session error:', error);

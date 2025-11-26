@@ -279,12 +279,36 @@ export class StripeProvider implements PaymentProvider {
       const session =
         await this.stripe.checkout.sessions.create(checkoutParams);
 
+      console.log('✅ Stripe checkout session created:', session.id);
       return {
         url: session.url!,
         id: session.id,
       };
     } catch (error) {
-      console.error('Create checkout session error:', error);
+      // 🔍 Enhanced error logging for production debugging
+      console.error('=== Stripe Provider Error ===');
+      console.error('Error:', error);
+      console.error('Error message:', error instanceof Error ? error.message : 'Unknown error');
+      console.error('Plan ID:', planId);
+      console.error('Price ID:', priceId);
+      console.error('Customer Email:', customerEmail);
+      console.error('Stripe API Key configured:', !!process.env.STRIPE_SECRET_KEY);
+      console.error('Webhook Secret configured:', !!process.env.STRIPE_WEBHOOK_SECRET);
+
+      // Log specific Stripe API errors
+      if (error && typeof error === 'object' && 'type' in error) {
+        const stripeError = error as Stripe.StripeError;
+        console.error('Stripe Error Type:', stripeError.type);
+        console.error('Stripe Error Code:', stripeError.code);
+        console.error('Stripe Error Message:', stripeError.message);
+        console.error('Stripe Request ID:', stripeError.requestId);
+      }
+      console.error('============================');
+
+      // Throw more specific error messages
+      if (error instanceof Error) {
+        throw error;
+      }
       throw new Error('Failed to create checkout session');
     }
   }

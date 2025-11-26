@@ -77,13 +77,25 @@ export const createCheckoutAction = userActionClient
       };
 
       const result = await createCheckout(params);
-      // console.log('create checkout session result:', result);
+      console.log('✅ Checkout session created successfully');
       return {
         success: true,
         data: result,
       };
     } catch (error) {
-      console.error('create checkout session error:', error);
+      // 🔍 Enhanced error logging for production debugging
+      console.error('=== Create Checkout Session Error ===');
+      console.error('Error:', error);
+      console.error('Plan ID:', planId);
+      console.error('Price ID:', priceId);
+      console.error('User ID:', currentUser.id);
+      console.error('User Email:', currentUser.email);
+      console.error('Stripe Secret Key exists:', !!process.env.STRIPE_SECRET_KEY);
+      console.error('Stripe Secret Key starts with sk_live_:', process.env.STRIPE_SECRET_KEY?.startsWith('sk_live_'));
+      console.error('Stripe Secret Key starts with sk_test_:', process.env.STRIPE_SECRET_KEY?.startsWith('sk_test_'));
+      console.error('Webhook Secret exists:', !!process.env.STRIPE_WEBHOOK_SECRET);
+      console.error('====================================');
+
       return {
         success: false,
         error: error instanceof Error ? error.message : 'Something went wrong',

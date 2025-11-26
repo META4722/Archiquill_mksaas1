@@ -114,9 +114,7 @@ export function CheckoutButton({
         console.error('====================================');
 
         // Show user-friendly error message with specific details when available
-        const errorMessage = result?.data?.error ||
-                           result?.serverError?.message ||
-                           t('checkoutFailed');
+        const errorMessage = result?.data?.error || t('checkoutFailed');
         toast.error(errorMessage);
       }
     } catch (error) {

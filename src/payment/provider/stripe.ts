@@ -297,7 +297,7 @@ export class StripeProvider implements PaymentProvider {
 
       // Log specific Stripe API errors
       if (error && typeof error === 'object' && 'type' in error) {
-        const stripeError = error as Stripe.StripeError;
+        const stripeError = error as any;
         console.error('Stripe Error Type:', stripeError.type);
         console.error('Stripe Error Code:', stripeError.code);
         console.error('Stripe Error Message:', stripeError.message);

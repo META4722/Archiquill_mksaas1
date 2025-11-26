@@ -53,32 +53,32 @@ export const ForgotPasswordForm = ({ className }: { className?: string }) => {
   }, [searchParams, form]);
 
   const onSubmit = async (values: z.infer<typeof ForgotPasswordSchema>) => {
-    await authClient.forgetPassword(
-      {
-        email: values.email,
-        redirectTo: `${Routes.ResetPassword}`,
-      },
-      {
-        onRequest: (ctx) => {
-          // console.log('forgotPassword, request:', ctx.url);
-          setIsPending(true);
-          setError('');
-          setSuccess('');
-        },
-        onResponse: (ctx) => {
-          // console.log('forgotPassword, response:', ctx.response);
-          setIsPending(false);
-        },
-        onSuccess: (ctx) => {
-          // console.log('forgotPassword, success:', ctx.data);
-          setSuccess(t('checkEmail'));
-        },
-        onError: (ctx) => {
-          console.error('forgotPassword, error:', ctx.error);
-          setError(`${ctx.error.status}: ${ctx.error.message}`);
-        },
+    setIsPending(true);
+    setError('');
+    setSuccess('');
+
+    try {
+      const response = await fetch('/api/auth/forget-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: values.email,
+          redirectTo: `${Routes.ResetPassword}`,
+        }),
+      });
+
+      if (response.ok) {
+        setSuccess(t('checkEmail'));
+      } else {
+        const data = await response.json();
+        setError(data.message || 'Failed to send reset email');
       }
-    );
+    } catch (error) {
+      console.error('forgotPassword error:', error);
+      setError('An error occurred. Please try again.');
+    } finally {
+      setIsPending(false);
+    }
   };
 
   return (

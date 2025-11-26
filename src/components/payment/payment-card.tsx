@@ -89,15 +89,31 @@ export function PaymentCard() {
       const handleRedirect = async () => {
         // Invalidate relevant cache based on callback destination
         if (callback === Routes.SettingsCredits) {
-          // Invalidate and refetch credits related queries
+          // Invalidate and refetch credits related queries multiple times
+          // to ensure we catch the webhook update
           await queryClient.invalidateQueries({
             queryKey: ['credits'],
           });
-          // Wait for the refetch to complete
+
+          // Refetch immediately
           await queryClient.refetchQueries({
             queryKey: ['credits'],
           });
-          console.log('Refetched credits cache for credits page');
+          console.log('Refetched credits cache (attempt 1)');
+
+          // Wait 1 second and refetch again in case webhook was slow
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          await queryClient.refetchQueries({
+            queryKey: ['credits'],
+          });
+          console.log('Refetched credits cache (attempt 2)');
+
+          // Wait another 2 seconds and final refetch
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          await queryClient.refetchQueries({
+            queryKey: ['credits'],
+          });
+          console.log('Refetched credits cache (attempt 3)');
         } else if (callback === Routes.SettingsBilling) {
           // Invalidate and refetch payment/subscription related queries
           await queryClient.invalidateQueries({

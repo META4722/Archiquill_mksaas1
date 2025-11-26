@@ -31,13 +31,13 @@ export default function CreditsCard() {
   const t = useTranslations('Dashboard.settings.credits.balance');
   const mounted = useMounted();
 
-  // Use TanStack Query hooks for credits
+  // Use TanStack Query hooks for credits with auto-refresh every 5 seconds
   const {
     data: balance = 0,
     isLoading: isLoadingBalance,
     error: balanceError,
     refetch: refetchBalance,
-  } = useCreditBalance();
+  } = useCreditBalance({ refetchInterval: 5000 });
 
   // TanStack Query hook for credit statistics
   const {

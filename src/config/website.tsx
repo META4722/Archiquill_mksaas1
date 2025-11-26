@@ -143,8 +143,9 @@ export const websiteConfig: WebsiteConfig = {
         isLifetime: false,
         popular: true,
         credits: {
-          enable: false,
-          amount: 0,
+          enable: true,
+          amount: 10000, // Pro订阅后增加10000积分
+          expireDays: 30,
         },
       },
       lifetime: {

@@ -15,8 +15,8 @@ export function CreditsBalanceButton() {
 
   const router = useLocaleRouter();
 
-  // Use TanStack Query hook for credit balance
-  const { data: balance = 0, isLoading } = useCreditBalance();
+  // Use TanStack Query hook for credit balance with auto-refresh every 10 seconds
+  const { data: balance = 0, isLoading } = useCreditBalance({ refetchInterval: 10000 });
 
   const handleClick = () => {
     router.push(Routes.SettingsCredits);

@@ -24,8 +24,8 @@ export const creditsKeys = {
   }) => [...creditsKeys.transactions(), filters] as const,
 };
 
-// Hook to fetch credit balance
-export function useCreditBalance() {
+// Hook to fetch credit balance with optional refetch interval
+export function useCreditBalance(options?: { refetchInterval?: number }) {
   return useQuery({
     queryKey: creditsKeys.balance(),
     queryFn: async () => {
@@ -40,6 +40,12 @@ export function useCreditBalance() {
       console.log('Credit balance fetched:', result.data.credits);
       return result.data.credits || 0;
     },
+    // Add refetch interval for automatic updates
+    refetchInterval: options?.refetchInterval,
+    // Refetch on window focus to catch updates when user returns
+    refetchOnWindowFocus: true,
+    // Keep data fresh
+    staleTime: 0,
   });
 }
 

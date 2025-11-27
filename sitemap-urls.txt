@@ -1,0 +1,59 @@
+# ArchiQuill Sitemap URLs - 完整列表
+# 生成日期: 2025-11-27
+# 总计: 22 个 URL (11 英文 + 11 中文)
+
+# ============================================
+# 主要页面 (Main Pages)
+# ============================================
+
+# 英文版
+https://archiquill.com/
+https://archiquill.com/pricing
+https://archiquill.com/about
+https://archiquill.com/contact
+
+# 中文版
+https://archiquill.com/zh/
+https://archiquill.com/zh/pricing
+https://archiquill.com/zh/about
+https://archiquill.com/zh/contact
+
+# ============================================
+# 认证页面 (Authentication Pages)
+# ============================================
+
+# 英文版
+https://archiquill.com/auth/login
+https://archiquill.com/auth/register
+
+# 中文版
+https://archiquill.com/zh/auth/login
+https://archiquill.com/zh/auth/register
+
+# ============================================
+# AI 功能页面 (AI Features)
+# ============================================
+
+# 英文版
+https://archiquill.com/ai-landscape-design
+https://archiquill.com/ai-garden-design
+
+# 中文版
+https://archiquill.com/zh/ai-landscape-design
+https://archiquill.com/zh/ai-garden-design
+
+# ============================================
+# 博客页面 (Blog)
+# ============================================
+
+# 博客首页
+https://archiquill.com/blog
+https://archiquill.com/zh/blog
+
+# 博客文章
+https://archiquill.com/blog/welcome-to-archiquill
+https://archiquill.com/zh/blog/welcome-to-archiquill
+
+# 博客分类
+https://archiquill.com/blog/category/announcement
+https://archiquill.com/zh/blog/category/announcement

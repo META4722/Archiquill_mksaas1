@@ -21,7 +21,7 @@ export default function ClarityAnalytics() {
   return (
     <Script
       id="microsoft-clarity-init"
-      strategy="afterInteractive"
+      strategy="lazyOnload"
       // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{
         __html: `

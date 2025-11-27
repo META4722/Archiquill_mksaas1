@@ -1,0 +1,9 @@
+# Browsers that we support for optimal performance
+# This reduces bundle size by targeting modern browsers only
+
+# Modern browsers with ES2020+ support
+> 0.5%
+last 2 versions
+not dead
+not IE 11
+not op_mini all

@@ -28,5 +28,6 @@ export const routing = defineRouting({
   },
   // The prefix to use for the locale in the URL
   // https://next-intl.dev/docs/routing#locale-prefix
-  localePrefix: 'always',
+  // 'as-needed': Default locale (en) has no prefix, others (zh) have prefix
+  localePrefix: 'as-needed',
 });

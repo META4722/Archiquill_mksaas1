@@ -13,17 +13,21 @@ type Href = Parameters<typeof getLocalePathname>[0]['href'];
  * static routes for sitemap, you may change the routes for your own
  */
 const staticRoutes = [
+  // Main pages
   '/',
   '/pricing',
   '/about',
   '/contact',
-  '/waitlist',
-  '/changelog',
-  '/privacy',
-  '/terms',
-  '/cookie',
+
+  // Auth pages
   '/auth/login',
   '/auth/register',
+
+  // AI features (public marketing pages)
+  '/ai-landscape-design',
+  '/ai-garden-design',
+
+  // Conditionally add blog and docs
   ...(websiteConfig.blog.enable ? ['/blog'] : []),
   ...(websiteConfig.docs.enable ? ['/docs'] : []),
 ];

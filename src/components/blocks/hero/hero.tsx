@@ -5,6 +5,7 @@ import { authClient } from '@/lib/auth-client';
 import { cn } from '@/lib/utils';
 import { Routes } from '@/routes';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import React from 'react';
 
 export default function HeroSection() {
@@ -130,10 +131,14 @@ export default function HeroSection() {
                 rotate: `${index % 2 === 0 ? -2 : 5}deg`,
               }}
             >
-              <img
+              <Image
                 src={src}
                 alt={`ArchiQuill showcase ${index + 1}`}
-                className="w-full h-full object-cover rounded-2xl shadow-md"
+                fill
+                sizes="(max-width: 768px) 192px, 256px"
+                className="object-cover rounded-2xl shadow-md"
+                quality={85}
+                priority={index < 2}
               />
             </div>
           ))}

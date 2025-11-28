@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 import { useState } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -62,10 +63,13 @@ export const Compare = ({
     >
       {/* Second Image (Background) */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src={secondImage}
           alt="Second"
-          className={cn('h-full w-full', secondImageClassname)}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+          className={cn('object-cover', secondImageClassname)}
+          quality={85}
         />
       </div>
 
@@ -76,10 +80,14 @@ export const Compare = ({
           clipPath: `inset(0 ${100 - sliderXPercent}% 0 0)`,
         }}
       >
-        <img
+        <Image
           src={firstImage}
           alt="First"
-          className={cn('h-full w-full', firstImageClassName)}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+          className={cn('object-cover', firstImageClassName)}
+          quality={85}
+          priority
         />
       </div>
 

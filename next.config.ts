@@ -125,6 +125,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'img.archiquill.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.prod.website-files.com',
+      },
     ],
   },
 };

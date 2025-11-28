@@ -69,7 +69,7 @@ export const Compare = ({
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
           className={cn('object-cover', secondImageClassname)}
-          quality={85}
+          quality={75}
         />
       </div>
 
@@ -86,7 +86,7 @@ export const Compare = ({
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
           className={cn('object-cover', firstImageClassName)}
-          quality={85}
+          quality={75}
           priority
         />
       </div>

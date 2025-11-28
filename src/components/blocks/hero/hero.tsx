@@ -137,7 +137,7 @@ export default function HeroSection() {
                 fill
                 sizes="(max-width: 768px) 192px, 256px"
                 className="object-cover rounded-2xl shadow-md"
-                quality={85}
+                quality={75}
                 priority={index < 2}
               />
             </div>

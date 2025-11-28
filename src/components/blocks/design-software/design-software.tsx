@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const designSoftware = [
   {
     id: 1,
@@ -54,19 +56,13 @@ export default function DesignSoftwareSection() {
                 className="flex flex-col items-center group"
               >
                 <div className="relative w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110">
-                  <img
+                  <Image
                     src={software.logo}
                     alt={`${software.name} logo`}
-                    className="w-full h-full object-contain transition-all duration-300"
-                    onError={(e) => {
-                      // Fallback to a simple text display if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.innerHTML = `<div class="w-20 h-20 bg-secondary/20 rounded-lg flex items-center justify-center text-2xl font-bold text-muted-foreground">${software.name.charAt(0)}</div>`;
-                      }
-                    }}
+                    fill
+                    sizes="80px"
+                    className="object-contain transition-all duration-300"
+                    quality={75}
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-1">

@@ -1,9 +1,15 @@
 # Browsers that we support for optimal performance
 # This reduces bundle size by targeting modern browsers only
+# Excludes browsers that need polyfills for modern features
 
-# Modern browsers with ES2020+ support
-> 0.5%
-last 2 versions
-not dead
+# Fully supports ES2020+ features (no polyfills needed)
+Chrome >= 90
+Edge >= 90
+Firefox >= 88
+Safari >= 14.1
+iOS >= 14.5
+
+# Exclude old browsers
 not IE 11
+not dead
 not op_mini all

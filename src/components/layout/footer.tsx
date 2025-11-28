@@ -7,6 +7,7 @@ import { useFooterLinks } from '@/config/footer-config';
 import { useSocialLinks } from '@/config/social-config';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import type React from 'react';
 
@@ -119,10 +120,11 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <img
+              <Image
                 src="https://askaiforit.com/badges/badge-3.svg"
                 alt="Listed on Ask AI For IT"
-                width="150"
+                width={150}
+                height={50}
                 className="h-auto"
               />
             </a>

@@ -7,8 +7,8 @@ import { useFooterLinks } from '@/config/footer-config';
 import { useSocialLinks } from '@/config/social-config';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import type React from 'react';
 
 export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
@@ -127,6 +127,28 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
                 height={50}
                 className="h-auto"
               />
+            </a>
+
+            {/* MossAI Tools */}
+            <a
+              href="https://mossai.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="MossAI Tools"
+              className="text-xs font-medium hover:text-primary transition-colors px-3 py-1 border border-border rounded-md hover:border-primary"
+            >
+              MossAI Tools
+            </a>
+
+            {/* SeekAIs */}
+            <a
+              href="https://SeekAIs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="SeekAIs"
+              className="text-xs font-medium hover:text-primary transition-colors px-3 py-1 border border-border rounded-md hover:border-primary"
+            >
+              SeekAIs - AI Tools Directory
             </a>
           </div>
 

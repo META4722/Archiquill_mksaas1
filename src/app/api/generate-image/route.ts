@@ -10,15 +10,20 @@ const EVOLINK_API_URL = 'https://api.evolink.ai/v1/images/generations';
 const EVOLINK_API_KEY =
   process.env.EVOLINK_API_KEY ||
   'sk-T9q6Qk7jAAmjHbbmunrxkuT1K9xIMXs4TZEH2aIT5ef0Jji8';
-const EVOLINK_MODEL = 'gemini-2.5-flash-image';
+// Free tier: fast & cheap model for anonymous users (unlimited)
+const EVOLINK_FREE_MODEL =
+  process.env.EVOLINK_FREE_MODEL || 'z-image-turbo';
+// Paid tier: high-quality model for logged-in users (consumes credits)
+const EVOLINK_PAID_MODEL =
+  process.env.EVOLINK_PAID_MODEL || 'gemini-2.5-flash-image';
 
-// Credit costs per generation type
+// Credit costs per generation type (Nano Banana, ~$0.024/img, ~4x markup)
 const CREDIT_COSTS = {
-  landscape: 5,
-  garden: 5,
-  sketch: 5,
-  exterior: 5,
-  interior: 5,
+  landscape: 10,
+  garden: 10,
+  sketch: 10,
+  exterior: 10,
+  interior: 10,
 } as const;
 
 // Type definitions
@@ -179,8 +184,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 3. Check credit balance (only for image-to-image)
-    if (!isFreeTextToImage && session?.user?.id) {
+    // Anonymous users get the free unlimited model; logged-in users get the paid premium model
+    const isAnonymous = !session?.user?.id;
+    const modelToUse = isAnonymous ? EVOLINK_FREE_MODEL : EVOLINK_PAID_MODEL;
+    const shouldConsumeCredits = !isAnonymous;
+
+    // 3. Check credit balance (logged-in users only)
+    if (shouldConsumeCredits && session?.user?.id) {
       const requiredCredits = CREDIT_COSTS[type];
       const hasCredits = await hasEnoughCredits({
         userId: session.user.id,
@@ -217,7 +227,7 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: EVOLINK_MODEL,
+        model: modelToUse,
         prompt: finalPrompt,
         size: mapAspectRatio(aspectRatio),
         ...(validImageUrls &&
@@ -259,9 +269,9 @@ export async function POST(req: NextRequest) {
       throw new Error('No images returned from generation');
     }
 
-    // 8. Consume credits after successful generation (only for image-to-image)
-    const creditsUsed = isFreeTextToImage ? 0 : CREDIT_COSTS[type];
-    if (!isFreeTextToImage && session?.user?.id) {
+    // 8. Consume credits after successful generation (logged-in users only)
+    const creditsUsed = shouldConsumeCredits ? CREDIT_COSTS[type] : 0;
+    if (shouldConsumeCredits && session?.user?.id) {
       await consumeCredits({
         userId: session.user.id,
         amount: CREDIT_COSTS[type],

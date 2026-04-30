@@ -372,6 +372,14 @@
           "audio": {
             "title": "AI Audio",
             "description": "Show how to use AI to generate wonderful audio"
+          },
+          "interior": {
+            "title": "AI Interior Design",
+            "description": "Transform room concepts into stunning interior visualizations"
+          },
+          "exterior": {
+            "title": "AI Exterior Design",
+            "description": "Generate photorealistic building exterior renderings from sketches"
           }
         }
       },
@@ -1502,5 +1510,239 @@
     "downloadImage": "Download Image",
     "deleteImage": "Delete",
     "confirmDelete": "Are you sure you want to delete this image?"
+  },
+  "AIInteriorPage": {
+    "metadata": {
+      "title": "Free AI Interior Design Generator | No Login Required",
+      "description": "Create stunning interior design visualizations instantly with our free AI generator. No login required. Transform room ideas into beautiful photorealistic renderings."
+    },
+    "hero": {
+      "title": "Free AI Interior Design Generator",
+      "description": "Transform your interior concepts into stunning photorealistic visualizations. Free to use, no login required."
+    },
+    "playground": {
+      "generate": "Generate Design",
+      "generating": "Generating...",
+      "credits": "Credits"
+    },
+    "upload": {
+      "label": "Reference Image",
+      "title": "Upload Reference Image",
+      "description": "Drag & drop or click to upload (JPEG, PNG, WebP, max 10MB)",
+      "button": "Choose File"
+    },
+    "prompt": {
+      "placeholder": "Example: A modern minimalist living room with floor-to-ceiling windows, white walls, natural oak flooring, a low-profile sofa in warm grey, and a statement pendant light",
+      "hint": "Press Enter to generate, Shift+Enter for new line"
+    },
+    "display": {
+      "generating": "Generating your interior design...",
+      "pleaseWait": "This may take 30-60 seconds",
+      "empty": {
+        "title": "No Design Yet",
+        "description": "Describe your room and generate your interior design"
+      },
+      "timing": "Generated in {seconds}s",
+      "download": "Download"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": {
+        "1": {
+          "title": "Describe Your Room",
+          "description": "Enter a detailed description of your ideal interior space"
+        },
+        "2": {
+          "title": "Add Reference (Optional)",
+          "description": "Upload a photo of your existing room for image-to-image transformation"
+        },
+        "3": {
+          "title": "Generate",
+          "description": "AI creates a photorealistic interior visualization in seconds"
+        }
+      }
+    },
+    "features": {
+      "title": "Perfect for Interior Designers",
+      "items": {
+        "0": {
+          "title": "Multiple Design Styles",
+          "description": "Choose from Modern, Scandinavian, Industrial, Japandi, Luxury, and Bohemian styles"
+        },
+        "1": {
+          "title": "Instant Client Presentations",
+          "description": "Show clients photorealistic room concepts in seconds, not days"
+        },
+        "2": {
+          "title": "Image-to-Image Transformation",
+          "description": "Upload an existing room photo and reimagine it in any style"
+        },
+        "3": {
+          "title": "Professional Quality",
+          "description": "AI-generated renderings with realistic lighting, materials, and spatial depth"
+        }
+      }
+    },
+    "roomTypes": {
+      "title": "Popular Room Types",
+      "description": "Explore different interior design possibilities with our AI generator",
+      "types": {
+        "living": {
+          "title": "Living Room Design",
+          "description": "Create stunning living room designs with our AI interior generator. Visualize furniture arrangements, color schemes, and lighting setups for any style — from cozy Scandinavian to sleek modern minimalism."
+        },
+        "bedroom": {
+          "title": "Bedroom Design",
+          "description": "Design your perfect bedroom retreat with AI assistance. Generate realistic renderings featuring bed layouts, wardrobe configurations, accent walls, and ambient lighting for a restful sanctuary."
+        },
+        "kitchen": {
+          "title": "Kitchen Design",
+          "description": "Reimagine your kitchen with AI-powered design visualization. Explore cabinet styles, countertop materials, island configurations, and appliance placements before committing to a renovation."
+        },
+        "bathroom": {
+          "title": "Bathroom Design",
+          "description": "Transform your bathroom with AI design concepts. Visualize tile patterns, fixture placements, vanity styles, and spa-like features to create your ideal bathroom space."
+        },
+        "office": {
+          "title": "Home Office Design",
+          "description": "Design a productive and inspiring home office with our AI tool. Generate layouts that balance functionality and aesthetics, with smart storage solutions and ergonomic setups."
+        }
+      }
+    },
+    "workflow": {
+      "title": "Other AI Design Tools",
+      "description": "Explore our complete suite of AI design tools for every aspect of your projects",
+      "items": {
+        "0": {
+          "title": "AI Exterior Design",
+          "description": "Generate stunning building exterior renderings from sketches. Perfect for architectural presentations, facade design, and client visualizations with realistic materials and lighting."
+        },
+        "1": {
+          "title": "AI Landscape Design",
+          "description": "Transform landscape sketches into photorealistic renderings. Perfect for large-scale landscape architecture projects, site planning, and outdoor space visualization."
+        },
+        "2": {
+          "title": "AI Garden Design",
+          "description": "Create beautiful garden visualizations instantly. Perfect for garden designers presenting concepts to clients with photorealistic quality and multiple style options."
+        }
+      }
+    }
+  },
+  "AIExteriorPage": {
+    "metadata": {
+      "title": "Free AI Exterior Design Generator | No Login Required",
+      "description": "Create stunning building exterior renderings instantly with our free AI generator. No login required. Transform architectural sketches into photorealistic visualizations."
+    },
+    "hero": {
+      "title": "Free AI Exterior Design Generator",
+      "description": "Transform your building concepts into stunning photorealistic exterior renderings. Free to use, no login required."
+    },
+    "playground": {
+      "generate": "Generate Design",
+      "generating": "Generating...",
+      "credits": "Credits"
+    },
+    "upload": {
+      "label": "Reference Image",
+      "title": "Upload Reference Image",
+      "description": "Drag & drop or click to upload (JPEG, PNG, WebP, max 10MB)",
+      "button": "Choose File"
+    },
+    "prompt": {
+      "placeholder": "Example: A modern two-story residential house with large floor-to-ceiling windows, flat roof, white stucco exterior, wooden deck, and minimalist landscaping",
+      "hint": "Press Enter to generate, Shift+Enter for new line"
+    },
+    "display": {
+      "generating": "Generating your exterior design...",
+      "pleaseWait": "This may take 30-60 seconds",
+      "empty": {
+        "title": "No Design Yet",
+        "description": "Describe your building and generate your exterior design"
+      },
+      "timing": "Generated in {seconds}s",
+      "download": "Download"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": {
+        "1": {
+          "title": "Describe Your Building",
+          "description": "Enter a detailed description of your building exterior concept"
+        },
+        "2": {
+          "title": "Add Reference (Optional)",
+          "description": "Upload an existing building photo for image-to-image transformation"
+        },
+        "3": {
+          "title": "Generate",
+          "description": "AI creates a photorealistic exterior rendering in seconds"
+        }
+      }
+    },
+    "features": {
+      "title": "Perfect for Architects & Designers",
+      "items": {
+        "0": {
+          "title": "Multiple Architectural Styles",
+          "description": "Choose from Modern, Traditional, Mediterranean, Farmhouse, Industrial, and Tropical styles"
+        },
+        "1": {
+          "title": "Rapid Client Presentations",
+          "description": "Show clients photorealistic building concepts in seconds, not weeks"
+        },
+        "2": {
+          "title": "Facade Transformation",
+          "description": "Upload an existing building photo and reimagine its exterior in any style"
+        },
+        "3": {
+          "title": "Realistic Rendering Quality",
+          "description": "AI-generated renderings with accurate materials, lighting, and environmental context"
+        }
+      }
+    },
+    "buildingTypes": {
+      "title": "Popular Building Types",
+      "description": "Explore different exterior design possibilities with our AI generator",
+      "types": {
+        "residential": {
+          "title": "Residential Homes",
+          "description": "Design stunning residential exteriors with our AI generator. Visualize facade materials, window configurations, roof styles, and landscaping for single-family homes, from contemporary to traditional."
+        },
+        "commercial": {
+          "title": "Commercial Buildings",
+          "description": "Create compelling commercial building renderings with AI. Explore curtain wall systems, entrance designs, signage integration, and corporate architectural styles for offices and retail spaces."
+        },
+        "villa": {
+          "title": "Luxury Villas",
+          "description": "Generate photorealistic luxury villa renderings with AI. Visualize premium materials, infinity pools, terraces, and landscaping for high-end residential projects and resort-style living."
+        },
+        "townhouse": {
+          "title": "Townhouses & Row Houses",
+          "description": "Design cohesive townhouse exteriors with AI assistance. Explore facade variations, material combinations, and streetscape compositions for urban residential developments."
+        },
+        "renovation": {
+          "title": "Renovation & Remodeling",
+          "description": "Visualize exterior renovation concepts before breaking ground. Upload your existing building and use AI to explore new cladding materials, window replacements, additions, and curb appeal improvements."
+        }
+      }
+    },
+    "workflow": {
+      "title": "Other AI Design Tools",
+      "description": "Explore our complete suite of AI design tools for every aspect of your projects",
+      "items": {
+        "0": {
+          "title": "AI Interior Design",
+          "description": "Create beautiful interior design visualizations instantly. Perfect for room layouts, furniture placement, and presenting design concepts to clients with photorealistic quality."
+        },
+        "1": {
+          "title": "AI Landscape Design",
+          "description": "Transform landscape sketches into photorealistic renderings. Perfect for large-scale landscape architecture projects, site planning, and outdoor space visualization."
+        },
+        "2": {
+          "title": "AI Garden Design",
+          "description": "Create beautiful garden visualizations instantly. Perfect for garden designers presenting concepts to clients with photorealistic quality and multiple style options."
+        }
+      }
+    }
   }
 }

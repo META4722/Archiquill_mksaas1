@@ -45,6 +45,8 @@ export enum Routes {
   // AI routes - ArchiQuill
   AILandscape = '/ai-landscape-design',
   AIGarden = '/ai-garden-design',
+  AIInterior = '/ai-interior-design',
+  AIExterior = '/ai-exterior-design',
   // Preserved for future use
   AIText = '/ai/text',
   AIImage = '/ai/image',

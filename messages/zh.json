@@ -372,6 +372,14 @@
           "audio": {
             "title": "AI 音频",
             "description": "展示如何使用 AI 生成动听音频"
+          },
+          "interior": {
+            "title": "AI 室内设计",
+            "description": "将房间概念转化为令人惊叹的室内可视化效果"
+          },
+          "exterior": {
+            "title": "AI 外观设计",
+            "description": "从草图生成逼真的建筑外观渲染图"
           }
         }
       },
@@ -1502,5 +1510,239 @@
     "downloadImage": "下载图片",
     "deleteImage": "删除",
     "confirmDelete": "确定要删除这张图片吗？"
+  },
+  "AIInteriorPage": {
+    "metadata": {
+      "title": "免费 AI 室内设计生成器 | 无需登录",
+      "description": "使用我们的免费 AI 生成器即时创建令人惊叹的室内设计可视化效果。无需登录。将房间创意转化为美丽的照片级渲染图。"
+    },
+    "hero": {
+      "title": "免费 AI 室内设计生成器",
+      "description": "将您的室内概念转化为令人惊叹的照片级可视化效果。免费使用，无需登录。"
+    },
+    "playground": {
+      "generate": "生成设计",
+      "generating": "生成中...",
+      "credits": "积分"
+    },
+    "upload": {
+      "label": "参考图片",
+      "title": "上传参考图片",
+      "description": "拖放或点击上传（JPEG、PNG、WebP，最大 10MB）",
+      "button": "选择文件"
+    },
+    "prompt": {
+      "placeholder": "示例：一个现代简约风格的客厅，落地窗，白色墙壁，天然橡木地板，暖灰色低矮沙发，以及一盏造型独特的吊灯",
+      "hint": "按 Enter 生成，Shift+Enter 换行"
+    },
+    "display": {
+      "generating": "正在生成您的室内设计...",
+      "pleaseWait": "这可能需要 30-60 秒",
+      "empty": {
+        "title": "尚无设计",
+        "description": "描述您的房间并生成室内设计"
+      },
+      "timing": "生成耗时 {seconds}s",
+      "download": "下载"
+    },
+    "howItWorks": {
+      "title": "使用方法",
+      "steps": {
+        "1": {
+          "title": "描述您的房间",
+          "description": "输入您理想室内空间的详细描述"
+        },
+        "2": {
+          "title": "添加参考图（可选）",
+          "description": "上传现有房间照片进行图生图转换"
+        },
+        "3": {
+          "title": "生成",
+          "description": "AI 在几秒内创建照片级室内可视化效果"
+        }
+      }
+    },
+    "features": {
+      "title": "专为室内设计师打造",
+      "items": {
+        "0": {
+          "title": "多种设计风格",
+          "description": "从现代简约、北欧、工业风、日式侘寂、奢华古典和波西米亚风格中选择"
+        },
+        "1": {
+          "title": "即时客户展示",
+          "description": "在几秒内向客户展示照片级房间概念，而非数天"
+        },
+        "2": {
+          "title": "图生图转换",
+          "description": "上传现有房间照片，以任意风格重新想象"
+        },
+        "3": {
+          "title": "专业渲染质量",
+          "description": "AI 生成的渲染图具有逼真的灯光、材质和空间深度"
+        }
+      }
+    },
+    "roomTypes": {
+      "title": "热门房间类型",
+      "description": "使用我们的 AI 生成器探索不同的室内设计可能性",
+      "types": {
+        "living": {
+          "title": "客厅设计",
+          "description": "使用我们的 AI 室内生成器创建令人惊叹的客厅设计。可视化家具布局、配色方案和灯光设置，适用于任何风格——从舒适的北欧风到简洁的现代简约风。"
+        },
+        "bedroom": {
+          "title": "卧室设计",
+          "description": "借助 AI 设计您完美的卧室休憩空间。生成逼真的渲染图，展示床铺布局、衣柜配置、特色墙和氛围灯光，打造宁静的休息场所。"
+        },
+        "kitchen": {
+          "title": "厨房设计",
+          "description": "通过 AI 驱动的设计可视化重新想象您的厨房。在装修前探索橱柜风格、台面材料、岛台配置和电器摆放。"
+        },
+        "bathroom": {
+          "title": "浴室设计",
+          "description": "通过 AI 设计概念改造您的浴室。可视化瓷砖图案、洁具摆放、梳妆台风格和水疗功能，打造理想的浴室空间。"
+        },
+        "office": {
+          "title": "家庭办公室设计",
+          "description": "使用我们的 AI 工具设计高效且富有灵感的家庭办公室。生成兼顾功能性与美观性的布局，配备智能收纳解决方案和人体工学设置。"
+        }
+      }
+    },
+    "workflow": {
+      "title": "其他 AI 设计工具",
+      "description": "探索我们完整的 AI 设计工具套件，满足项目各方面需求",
+      "items": {
+        "0": {
+          "title": "AI 外观设计",
+          "description": "从草图生成令人惊叹的建筑外观渲染图。非常适合建筑展示、立面设计和客户可视化，具有逼真的材质和灯光效果。"
+        },
+        "1": {
+          "title": "AI 景观设计",
+          "description": "将景观草图转化为照片级渲染图。非常适合大型景观建筑项目、场地规划和户外空间可视化。"
+        },
+        "2": {
+          "title": "AI 花园设计",
+          "description": "即时创建美丽的花园可视化效果。非常适合花园设计师向客户展示概念，具有照片级质量和多种风格选项。"
+        }
+      }
+    }
+  },
+  "AIExteriorPage": {
+    "metadata": {
+      "title": "免费 AI 建筑外观设计生成器 | 无需登录",
+      "description": "使用我们的免费 AI 生成器即时创建令人惊叹的建筑外观渲染图。无需登录。将建筑草图转化为照片级可视化效果。"
+    },
+    "hero": {
+      "title": "免费 AI 建筑外观设计生成器",
+      "description": "将您的建筑概念转化为令人惊叹的照片级外观渲染图。免费使用，无需登录。"
+    },
+    "playground": {
+      "generate": "生成设计",
+      "generating": "生成中...",
+      "credits": "积分"
+    },
+    "upload": {
+      "label": "参考图片",
+      "title": "上传参考图片",
+      "description": "拖放或点击上传（JPEG、PNG、WebP，最大 10MB）",
+      "button": "选择文件"
+    },
+    "prompt": {
+      "placeholder": "示例：一栋现代两层住宅，落地窗，平屋顶，白色灰泥外墙，木质露台，以及简约的景观设计",
+      "hint": "按 Enter 生成，Shift+Enter 换行"
+    },
+    "display": {
+      "generating": "正在生成您的外观设计...",
+      "pleaseWait": "这可能需要 30-60 秒",
+      "empty": {
+        "title": "尚无设计",
+        "description": "描述您的建筑并生成外观设计"
+      },
+      "timing": "生成耗时 {seconds}s",
+      "download": "下载"
+    },
+    "howItWorks": {
+      "title": "使用方法",
+      "steps": {
+        "1": {
+          "title": "描述您的建筑",
+          "description": "输入您建筑外观概念的详细描述"
+        },
+        "2": {
+          "title": "添加参考图（可选）",
+          "description": "上传现有建筑照片进行图生图转换"
+        },
+        "3": {
+          "title": "生成",
+          "description": "AI 在几秒内创建照片级外观渲染图"
+        }
+      }
+    },
+    "features": {
+      "title": "专为建筑师和设计师打造",
+      "items": {
+        "0": {
+          "title": "多种建筑风格",
+          "description": "从现代当代、传统古典、地中海、现代农舍、工业阁楼和热带度假风格中选择"
+        },
+        "1": {
+          "title": "快速客户展示",
+          "description": "在几秒内向客户展示照片级建筑概念，而非数周"
+        },
+        "2": {
+          "title": "立面改造",
+          "description": "上传现有建筑照片，以任意风格重新想象其外观"
+        },
+        "3": {
+          "title": "逼真渲染质量",
+          "description": "AI 生成的渲染图具有准确的材质、灯光和环境背景"
+        }
+      }
+    },
+    "buildingTypes": {
+      "title": "热门建筑类型",
+      "description": "使用我们的 AI 生成器探索不同的外观设计可能性",
+      "types": {
+        "residential": {
+          "title": "住宅建筑",
+          "description": "使用我们的 AI 生成器设计令人惊叹的住宅外观。可视化立面材料、窗户配置、屋顶风格和景观设计，适用于独栋住宅，从现代风到传统风。"
+        },
+        "commercial": {
+          "title": "商业建筑",
+          "description": "使用 AI 创建引人注目的商业建筑渲染图。探索幕墙系统、入口设计、标识整合和企业建筑风格，适用于办公室和零售空间。"
+        },
+        "villa": {
+          "title": "豪华别墅",
+          "description": "使用 AI 生成照片级豪华别墅渲染图。可视化高端材料、无边泳池、露台和景观设计，适用于高端住宅项目和度假式生活。"
+        },
+        "townhouse": {
+          "title": "联排别墅",
+          "description": "借助 AI 设计协调统一的联排别墅外观。探索立面变化、材料组合和街景构图，适用于城市住宅开发项目。"
+        },
+        "renovation": {
+          "title": "翻新改造",
+          "description": "在动工前可视化外观翻新概念。上传您的现有建筑，使用 AI 探索新的外墙材料、窗户更换、加建方案和提升外观吸引力的改造方案。"
+        }
+      }
+    },
+    "workflow": {
+      "title": "其他 AI 设计工具",
+      "description": "探索我们完整的 AI 设计工具套件，满足项目各方面需求",
+      "items": {
+        "0": {
+          "title": "AI 室内设计",
+          "description": "即时创建美丽的室内设计可视化效果。非常适合房间布局、家具摆放和向客户展示设计概念，具有照片级质量。"
+        },
+        "1": {
+          "title": "AI 景观设计",
+          "description": "将景观草图转化为照片级渲染图。非常适合大型景观建筑项目、场地规划和户外空间可视化。"
+        },
+        "2": {
+          "title": "AI 花园设计",
+          "description": "即时创建美丽的花园可视化效果。非常适合花园设计师向客户展示概念，具有照片级质量和多种风格选项。"
+        }
+      }
+    }
   }
 }

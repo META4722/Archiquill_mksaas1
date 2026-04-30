@@ -14,6 +14,7 @@ import {
   FilmIcon,
   FlameIcon,
   FootprintsIcon,
+  HomeIcon,
   ImageIcon,
   ListChecksIcon,
   LockKeyholeIcon,
@@ -98,6 +99,20 @@ export function useNavbarLinks(): NestedMenuItem[] {
           href: Routes.AIGarden,
           external: false,
         },
+        {
+          title: t('ai.items.interior.title'),
+          description: t('ai.items.interior.description'),
+          icon: <HomeIcon className="size-4 shrink-0" />,
+          href: Routes.AIInterior,
+          external: false,
+        },
+        {
+          title: t('ai.items.exterior.title'),
+          description: t('ai.items.exterior.description'),
+          icon: <BuildingIcon className="size-4 shrink-0" />,
+          href: Routes.AIExterior,
+          external: false,
+        },
         // Original AI features - commented out
         // {
         //   title: t('ai.items.text.title'),
@@ -136,69 +151,53 @@ export function useNavbarLinks(): NestedMenuItem[] {
         // },
       ],
     },
-    {
-      title: t('pages.title'),
-      items: [
-        {
-          title: t('pages.items.about.title'),
-          description: t('pages.items.about.description'),
-          icon: <BuildingIcon className="size-4 shrink-0" />,
-          href: Routes.About,
-          external: false,
-        },
-        {
-          title: t('pages.items.contact.title'),
-          description: t('pages.items.contact.description'),
-          icon: <MailIcon className="size-4 shrink-0" />,
-          href: Routes.Contact,
-          external: false,
-        },
-        // Hidden: Waitlist page
-        // {
-        //   title: t('pages.items.waitlist.title'),
-        //   description: t('pages.items.waitlist.description'),
-        //   icon: <MailboxIcon className="size-4 shrink-0" />,
-        //   href: Routes.Waitlist,
-        //   external: false,
-        // },
-        {
-          title: t('pages.items.roadmap.title'),
-          description: t('pages.items.roadmap.description'),
-          icon: <SquareKanbanIcon className="size-4 shrink-0" />,
-          href: Routes.Roadmap,
-          external: false,
-        },
-        // Hidden: Changelog page
-        // {
-        //   title: t('pages.items.changelog.title'),
-        //   description: t('pages.items.changelog.description'),
-        //   icon: <ListChecksIcon className="size-4 shrink-0" />,
-        //   href: Routes.Changelog,
-        //   external: false,
-        // },
-        {
-          title: t('pages.items.cookiePolicy.title'),
-          description: t('pages.items.cookiePolicy.description'),
-          icon: <CookieIcon className="size-4 shrink-0" />,
-          href: Routes.CookiePolicy,
-          external: false,
-        },
-        {
-          title: t('pages.items.privacyPolicy.title'),
-          description: t('pages.items.privacyPolicy.description'),
-          icon: <ShieldCheckIcon className="size-4 shrink-0" />,
-          href: Routes.PrivacyPolicy,
-          external: false,
-        },
-        {
-          title: t('pages.items.termsOfService.title'),
-          description: t('pages.items.termsOfService.description'),
-          icon: <FileTextIcon className="size-4 shrink-0" />,
-          href: Routes.TermsOfService,
-          external: false,
-        },
-      ],
-    },
+    // {
+    //   title: t('pages.title'),
+    //   items: [
+    //     {
+    //       title: t('pages.items.about.title'),
+    //       description: t('pages.items.about.description'),
+    //       icon: <BuildingIcon className="size-4 shrink-0" />,
+    //       href: Routes.About,
+    //       external: false,
+    //     },
+    //     {
+    //       title: t('pages.items.contact.title'),
+    //       description: t('pages.items.contact.description'),
+    //       icon: <MailIcon className="size-4 shrink-0" />,
+    //       href: Routes.Contact,
+    //       external: false,
+    //     },
+    //     {
+    //       title: t('pages.items.roadmap.title'),
+    //       description: t('pages.items.roadmap.description'),
+    //       icon: <SquareKanbanIcon className="size-4 shrink-0" />,
+    //       href: Routes.Roadmap,
+    //       external: false,
+    //     },
+    //     {
+    //       title: t('pages.items.cookiePolicy.title'),
+    //       description: t('pages.items.cookiePolicy.description'),
+    //       icon: <CookieIcon className="size-4 shrink-0" />,
+    //       href: Routes.CookiePolicy,
+    //       external: false,
+    //     },
+    //     {
+    //       title: t('pages.items.privacyPolicy.title'),
+    //       description: t('pages.items.privacyPolicy.description'),
+    //       icon: <ShieldCheckIcon className="size-4 shrink-0" />,
+    //       href: Routes.PrivacyPolicy,
+    //       external: false,
+    //     },
+    //     {
+    //       title: t('pages.items.termsOfService.title'),
+    //       description: t('pages.items.termsOfService.description'),
+    //       icon: <FileTextIcon className="size-4 shrink-0" />,
+    //       href: Routes.TermsOfService,
+    //       external: false,
+    //     },
+    //   ],
+    // },
     // {
     //   title: t('blocks.title'),
     //   items: [

@@ -47,20 +47,23 @@
   },
   "PricingPage": {
     "title": "价格",
-    "description": "选择最适合您的付费计划",
-    "subtitle": "选择最适合您的付费计划",
+    "description": "透明定价，积分可滚存，不浪费。",
+    "subtitle": "透明定价，积分可滚存，不浪费。",
     "monthly": "月付",
     "yearly": "年付",
+    "yearlyBadge": "8折优惠",
+    "trustLine": "积分可滚存 · 随时取消 · 无隐藏费用",
     "PricingCard": {
       "freePrice": "$0",
       "perMonth": "/月",
       "perYear": "/年",
+      "billedYearly": "按年计费",
       "popular": "热门",
       "currentPlan": "当前方案",
       "yourCurrentPlan": "您的当前方案",
       "getStartedForFree": "开始免费使用",
       "getLifetimeAccess": "开启终身会员",
-      "getStarted": "开始免费试用",
+      "getStarted": "立即开始",
       "notAvailable": "不可用",
       "daysTrial": "{days} 天试用期"
     },
@@ -72,59 +75,53 @@
   "PricePlans": {
     "free": {
       "name": "免费版",
-      "description": "体验尝鲜",
+      "description": "无需信用卡，立即体验",
       "features": {
-        "feature-1": "2 张免费图片",
-        "feature-2": "登录送 20 点",
-        "feature-3": "10 点 / 张",
+        "feature-1": "注册赠 20 点数",
+        "feature-2": "2 张免费设计图",
+        "feature-3": "全部 AI 设计工具",
         "feature-4": "社区支持"
       },
       "limits": {
         "limit-1": "生成次数有限",
-        "limit-2": "标准画质",
-        "limit-3": "基础功能"
+        "limit-2": "导出带水印"
       }
     },
     "basic": {
-      "name": "基础版",
-      "description": "日常使用",
+      "name": "入门版",
+      "description": "适合个人爱好者和轻度使用",
       "features": {
-        "feature-1": "350 张图片/月",
-        "feature-2": "含 3500 点数",
-        "feature-3": "10 点 / 张",
-        "feature-4": "优先支持"
-      },
-      "limits": {
-        "limit-1": "每月点数限制",
-        "limit-2": "标准画质"
+        "feature-1": "每月 2,400 点数",
+        "feature-2": "约 240 张设计图/月",
+        "feature-3": "积分可滚存",
+        "feature-4": "全部 AI 设计工具",
+        "feature-5": "无水印",
+        "feature-6": "邮件支持"
       }
     },
     "pro": {
       "name": "专业版",
-      "description": "真正无限生图",
+      "description": "适合专业人士和重度用户",
       "features": {
-        "feature-1": "无限生成图片",
-        "feature-2": "无点数限制",
-        "feature-3": "最高优先级",
-        "feature-4": "专属客服",
-        "feature-5": "高级功能"
-      },
-      "limits": {
-        "limit-1": "无月度限制",
-        "limit-2": "最高品质"
+        "feature-1": "每月 9,600 点数",
+        "feature-2": "约 960 张设计图/月",
+        "feature-3": "积分可滚存",
+        "feature-4": "全部 AI 设计工具",
+        "feature-5": "无水印",
+        "feature-6": "极速生成",
+        "feature-7": "优先客服支持"
       }
     },
     "lifetime": {
       "name": "终身版",
-      "description": "一次性付款获得所有高级功能",
+      "description": "一次付款，永久使用",
       "features": {
-        "feature-1": "所有专业版功能",
-        "feature-2": "100GB存储空间",
-        "feature-3": "专属支持",
-        "feature-4": "企业级安全",
-        "feature-5": "高级集成",
-        "feature-6": "自定义品牌",
-        "feature-7": "终身更新"
+        "feature-1": "每月 500 点数，永久有效",
+        "feature-2": "积分可滚存",
+        "feature-3": "全部 AI 设计工具",
+        "feature-4": "无水印",
+        "feature-5": "所有未来新功能",
+        "feature-6": "优先客服支持"
       }
     }
   },

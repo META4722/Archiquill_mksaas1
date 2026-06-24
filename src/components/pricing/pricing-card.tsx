@@ -87,15 +87,19 @@ export function PricingCard({
   // generate formatted price and price label
   let formattedPrice = '';
   let priceLabel = '';
+  let billedYearlyLabel = '';
   if (plan.isFree) {
     formattedPrice = t('freePrice');
   } else if (price && price.amount > 0) {
-    // price is available
-    formattedPrice = formatPrice(price.amount, price.currency);
-    if (interval === PlanIntervals.MONTH) {
+    if (interval === PlanIntervals.YEAR) {
+      // Show monthly equivalent for yearly plans
+      const monthlyEquivalent = Math.round(price.amount / 12);
+      formattedPrice = formatPrice(monthlyEquivalent, price.currency);
       priceLabel = t('perMonth');
-    } else if (interval === PlanIntervals.YEAR) {
-      priceLabel = t('perYear');
+      billedYearlyLabel = `${formatPrice(price.amount, price.currency)} ${t('billedYearly')}`;
+    } else {
+      formattedPrice = formatPrice(price.amount, price.currency);
+      priceLabel = t('perMonth');
     }
   } else {
     formattedPrice = t('notAvailable');
@@ -152,6 +156,9 @@ export function PricingCard({
           </span>
           {priceLabel && <span className="text-2xl">{priceLabel}</span>}
         </div>
+        {billedYearlyLabel && (
+          <p className="text-xs text-muted-foreground -mt-3 mb-1">{billedYearlyLabel}</p>
+        )}
 
         <CardDescription>
           <p className="text-sm">{plan.description}</p>

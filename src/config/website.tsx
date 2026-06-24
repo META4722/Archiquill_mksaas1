@@ -114,9 +114,16 @@ export const websiteConfig: WebsiteConfig = {
           {
             type: PaymentTypes.SUBSCRIPTION,
             priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC_MONTHLY!,
-            amount: 2900,
+            amount: 990,
             currency: 'USD',
             interval: PlanIntervals.MONTH,
+          },
+          {
+            type: PaymentTypes.SUBSCRIPTION,
+            priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC_YEARLY!,
+            amount: 10000,
+            currency: 'USD',
+            interval: PlanIntervals.YEAR,
           },
         ],
         isFree: false,
@@ -124,8 +131,7 @@ export const websiteConfig: WebsiteConfig = {
         popular: false,
         credits: {
           enable: true,
-          amount: 3500,
-          expireDays: 30,
+          amount: 2400,
         },
       },
       pro: {
@@ -134,9 +140,16 @@ export const websiteConfig: WebsiteConfig = {
           {
             type: PaymentTypes.SUBSCRIPTION,
             priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO_MONTHLY!,
-            amount: 6900,
+            amount: 2990,
             currency: 'USD',
             interval: PlanIntervals.MONTH,
+          },
+          {
+            type: PaymentTypes.SUBSCRIPTION,
+            priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO_YEARLY!,
+            amount: 28800,
+            currency: 'USD',
+            interval: PlanIntervals.YEAR,
           },
         ],
         isFree: false,
@@ -144,13 +157,11 @@ export const websiteConfig: WebsiteConfig = {
         popular: true,
         credits: {
           enable: true,
-          amount: 10000, // Pro订阅后增加10000积分
-          expireDays: 30,
+          amount: 9600,
         },
       },
       lifetime: {
         id: 'lifetime',
-        disabled: true,
         prices: [
           {
             type: PaymentTypes.ONE_TIME,
@@ -164,8 +175,7 @@ export const websiteConfig: WebsiteConfig = {
         isLifetime: true,
         credits: {
           enable: true,
-          amount: 1000,
-          expireDays: 30,
+          amount: 500,
         },
       },
     },

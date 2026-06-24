@@ -380,6 +380,10 @@
           "exterior": {
             "title": "AI 外观设计",
             "description": "从草图生成逼真的建筑外观渲染图"
+          },
+          "backgroundRemoval": {
+            "title": "AI 背景移除",
+            "description": "使用 AI 即时移除图片背景"
           }
         }
       },
@@ -1741,6 +1745,70 @@
         "2": {
           "title": "AI 花园设计",
           "description": "即时创建美丽的花园可视化效果。非常适合花园设计师向客户展示概念，具有照片级质量和多种风格选项。"
+        }
+      }
+    }
+  },
+  "AIBackgroundRemovalPage": {
+    "metadata": {
+      "title": "免费 AI 背景移除 | 在线去除图片背景",
+      "description": "使用 AI 即时移除图片背景。免费在线背景移除工具，无需设计技能。适用于产品图片、人像等。"
+    },
+    "hero": {
+      "title": "AI 背景移除",
+      "description": "使用 AI 在几秒内移除任何图片背景。上传照片，即时获得干净的透明 PNG。"
+    },
+    "playground": {
+      "original": "原始图片",
+      "result": "处理结果",
+      "uploadTitle": "上传图片",
+      "uploadHint": "拖放或点击上传（JPEG、PNG、WebP，最大 10MB）",
+      "chooseFile": "选择文件",
+      "uploading": "上传中...",
+      "removeBackground": "移除背景",
+      "processing": "正在移除背景...",
+      "processingTitle": "正在移除背景...",
+      "processingHint": "通常需要 5-15 秒",
+      "emptyTitle": "结果将显示在这里",
+      "emptyHint": "上传图片并点击移除背景",
+      "download": "下载 PNG"
+    },
+    "howItWorks": {
+      "title": "使用方法",
+      "steps": {
+        "1": {
+          "title": "上传图片",
+          "description": "上传任何照片——产品、人像、物体或其他任何内容"
+        },
+        "2": {
+          "title": "AI 移除背景",
+          "description": "我们的 AI 模型在几秒内精确检测并移除背景"
+        },
+        "3": {
+          "title": "下载透明 PNG",
+          "description": "获得带有透明背景的干净 PNG，可在任何地方使用"
+        }
+      }
+    },
+    "useCases": {
+      "title": "使用场景",
+      "description": "背景移除解锁了广泛的创意和专业使用场景",
+      "items": {
+        "ecommerce": {
+          "title": "产品摄影",
+          "description": "为您的网店创建干净的白色背景产品图片。移除杂乱的背景，专业地展示您的产品。"
+        },
+        "portrait": {
+          "title": "人像与证件照",
+          "description": "移除人像和证件照的背景。将人物放置在任何背景上，用于专业档案、证件照或创意合成。"
+        },
+        "design": {
+          "title": "平面设计",
+          "description": "提取对象和主体用于设计项目。组合多张照片中的元素，创建拼贴画或制作营销材料。"
+        },
+        "presentation": {
+          "title": "演示文稿与幻灯片",
+          "description": "在演示文稿和文档中添加干净的无背景图片。无需手动编辑，让您的幻灯片看起来更精致。"
         }
       }
     }

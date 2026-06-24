@@ -131,7 +131,8 @@ export const config = {
   matcher: [
     // Match all pathnames except for
     // - if they start with `/api`, `/_next` or `/_vercel`
+    // - sitemap.xml and robots.txt (must bypass middleware so Next.js serves them as XML/text)
     // - if they contain a dot (e.g. `favicon.ico`)
-    '/((?!api|_next|_vercel|.*\\..*).*)',
+    '/((?!api|_next|_vercel|sitemap\\.xml|robots\\.txt|.*\\..*).*)',
   ],
 };

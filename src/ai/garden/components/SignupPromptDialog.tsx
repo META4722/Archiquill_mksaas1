@@ -53,7 +53,7 @@ export function SignupPromptDialog({
       }}
     >
       <DialogContent
-        className="sm:max-w-[440px]"
+        className="w-[90vw] max-w-sm"
         onPointerDownOutside={(e) => {
           if (isHard) e.preventDefault();
         }}

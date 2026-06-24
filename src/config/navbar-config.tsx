@@ -24,6 +24,7 @@ import {
   MessageCircleIcon,
   NewspaperIcon,
   RocketIcon,
+  ScissorsIcon,
   ShieldCheckIcon,
   SnowflakeIcon,
   SplitSquareVerticalIcon,
@@ -111,6 +112,13 @@ export function useNavbarLinks(): NestedMenuItem[] {
           description: t('ai.items.exterior.description'),
           icon: <BuildingIcon className="size-4 shrink-0" />,
           href: Routes.AIExterior,
+          external: false,
+        },
+        {
+          title: t('ai.items.backgroundRemoval.title'),
+          description: t('ai.items.backgroundRemoval.description'),
+          icon: <ScissorsIcon className="size-4 shrink-0" />,
+          href: Routes.AIBackgroundRemoval,
           external: false,
         },
         // Original AI features - commented out

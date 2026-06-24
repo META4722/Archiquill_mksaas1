@@ -380,6 +380,10 @@
           "exterior": {
             "title": "AI Exterior Design",
             "description": "Generate photorealistic building exterior renderings from sketches"
+          },
+          "backgroundRemoval": {
+            "title": "AI Background Removal",
+            "description": "Remove image backgrounds instantly with AI"
           }
         }
       },
@@ -1741,6 +1745,70 @@
         "2": {
           "title": "AI Garden Design",
           "description": "Create beautiful garden visualizations instantly. Perfect for garden designers presenting concepts to clients with photorealistic quality and multiple style options."
+        }
+      }
+    }
+  },
+  "AIBackgroundRemovalPage": {
+    "metadata": {
+      "title": "Free AI Background Removal | Remove Image Background Online",
+      "description": "Remove image backgrounds instantly with AI. Free online background remover — no design skills needed. Perfect for product photos, portraits, and more."
+    },
+    "hero": {
+      "title": "AI Background Removal",
+      "description": "Remove any image background in seconds with AI. Upload your photo and get a clean, transparent PNG instantly."
+    },
+    "playground": {
+      "original": "Original Image",
+      "result": "Result",
+      "uploadTitle": "Upload an Image",
+      "uploadHint": "Drag & drop or click to upload (JPEG, PNG, WebP, max 10MB)",
+      "chooseFile": "Choose File",
+      "uploading": "Uploading...",
+      "removeBackground": "Remove Background",
+      "processing": "Removing background...",
+      "processingTitle": "Removing background...",
+      "processingHint": "This usually takes 5-15 seconds",
+      "emptyTitle": "Result will appear here",
+      "emptyHint": "Upload an image and click Remove Background",
+      "download": "Download PNG"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "steps": {
+        "1": {
+          "title": "Upload Your Image",
+          "description": "Upload any photo — product, portrait, object, or anything else"
+        },
+        "2": {
+          "title": "AI Removes Background",
+          "description": "Our AI model precisely detects and removes the background in seconds"
+        },
+        "3": {
+          "title": "Download Transparent PNG",
+          "description": "Get a clean PNG with transparent background, ready to use anywhere"
+        }
+      }
+    },
+    "useCases": {
+      "title": "What You Can Do With It",
+      "description": "Background removal unlocks a wide range of creative and professional use cases",
+      "items": {
+        "ecommerce": {
+          "title": "Product Photography",
+          "description": "Create clean white-background product images for your online store. Remove cluttered backgrounds and present your products professionally."
+        },
+        "portrait": {
+          "title": "Portrait & Headshots",
+          "description": "Remove backgrounds from portraits and headshots. Place subjects on any background for professional profiles, ID photos, or creative composites."
+        },
+        "design": {
+          "title": "Graphic Design",
+          "description": "Extract objects and subjects for use in design projects. Combine elements from multiple photos, create collages, or build marketing materials."
+        },
+        "presentation": {
+          "title": "Presentations & Slides",
+          "description": "Add clean, background-free images to your presentations and documents. Make your slides look polished without manual editing."
         }
       }
     }

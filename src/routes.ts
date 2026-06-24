@@ -47,6 +47,7 @@ export enum Routes {
   AIGarden = '/ai-garden-design',
   AIInterior = '/ai-interior-design',
   AIExterior = '/ai-exterior-design',
+  AIBackgroundRemoval = '/ai-background-removal',
   // Preserved for future use
   AIText = '/ai/text',
   AIImage = '/ai/image',

@@ -91,8 +91,8 @@
       "name": "入门版",
       "description": "适合个人爱好者和轻度使用",
       "features": {
-        "feature-1": "每月 2,400 点数",
-        "feature-2": "约 240 张设计图/月",
+        "feature-1": "每月 50 点数",
+        "feature-2": "约 50 张设计图/月",
         "feature-3": "积分可滚存",
         "feature-4": "全部 AI 设计工具",
         "feature-5": "无水印",
@@ -103,8 +103,8 @@
       "name": "专业版",
       "description": "适合专业人士和重度用户",
       "features": {
-        "feature-1": "每月 9,600 点数",
-        "feature-2": "约 960 张设计图/月",
+        "feature-1": "每月 150 点数",
+        "feature-2": "约 150 张设计图/月",
         "feature-3": "积分可滚存",
         "feature-4": "全部 AI 设计工具",
         "feature-5": "无水印",
@@ -112,16 +112,17 @@
         "feature-7": "优先客服支持"
       }
     },
-    "lifetime": {
-      "name": "终身版",
-      "description": "一次付款，永久使用",
+    "studio": {
+      "name": "Studio",
+      "description": "适合团队和高频用户",
       "features": {
-        "feature-1": "每月 500 点数，永久有效",
-        "feature-2": "积分可滚存",
-        "feature-3": "全部 AI 设计工具",
-        "feature-4": "无水印",
-        "feature-5": "所有未来新功能",
-        "feature-6": "优先客服支持"
+        "feature-1": "每月 250 点数",
+        "feature-2": "约 250 张设计图/月",
+        "feature-3": "积分可滚存",
+        "feature-4": "全部 AI 设计工具",
+        "feature-5": "无水印",
+        "feature-6": "最快生成速度",
+        "feature-7": "专属客服支持"
       }
     }
   },

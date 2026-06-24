@@ -132,7 +132,7 @@ export const websiteConfig: WebsiteConfig = {
         popular: false,
         credits: {
           enable: true,
-          amount: 2400,
+          amount: 50,
         },
       },
       pro: {
@@ -158,25 +158,33 @@ export const websiteConfig: WebsiteConfig = {
         popular: true,
         credits: {
           enable: true,
-          amount: 9600,
+          amount: 150,
         },
       },
-      lifetime: {
-        id: 'lifetime',
+      studio: {
+        id: 'studio',
         prices: [
           {
-            type: PaymentTypes.ONE_TIME,
-            priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_LIFETIME!,
-            amount: 19900,
+            type: PaymentTypes.SUBSCRIPTION,
+            priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_STUDIO_MONTHLY!,
+            amount: 4990,
             currency: 'USD',
-            allowPromotionCode: true,
+            interval: PlanIntervals.MONTH,
+          },
+          {
+            type: PaymentTypes.SUBSCRIPTION,
+            priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_STUDIO_YEARLY!,
+            amount: 36000,
+            currency: 'USD',
+            interval: PlanIntervals.YEAR,
           },
         ],
         isFree: false,
-        isLifetime: true,
+        isLifetime: false,
+        popular: false,
         credits: {
           enable: true,
-          amount: 500,
+          amount: 250,
         },
       },
     },

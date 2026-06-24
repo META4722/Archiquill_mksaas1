@@ -91,8 +91,8 @@
       "name": "Starter",
       "description": "For hobbyists and occasional use",
       "features": {
-        "feature-1": "2,400 credits / month",
-        "feature-2": "≈ 240 designs per month",
+        "feature-1": "50 credits / month",
+        "feature-2": "≈ 50 designs per month",
         "feature-3": "Credits roll over",
         "feature-4": "All AI design tools",
         "feature-5": "No watermark",
@@ -103,8 +103,8 @@
       "name": "Pro",
       "description": "For professionals and power users",
       "features": {
-        "feature-1": "9,600 credits / month",
-        "feature-2": "≈ 960 designs per month",
+        "feature-1": "150 credits / month",
+        "feature-2": "≈ 150 designs per month",
         "feature-3": "Credits roll over",
         "feature-4": "All AI design tools",
         "feature-5": "No watermark",
@@ -112,16 +112,17 @@
         "feature-7": "Priority support"
       }
     },
-    "lifetime": {
-      "name": "Lifetime",
-      "description": "One-time payment, use forever",
+    "studio": {
+      "name": "Studio",
+      "description": "For teams and high-volume users",
       "features": {
-        "feature-1": "500 credits / month forever",
-        "feature-2": "Credits roll over",
-        "feature-3": "All AI design tools",
-        "feature-4": "No watermark",
-        "feature-5": "All future features included",
-        "feature-6": "Priority support"
+        "feature-1": "250 credits / month",
+        "feature-2": "≈ 250 designs per month",
+        "feature-3": "Credits roll over",
+        "feature-4": "All AI design tools",
+        "feature-5": "No watermark",
+        "feature-6": "Fastest generation",
+        "feature-7": "Dedicated support"
       }
     }
   },

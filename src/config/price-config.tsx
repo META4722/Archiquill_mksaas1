@@ -75,18 +75,19 @@ export function usePricePlans(): Record<string, PricePlan> {
     };
   }
 
-  if (priceConfig.plans.lifetime) {
-    plans.lifetime = {
-      ...priceConfig.plans.lifetime,
-      name: t('lifetime.name'),
-      description: t('lifetime.description'),
+  if (priceConfig.plans.studio) {
+    plans.studio = {
+      ...priceConfig.plans.studio,
+      name: t('studio.name'),
+      description: t('studio.description'),
       features: [
-        t('lifetime.features.feature-1'),
-        t('lifetime.features.feature-2'),
-        t('lifetime.features.feature-3'),
-        t('lifetime.features.feature-4'),
-        t('lifetime.features.feature-5'),
-        t('lifetime.features.feature-6'),
+        t('studio.features.feature-1'),
+        t('studio.features.feature-2'),
+        t('studio.features.feature-3'),
+        t('studio.features.feature-4'),
+        t('studio.features.feature-5'),
+        t('studio.features.feature-6'),
+        t('studio.features.feature-7'),
       ],
       limits: [],
     };

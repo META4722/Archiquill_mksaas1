@@ -99,6 +99,7 @@ export const websiteConfig: WebsiteConfig = {
     plans: {
       free: {
         id: 'free',
+        disabled: true,
         prices: [],
         isFree: true,
         isLifetime: false,

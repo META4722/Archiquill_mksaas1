@@ -12,7 +12,7 @@ COPY package.json pnpm-lock.yaml* ./
 # Copy config files needed for fumadocs-mdx postinstall
 COPY source.config.ts ./
 COPY content ./content
-RUN npm install -g pnpm && pnpm i --frozen-lockfile
+RUN npm install -g pnpm@9 && pnpm i --frozen-lockfile
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -25,7 +25,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN npm install -g pnpm \
+RUN npm install -g pnpm@9 \
   && DOCKER_BUILD=true pnpm build
 
 # Production image, copy all the files and run next

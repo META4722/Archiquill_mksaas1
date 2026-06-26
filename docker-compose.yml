@@ -1,14 +1,11 @@
 services:
   app:
-    image: ghcr.io/${GITHUB_REPOSITORY}:latest
+    image: ghcr.io/meta4722/archiquill_mksaas1:latest
     restart: unless-stopped
     ports:
       - "3000:3000"
     env_file:
       - .env
-    depends_on:
-      db:
-        condition: service_healthy
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.archiquill.rule=Host(`archiquill.com`) || Host(`www.archiquill.com`)"
@@ -19,21 +16,3 @@ services:
       - "traefik.http.middlewares.archiquill-www-redirect.redirectregex.regex=^https://www\\.archiquill\\.com/(.*)"
       - "traefik.http.middlewares.archiquill-www-redirect.redirectregex.replacement=https://archiquill.com/$${1}"
       - "traefik.http.middlewares.archiquill-www-redirect.redirectregex.permanent=true"
-
-  db:
-    image: postgres:16-alpine
-    restart: unless-stopped
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-saas_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB:-saas_db}
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-saas_user} -d ${POSTGRES_DB:-saas_db}"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-volumes:
-  postgres_data:

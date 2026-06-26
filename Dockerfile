@@ -12,7 +12,7 @@ COPY package.json pnpm-lock.yaml* ./
 # Copy config files needed for fumadocs-mdx postinstall
 COPY source.config.ts ./
 COPY content ./content
-RUN npm install -g pnpm@9 && pnpm i --no-frozen-lockfile
+RUN npm install -g pnpm@9 && pnpm i --no-frozen-lockfile --ignore-scripts
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -26,6 +26,7 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm install -g pnpm@9 \
+  && pnpm fumadocs-mdx \
   && DOCKER_BUILD=true pnpm build
 
 # Production image, copy all the files and run next

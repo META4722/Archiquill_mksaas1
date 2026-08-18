@@ -3,11 +3,19 @@ import { createAuthClient } from 'better-auth/react';
 import type { auth } from './auth';
 import { getBaseUrl } from './urls/urls';
 
+const getAuthClientBaseUrl = () => {
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+
+  return getBaseUrl();
+};
+
 /**
  * https://www.better-auth.com/docs/installation#create-client-instance
  */
 export const authClient = createAuthClient({
-  baseURL: getBaseUrl(),
+  baseURL: getAuthClientBaseUrl(),
   plugins: [
     // https://www.better-auth.com/docs/plugins/admin#add-the-client-plugin
     adminClient(),

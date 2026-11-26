@@ -94,7 +94,7 @@
       "name": "入门版",
       "description": "适合个人爱好者和轻度使用",
       "features": {
-        "feature-1": "每月 50 点数",
+        "feature-1": "每月 500 点数",
         "feature-2": "约 50 张设计图/月",
         "feature-3": "积分可滚存",
         "feature-4": "全部 AI 设计工具",
@@ -106,7 +106,7 @@
       "name": "专业版",
       "description": "适合专业人士和重度用户",
       "features": {
-        "feature-1": "每月 150 点数",
+        "feature-1": "每月 1,500 点数",
         "feature-2": "约 150 张设计图/月",
         "feature-3": "积分可滚存",
         "feature-4": "全部 AI 设计工具",
@@ -119,7 +119,7 @@
       "name": "Studio",
       "description": "适合团队和高频用户",
       "features": {
-        "feature-1": "每月 250 点数",
+        "feature-1": "每月 2,500 点数",
         "feature-2": "约 250 张设计图/月",
         "feature-3": "积分可滚存",
         "feature-4": "全部 AI 设计工具",

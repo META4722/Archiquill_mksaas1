@@ -147,7 +147,7 @@ export const websiteConfig: WebsiteConfig = {
         popular: false,
         credits: {
           enable: true,
-          amount: 50,
+          amount: 500,
         },
       },
       pro: {
@@ -173,7 +173,7 @@ export const websiteConfig: WebsiteConfig = {
         popular: true,
         credits: {
           enable: true,
-          amount: 150,
+          amount: 1500,
         },
       },
       studio: {
@@ -199,7 +199,7 @@ export const websiteConfig: WebsiteConfig = {
         popular: false,
         credits: {
           enable: true,
-          amount: 250,
+          amount: 2500,
         },
       },
     },

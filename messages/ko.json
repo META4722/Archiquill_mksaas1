@@ -94,7 +94,7 @@
       "name": "....",
       "description": "취미 및 행사용 사용",
       "features": {
-        "feature-1": "50 크레딧 / 월",
+        "feature-1": "500 크레딧 / 월",
         "feature-2": "달 당 ≈ 50 디자인",
         "feature-3": "크레딧 롤",
         "feature-4": "모든 AI 디자인 도구",
@@ -106,7 +106,7 @@
       "name": "Pro",
       "description": "전문가와 힘 사용자를 위해",
       "features": {
-        "feature-1": "150 크레딧 / 월",
+        "feature-1": "1,500 크레딧 / 월",
         "feature-2": "달 당 ≈ 150 디자인",
         "feature-3": "크레딧 롤",
         "feature-4": "모든 AI 디자인 도구",
@@ -119,7 +119,7 @@
       "name": "- 한국어",
       "description": "팀과 높은 볼륨 사용자를 위해",
       "features": {
-        "feature-1": "250 크레딧 / 월",
+        "feature-1": "2,500 크레딧 / 월",
         "feature-2": "달 당 ≈ 250 디자인",
         "feature-3": "크레딧 롤",
         "feature-4": "모든 AI 디자인 도구",

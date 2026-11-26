@@ -94,7 +94,7 @@
       "name": "Starter",
       "description": "For hobbyists and occasional use",
       "features": {
-        "feature-1": "50 credits / month",
+        "feature-1": "500 credits / month",
         "feature-2": "≈ 50 designs per month",
         "feature-3": "Credits roll over",
         "feature-4": "All AI design tools",
@@ -106,7 +106,7 @@
       "name": "Pro",
       "description": "For professionals and power users",
       "features": {
-        "feature-1": "150 credits / month",
+        "feature-1": "1,500 credits / month",
         "feature-2": "≈ 150 designs per month",
         "feature-3": "Credits roll over",
         "feature-4": "All AI design tools",
@@ -119,7 +119,7 @@
       "name": "Studio",
       "description": "For teams and high-volume users",
       "features": {
-        "feature-1": "250 credits / month",
+        "feature-1": "2,500 credits / month",
         "feature-2": "≈ 250 designs per month",
         "feature-3": "Credits roll over",
         "feature-4": "All AI design tools",

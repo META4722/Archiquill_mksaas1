@@ -1,5 +1,7 @@
 import { GardenPlayground } from '@/ai/garden';
 import Container from '@/components/layout/container';
+import { constructMetadata } from '@/lib/metadata';
+import { Routes } from '@/routes';
 import {
   CheckCircle2,
   ImageIcon,
@@ -22,10 +24,12 @@ export async function generateMetadata({ params }: PageProps) {
     namespace: 'AIGardenPage.metadata',
   });
 
-  return {
+  return constructMetadata({
     title: t('title'),
     description: t('description'),
-  };
+    locale,
+    pathname: Routes.AIGarden,
+  });
 }
 
 export default async function GardenPage({ params }: PageProps) {

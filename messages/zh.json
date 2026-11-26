@@ -5,6 +5,9 @@
     "description": "在几秒内，将建筑草图转化为专业效果图。为建筑师打造的 AI 渲染工具。"
   },
   "Common": {
+    "imageToImage": "图生图",
+    "textToImage": "文生图",
+    "prompt": "提示词",
     "premium": "付费文章",
     "login": "登录",
     "logout": "退出",
@@ -909,9 +912,84 @@
     }
   },
   "HomePage": {
+    "showcaseTools": {
+      "title": "开始创作",
+      "description": "探索专为建筑师和设计师打造的 AI 工具",
+      "tryNow": "立即试用",
+      "items": {
+        "1": {
+          "title": "草图转效果图",
+          "description": "将手绘草图转成写实效果图"
+        },
+        "2": {
+          "title": "立面图转效果图",
+          "description": "将立面图转成细致的三维效果图"
+        },
+        "3": {
+          "title": "建筑外观设计",
+          "description": "生成建筑外观效果图"
+        },
+        "4": {
+          "title": "室内设计",
+          "description": "用 AI 渲染室内空间"
+        },
+        "5": {
+          "title": "景观设计",
+          "description": "用自然元素设计景观"
+        },
+        "6": {
+          "title": "花园设计",
+          "description": "规划花园并预览不同季节的效果"
+        }
+      }
+    },
+    "software": {
+      "title": "让设计变得可见",
+      "description": "将常用设计软件中的概念模型转成写实效果图。",
+      "items": {
+        "1": "三维建模",
+        "2": "CAD 设计",
+        "3": "三维动画",
+        "4": "BIM 设计",
+        "5": "动态图形"
+      }
+    },
+    "showcaseFeatures": {
+      "title": "让设计更简单",
+      "description": "从方案构思到提案展示，用 AI 查看设计效果。",
+      "items": {
+        "1": {
+          "title": "自由探索设计方案",
+          "description": "用效果图比较不同的设计选择。",
+          "details": [
+            "尝试不同的表现风格",
+            "对比材质与光照",
+            "快速预览设计细节"
+          ]
+        },
+        "2": {
+          "title": "快速验证构思",
+          "description": "迅速将初步想法转成可以讨论的图像。",
+          "details": ["预览早期方案", "持续调整和比较", "及早收集反馈"]
+        },
+        "3": {
+          "title": "快速生成效果图",
+          "description": "从概念草图推进到完整的可视化。",
+          "details": ["从草图开始", "减少场景设置", "制作提案用图"]
+        },
+        "4": {
+          "title": "环境光遮蔽效果图",
+          "description": "查看环境光遮蔽对建筑体量与空间层次的表现。",
+          "details": ["查看接触阴影", "观察空间层次", "对照原始图面"]
+        }
+      }
+    },
     "title": "ArchiQuill - 让设计回归设计",
     "description": "在几秒内，将建筑草图转化为专业效果图。为建筑师打造的 AI 渲染工具。",
     "hero": {
+      "headline": "10 秒生成 AI 写实效果图",
+      "showcaseDescription": "几秒内将建筑草图转为专业效果图。",
+      "freePoints": "免费领取 20 积分",
       "title": "ArchiQuill - 让设计回归设计",
       "description": "在几秒内，将建筑草图转化为专业效果图。释放建筑师的创造力，专注于设计本身。",
       "introduction": "AI 驱动的建筑渲染",

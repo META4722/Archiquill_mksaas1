@@ -3,6 +3,7 @@ import { getLocalePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { generateHreflangUrls } from '@/lib/hreflang';
 import { blogSource, categorySource, source } from '@/lib/source';
+import { Routes } from '@/routes';
 import type { MetadataRoute } from 'next';
 import type { Locale } from 'next-intl';
 import { getBaseUrl } from '../lib/urls/urls';
@@ -24,8 +25,11 @@ const staticRoutes = [
   '/auth/register',
 
   // AI features (public marketing pages)
-  '/ai-landscape-design',
-  '/ai-garden-design',
+  Routes.AILandscape,
+  Routes.AIGarden,
+  Routes.AIInterior,
+  Routes.AIExterior,
+  Routes.AIBackgroundRemoval,
 
   // Conditionally add blog and docs
   ...(websiteConfig.blog.enable ? ['/blog'] : []),

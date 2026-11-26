@@ -2,7 +2,7 @@ import { LOCALES, routing } from '@/i18n/routing';
 import type { Locale } from 'next-intl';
 
 const serverBaseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL ??
+  process.env.NEXT_PUBLIC_BASE_URL ||
   `http://localhost:${process.env.PORT ?? 3000}`;
 
 /**

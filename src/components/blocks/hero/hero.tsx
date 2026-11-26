@@ -5,10 +5,12 @@ import { authClient } from '@/lib/auth-client';
 import { cn } from '@/lib/utils';
 import { Routes } from '@/routes';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
 
 export default function HeroSection() {
+  const t = useTranslations('HomePage.hero');
   const { data: session } = authClient.useSession();
   const isLoggedIn = !!session?.user;
   const linkPrimary = isLoggedIn ? Routes.Create : Routes.Register;
@@ -51,7 +53,7 @@ export default function HeroSection() {
           variants={FADE_IN_ANIMATION_VARIANTS}
           className="mb-3 inline-block rounded-full border border-[#A98950]/30 bg-white/50 px-4 py-1.5 text-sm font-medium text-[#3C4242] backdrop-blur-sm"
         >
-          AI-Powered Architectural Rendering
+          {t('introduction')}
         </motion.div>
 
         {/* Main Title */}
@@ -66,17 +68,19 @@ export default function HeroSection() {
               },
             },
           }}
-          className="text-3xl md:text-5xl xl:text-6xl font-bold tracking-tighter text-[#3C4242]"
+          className="text-3xl md:text-5xl xl:text-6xl font-bold tracking-tighter break-words text-[#3C4242]"
         >
-          {'10-Second AI Photorealistic Rendering'.split(' ').map((word, i) => (
-            <motion.span
-              key={i}
-              variants={FADE_IN_ANIMATION_VARIANTS}
-              className="inline-block"
-            >
-              {word}&nbsp;
-            </motion.span>
-          ))}
+          {t('headline')
+            .split(' ')
+            .map((word, i) => (
+              <motion.span
+                key={i}
+                variants={FADE_IN_ANIMATION_VARIANTS}
+                className="inline-block max-w-full"
+              >
+                {word}&nbsp;
+              </motion.span>
+            ))}
         </motion.h1>
 
         {/* Description */}
@@ -87,8 +91,7 @@ export default function HeroSection() {
           transition={{ delay: 0.5 }}
           className="mt-4 max-w-xl text-base md:text-lg text-[#3C4242]/80"
         >
-          Let Design Back To Design. Transform architectural sketches into
-          professional renderings in seconds.
+          {t('showcaseDescription')}
         </motion.p>
 
         {/* Call to Action Button */}
@@ -103,7 +106,7 @@ export default function HeroSection() {
               href={linkPrimary}
               className="mt-6 inline-block px-8 py-3 rounded-full bg-[#A98950] text-white font-semibold shadow-lg transition-colors hover:bg-[#8B6F3E] focus:outline-none focus:ring-2 focus:ring-[#A98950] focus:ring-opacity-75"
             >
-              Get 20 Points for Free
+              {t('freePoints')}
             </LocaleLink>
           </motion.div>
         </motion.div>

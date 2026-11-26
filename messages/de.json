@@ -1,0 +1,1907 @@
+{
+  "Metadata": {
+    "name": "ArchiQuill",
+    "title": "ArchiQuill – KI für Architekturrendering",
+    "description": "Erstellen Sie fotorealistische Architekturvisualisierungen aus Skizzen und 3D-Modellen."
+  },
+  "Common": {
+    "imageToImage": "Bild zu Bild",
+    "textToImage": "Text zu Bild",
+    "prompt": "Prompt",
+    "premium": "Premium",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "signUp": "Registrieren",
+    "language": "Sprache wechseln",
+    "mode": {
+      "label": "Umschaltmodus",
+      "light": "Hell",
+      "dark": "Dunkel",
+      "system": "Systemeinstellung"
+    },
+    "theme": {
+      "label": "Das Thema Toggle",
+      "default": "Ausfall",
+      "blue": "Blau",
+      "green": "Grüngrün",
+      "amber": "Bernstein",
+      "neutral": "Neutral"
+    },
+    "copy": "Kopie",
+    "saving": "Rettung...",
+    "save": "Sparen",
+    "loading": "Beladung...",
+    "cancel": "Stornierung",
+    "logoutFailed": "Ausloggen fehlgeschlagen",
+    "table": {
+      "totalRecords": "Insgesamt {count} Einträge",
+      "noResults": "Keine Ergebnisse",
+      "loading": "Beladung...",
+      "columns": "Spalten",
+      "rowsPerPage": "Zeilen pro Seite",
+      "page": "Seite",
+      "firstPage": "Erste Seite",
+      "lastPage": "Letzte Seite",
+      "nextPage": "Nächste Seite",
+      "previousPage": "Vorherige Seite",
+      "ascending": "Aufsteigend",
+      "descending": "Absteigend"
+    }
+  },
+  "PricingPage": {
+    "title": "Preisgestaltung",
+    "description": "Einfache, transparente Preisgestaltung. Credits rollen um — keine Verschwendung.",
+    "subtitle": "Einfache, transparente Preisgestaltung. Credits rollen um — keine Verschwendung.",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "yearlyBadge": "20 % Rabatt",
+    "trustLine": "Credits werden übertragen · jederzeit kündbar · keine versteckten Gebühren",
+    "PricingCard": {
+      "freePrice": "$0",
+      "perMonth": "/Monat",
+      "perYear": "/Jahr",
+      "billedYearly": "jährlich in Rechnung gestellt",
+      "popular": "Populär",
+      "currentPlan": "Aktueller Plan",
+      "yourCurrentPlan": "Dein aktueller Plan",
+      "getStartedForFree": "Starten Sie kostenlos",
+      "getLifetimeAccess": "Erhalten Sie Lifetime Access",
+      "getStarted": "Beginnen Sie",
+      "notAvailable": "Nicht verfügbar",
+      "daysTrial": "{days} Tage kostenlos testen"
+    },
+    "CheckoutButton": {
+      "loading": "Beladung...",
+      "checkoutFailed": "Nicht öffnen Checkout-Seite"
+    }
+  },
+  "PricePlans": {
+    "free": {
+      "name": "frei",
+      "description": "Probieren Sie es aus, keine Kreditkarte erforderlich",
+      "features": {
+        "feature-1": "20 Credits bei der Anmeldung",
+        "feature-2": "2 freie Designs",
+        "feature-3": "Alle AI Design Tools",
+        "feature-4": "Unterstützung der Gemeinschaft"
+      },
+      "limits": {
+        "limit-1": "Begrenzte Generationen",
+        "limit-2": "Wasserzeichen für Exporte"
+      }
+    },
+    "basic": {
+      "name": "Starter",
+      "description": "Für Hobbyisten und gelegentlichen Gebrauch",
+      "features": {
+        "feature-1": "50 Credits / Monat",
+        "feature-2": "≈ 50 Designs pro Monat",
+        "feature-3": "Credits-Rollover",
+        "feature-4": "Alle AI Design Tools",
+        "feature-5": "Kein Wasserzeichen",
+        "feature-6": "E-Mail Support"
+      }
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "Für Profis und Power User",
+      "features": {
+        "feature-1": "150 Credits / Monat",
+        "feature-2": "≈ 150 Designs pro Monat",
+        "feature-3": "Credits-Rollover",
+        "feature-4": "Alle AI Design Tools",
+        "feature-5": "Kein Wasserzeichen",
+        "feature-6": "Schnellere Generation",
+        "feature-7": "Prioritäre Unterstützung"
+      }
+    },
+    "studio": {
+      "name": "Studio",
+      "description": "Für Teams und hochvolumige Benutzer",
+      "features": {
+        "feature-1": "250 Credits / Monat",
+        "feature-2": "≈ 250 Designs pro Monat",
+        "feature-3": "Credits-Rollover",
+        "feature-4": "Alle AI Design Tools",
+        "feature-5": "Kein Wasserzeichen",
+        "feature-6": "Schnellste Generation",
+        "feature-7": "Dedizierte Unterstützung"
+      }
+    }
+  },
+  "CreditPackages": {
+    "basic": {
+      "name": "Grundlegend",
+      "description": "Beschreibung des Basiskreditpakets"
+    },
+    "standard": {
+      "name": "Standard",
+      "description": "Beschreibung des Kreditpakets"
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Beschreibung des Pakets mit Prämiengutschriften"
+    },
+    "enterprise": {
+      "name": "Unternehmen",
+      "description": "Beschreibung des Pakets für Unternehmenskredite"
+    }
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "Leider existiert die Seite, die Sie suchen, nicht.",
+    "backToHome": "Zurück nach Hause"
+  },
+  "ErrorPage": {
+    "title": "Ups! Irgendetwas ist schief gelaufen!",
+    "tryAgain": "Versuchen Sie es noch einmal",
+    "backToHome": "Zurück nach Hause"
+  },
+  "AboutPage": {
+    "title": "Über:",
+    "description": "ArchiQuill Verwandelt architektonische Skizzen in Sekundenschnelle in professionelle Renderings mithilfe von KI-Technologie.",
+    "authorName": "ArchiQuill",
+    "authorBio": "AI-Powered Architectural Rendering",
+    "introduction": "ArchiQuill ist eine KI-gestützte architektonische Rendering-Plattform, die Skizzen in fotorealistische Visualisierungen verwandelt. Wir helfen Architekten, sich auf Design zu konzentrieren, indem wir den Rendering-Prozess automatisieren und Stunden Arbeit in Sekunden verwandeln.",
+    "talkWithMe": "Kontaktieren Sie uns",
+    "followMe": "Folgen Sie uns auf X"
+  },
+  "ChangelogPage": {
+    "title": "Changelog",
+    "description": "Bleiben Sie auf dem Laufenden mit den neuesten Änderungen in unserem Produkt",
+    "subtitle": "Bleiben Sie auf dem Laufenden mit den neuesten Änderungen in unserem Produkt"
+  },
+  "RoadmapPage": {
+    "title": "Fahrplan",
+    "description": "Entdecken Sie unsere Zukunftspläne und kommenden Features",
+    "subtitle": "Entdecken Sie unsere Zukunftspläne und kommenden Features"
+  },
+  "ContactPage": {
+    "title": "Kontakt",
+    "description": "Wir helfen Ihnen, den richtigen Plan für Ihr Unternehmen zu finden",
+    "subtitle": "Wir helfen Ihnen, den richtigen Plan für Ihr Unternehmen zu finden",
+    "form": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Wenn Sie Fragen oder Feedback haben, kontaktieren Sie bitte unser Team.",
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "submit": "Einreichung",
+      "submitting": "Einreichung...",
+      "success": "Erfolgreich gesendete Nachricht",
+      "fail": "Nachricht nicht senden",
+      "nameMinLength": "Der Name muss mindestens 3 Zeichen haben",
+      "nameMaxLength": "Der Name darf 30 Zeichen nicht überschreiten",
+      "emailValidation": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "messageMinLength": "Nachricht muss mindestens 10 Zeichen sein",
+      "messageMaxLength": "Die Nachricht darf 500 Zeichen nicht überschreiten"
+    }
+  },
+  "WaitlistPage": {
+    "title": "Warteliste",
+    "description": "Treten Sie unserer Warteliste für die Einführung unseres Produkts bei",
+    "subtitle": "Treten Sie unserer Warteliste für die Einführung unseres Produkts bei",
+    "form": {
+      "title": "Treten Sie unserer Warteliste bei",
+      "description": "Wir werden Sie benachrichtigen, wenn wir unser Produkt starten",
+      "email": "E-Mail",
+      "subscribe": "Subscriber",
+      "subscribing": "Zeichnung...",
+      "success": "Erfolgreich abonniert",
+      "fail": "Nicht abonniert",
+      "emailValidation": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    }
+  },
+  "Newsletter": {
+    "title": "Newsletter",
+    "subtitle": "Treten Sie der Community bei",
+    "description": "Abonnieren Sie unseren Newsletter für die neuesten Nachrichten und Updates",
+    "form": {
+      "email": "E-Mail",
+      "subscribe": "Subscriber",
+      "subscribing": "Zeichnung...",
+      "success": "Erfolgreich abonniert",
+      "fail": "Nicht abonniert",
+      "emailValidation": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    }
+  },
+  "AuthPage": {
+    "login": {
+      "title": "Anmelden",
+      "welcomeBack": "Willkommen zurück",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "signIn": "Anmelden",
+      "signUpHint": "Noch kein Konto? Registrieren",
+      "forgotPassword": "Passwort vergessen?",
+      "verificationResent": "Wir haben einen neuen Bestätigungslink gesendet. Öffnen Sie ihn in Ihrem Posteingang, um die Anmeldung abzuschließen.",
+      "loginFailed": "Ich kann mich nicht anmelden. Bitte versuchen Sie es erneut.",
+      "socialLoginFailed": "Ich kann nicht mit dem Anmelden beginnen.",
+      "signInWithGoogle": "Mit Google anmelden",
+      "signInWithGitHub": "Mit GitHub anmelden",
+      "showPassword": "Passwort anzeigen",
+      "hidePassword": "Passwort ausblenden",
+      "or": "Oder",
+      "emailRequired": "Geben Sie Ihre E-Mail-Adresse ein",
+      "passwordRequired": "Geben Sie Ihr Passwort ein",
+      "captchaInvalid": "Capcha-Verifizierung fehlgeschlagen",
+      "captchaError": "Fehler bei der Capcha-Verifizierung",
+      "emailAlreadyExists": "Diese E-Mail ist bereits registriert. Bitte melden Sie sich mit Ihrem Passwort an."
+    },
+    "register": {
+      "title": "Registrieren",
+      "createAccount": "Konto erstellen",
+      "name": "Name",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "signUp": "Registrieren",
+      "signInHint": "Bereits ein Konto? Anmelden",
+      "checkEmail": "Prüfen Sie Ihren Posteingang",
+      "showPassword": "Passwort anzeigen",
+      "hidePassword": "Passwort ausblenden",
+      "nameRequired": "Bitte geben Sie Ihren Namen ein",
+      "emailRequired": "Bitte geben Sie Ihre E-Mail",
+      "passwordRequired": "Bitte geben Sie Ihr Passwort ein",
+      "captchaInvalid": "Capcha-Verifizierung fehlgeschlagen",
+      "captchaError": "Fehler bei der Capcha-Verifizierung"
+    },
+    "forgotPassword": {
+      "title": "Passwort vergessen",
+      "email": "E-Mail",
+      "send": "Senden Sie Reset Link",
+      "backToLogin": "Zurück zum Login",
+      "checkEmail": "Bitte überprüfen Sie Ihren E-Mail-Posteingang",
+      "emailRequired": "Bitte geben Sie Ihre E-Mail"
+    },
+    "resetPassword": {
+      "title": "Passwort zurücksetzen",
+      "password": "Passwort",
+      "reset": "Passwort zurücksetzen",
+      "backToLogin": "Zurück zum Login",
+      "showPassword": "Passwort anzeigen",
+      "hidePassword": "Passwort ausblenden",
+      "minLength": "Das Passwort muss mindestens 8 Zeichen haben"
+    },
+    "error": {
+      "title": "Ups! Irgendetwas ist schief gelaufen!",
+      "tryAgain": "Bitte versuchen Sie es noch einmal.",
+      "backToLogin": "Zurück zum Login",
+      "checkEmail": "Bitte überprüfen Sie Ihren E-Mail-Posteingang"
+    },
+    "common": {
+      "termsOfService": "Nutzungsbedingungen",
+      "privacyPolicy": "Datenschutzpolitik",
+      "byClickingContinue": "Wenn Sie fortfahren, akzeptieren Sie unsere ",
+      "and": " und "
+    }
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "description": "Aktuelles und Anleitungen von ArchiQuill",
+    "subtitle": "Aktuelles und Anleitungen von ArchiQuill",
+    "author": "Autor",
+    "categories": "Kategorien",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "readTime": "{minutes} Min. Lesezeit",
+    "all": "alle",
+    "noPostsFound": "Keine Beiträge gefunden",
+    "allPosts": "Alle Beiträge",
+    "morePosts": "Mehr Posts"
+  },
+  "DocsPage": {
+    "toc": "Inhaltsverzeichnis",
+    "search": "Suchdocs",
+    "lastUpdate": "Zuletzt aktualisiert am",
+    "searchNoResult": "Keine Ergebnisse",
+    "previousPage": "Vorherig",
+    "nextPage": "Nächster Artikel",
+    "chooseLanguage": "Auswählen der Sprache",
+    "title": "MkSaaS Docs",
+    "homepage": "Homepage"
+  },
+  "PremiumContent": {
+    "title": "Premium-Inhalte freischalten",
+    "description": "Abonnieren Sie unseren Pro-Plan, um auf alle Premium-Inhalte und exklusiven Inhalte zuzugreifen.",
+    "upgradeCta": "Upgrade jetzt",
+    "benefit1": "Alle Premium-Inhalte",
+    "benefit2": "Exklusive Inhalte",
+    "benefit3": "Jederzeit abbrechen",
+    "signIn": "Zeichen ein",
+    "loginRequired": "Melden Sie sich an, um weiter zu lesen",
+    "loginDescription": "Dies ist Premium-Inhalte. Melden Sie sich bei Ihrem Konto an, um auf den vollständigen Inhalt zuzugreifen.",
+    "checkingAccess": "Zugangskontrolle...",
+    "loadingContent": "Vollständige Inhalte laden..."
+  },
+  "Marketing": {
+    "navbar": {
+      "features": {
+        "title": "Merkmale"
+      },
+      "pricing": {
+        "title": "Preisgestaltung"
+      },
+      "blog": {
+        "title": "Blog"
+      },
+      "docs": {
+        "title": "Docs"
+      },
+      "ai": {
+        "title": "KI-Tools",
+        "items": {
+          "landscape": {
+            "title": "KI-Landschaftsgestaltung",
+            "description": "Landschaftsskizzen in fotorealistische Renderings verwandeln"
+          },
+          "garden": {
+            "title": "KI-Gartengestaltung",
+            "description": "Generieren Sie schöne Gartenvisualisierungen aus Ihren Konzepten"
+          },
+          "text": {
+            "title": "AI-Text",
+            "description": "Zeigen Sie, wie Sie AI verwenden, um atemberaubenden Text zu schreiben"
+          },
+          "image": {
+            "title": "AI-Bild",
+            "description": "Zeigen Sie, wie Sie AI verwenden, um schöne Bilder zu erzeugen"
+          },
+          "chat": {
+            "title": "AI Chat",
+            "description": "Zeigen Sie, wie Sie AI verwenden, um mit Ihren Kunden zu chatten"
+          },
+          "video": {
+            "title": "AI Video",
+            "description": "Zeigen Sie, wie Sie AI verwenden, um erstaunliche Videos zu generieren"
+          },
+          "audio": {
+            "title": "AI Audio",
+            "description": "Zeigen Sie, wie Sie AI verwenden, um wunderbares Audio zu erzeugen"
+          },
+          "interior": {
+            "title": "KI-Raumgestaltung",
+            "description": "Verwandeln Sie Raumkonzepte in atemberaubende Innenvisualisierungen"
+          },
+          "exterior": {
+            "title": "KI-Fassadengestaltung",
+            "description": "Generieren Sie fotorealistische Gebäude-Außenrenderings aus Skizzen"
+          },
+          "backgroundRemoval": {
+            "title": "KI-Hintergrundentfernung",
+            "description": "Bildhintergründe sofort mit AI entfernen"
+          }
+        }
+      },
+      "pages": {
+        "title": "Seiten",
+        "items": {
+          "about": {
+            "title": "Über:",
+            "description": "Erfahren Sie mehr über unser Unternehmen, Mission und Werte"
+          },
+          "contact": {
+            "title": "Kontakt",
+            "description": "Kontaktieren Sie unser Team für Support oder Anfragen"
+          },
+          "waitlist": {
+            "title": "Warteliste",
+            "description": "Treten Sie unserer Warteliste für die neuesten Nachrichten und Updates bei"
+          },
+          "changelog": {
+            "title": "Changelog",
+            "description": "Sehen Sie die neuesten Updates für unsere Produkte"
+          },
+          "roadmap": {
+            "title": "Fahrplan",
+            "description": "Entdecken Sie unsere Zukunftspläne und kommenden Features"
+          },
+          "cookiePolicy": {
+            "title": "Cookie-Richtlinien",
+            "description": "Wie wir die Cookies auf unserer Website verwenden"
+          },
+          "privacyPolicy": {
+            "title": "Datenschutzpolitik",
+            "description": "Wie wir Ihre Daten schützen und behandeln"
+          },
+          "termsOfService": {
+            "title": "Nutzungsbedingungen",
+            "description": "Die rechtliche Vereinbarung zwischen Ihnen und unserem Unternehmen"
+          }
+        }
+      },
+      "blocks": {
+        "title": "Blöcke",
+        "items": {
+          "magicui": {
+            "title": "MagicUI Blöcke"
+          },
+          "hero-section": {
+            "title": "Heldenblöcke"
+          },
+          "logo-cloud": {
+            "title": "Logo Cloud Blocks"
+          },
+          "integrations": {
+            "title": "Integrationsblöcke"
+          },
+          "features": {
+            "title": "Merkmalsblöcke"
+          },
+          "content": {
+            "title": "Inhaltsblöcke"
+          },
+          "stats": {
+            "title": "Stats Blöcke"
+          },
+          "team": {
+            "title": "Teamblöcke"
+          },
+          "testimonials": {
+            "title": "Testimonials Blöcke"
+          },
+          "callToAction": {
+            "title": "Aufruf zu Aktionsblöcken"
+          },
+          "footer": {
+            "title": "Fußzeilenblöcke"
+          },
+          "pricing": {
+            "title": "Preisblöcke"
+          },
+          "comparator": {
+            "title": "Vergleicherblöcke"
+          },
+          "faq": {
+            "title": "FAQ Blöcke"
+          },
+          "login": {
+            "title": "Login-Blöcke"
+          },
+          "signup": {
+            "title": "Anmeldeblöcke"
+          },
+          "forgot-password": {
+            "title": "Password Blocks vergessen"
+          },
+          "contact": {
+            "title": "Kontaktblöcke"
+          }
+        }
+      }
+    },
+    "footer": {
+      "tagline": "Verwandeln Sie architektonische Skizzen in Sekundenschnelle in professionelle Renderings mit KI-gestützter Technologie",
+      "product": {
+        "title": "Produkt",
+        "items": {
+          "features": "Merkmale",
+          "pricing": "Preisgestaltung",
+          "faq": "FAQ"
+        }
+      },
+      "resources": {
+        "title": "Ressourcen",
+        "items": {
+          "blog": "Blog",
+          "docs": "Dokumentation",
+          "changelog": "Changelog",
+          "roadmap": "Fahrplan"
+        }
+      },
+      "company": {
+        "title": "Unternehmen",
+        "items": {
+          "about": "Über:",
+          "contact": "Kontakt",
+          "waitlist": "Warteliste"
+        }
+      },
+      "legal": {
+        "title": "Rechtlich",
+        "items": {
+          "cookiePolicy": "Cookie-Richtlinien",
+          "privacyPolicy": "Datenschutzpolitik",
+          "termsOfService": "Nutzungsbedingungen"
+        }
+      }
+    },
+    "avatar": {
+      "dashboard": "Dashboard",
+      "profile": "Profil",
+      "billing": "Rechnungsstellung",
+      "credits": "Kredite",
+      "settings": "Einstellungen",
+      "logout": "Abmelden"
+    }
+  },
+  "Dashboard": {
+    "home": {
+      "title": "Zuhause",
+      "welcome": "Willkommen zurück, {name}",
+      "description": "Beginnen Sie mit der Erstellung schöner Designs mit KI-Tools",
+      "aiTools": {
+        "title": "AI Design Tools",
+        "subtitle": "Wählen Sie ein KI-Tool, um Ihre kreative Reise zu beginnen",
+        "landscape": {
+          "title": "AI Landschaft Design",
+          "description": "Verwandeln Sie Skizzen in professionelle Landschaftsdarstellungen"
+        },
+        "garden": {
+          "title": "AI Garden Design",
+          "description": "Generieren Sie schöne Gartendesigns in verschiedenen Stilen"
+        },
+        "more": {
+          "title": "Weitere AI Tools",
+          "description": "Bleiben Sie dran für weitere aufregende AI-Design-Funktionen"
+        }
+      },
+      "credits": {
+        "available": "Verfügbare Credits",
+        "buy": "Credits kaufen"
+      },
+      "stats": {
+        "generatedThisMonth": "Generiert in diesem Monat",
+        "creditsUsed": "Verwendete Kredite",
+        "savedWorks": "Gerettete Werke"
+      },
+      "aiToolCard": {
+        "comingSoon": "Bald kommen",
+        "credits": "Kredite",
+        "startCreating": "Starten Sie mit dem Erstellen"
+      },
+      "unifiedGeneration": {
+        "toolGrid": {
+          "title": "AI Design Tools",
+          "subtitle": "Wählen Sie ein Werkzeug aus, um mit der Erstellung zu beginnen",
+          "exterior": "Außen",
+          "interior": "Innenausstattung",
+          "landscape": "Landschaft",
+          "garden": "Garten"
+        },
+        "styles": {
+          "photorealistic": "Fotorealistisch",
+          "artistic": "Künstlerisch",
+          "conceptual": "Konzeptionell",
+          "technical": "Technische"
+        },
+        "controls": {
+          "styleLabel": "Art der Tierkörperbeseitigung",
+          "uploadLabel": "Bild hochladen (optional für Image-to-Image)",
+          "uploadTitle": "Klicken oder Ziehen zum Hochladen",
+          "uploadDescription": "JPEG, PNG, oder WebP (max. 10 MB)",
+          "uploadButton": "Wählen Sie Datei",
+          "uploading": "Hochladen...",
+          "promptLabel": "Beschreiben Sie Ihr Design",
+          "promptPlaceholder": {
+            "default": "Wählen Sie ein Tool zum Starten...",
+            "exterior": "Beschreiben Sie das Außendesign, das Sie erstellen möchten (z. B. moderne Villa mit Glasfassade, minimalistischer Eingang ...)",
+            "interior": "Beschreiben Sie das Innendesign, das Sie erstellen möchten (z. B. gemütliches Wohnzimmer mit warmer Beleuchtung, moderne Küche ...)",
+            "landscape": "Beschreiben Sie die Landschaftsgestaltung, die Sie erstellen möchten (z. B. Zen-Garten mit Wasserspielen, moderner Park mit Wegen ...)",
+            "garden": "Beschreiben Sie die Gartengestaltung, die Sie erstellen möchten (z. B. bunter Blumengarten, Gemüsegarten mit Hochbeeten ...)"
+          },
+          "aspectRatioLabel": "Aspektverhältnis",
+          "generateButton": "Erstellen ({credits} Credits)",
+          "generateButtonFree": "Generieren (frei)",
+          "generating": "Generierung...",
+          "selectToolFirst": "Bitte wählen Sie oben ein Tool aus, um zu starten"
+        },
+        "display": {
+          "loading": "Generieren Sie Ihr Design...",
+          "empty": "Ihr generiertes Bild erscheint hier",
+          "emptyDescription": "Wählen Sie ein Werkzeug und klicken Sie auf Generieren, um mit der Erstellung zu beginnen",
+          "timing": "In {time} s erstellt",
+          "download": "Download",
+          "share": "Anteil"
+        }
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "create": {
+      "title": "Schaffen"
+    },
+    "gallery": {
+      "title": "Galerie"
+    },
+    "admin": {
+      "title": "Admin",
+      "users": {
+        "title": "Nutzer",
+        "fakeData": "Hinweis: Gefälschte Daten zur Demonstration, einige Features sind deaktiviert",
+        "error": "Es ist nicht gelungen, Benutzer zu bekommen",
+        "search": "Suchen Sie Benutzer...",
+        "columns": {
+          "columns": "Säulen",
+          "name": "Name",
+          "email": "E-Mail",
+          "role": "Rolle",
+          "createdAt": "Erstellt bei",
+          "customerId": "Kunden-ID",
+          "status": "Status",
+          "banReason": "Verbotsgründe",
+          "banExpires": "Verbot läuft ab"
+        },
+        "admin": "Admin",
+        "user": "Nutzer",
+        "email": {
+          "verified": "E-Mail verifiziert",
+          "unverified": "E-Mail nicht verifiziert"
+        },
+        "emailCopied": "E-Mail kopiert ins Clipboard",
+        "banned": "Verboten",
+        "active": "Aktiv",
+        "joined": "Beigetreten bei",
+        "updated": "Aktualisiert unter",
+        "ban": {
+          "reason": "Verbotsgründe",
+          "reasonPlaceholder": "Geben Sie den Grund für das Verbot dieses Benutzers ein",
+          "defaultReason": "Spam",
+          "never": "Nie nie",
+          "expires": "Verbot läuft ab",
+          "selectDate": "Datum der Auswahl",
+          "button": "Ban-User",
+          "success": "Benutzer wurde verboten",
+          "error": "Versäumt, den Benutzer zu verbieten"
+        },
+        "unban": {
+          "button": "Unban-Nutzer",
+          "success": "Der User wurde nicht verboten",
+          "error": "Unban-Nutzer nicht erfolgreich"
+        },
+        "close": "Schließen"
+      }
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "profile": {
+        "title": "Profil",
+        "description": "Verwalten Sie Ihre Kontoinformationen",
+        "avatar": {
+          "title": "Avatar",
+          "description": "Klicken Sie auf den Upload-Button, um einen benutzerdefinierten hochzuladen",
+          "recommendation": "Ein Avatar ist optional, wird aber dringend empfohlen",
+          "uploading": "Hochladen...",
+          "uploadAvatar": "Avatar hochladen",
+          "success": "Avatar erfolgreich aktualisiert",
+          "fail": "Update des Avatars fehlgeschlagen"
+        },
+        "name": {
+          "title": "Name",
+          "description": "Bitte geben Sie Ihren Anzeigenamen ein",
+          "placeholder": "Geben Sie Ihren Namen ein",
+          "minLength": "Bitte verwenden Sie mindestens 3 Zeichen",
+          "maxLength": "Bitte maximal 30 Zeichen verwenden",
+          "hint": "Bitte verwenden Sie 3-30 Zeichen für Ihren Namen",
+          "success": "Name erfolgreich aktualisiert",
+          "fail": "Name nicht aktualisieren",
+          "saving": "Rettung...",
+          "save": "Sparen"
+        }
+      },
+      "billing": {
+        "title": "Rechnungsstellung",
+        "description": "Verwalten Sie Ihre Abonnement- und Rechnungsdetails",
+        "status": {
+          "active": "Aktiv",
+          "trial": "Versuch",
+          "free": "frei",
+          "lifetime": "Lebenszeit"
+        },
+        "interval": {
+          "month": "Monat",
+          "year": "Jahr",
+          "oneTime": "einmalig"
+        },
+        "currentPlan": {
+          "title": "Aktueller Plan",
+          "description": "Ihre aktuellen Plan Details",
+          "noPlan": "Sie haben keinen aktiven Plan"
+        },
+        "CustomerPortalButton": {
+          "loading": "Beladung...",
+          "createCustomerPortalFailed": "Nicht geöffnet Stripe Kundenportal"
+        },
+        "price": "Preis:",
+        "periodStartDate": "Datum des Beginns des Zeitraums:",
+        "periodEndDate": "Ende des Zeitraums:",
+        "trialEnds": "Der Versuch endet:",
+        "freePlanMessage": "Sie befinden sich derzeit auf dem kostenlosen plan mit begrenzten funktionen.",
+        "lifetimeMessage": "Sie haben lebenslangen Zugriff auf alle Premium-Funktionen",
+        "manageSubscription": "Verwalten von Abonnements und Abrechnung",
+        "manageBilling": "Verwalten von Billing",
+        "upgradePlan": "Upgrade-Plan",
+        "retry": "Wiederholen",
+        "errorMessage": "Daten nicht erhalten",
+        "paymentSuccess": "Zahlungserfolg"
+      },
+      "payment": {
+        "processing": {
+          "title": "Abwicklungszahlung",
+          "description": "Bitte warten Sie, bis wir Ihre Zahlung bestätigen..."
+        },
+        "success": {
+          "title": "Zahlungserfolg",
+          "description": "Automatische Umleitung..."
+        },
+        "failed": {
+          "title": "Zahlung fehlgeschlagen",
+          "description": "Es gab ein Problem bei der Verarbeitung Ihrer Zahlung."
+        },
+        "timeout": {
+          "title": "Processing Timeout",
+          "description": "Die Zahlungsabwicklung dauert länger als erwartet."
+        },
+        "retry": "Wiederholen"
+      },
+      "credits": {
+        "title": "Kredite",
+        "description": "Verwalten Sie Ihre Kredittransaktionen",
+        "tabs": {
+          "balance": "Saldo",
+          "transactions": "Transaktionen"
+        },
+        "balance": {
+          "title": "Kreditausfall",
+          "description": "Ihr Kreditsaldo",
+          "credits": "Kredite",
+          "creditsDescription": "Sie haben {credits} Credits",
+          "creditsExpired": "Verfallene Kredite",
+          "creditsAdded": "Credits wurden Ihrem Konto hinzugefügt",
+          "viewTransactions": "Credit Transactions ansehen",
+          "retry": "Wiederholen",
+          "expiringCredits": "{credits} Credits verfallen innerhalb der nächsten {days} Tage"
+        },
+        "packages": {
+          "title": "Kreditpakete",
+          "description": "Kaufen Sie zusätzliche Credits, um unsere Dienste zu nutzen",
+          "purchase": "Kaufpreis",
+          "processing": "Verarbeitung ...",
+          "popular": "Populär",
+          "completePurchase": "Vervollständigen Sie Ihren Kauf",
+          "failedToFetchCredits": "Nicht in der Lage, Credits zu holen",
+          "failedToCreatePaymentIntent": "Fehlgeschlagen, um Zahlungsabsicht zu erstellen",
+          "failedToInitiatePayment": "Zahlungsauslösung fehlgeschlagen",
+          "cancel": "Stornierung",
+          "purchaseFailed": "Fehlgeschlagene Kaufkredite",
+          "checkoutFailed": "Fehlgeschlagen, Checkout-Sitzung zu erstellen",
+          "loading": "Beladung...",
+          "pay": "Zahl"
+        },
+        "transactions": {
+          "title": "Kredittransaktionen",
+          "error": "Fehlgeschlagen, um Kredittransaktionen zu erhalten",
+          "search": "Suchen Sie Kredittransaktionen ...",
+          "paymentIdCopied": "Zahlungs-ID kopiert ins Clipboard",
+          "columns": {
+            "columns": "Säulen",
+            "id": "ID",
+            "type": "Typ",
+            "description": "Beschreibung",
+            "amount": "Betrag",
+            "remainingAmount": "Verbleibender Betrag",
+            "paymentId": "Zahlungskennung",
+            "expirationDate": "Datum des Ablaufs",
+            "expirationDateProcessedAt": "Verfallsdatum verarbeitet am",
+            "createdAt": "Erstellt bei",
+            "updatedAt": "Aktualisiert At"
+          },
+          "types": {
+            "MONTHLY_REFRESH": "Monatliche Refresh",
+            "REGISTER_GIFT": "Registergeschenk",
+            "PURCHASE": "Gekaufte Kredite",
+            "USAGE": "Verbrauchte Kredite",
+            "EXPIRE": "Abgelaufene Kredite",
+            "SUBSCRIPTION_RENEWAL": "Verlängerung des Abonnements",
+            "LIFETIME_MONTHLY": "Lebenszeit Monatlich"
+          },
+          "detailViewer": {
+            "title": "Details zu Kredittransaktionen",
+            "close": "Schließen"
+          },
+          "expired": "Läuft ab",
+          "never": "Nie nie"
+        }
+      },
+      "notification": {
+        "title": "Anmeldung",
+        "description": "Verwalten Sie Ihre Benachrichtigungspräferenzen",
+        "newsletter": {
+          "title": "Newsletter Abonnement",
+          "description": "Verwalten Sie Ihre Newsletter-Abonnementpräferenzen",
+          "label": "Newsletter abonnieren",
+          "hint": "Sie können Ihre Abonnementeinstellungen jederzeit ändern",
+          "emailRequired": "E-Mail ist erforderlich, um den Newsletter zu abonnieren",
+          "subscribeSuccess": "Erfolgreich den Newsletter abonniert",
+          "subscribeFail": "Nicht abonniert den Newsletter",
+          "unsubscribeSuccess": "Erfolgreich vom Newsletter abgemeldet",
+          "unsubscribeFail": "Fehlgeschlagen, sich vom Newsletter abzumelden",
+          "error": "Ein Fehler ist beim Aktualisieren Ihres Abonnements aufgetreten"
+        }
+      },
+      "security": {
+        "title": "Sicherheit",
+        "description": "Verwalten Sie Ihre Sicherheitseinstellungen",
+        "updatePassword": {
+          "title": "Passwort ändern",
+          "description": "Geben Sie Ihr aktuelles Passwort und ein neues Passwort ein",
+          "currentPassword": "Aktuelles Passwort",
+          "currentRequired": "Aktuelles Passwort ist erforderlich",
+          "newPassword": "Neues Passwort",
+          "newMinLength": "Das Passwort muss mindestens 8 Zeichen haben",
+          "hint": "Bitte verwenden Sie mindestens 8 Zeichen für das Passwort",
+          "showPassword": "Passwort anzeigen",
+          "hidePassword": "Passwort ausblenden",
+          "success": "Password erfolgreich aktualisiert",
+          "fail": "Fehler beim Aktualisieren des Passworts",
+          "saving": "Rettung...",
+          "save": "Sparen"
+        },
+        "resetPassword": {
+          "title": "Passwort zurücksetzen",
+          "description": "Passwort zurücksetzen, um E-Mail-Login zu aktivieren",
+          "info": "Wenn Sie Ihr Passwort zurücksetzen, können Sie sich mit Ihrer E-Mail und Ihrem Passwort zusätzlich zu Ihren Social-Login-Methoden anmelden.",
+          "button": "Passwort zurücksetzen"
+        },
+        "deleteAccount": {
+          "title": "Konto löschen",
+          "description": "Löschen Sie Ihr Konto und alle seine Inhalte dauerhaft",
+          "warning": "Diese Aktion ist nicht reversibel, also bitte mit Vorsicht fortfahren",
+          "button": "Konto löschen",
+          "confirmTitle": "Konto löschen",
+          "confirmDescription": "Sind Sie sicher, dass Sie Ihr Konto löschen wollen?",
+          "confirm": "Löschung",
+          "cancel": "Stornierung",
+          "deleting": "Streichung...",
+          "success": "Account erfolgreich gelöscht",
+          "fail": "Konto nicht löschen"
+        }
+      }
+    },
+    "upgrade": {
+      "title": "Upgrade",
+      "description": "Upgrade auf Pro, um auf alle Funktionen zuzugreifen",
+      "button": "Upgrade"
+    }
+  },
+  "Mail": {
+    "common": {
+      "team": "Ihr {name}-Team",
+      "copyright": "© {year} Alle Rechte vorbehalten."
+    },
+    "verifyEmail": {
+      "title": "Hallo {name}",
+      "body": "Bitte klicken Sie auf den Link unten, um Ihre E-Mail-Adresse zu überprüfen.",
+      "confirmEmail": "E-Mail bestätigen",
+      "subject": "Überprüfen Sie Ihre E-Mail"
+    },
+    "forgotPassword": {
+      "title": "Hallo {name}",
+      "body": "Bitte klicken Sie auf den Link unten, um Ihr Passwort zurückzusetzen.",
+      "resetPassword": "Passwort zurücksetzen",
+      "subject": "Setzen Sie Ihr Passwort zurück"
+    },
+    "subscribeNewsletter": {
+      "body": "Vielen Dank, dass Sie den Newsletter abonniert haben. Wir halten Sie auf dem Laufenden mit den neuesten Nachrichten und Updates.",
+      "subject": "Danke fürs Abonnement"
+    },
+    "contactMessage": {
+      "name": "Name: {name}",
+      "email": "E-Mail: {email}",
+      "message": "Nachricht: {message}",
+      "subject": "Kontaktnachricht von der Website"
+    }
+  },
+  "HomePage": {
+    "showcaseTools": {
+      "title": "Starten Sie mit dem Erstellen",
+      "description": "Entdecken Sie unsere vielfältigen KI-Tools für Architekten und Designer",
+      "tryNow": "Jetzt versuchen",
+      "items": {
+        "1": {
+          "title": "Skizze zum Rendern",
+          "description": "Verwandeln Sie handgezeichnete Skizzen in fotorealistische Renderings"
+        },
+        "2": {
+          "title": "Elevation to Render",
+          "description": "Konvertieren von Höhenzeichnungen in detaillierte 3D-Visualisierungen"
+        },
+        "3": {
+          "title": "Außenausbau",
+          "description": "Erstellen Sie atemberaubende architektonische Außendarstellungen"
+        },
+        "4": {
+          "title": "Innenausstattung",
+          "description": "Visualisieren Sie Innenräume mit AI-powered Rendering"
+        },
+        "5": {
+          "title": "Landschaftsgestaltung",
+          "description": "Gestalten Sie schöne Landschaften mit natürlichen Elementen"
+        },
+        "6": {
+          "title": "Gartengestaltung",
+          "description": "Planen und visualisieren Sie Gärten mit saisonalen Variationen"
+        }
+      }
+    },
+    "software": {
+      "title": "Verwandeln Sie Ihr Design in die Realität",
+      "description": "Verwandeln Sie Konzepte aus Ihrer Lieblings-Design-Software in atemberaubende, fotorealistische Renderings mit KI-gestützter Präzision.",
+      "items": {
+        "1": "3D-Modellierung",
+        "2": "CAD Design",
+        "3": "3D Animation",
+        "4": "BIM-Design",
+        "5": "Bewegungsgrafik"
+      }
+    },
+    "showcaseFeatures": {
+      "title": "Entfesseln Sie Kreativität, machen Sie Design einfach",
+      "description": "Erfahren Sie, wie AI-Rendering das Design vom Konzept bis zur Präsentation unterstützt.",
+      "items": {
+        "1": {
+          "title": "Designfreiheit",
+          "description": "Entfesseln Sie Ihr kreatives Potenzial ohne die Einschränkungen traditioneller Design-Tools. Durch unser KI-gesteuertes Design-System kann jede Idee frei zum Ausdruck gebracht werden und einzigartige und personalisierte visuelle Arbeiten schaffen.",
+          "details": [
+            "Unbegrenzter kreativer Ausdrucksraum",
+            "Intelligente Designvorschläge und Optimierungen",
+            "Personalisierte visuelle Stilanpassung"
+          ]
+        },
+        "2": {
+          "title": "Quick Idea Forming",
+          "description": "Verwandeln Sie Inspiration schnell in konkrete Designkonzepte. Unsere intelligenten Algorithmen verstehen Ihre kreative Absicht und helfen Ihnen, in kürzester Zeit vollständige Designideen und -lösungen zu entwickeln.",
+          "details": [
+            "Instant Inspiration Capture und Transformation",
+            "Smart Concept Generation Algorithmen",
+            "Rapid Prototyping Tools"
+          ]
+        },
+        "3": {
+          "title": "Ideen in Minuten generieren",
+          "description": "Generieren Sie komplette Designlösungen innerhalb weniger Minuten. Vom Konzept bis zum fertigen Produkt begleitet Sie der KI-Assistent durch den gesamten kreativen Prozess und macht das Design effizienter und angenehmer.",
+          "details": [
+            "Schnelllösungserzeugungsmotor",
+            "KI-unterstützter Design-Workflow",
+            "Effiziente kreative Erfahrung"
+          ]
+        },
+        "4": {
+          "title": "Echtzeit AO Map Rendering",
+          "description": "Direct AO Map Rendering Technologie für effiziente Rendering Workflows. Output hochwertige Ambient Occlusion Maps direkt ohne komplexe Nachbearbeitung, was die Rendering Effizienz und visuelle Qualität dramatisch verbessert.",
+          "details": [
+            "Direkte AO-Kartenausgabe ohne Nachbearbeitung",
+            "Optimierte hocheffiziente Rendering-Engine",
+            "Berechnung des Umgebungsokklus in Echtzeit"
+          ]
+        }
+      }
+    },
+    "title": "ArchiQuill Design kehrt zum Design zurück",
+    "description": "Verwandeln Sie architektonische Skizzen in Sekundenschnelle in professionelle Renderings. KI-gestütztes Rendering-Tool für Architekten.",
+    "hero": {
+      "headline": "Fotorealistische Architekturvisualisierung mit KI",
+      "showcaseDescription": "Verwandeln Sie Architekturskizzen in wenigen Sekunden in professionelle Renderings.",
+      "freePoints": "20 kostenlose Credits erhalten",
+      "title": "ArchiQuill Design kehrt zum Design zurück",
+      "description": "In Sekunden verwandeln Sie architektonische Skizzen in professionelle Renderings. Entfesseln Sie die Kreativität der Architekten, konzentrieren Sie sich auf das Design selbst.",
+      "introduction": "KI-Rendering für Architektur",
+      "primary": "Starten Sie die kostenlose Testversion",
+      "secondary": "Beispiele:"
+    },
+    "logocloud": {
+      "title": "Ihre Lieblingsunternehmen sind unsere Partner"
+    },
+    "integration": {
+      "title": "Integrationen",
+      "subtitle": "Integrieren Sie sich mit Ihren Lieblings-Tools",
+      "description": "Verbinden Sie sich nahtlos mit gängigen Plattformen und Diensten, um Ihren Workflow zu verbessern.",
+      "learnMore": "Erfahren Sie mehr",
+      "items": {
+        "item-1": {
+          "title": "Google Gemini",
+          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+        },
+        "item-2": {
+          "title": "Replit",
+          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+        },
+        "item-3": {
+          "title": "MagicUI",
+          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+        },
+        "item-4": {
+          "title": "VSCodium",
+          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+        },
+        "item-5": {
+          "title": "MediaWiki",
+          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+        },
+        "item-6": {
+          "title": "Google PaLM",
+          "description": "Amet praesentium deserunt ex commodi tempore fuga voluptatem."
+        }
+      }
+    },
+    "integration2": {
+      "title": "Integrieren Sie sich mit Ihren Lieblings-Tools",
+      "description": "Verbinden Sie sich nahtlos mit gängigen Plattformen und Diensten, um Ihren Workflow zu verbessern.",
+      "primaryButton": "Beginnen Sie",
+      "secondaryButton": "Siehe Demo"
+    },
+    "features": {
+      "title": "Merkmale",
+      "subtitle": "Warum Architekten wählen ArchiQuill",
+      "description": "Verwandeln Sie Ihren architektonischen Workflow mit KI-basiertem Rendering, das Zeit spart und Kunden beeindruckt",
+      "items": {
+        "item-1": {
+          "title": "Blitzschnelle Tierkörperbeseitigung",
+          "description": "Generieren Sie fotorealistische Renderings aus Skizzen oder 3D-Modellen in Sekunden, nicht Stunden. Verbringen Sie mehr Zeit mit dem Entwerfen, weniger Zeit mit dem Warten auf die Fertigstellung von Renderings."
+        },
+        "item-2": {
+          "title": "Mehrere Designszenarien",
+          "description": "Erkunden Sie Landschafts-, Garten-, Außen- und Innenarchitekturszenarien. Unterstützung für verschiedene architektonische Stile von modern bis klassisch, die Ihnen helfen, jede Möglichkeit zu visualisieren."
+        },
+        "item-3": {
+          "title": "Design-Intention bewahren",
+          "description": "Unsere KI versteht die Architektursprache und bewahrt Ihre Designabsicht und verbessert gleichzeitig die Visualisierungsqualität. Ihre Vision bleibt intakt, während die Präsentationsqualität steigt."
+        },
+        "item-4": {
+          "title": "Bild + Texteingang",
+          "description": "Laden Sie Ihre Skizzen oder 3D-Modell-Screenshots hoch und verfeinern Sie sie mit Textbeschreibungen. Die perfekte Kombination aus visueller und textlicher Anleitung für präzise Ergebnisse."
+        }
+      }
+    },
+    "features2": {
+      "title": "Merkmale2",
+      "subtitle": "Die Eigenschaften Ihres Produkts",
+      "description": "Schreiben Sie die Beschreibung Ihres Produkts hier",
+      "feature-1": "Produktmerkmal Eins",
+      "feature-2": "Produkt-Feature 2",
+      "feature-3": "Produkt-Feature Drei",
+      "feature-4": "Produkt-Feature 4"
+    },
+    "features3": {
+      "title": "Merkmale3",
+      "subtitle": "Die Eigenschaften Ihres Produkts",
+      "description": "Schreiben Sie die Beschreibung Ihres Produkts hier",
+      "items": {
+        "item-1": {
+          "title": "Produktmerkmal Eins",
+          "description": "Bitte schreiben Sie die detaillierte Beschreibung von Feature One hier"
+        },
+        "item-2": {
+          "title": "Produkt-Feature 2",
+          "description": "Bitte schreiben Sie die detaillierte Beschreibung von Feature 2 hier"
+        },
+        "item-3": {
+          "title": "Produkt-Feature Drei",
+          "description": "Bitte schreiben Sie hier die detaillierte Beschreibung von Feature 3"
+        },
+        "item-4": {
+          "title": "Produkt-Feature 4",
+          "description": "Bitte schreiben Sie die detaillierte Beschreibung von Feature 4 hier"
+        },
+        "item-5": {
+          "title": "Produkt-Feature 5",
+          "description": "Bitte schreiben Sie die detaillierte Beschreibung von Feature 5 hier"
+        },
+        "item-6": {
+          "title": "Produkt-Feature Six",
+          "description": "Bitte schreiben Sie die detaillierte Beschreibung von Feature 6 hier"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Preisgestaltung",
+      "subtitle": "Preisgestaltung",
+      "description": "Wählen Sie den Plan, der am besten für Sie funktioniert"
+    },
+    "faqs": {
+      "title": "FAQ",
+      "subtitle": "Häufig gestellte Fragen",
+      "items": {
+        "item-1": {
+          "question": "Welche Arten von Eingabebildern tun ArchiQuill Unterstützung?",
+          "answer": "ArchiQuill unterstützt handgezeichnete Skizzen, CAD-Zeichnungen, 3D-Modell-Screenshots und Konzeptdiagramme. PNG, und die meisten gängigen Bildformate funktionieren perfekt."
+        },
+        "item-2": {
+          "question": "Wie lange dauert es, ein Rendering zu generieren?",
+          "answer": "Die meisten Renderings werden in 10-30 Sekunden generiert, je nach Komplexität und Serverauslastung. Viel schneller als herkömmliche Rendering-Software."
+        },
+        "item-3": {
+          "question": "Kann ich architektonische Stile und Materialien angeben?",
+          "answer": "Verwenden Sie Textbeschreibungen, um Materialien (Stein, Holz, Glas), Stile (modern, klassisch, minimalistisch), Lichtverhältnisse und Landschaftsmerkmale zur präzisen Steuerung anzugeben."
+        },
+        "item-4": {
+          "question": "Welche Szenarien machen ArchiQuill Deckung?",
+          "answer": "Derzeit: Landschaftsgestaltung und Gartengestaltung. In Kürze: Außenarchitektur und Innenarchitektur. Weitere Szenarien werden auf der Grundlage von Benutzerfeedback hinzugefügt."
+        },
+        "item-5": {
+          "question": "Brauchen Sie Hilfe oder haben Sie Vorschläge?",
+          "answer": "Bitte kontaktieren Sie unser Support-Team unter support@archiquill.com. Wir würden uns freuen, Ihr Feedback zu hören!"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "subtitle": "Was unsere Kunden sagen",
+      "items": {
+        "item-1": {
+          "name": "Jonathan Yombo",
+          "role": "Software-Ingenieur",
+          "image": "https://randomuser.me/api/portraits/men/1.jpg",
+          "quote": "MkSaaS ist wirklich außergewöhnlich und sehr praktisch, keine Notwendigkeit, den Kopf zu brechen. Eine echte Goldmine."
+        },
+        "item-2": {
+          "name": "Yves Kalume",
+          "role": "GDE - Android",
+          "image": "https://randomuser.me/api/portraits/men/6.jpg",
+          "quote": "Ohne Erfahrung im Webdesign habe ich meine gesamte Website in wenigen Minuten mit tailwindcss dank MkSaaS neu gestaltet."
+        },
+        "item-3": {
+          "name": "Yucel Faruksahan",
+          "role": "Tailkits Schöpfer",
+          "image": "https://randomuser.me/api/portraits/men/7.jpg",
+          "quote": "Tolle Arbeit an MkSaaS-Vorlage. Dies ist eine der besten persönlichen Websites, die ich bisher gesehen habe :"
+        },
+        "item-4": {
+          "name": "Anonymer Autor",
+          "role": "Produktmanager",
+          "image": "https://randomuser.me/api/portraits/men/8.jpg",
+          "quote": "Ich habe die MkSaaS-Vorlage heruntergeladen, die zu Beginn sehr klar zu verstehen ist, und Sie können die Codes / Blöcke so ändern, dass sie perfekt zu Ihrem Zweck der Seite passen."
+        },
+        "item-5": {
+          "name": "Shekinah Tshiokufila",
+          "role": "Senior Software Engineer",
+          "image": "https://randomuser.me/api/portraits/men/4.jpg",
+          "quote": "MkSaaS definiert den Standard des Webdesigns neu und bietet mit diesen Blöcken eine einfache und effiziente Möglichkeit für diejenigen, die Schönheit lieben, aber möglicherweise nicht die Zeit haben, sie zu implementieren."
+        },
+        "item-6": {
+          "name": "Oketa Fred",
+          "role": "Fullstack Entwickler",
+          "image": "https://randomuser.me/api/portraits/men/2.jpg",
+          "quote": "Ich liebe MkSaaS! Die Komponentenblöcke sind wunderschön gestaltet und einfach zu bedienen, was die Erstellung einer gut aussehenden Website zum Kinderspiel macht."
+        },
+        "item-7": {
+          "name": "Zeki",
+          "role": "Gründer von ChatExtend",
+          "image": "https://randomuser.me/api/portraits/men/5.jpg",
+          "quote": "MkSaaS ist die perfekte Fusion von Einfachheit und Vielseitigkeit, die es uns ermöglicht, UIs zu erstellen, die sowohl atemberaubend als auch benutzerfreundlich sind."
+        },
+        "item-8": {
+          "name": "Joseph Kitheka",
+          "role": "Fullstack Entwickler",
+          "image": "https://randomuser.me/api/portraits/men/9.jpg",
+          "quote": "MkSaaS hat die Art und Weise, wie ich Webanwendungen entwickle, verändert. Ihre umfangreiche Sammlung von UI-Komponenten, Blöcken und Vorlagen hat meinen Workflow erheblich beschleunigt."
+        },
+        "item-9": {
+          "name": "Khatab Wedaa",
+          "role": "MerakiUI Schöpfer",
+          "image": "https://randomuser.me/api/portraits/men/10.jpg",
+          "quote": "MkSaaS ist eine elegante, saubere und reaktionsschnelle Rückenwind-CSS-Komponente, die es sehr hilfreich ist, schnell mit Ihrem Projekt zu beginnen."
+        },
+        "item-10": {
+          "name": "Rodrigo Aguilar",
+          "role": "TailwindAwesome Schöpfer",
+          "image": "https://randomuser.me/api/portraits/men/11.jpg",
+          "quote": "Ich liebe MkSaaS ❤️. Die Komponentenblöcke sind gut strukturiert, einfach zu bedienen und schön gestaltet. Es macht es wirklich einfach, eine gut aussehende Website in kürzester Zeit zu haben."
+        },
+        "item-11": {
+          "name": "Eric Ampire",
+          "role": "@GoogleDevExpert für Android",
+          "image": "https://randomuser.me/api/portraits/men/12.jpg",
+          "quote": "MkSaaS-Vorlagen sind die perfekte Lösung für alle, die eine schöne und funktionale Website ohne Webdesign-Erfahrung erstellen möchten."
+        },
+        "item-12": {
+          "name": "Roland Tubonge",
+          "role": "Software-Ingenieur",
+          "image": "https://randomuser.me/api/portraits/men/13.jpg",
+          "quote": "MkSaaS ist so gut gestaltet, dass man selbst mit einem sehr schlechten Wissen über Webdesign Wunder vollbringen kann."
+        }
+      }
+    },
+    "stats": {
+      "title": "ArchiQuill in Zahlen",
+      "subtitle": "Vertrauen Sie Architekten weltweit",
+      "description": "Schließen Sie sich Tausenden von Architekten an, die ihren Workflow mit KI-gestütztem Rendering transformiert haben",
+      "items": {
+        "item-1": {
+          "title": "Architekten verwenden ArchiQuill"
+        },
+        "item-2": {
+          "title": "Durchschnittliche Wiedergabezeit (Sekunden)"
+        },
+        "item-3": {
+          "title": "Generierte Tierkörperbeseitigungen"
+        }
+      }
+    },
+    "calltoaction": {
+      "title": "Bereit, Ihren Workflow zu transformieren?",
+      "description": "Schließen Sie sich Architekten weltweit an, die Stunden sparen, um Kunden mit ArchiQuill",
+      "primaryButton": "Starten Sie die kostenlose Testversion",
+      "secondaryButton": "Beispiele:"
+    }
+  },
+  "AITextPage": {
+    "title": "AI Text Demo",
+    "description": "Analysieren Sie Webinhalte mit KI, um wichtige Informationen, Funktionen und Erkenntnisse zu extrahieren",
+    "content": "Web Content Analyzer",
+    "subtitle": "Geben Sie eine Website-URL ein, um eine KI-gestützte Analyse ihres Inhalts zu erhalten",
+    "analyzer": {
+      "title": "Web Content Analyzer",
+      "description": "Analysieren Sie alle Website-Inhalte mit AI, um strukturierte Informationen zu extrahieren",
+      "placeholder": "Website-URL eingeben (z.B., https://example.com)",
+      "button": "Analysieren der Website",
+      "loading": {
+        "scraping": "Scraping von Website-Inhalten...",
+        "analyzing": "Inhaltsanalyse mit AI..."
+      },
+      "results": {
+        "title": "Analyseergebnisse",
+        "newAnalysis": "Analysieren einer anderen Website",
+        "sections": {
+          "title": "Titel",
+          "description": "Beschreibung",
+          "introduction": "Einleitung",
+          "features": "Merkmale",
+          "pricing": "Preisgestaltung",
+          "useCases": "Use Cases",
+          "screenshot": "Website Screenshot"
+        }
+      },
+      "errors": {
+        "invalidUrl": "Bitte geben Sie eine gültige URL ein, die mit http:// oder https:// beginnt.",
+        "analysisError": "Ich konnte die Website nicht analysieren. Bitte versuchen Sie es erneut.",
+        "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+        "insufficientCredits": "Bitte kaufen Sie mehr Credits, um weiterzumachen."
+      }
+    },
+    "features": {
+      "scraping": {
+        "title": "Smart Web Scraping",
+        "description": "Fortschrittliche Web-Scraping-Technologie extrahiert saubere, strukturierte Inhalte von jeder Website"
+      },
+      "analysis": {
+        "title": "AI-Powered Analyse",
+        "description": "Intelligente KI-Analyse extrahiert wichtige Erkenntnisse, Funktionen und strukturierte Informationen"
+      },
+      "results": {
+        "title": "Strukturierte Ergebnisse",
+        "description": "Holen Sie sich organisierte, leicht zu lesende Ergebnisse mit klaren Abschnitten und umsetzbaren Erkenntnissen"
+      }
+    }
+  },
+  "AIImagePage": {
+    "title": "AI-Bild",
+    "description": "Mit MkSaaS können Sie AI SaaS in wenigen Tagen erstellen, einfach und mühelos"
+  },
+  "AIChatPage": {
+    "title": "AI Chat",
+    "description": "Mit MkSaaS können Sie AI SaaS in wenigen Tagen erstellen, einfach und mühelos"
+  },
+  "AIVideoPage": {
+    "title": "AI Video",
+    "description": "Mit MkSaaS können Sie AI SaaS in wenigen Tagen erstellen, einfach und mühelos"
+  },
+  "AIAudioPage": {
+    "title": "AI Audio",
+    "description": "Mit MkSaaS können Sie AI SaaS in wenigen Tagen erstellen, einfach und mühelos"
+  },
+  "AILandscapePage": {
+    "title": "KI-Generator für Landschaftsvisualisierung",
+    "description": "Verwandeln Sie Landschaftsskizzen in fotorealistische Renderings in Sekunden. Frei zu verwenden, kein Login erforderlich.",
+    "metadata": {
+      "title": "Kostenloser AI Landscape Design Generator | Kein Login erforderlich",
+      "description": "Fotorealistische Landschaftsdarstellungen kostenlos erzeugen. Kein Login erforderlich. Skizzen sofort in professionelle Designs verwandeln."
+    },
+    "upload": {
+      "title": "Laden Sie Ihre Skizze hoch",
+      "description": "Drag & Drop oder Klick zum Hochladen ()JPEG, PNG, WebPmax. 10 MB",
+      "button": "Wählen Sie Datei"
+    },
+    "styles": {
+      "title": "Wählen Sie Rendering Style",
+      "photorealistic": {
+        "label": "Fotorealistisch",
+        "description": "Ultra-realistisches Rendering mit natürlicher Beleuchtung und Texturen"
+      },
+      "artistic": {
+        "label": "Künstlerisch",
+        "description": "Malerischer Stil mit atmosphärischer Stimmung und Komposition"
+      },
+      "conceptual": {
+        "label": "Konzeptionell",
+        "description": "Moderne Designvisualisierung mit sauberer Präsentation"
+      },
+      "technical": {
+        "label": "Technische",
+        "description": "Präzise technische Zeichnung mit klaren Details"
+      }
+    },
+    "prompt": {
+      "label": "Beschreibe deine Vision",
+      "placeholder": "Beispiel: Eine ruhige Landschaft mit sanften grünen Hügeln, einem gewundenen Steinweg, der zu einem kleinen Teich führt, umgeben von reifen Eichen und bunten Wildblumenwiesen.",
+      "hint": "Drücken Sie Enter zum Generieren, Shift + Enter für neue Zeile",
+      "suggestions": {
+        "title": "Vorschläge",
+        "refresh": "Erfrischend"
+      },
+      "submit": "Generieren von Rendering",
+      "generating": "Generierung..."
+    },
+    "result": {
+      "title": "Generated Rendering",
+      "generating": "Erstellen Sie Ihre Landschaft Rendering...",
+      "error": "Keine Rendering-Generierung",
+      "timing": "In {seconds} s erstellt",
+      "share": "Anteil",
+      "download": "Download"
+    },
+    "howItWorks": {
+      "title": "Wie es funktioniert",
+      "step1": {
+        "title": "Upload Sketch",
+        "description": "Laden Sie Ihre Landschaftsskizze oder Ihr handgezeichnetes Konzept hoch"
+      },
+      "step2": {
+        "title": "Wählen Sie Style & Describe",
+        "description": "Wählen Sie einen Renderstil und beschreiben Sie Ihre Vision"
+      },
+      "step3": {
+        "title": "Vermehrung",
+        "description": "AI verwandelt Ihre Skizze in ein professionelles Rendering"
+      }
+    },
+    "features": {
+      "title": "Warum Architekten wählen ArchiQuill",
+      "feature1": {
+        "title": "Blitze schnell",
+        "description": "Generieren Sie professionelle Renderings in Sekunden"
+      },
+      "feature2": {
+        "title": "Fotorealistische Qualität",
+        "description": "AI-powered Rendering liefert erstaunliche Ergebnisse"
+      },
+      "feature3": {
+        "title": "Entwurfskontrolle",
+        "description": "Ihre Design-Intention bleibt erhalten und wird verbessert"
+      },
+      "feature4": {
+        "title": "Kosteneffektiv",
+        "description": "Sparen Sie Stunden der Renderzeit und Kosten"
+      }
+    },
+    "workflow": {
+      "title": "Andere Möglichkeiten, wie AI Ihren Design-Workflow verbessern kann",
+      "description": "Entdecken Sie unsere komplette Suite von KI-Design-Tools für eine umfassende Projektvisualisierung",
+      "items": {
+        "0": {
+          "title": "AI Garden Design",
+          "description": "Erstellen Sie atemberaubende Gartendesigns mit KI-Unterstützung. Perfekt für Wohnlandschaft, Gartenplanung und Außenraumvisualisierung mit mehreren Stiloptionen."
+        },
+        "1": {
+          "title": "AI Außendesign",
+          "description": "Generieren Sie fotorealistische Gebäudeaußenräume und Fassadenrenderings. Ideal für architektonische Präsentationen, Materialauswahl und Präsentation von Designkonzepten für Kunden."
+        },
+        "2": {
+          "title": "AI Interior Design",
+          "description": "Verwandeln Sie Innenkonzepte in schöne Visualisierungen. Perfekt für Raumplanung, Möbelarrangements und die Schaffung überzeugender Präsentationen im Innendesign."
+        }
+      }
+    }
+  },
+  "AIGardenPage": {
+    "metadata": {
+      "title": "Kostenloser AI Garden Design Generator | Kein Login erforderlich",
+      "description": "Erstellen Sie sofort atemberaubende Gartendesigns mit unserem kostenlosen KI-Generator. Kein Login erforderlich. Verwandeln Sie Ideen in schöne Visualisierungen."
+    },
+    "hero": {
+      "badge": "AI-Powered Garden Design",
+      "title": "KI-Generator für Gartenvisualisierung",
+      "description": "Verwandeln Sie Ihre Gartenkonzepte in atemberaubende Visualisierungen mit mehreren Stiloptionen. Kostenlos zu verwenden, kein Login erforderlich.",
+      "features": {
+        "fast": "Generieren in Sekunden",
+        "ai": "AI-Powered",
+        "quality": "Professionelle Qualität"
+      }
+    },
+    "playground": {
+      "title": "Erstellen Sie Ihren Garten",
+      "generate": "Generieren von Design",
+      "generating": "Generierung...",
+      "credits": "Kredite"
+    },
+    "styleSelect": {
+      "title": "Gartenstil",
+      "selected": "Ausgewählt"
+    },
+    "upload": {
+      "label": "Referenzbild",
+      "optional": "Fakultativ",
+      "title": "Hochladen Referenzbild",
+      "description": "Drag & Drop oder Klick zum Hochladen ()JPEG, PNG, WebPmax. 10 MB",
+      "button": "Wählen Sie Datei"
+    },
+    "aspectRatio": {
+      "label": "Aspektverhältnis"
+    },
+    "prompt": {
+      "label": "Beschreibe deinen Garten",
+      "placeholder": "Beispiel: Ein moderner japanischer Zen-Garten mit glatten weißen Kieselsteinen, sorgfältig geharkten Mustern, minimalistischen Felsarrangements und einem kleinen Bambuswasserspiel in der Ecke",
+      "hint": "Drücken Sie Enter zum Generieren, Shift + Enter für neue Zeile"
+    },
+    "display": {
+      "generating": "Generieren Sie Ihre Gartengestaltung...",
+      "pleaseWait": "Dies kann 30-60 Sekunden dauern",
+      "empty": {
+        "title": "Noch kein Design",
+        "description": "Wählen Sie einen Stil, fügen Sie eine Beschreibung hinzu und generieren Sie Ihr Gartendesign"
+      },
+      "generated": "{count, plural, one {# Entwurf erstellt} other {# Entwürfe erstellt}}",
+      "timing": "In {seconds} s erstellt",
+      "download": "Download"
+    },
+    "howItWorks": {
+      "title": "Wie es funktioniert",
+      "steps": {
+        "1": {
+          "title": "Wählen Sie Stil",
+          "description": "Wählen Sie aus 6 schönen Gartenstilen"
+        },
+        "2": {
+          "title": "Beschreibung der Vision",
+          "description": "Fügen Sie ein Referenzbild hinzu (optional) und beschreiben Sie Ihren Garten"
+        },
+        "3": {
+          "title": "Vermehrung",
+          "description": "AI schafft professionelle Gartenvisualisierung in Sekundenschnelle"
+        }
+      }
+    },
+    "features": {
+      "title": "Perfekt für Gartendesigner",
+      "items": {
+        "0": {
+          "title": "Mehrere Stile",
+          "description": "Wählen Sie aus japanischem Zen, englischem Cottage, modernem, tropischem, mediterranem und Wüstenstil"
+        },
+        "1": {
+          "title": "Sofortige Visualisierung",
+          "description": "Zeigen Sie Kunden atemberaubende Gartenkonzepte in Sekunden"
+        },
+        "2": {
+          "title": "Pflanzenbibliothek",
+          "description": "KI versteht Hunderte von Pflanzenarten und ihre Eigenschaften"
+        },
+        "3": {
+          "title": "Kosteneffektiv",
+          "description": "Sparen Sie Stunden Designzeit und Visualisierungskosten"
+        }
+      }
+    },
+    "gardenTypes": {
+      "title": "Beliebte Gartentypen",
+      "description": "Entdecken Sie verschiedene Gartengestaltungsstile mit unserem AI Garden Design Generator",
+      "types": {
+        "small": {
+          "title": "Kleine Gärten",
+          "description": "Erstellen Sie schöne kleine Gartendesigns, die perfekt für kompakte Räume geeignet sind. Unser KI-Gartengenerator hilft Ihnen, jeden Zentimeter mit cleveren Layouts, vertikalen Elementen und platzsparenden Pflanzenauswahlen zu maximieren."
+        },
+        "shade": {
+          "title": "Schattengärten",
+          "description": "Entwerfen Sie atemberaubende Schattengärten mit KI-Unterstützung. Generieren Sie realistische Renderings mit schattenliebenden Pflanzen, Hostas, Farnen und Waldbodenästhetik, die sich perfekt für schwache Lichtbereiche eignen."
+        },
+        "cottage": {
+          "title": "Cottage Gardens",
+          "description": "Bringen Sie englischen Cottage-Garten-Charme mit unserem KI-Design-Tool zum Leben. Generieren Sie romantische, informelle Layouts mit gemischten Grenzen, Kletterrosen und traditionellen Cottage-Gartenpflanzen."
+        },
+        "rock": {
+          "title": "Felsengärten",
+          "description": "Entwerfen Sie Alpen- und Felsgärten mit Natursteineigenschaften. Unser KI-Generator kreiert authentische Felsgärten mit dürretoleranten Pflanzen, Schotterwegen und dramatischen Felsbrockenarrangements."
+        },
+        "zen": {
+          "title": "Zen Gärten",
+          "description": "Erstellen Sie ruhige japanische Zen-Gärten mit unserem AI-Design-Generator. Generieren Sie minimalistische Designs mit geharktem Kies, sorgfältig platzierten Felsen, Bambus und Meditationsräumen."
+        }
+      }
+    },
+    "workflow": {
+      "title": "Andere Möglichkeiten, wie AI Ihren Design-Workflow verbessern kann",
+      "description": "Entdecken Sie unsere komplette Suite von KI-Design-Tools für jeden Aspekt Ihrer Projekte",
+      "items": {
+        "0": {
+          "title": "AI Landschaft Design",
+          "description": "Verwandeln Sie Landschaftsskizzen in fotorealistische Renderings. Perfekt für groß angelegte Landschaftsarchitekturprojekte, Standortplanung und Außenraumvisualisierung."
+        },
+        "1": {
+          "title": "AI Außenausstattung",
+          "description": "Generieren Sie atemberaubende Außengebäude-Renderings aus Skizzen. Ideal für architektonische Präsentationen, Fassadendesign und Kundenvisualisierungen mit realistischen Materialien und Beleuchtung."
+        },
+        "2": {
+          "title": "AI Interior Design",
+          "description": "Erstellen Sie sofort schöne Visualisierungen für die Innenarchitektur. Perfekt für Raumgestaltung, Möbelplatzierung und Präsentation von Designkonzepten für Kunden mit fotorealistischer Qualität."
+        }
+      }
+    }
+  },
+  "Navigation": {
+    "home": "Startseite",
+    "create": "Erstellen",
+    "gallery": "Galerie"
+  },
+  "DashboardHome": {
+    "title": "AI Design Tools",
+    "subtitle": "Wählen Sie ein Werkzeug aus, um mit Ihrem Architekturdesign zu beginnen",
+    "startCreating": "Starten Sie mit dem Erstellen",
+    "tools": {
+      "exterior": {
+        "title": "Tierkörperbeseitigung im Außenbereich",
+        "description": "Verwandeln Sie Gebäudefassaden in fotorealistische Darstellungen",
+        "features": {
+          "0": "Professionelle Fassadenvisualisierung",
+          "1": "Realistische Materialien und Beleuchtung",
+          "2": "Perfekt für Kundenpräsentationen"
+        }
+      },
+      "interior": {
+        "title": "Innenausstattung",
+        "description": "Erstellen Sie atemberaubende Visualisierungen des Innenraums",
+        "features": {
+          "0": "Raumgestaltung und Möbelplatzierung",
+          "1": "Fotorealistische Innenausstattung",
+          "2": "Mehrere Design-Optionen"
+        }
+      },
+      "landscape": {
+        "title": "Landschaftsgestaltung",
+        "description": "Entwerfen Sie schöne Außenräume und Gärten",
+        "features": {
+          "0": "Außenraumvisualisierung",
+          "1": "Anlagen- und Geländewiedergabe",
+          "2": "Saisonale Variationsunterstützung"
+        }
+      },
+      "garden": {
+        "title": "Gartengestaltung",
+        "description": "Erstellen Sie üppige Garten- und Pflanzdesigns",
+        "features": {
+          "0": "Detaillierte Gartengestaltung",
+          "1": "Visualisierung von Pflanzenarten",
+          "2": "Garten-Stil Anpassung"
+        }
+      }
+    }
+  },
+  "Gallery": {
+    "title": "Meine Schöpfungen",
+    "subtitle": "Durchsuchen und Verwalten Ihrer AI-generierten Designs",
+    "empty": {
+      "title": "Noch keine Schöpfungen",
+      "description": "Beginnen Sie mit der Erstellung atemberaubender architektonischer Renderings mit unseren KI-Tools"
+    },
+    "generatedAt": "Erstellt am {date}",
+    "downloadImage": "Download Bild",
+    "deleteImage": "Löschung",
+    "confirmDelete": "Sind Sie sicher, dass Sie dieses Bild löschen möchten?"
+  },
+  "AIInteriorPage": {
+    "metadata": {
+      "title": "Kostenloser AI Interior Design Generator | Kein Login erforderlich",
+      "description": "Erstellen Sie sofort atemberaubende Visualisierungen für das Innendesign mit unserem kostenlosen KI-Generator. Kein Login erforderlich. Verwandeln Sie Raumideen in wunderschöne fotorealistische Renderings."
+    },
+    "hero": {
+      "title": "KI-Generator für Innenraumvisualisierung",
+      "description": "Verwandeln Sie Ihre Innenkonzepte in atemberaubende fotorealistische Visualisierungen. Kostenlos zu verwenden, kein Login erforderlich."
+    },
+    "playground": {
+      "generate": "Generieren von Design",
+      "generating": "Generierung...",
+      "credits": "Kredite"
+    },
+    "upload": {
+      "label": "Referenzbild",
+      "title": "Hochladen Referenzbild",
+      "description": "Drag & Drop oder Klick zum Hochladen ()JPEG, PNG, WebPmax. 10 MB",
+      "button": "Wählen Sie Datei"
+    },
+    "prompt": {
+      "placeholder": "Beispiel: Ein modernes minimalistisches Wohnzimmer mit bodentiefen Fenstern, weißen Wänden, natürlichen Eichenböden, einem Low-Profile-Sofa in warmem Grau und einem Statement-Anhängerlicht",
+      "hint": "Drücken Sie Enter zum Generieren, Shift + Enter für neue Zeile"
+    },
+    "display": {
+      "generating": "Generieren Sie Ihr Interior Design...",
+      "pleaseWait": "Dies kann 30-60 Sekunden dauern",
+      "empty": {
+        "title": "Noch kein Design",
+        "description": "Beschreiben Sie Ihr Zimmer und generieren Sie Ihr Interior Design"
+      },
+      "timing": "In {seconds} s erstellt",
+      "download": "Download"
+    },
+    "howItWorks": {
+      "title": "Wie es funktioniert",
+      "steps": {
+        "1": {
+          "title": "Beschreibe dein Zimmer",
+          "description": "Geben Sie eine detaillierte Beschreibung Ihres idealen Innenraums ein"
+        },
+        "2": {
+          "title": "Referenz hinzufügen (fakultativ)",
+          "description": "Laden Sie ein Foto Ihres vorhandenen Raums für die Bild-Bild-Transformation hoch"
+        },
+        "3": {
+          "title": "Vermehrung",
+          "description": "AI schafft eine fotorealistische Innenvisualisierung in Sekunden"
+        }
+      }
+    },
+    "features": {
+      "title": "Perfekt für Interior Designer",
+      "items": {
+        "0": {
+          "title": "Mehrere Designstile",
+          "description": "Wählen Sie aus modernen, skandinavischen, industriellen, Japandi, Luxus und böhmischen Stilen"
+        },
+        "1": {
+          "title": "Instant Client Präsentationen",
+          "description": "Zeigen Sie den Kunden fotorealistische Raumkonzepte in Sekunden, nicht in Tagen"
+        },
+        "2": {
+          "title": "Image-to-Image Transformation",
+          "description": "Laden Sie ein vorhandenes Raumfoto hoch und überdenken Sie es in jedem Stil"
+        },
+        "3": {
+          "title": "Professionelle Qualität",
+          "description": "KI-generierte Renderings mit realistischer Beleuchtung, Materialien und räumlicher Tiefe"
+        }
+      }
+    },
+    "roomTypes": {
+      "title": "Beliebte Zimmertypen",
+      "description": "Entdecken Sie verschiedene Möglichkeiten der Innenarchitektur mit unserem AI Generator",
+      "types": {
+        "living": {
+          "title": "Wohnzimmer Design",
+          "description": "Erstellen Sie atemberaubende Wohnzimmer-Designs mit unserem AI-Innengenerator. Visualisieren Sie Möbelarrangements, Farbschemata und Beleuchtungs-Setups für jeden Stil - von gemütlichen skandinavischen bis hin zu eleganten modernen Minimalismus."
+        },
+        "bedroom": {
+          "title": "Schlafzimmer Design",
+          "description": "Entwerfen Sie Ihren perfekten Schlafzimmer-Retreat mit KI-Unterstützung. Generieren Sie realistische Renderings mit Bettlayouts, Garderobenkonfigurationen, Akzentwänden und Ambientebeleuchtung für ein erholsames Heiligtum."
+        },
+        "kitchen": {
+          "title": "Küchendesign",
+          "description": "Stellen Sie sich Ihre Küche mit KI-gestützter Designvisualisierung neu vor. Entdecken Sie Schrankstile, Arbeitsplattenmaterialien, Inselkonfigurationen und Geräteplatzierungen, bevor Sie sich zu einer Renovierung verpflichten."
+        },
+        "bathroom": {
+          "title": "Badezimmer Design",
+          "description": "Verwandeln Sie Ihr Badezimmer mit KI-Designkonzepten. Visualisieren Sie Fliesenmuster, Platzierungen, Eitelkeitsstile und spa-ähnliche Funktionen, um Ihren idealen Badezimmerraum zu schaffen."
+        },
+        "office": {
+          "title": "Home Office Design",
+          "description": "Entwerfen Sie mit unserem KI-Tool ein produktives und inspirierendes Home Office. Generieren Sie Layouts, die Funktionalität und Ästhetik mit intelligenten Speicherlösungen und ergonomischen Setups in Einklang bringen."
+        }
+      }
+    },
+    "workflow": {
+      "title": "Weitere AI Design Tools",
+      "description": "Entdecken Sie unsere komplette Suite von KI-Design-Tools für jeden Aspekt Ihrer Projekte",
+      "items": {
+        "0": {
+          "title": "AI Außendesign",
+          "description": "Generieren Sie atemberaubende Gebäude-Außenrenderings aus Skizzen. Perfekt für architektonische Präsentationen, Fassadendesign und Kundenvisualisierungen mit realistischen Materialien und Beleuchtung."
+        },
+        "1": {
+          "title": "AI Landschaft Design",
+          "description": "Verwandeln Sie Landschaftsskizzen in fotorealistische Renderings. Perfekt für groß angelegte Landschaftsarchitekturprojekte, Standortplanung und Außenraumvisualisierung."
+        },
+        "2": {
+          "title": "AI Garden Design",
+          "description": "Erstellen Sie sofort schöne Gartenvisualisierungen. Perfekt für Gartendesigner, die Kunden Konzepte mit fotorealistischer Qualität und verschiedenen Stiloptionen präsentieren."
+        }
+      }
+    }
+  },
+  "AIExteriorPage": {
+    "metadata": {
+      "title": "Kostenloser AI Exterior Design Generator | Kein Login erforderlich",
+      "description": "Erstellen Sie sofort atemberaubende Gebäude-Außenrenderings mit unserem kostenlosen KI-Generator. Kein Login erforderlich. Verwandeln Sie architektonische Skizzen in fotorealistische Visualisierungen."
+    },
+    "hero": {
+      "title": "KI-Generator für Außenrenderings",
+      "description": "Verwandeln Sie Ihre Gebäudekonzepte in atemberaubende fotorealistische Außendarstellungen. Kostenlos zu verwenden, kein Login erforderlich."
+    },
+    "playground": {
+      "generate": "Generieren von Design",
+      "generating": "Generierung...",
+      "credits": "Kredite"
+    },
+    "upload": {
+      "label": "Referenzbild",
+      "title": "Hochladen Referenzbild",
+      "description": "Drag & Drop oder Klick zum Hochladen ()JPEG, PNG, WebPmax. 10 MB",
+      "button": "Wählen Sie Datei"
+    },
+    "prompt": {
+      "placeholder": "Beispiel: Ein modernes zweistöckiges Wohnhaus mit großen bodenhohen Fenstern, Flachdach, weißem Stuckaußenraum, Holzdeck und minimalistischer Landschaftsgestaltung",
+      "hint": "Drücken Sie Enter zum Generieren, Shift + Enter für neue Zeile"
+    },
+    "display": {
+      "generating": "Generieren Sie Ihr Exterieur-Design...",
+      "pleaseWait": "Dies kann 30-60 Sekunden dauern",
+      "empty": {
+        "title": "Noch kein Design",
+        "description": "Beschreiben Sie Ihr Gebäude und generieren Sie Ihr Außendesign"
+      },
+      "timing": "In {seconds} s erstellt",
+      "download": "Download"
+    },
+    "howItWorks": {
+      "title": "Wie es funktioniert",
+      "steps": {
+        "1": {
+          "title": "Beschreibe dein Gebäude",
+          "description": "Geben Sie eine detaillierte Beschreibung Ihres Gebäude-Außenkonzepts ein"
+        },
+        "2": {
+          "title": "Referenz hinzufügen (fakultativ)",
+          "description": "Hochladen eines vorhandenen Gebäudefotos für die Bild-Bild-Transformation"
+        },
+        "3": {
+          "title": "Vermehrung",
+          "description": "AI schafft ein fotorealistisches Außenrendering in Sekunden"
+        }
+      }
+    },
+    "features": {
+      "title": "Perfekt für Architekten & Designer",
+      "items": {
+        "0": {
+          "title": "Mehrere architektonische Stile",
+          "description": "Wählen Sie aus modernen, traditionellen, mediterranen, Bauernhaus, Industrie- und Tropenstilen"
+        },
+        "1": {
+          "title": "Rapid Client Präsentationen",
+          "description": "Kunden fotorealistische Gebäudekonzepte in Sekunden, nicht Wochen zeigen"
+        },
+        "2": {
+          "title": "Fassadentransformation",
+          "description": "Laden Sie ein bestehendes Gebäudefoto hoch und überdenken Sie sein Äußeres in jedem Stil"
+        },
+        "3": {
+          "title": "Realistische Wiedergabequalität",
+          "description": "KI-generierte Renderings mit genauen Materialien, Beleuchtung und Umweltkontext"
+        }
+      }
+    },
+    "buildingTypes": {
+      "title": "Beliebte Gebäudetypen",
+      "description": "Entdecken Sie verschiedene Möglichkeiten des Außendesigns mit unserem AI Generator",
+      "types": {
+        "residential": {
+          "title": "Wohnheime",
+          "description": "Gestalten Sie atemberaubende Wohn-Außenräume mit unserem AI-Generator. Visualisieren Sie Fassadenmaterialien, Fensterkonfigurationen, Dachstile und Landschaftsgestaltung für Einfamilienhäuser, von zeitgenössisch bis traditionell."
+        },
+        "commercial": {
+          "title": "Gewerbegebäude",
+          "description": "Erstellen Sie überzeugende kommerzielle Gebäude-Renderings mit AI. Entdecken Sie Vorhang-Wandsysteme, Eingangsdesigns, Beschilderungsintegration und Corporate-Architekturstile für Büros und Einzelhandelsflächen."
+        },
+        "villa": {
+          "title": "Luxusvillen",
+          "description": "Generieren Sie fotorealistische Luxus-Villa-Renderings mit AI. Visualisieren Sie Premium-Materialien, Infinity-Pools, Terrassen und Landschaftsgestaltung für High-End-Wohnprojekte und Resort-Stil leben."
+        },
+        "townhouse": {
+          "title": "Stadthäuser und Reihenhäuser",
+          "description": "Entwerfen Sie kohäsive Stadthaus-Außenräume mit KI-Unterstützung. Entdecken Sie Fassadenvariationen, Materialkombinationen und Straßenlandschaftskompositionen für städtische Wohnsiedlungen."
+        },
+        "renovation": {
+          "title": "Renovierung & Umbau",
+          "description": "Visualisieren Sie Außensanierungskonzepte, bevor Sie den Grundstein legen. Laden Sie Ihr bestehendes Gebäude hoch und verwenden Sie KI, um neue Verkleidungsmaterialien, Fensterersatz, Ergänzungen und Verbesserungen der Bordsteinanziehung zu erkunden."
+        }
+      }
+    },
+    "workflow": {
+      "title": "Weitere AI Design Tools",
+      "description": "Entdecken Sie unsere komplette Suite von KI-Design-Tools für jeden Aspekt Ihrer Projekte",
+      "items": {
+        "0": {
+          "title": "AI Interior Design",
+          "description": "Erstellen Sie sofort schöne Visualisierungen für die Innenarchitektur. Perfekt für Raumgestaltung, Möbelplatzierung und Präsentation von Designkonzepten für Kunden mit fotorealistischer Qualität."
+        },
+        "1": {
+          "title": "AI Landschaft Design",
+          "description": "Verwandeln Sie Landschaftsskizzen in fotorealistische Renderings. Perfekt für groß angelegte Landschaftsarchitekturprojekte, Standortplanung und Außenraumvisualisierung."
+        },
+        "2": {
+          "title": "AI Garden Design",
+          "description": "Erstellen Sie sofort schöne Gartenvisualisierungen. Perfekt für Gartendesigner, die Kunden Konzepte mit fotorealistischer Qualität und verschiedenen Stiloptionen präsentieren."
+        }
+      }
+    }
+  },
+  "AIBackgroundRemovalPage": {
+    "metadata": {
+      "title": "Kostenloses Entfernen von AI-Hintergrund | Entfernen von Image Background Online",
+      "description": "Bildhintergründe sofort mit AI entfernen. Kostenloser Online-Hintergrundentferner — keine Designfähigkeiten erforderlich. Perfekt für Produktfotos, Porträts und mehr."
+    },
+    "hero": {
+      "title": "Bildhintergrund mit KI entfernen",
+      "description": "Entfernen Sie jeden Bildhintergrund in Sekunden mit AI. Laden Sie Ihr Foto hoch und erhalten Sie eine saubere, transparente PNG Sofort."
+    },
+    "playground": {
+      "original": "Originalbild",
+      "result": "Ergebnis",
+      "uploadTitle": "Ein Bild hochladen",
+      "uploadHint": "Drag & Drop oder Klick zum Hochladen ()JPEG, PNG, WebPmax. 10 MB",
+      "chooseFile": "Wählen Sie Datei",
+      "uploading": "Hochladen...",
+      "removeBackground": "Hintergrund entfernen",
+      "processing": "Hintergrund entfernen...",
+      "processingTitle": "Hintergrund entfernen...",
+      "processingHint": "Dies dauert normalerweise 5-15 Sekunden.",
+      "emptyTitle": "Das Ergebnis erscheint hier",
+      "emptyHint": "Laden Sie ein Bild hoch und klicken Sie auf Hintergrund entfernen",
+      "download": "Download PNG"
+    },
+    "howItWorks": {
+      "title": "Wie es funktioniert",
+      "steps": {
+        "1": {
+          "title": "Laden Sie Ihr Bild hoch",
+          "description": "Laden Sie ein beliebiges Foto hoch - Produkt, Porträt, Objekt oder etwas anderes"
+        },
+        "2": {
+          "title": "AI entfernt Hintergrund",
+          "description": "Unser KI-Modell erkennt und entfernt den Hintergrund präzise in Sekunden"
+        },
+        "3": {
+          "title": "Download Transparent PNG",
+          "description": "Holen Sie sich einen sauberen PNG mit transparentem Hintergrund, bereit, überall zu verwenden"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Was Sie damit tun können",
+      "description": "Hintergrundentfernung erschließt eine breite Palette von kreativen und professionellen Anwendungsfällen",
+      "items": {
+        "ecommerce": {
+          "title": "Produktfotografie",
+          "description": "Erstellen Sie saubere Produktbilder mit weißem Hintergrund für Ihren Online-Shop. Entfernen Sie überladene Hintergründe und präsentieren Sie Ihre Produkte professionell."
+        },
+        "portrait": {
+          "title": "Portrait & Headshots",
+          "description": "Hintergründe aus Porträts und Headshots entfernen. Motive auf jedem Hintergrund für professionelle Profile, ID-Fotos oder kreative Composites platzieren."
+        },
+        "design": {
+          "title": "Grafikdesign",
+          "description": "Extrahieren von Objekten und Motiven für Designprojekte, Kombinieren von Elementen aus mehreren Fotos, Erstellen von Collagen oder Erstellen von Marketingmaterialien."
+        },
+        "presentation": {
+          "title": "Präsentationen & Folien",
+          "description": "Fügen Sie Ihren Präsentationen und Dokumenten saubere, hintergrundfreie Bilder hinzu. Lassen Sie Ihre Folien ohne manuelle Bearbeitung poliert aussehen."
+        }
+      }
+    }
+  }
+}

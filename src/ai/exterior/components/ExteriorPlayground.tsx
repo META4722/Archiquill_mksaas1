@@ -5,10 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Textarea } from '@/components/ui/textarea';
+import { useLocaleRouter } from '@/i18n/navigation';
 import { authClient } from '@/lib/auth-client';
 import { AlertCircle, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import {
   FREE_TRIAL_LIMIT,
@@ -24,8 +24,9 @@ type GenerationMode = 'image_to_image' | 'text_to_image';
 const PENDING_PROMPT_KEY = 'archiquill_exterior_pending_prompt';
 
 export function ExteriorPlayground() {
+  const common = useTranslations('Common');
   const t = useTranslations('AIExteriorPage');
-  const router = useRouter();
+  const router = useLocaleRouter();
   const { data: session, isPending: sessionPending } = authClient.useSession();
   const isLoggedIn = !!session?.user;
 
@@ -105,18 +106,18 @@ export function ExteriorPlayground() {
         <div className="rounded-xl border bg-card p-6 shadow-sm sm:p-8">
           <Tabs value={mode} onValueChange={(v) => setMode(v as GenerationMode)} className="mb-8">
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="image_to_image">Image to Image</TabsTrigger>
-              <TabsTrigger value="text_to_image">Text to Image</TabsTrigger>
+              <TabsTrigger value="image_to_image">{common('imageToImage')}</TabsTrigger>
+              <TabsTrigger value="text_to_image">{common('textToImage')}</TabsTrigger>
             </TabsList>
           </Tabs>
 
           <h2 className="mb-8 text-xl font-bold">
-            {mode === 'image_to_image' ? 'Image to Image' : 'Text to Image'}
+            {mode === 'image_to_image' ? common('imageToImage') : common('textToImage')}
           </h2>
 
           <div className="space-y-8">
             <div className="space-y-3">
-              <Label htmlFor="prompt" className="text-sm font-medium">Prompt</Label>
+              <Label htmlFor="prompt" className="text-sm font-medium">{common('prompt')}</Label>
               <Textarea
                 id="prompt"
                 value={prompt}

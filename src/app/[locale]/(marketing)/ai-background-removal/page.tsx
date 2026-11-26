@@ -1,6 +1,7 @@
 import { BackgroundRemovalPlayground } from '@/ai/background-removal/components/BackgroundRemovalPlayground';
 import Container from '@/components/layout/container';
 import { constructMetadata } from '@/lib/metadata';
+import { Routes } from '@/routes';
 import { ScissorsIcon } from 'lucide-react';
 import type { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -11,18 +12,25 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'AIBackgroundRemovalPage' });
+  const t = await getTranslations({
+    locale,
+    namespace: 'AIBackgroundRemovalPage',
+  });
 
   return constructMetadata({
     title: t('metadata.title'),
     description: t('metadata.description'),
     locale,
+    pathname: Routes.AIBackgroundRemoval,
   });
 }
 
 export default async function AIBackgroundRemovalPage({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'AIBackgroundRemovalPage' });
+  const t = await getTranslations({
+    locale,
+    namespace: 'AIBackgroundRemovalPage',
+  });
 
   return (
     <div className="flex flex-col">
@@ -84,8 +92,13 @@ export default async function AIBackgroundRemovalPage({ params }: Props) {
               {t('useCases.description')}
             </p>
             <div className="grid gap-6 md:grid-cols-2">
-              {(['ecommerce', 'portrait', 'design', 'presentation'] as const).map((key) => (
-                <div key={key} className="flex gap-4 rounded-lg border bg-card p-6">
+              {(
+                ['ecommerce', 'portrait', 'design', 'presentation'] as const
+              ).map((key) => (
+                <div
+                  key={key}
+                  className="flex gap-4 rounded-lg border bg-card p-6"
+                >
                   <ScissorsIcon className="size-6 shrink-0 text-primary" />
                   <div>
                     <h3 className="mb-2 font-semibold">

@@ -68,6 +68,21 @@ export const websiteConfig: WebsiteConfig = {
         name: '中文',
         hreflang: 'zh-CN',
       },
+      ja: {
+        flag: '🇯🇵',
+        name: '日本語',
+        hreflang: 'ja',
+      },
+      ko: {
+        flag: '🇰🇷',
+        name: '한국어',
+        hreflang: 'ko',
+      },
+      de: {
+        flag: '🇩🇪',
+        name: 'Deutsch',
+        hreflang: 'de',
+      },
     },
   },
   blog: {

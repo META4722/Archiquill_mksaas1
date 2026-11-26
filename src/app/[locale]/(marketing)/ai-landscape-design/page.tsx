@@ -2,6 +2,7 @@ import { LandscapePlayground } from '@/ai/landscape/components/LandscapePlaygrou
 import { getRandomSuggestions } from '@/ai/landscape/lib/suggestions';
 import Container from '@/components/layout/container';
 import { constructMetadata } from '@/lib/metadata';
+import { Routes } from '@/routes';
 import { TreesIcon } from 'lucide-react';
 import type { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: Props) {
     title: t('metadata.title'),
     description: t('metadata.description'),
     locale,
+    pathname: Routes.AILandscape,
   });
 }
 

@@ -1,6 +1,7 @@
 import { ExteriorPlayground } from '@/ai/exterior';
 import Container from '@/components/layout/container';
 import { constructMetadata } from '@/lib/metadata';
+import { Routes } from '@/routes';
 import { BuildingIcon } from 'lucide-react';
 import type { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: Props) {
     title: t('metadata.title'),
     description: t('metadata.description'),
     locale,
+    pathname: Routes.AIExterior,
   });
 }
 
@@ -82,7 +84,10 @@ export default async function AIExteriorPage({ params }: Props) {
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
               {([0, 1, 2, 3] as const).map((i) => (
-                <div key={i} className="flex gap-4 rounded-lg border bg-card p-6">
+                <div
+                  key={i}
+                  className="flex gap-4 rounded-lg border bg-card p-6"
+                >
                   <BuildingIcon className="size-6 shrink-0 text-primary" />
                   <div>
                     <h3 className="mb-2 font-semibold">
@@ -110,7 +115,15 @@ export default async function AIExteriorPage({ params }: Props) {
               {t('buildingTypes.description')}
             </p>
             <div className="space-y-8">
-              {(['residential', 'commercial', 'villa', 'townhouse', 'renovation'] as const).map((type) => (
+              {(
+                [
+                  'residential',
+                  'commercial',
+                  'villa',
+                  'townhouse',
+                  'renovation',
+                ] as const
+              ).map((type) => (
                 <div key={type} className="rounded-lg border bg-card p-6">
                   <h3 className="mb-3 text-xl font-semibold">
                     {t(`buildingTypes.types.${type}.title` as any)}

@@ -5,6 +5,9 @@
     "description": "Transform architectural sketches into professional renderings in seconds. AI-powered rendering tool for architects."
   },
   "Common": {
+    "imageToImage": "Image to Image",
+    "textToImage": "Text to Image",
+    "prompt": "Prompt",
     "premium": "Premium",
     "login": "Log in",
     "logout": "Log out",
@@ -909,9 +912,96 @@
     }
   },
   "HomePage": {
+    "showcaseTools": {
+      "title": "Start Creating",
+      "description": "Discover our multiple AI tools for architects and designers",
+      "tryNow": "Try Now",
+      "items": {
+        "1": {
+          "title": "Sketch to Render",
+          "description": "Transform hand-drawn sketches into photorealistic renders"
+        },
+        "2": {
+          "title": "Elevation to Render",
+          "description": "Convert elevation drawings into detailed 3D visualizations"
+        },
+        "3": {
+          "title": "Exterior Design",
+          "description": "Create stunning exterior architectural renderings"
+        },
+        "4": {
+          "title": "Interior Design",
+          "description": "Visualize interior spaces with AI-powered rendering"
+        },
+        "5": {
+          "title": "Landscape Design",
+          "description": "Design beautiful landscapes with natural elements"
+        },
+        "6": {
+          "title": "Garden Design",
+          "description": "Plan and visualize gardens with seasonal variations"
+        }
+      }
+    },
+    "software": {
+      "title": "Turn your design into reality",
+      "description": "Transform concepts from your favorite design software into stunning, photorealistic renders with AI-powered precision.",
+      "items": {
+        "1": "3D Modeling",
+        "2": "CAD Design",
+        "3": "3D Animation",
+        "4": "BIM Design",
+        "5": "Motion Graphics"
+      }
+    },
+    "showcaseFeatures": {
+      "title": "Unleash Creativity, Make Design Simple",
+      "description": "Explore how AI rendering supports design from concept to presentation.",
+      "items": {
+        "1": {
+          "title": "Design Freedom",
+          "description": "Unleash your creative potential without the limitations of traditional design tools. Through our AI-driven design system, every idea can be freely expressed, creating unique and personalized visual works.",
+          "details": [
+            "Unlimited creative expression space",
+            "Intelligent design suggestions and optimization",
+            "Personalized visual style customization"
+          ]
+        },
+        "2": {
+          "title": "Quick Idea Forming",
+          "description": "Rapidly transform inspiration into concrete design concepts. Our intelligent algorithms understand your creative intent, helping you form complete design ideas and solutions in the shortest time.",
+          "details": [
+            "Instant inspiration capture and transformation",
+            "Smart concept generation algorithms",
+            "Rapid prototyping tools"
+          ]
+        },
+        "3": {
+          "title": "Generate Idea in minutes",
+          "description": "Generate complete design solutions within minutes. From concept to finished product, AI assistant will accompany you through the entire creative process, making design more efficient and enjoyable.",
+          "details": [
+            "Fast solution generation engine",
+            "AI-assisted design workflow",
+            "Efficient creative experience"
+          ]
+        },
+        "4": {
+          "title": "Real-time AO Map Rendering",
+          "description": "Direct AO map rendering technology for efficient rendering workflows. Output high-quality ambient occlusion maps directly without complex post-processing, dramatically improving rendering efficiency and visual quality.",
+          "details": [
+            "Direct AO map output without post-processing",
+            "Optimized high-efficiency rendering engine",
+            "Real-time ambient occlusion calculation"
+          ]
+        }
+      }
+    },
     "title": "ArchiQuill - Design Returns to Design",
     "description": "Transform architectural sketches into professional renderings in seconds. AI-powered rendering tool for architects.",
     "hero": {
+      "headline": "10-Second AI Photorealistic Rendering",
+      "showcaseDescription": "Let Design Back To Design. Transform architectural sketches into professional renderings in seconds.",
+      "freePoints": "Get 20 Points for Free",
       "title": "ArchiQuill - Design Returns to Design",
       "description": "In seconds, transform architectural sketches into professional renderings. Unleash architects' creativity, focus on design itself.",
       "introduction": "AI-Powered Architectural Rendering",

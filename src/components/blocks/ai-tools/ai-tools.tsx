@@ -3,47 +3,37 @@
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { Building2, Flower2, Home, Image, Palette, Trees } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const aiTools = [
   {
     id: 1,
-    name: 'Sketch to Render',
     icon: Palette,
-    description: 'Transform hand-drawn sketches into photorealistic renders',
   },
   {
     id: 2,
-    name: 'Elevation to Render',
     icon: Building2,
-    description: 'Convert elevation drawings into detailed 3D visualizations',
   },
   {
     id: 3,
-    name: 'Exterior Design',
     icon: Home,
-    description: 'Create stunning exterior architectural renderings',
   },
   {
     id: 4,
-    name: 'Interior Design',
     icon: Image,
-    description: 'Visualize interior spaces with AI-powered rendering',
   },
   {
     id: 5,
-    name: 'Landscape Design',
     icon: Trees,
-    description: 'Design beautiful landscapes with natural elements',
   },
   {
     id: 6,
-    name: 'Garden Design',
     icon: Flower2,
-    description: 'Plan and visualize gardens with seasonal variations',
   },
-];
+] as const;
 
 export default function AIToolsSection() {
+  const t = useTranslations('HomePage.showcaseTools');
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,10 +69,10 @@ export default function AIToolsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#3C4242] mb-4">
-            Start Creating
+            {t('title')}
           </h2>
           <p className="text-lg text-[#3C4242]/70 max-w-2xl mx-auto">
-            Discover our multiple AI tools for architects and designers
+            {t('description')}
           </p>
         </motion.div>
 
@@ -115,15 +105,15 @@ export default function AIToolsSection() {
 
                 {/* Content */}
                 <h3 className="text-xl font-bold text-[#3C4242] mb-3">
-                  {tool.name}
+                  {t(`items.${tool.id}.title`)}
                 </h3>
                 <p className="text-[#3C4242]/70 leading-relaxed">
-                  {tool.description}
+                  {t(`items.${tool.id}.description`)}
                 </p>
 
                 {/* Hover Effect - Arrow */}
                 <div className="mt-4 flex items-center text-[#A98950] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-semibold">Try Now</span>
+                  <span className="text-sm font-semibold">{t('tryNow')}</span>
                   <svg
                     className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
                     fill="none"

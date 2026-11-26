@@ -1,8 +1,9 @@
 'use client';
 
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useLocaleRouter } from '@/i18n/navigation';
 import { authClient } from '@/lib/auth-client';
-import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { useLandscapeGeneration } from '../hooks/use-landscape-generation';
 import type { RenderingStyle } from '../lib/landscape-types';
@@ -21,7 +22,8 @@ interface LandscapePlaygroundProps {
 export function LandscapePlayground({
   initialSuggestions,
 }: LandscapePlaygroundProps) {
-  const router = useRouter();
+  const common = useTranslations('Common');
+  const router = useLocaleRouter();
   const { data: session } = authClient.useSession();
   const isLoggedIn = !!session?.user;
 
@@ -70,8 +72,8 @@ export function LandscapePlayground({
             onValueChange={(value) => setMode(value as GenerationMode)}
           >
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="image_to_image">Image to Image</TabsTrigger>
-              <TabsTrigger value="text_to_image">Text to Image</TabsTrigger>
+              <TabsTrigger value="image_to_image">{common('imageToImage')}</TabsTrigger>
+              <TabsTrigger value="text_to_image">{common('textToImage')}</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>

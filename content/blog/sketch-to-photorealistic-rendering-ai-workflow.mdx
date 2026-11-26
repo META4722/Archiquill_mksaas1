@@ -1,6 +1,6 @@
 ---
 title: From Sketch to Photorealistic Rendering - The Architect's AI Workflow
-description: Discover how AI-powered rendering transforms architectural sketches into stunning photorealistic visualizations, revolutionizing the design presentation process and client communication
+description: Turn an architectural sketch into a photorealistic exterior with before-and-after examples, copyable prompts, and fixes for changed windows or facade geometry.
 date: '2025-04-17'
 author: archiquill
 categories:
@@ -11,6 +11,56 @@ image: /images/blog/architectural-sketch-to-render-workflow.png
 ---
 
 The gap between conception and presentation has long been one of architecture's most persistent challenges. An architect's initial sketches capture the essence of a design—the spatial relationships, the play of light, the emotional intent—but translating these rough ideas into client-ready visualizations traditionally required hours of painstaking 3D modeling, material assignment, lighting setup, and rendering. This bottleneck often meant that early design iterations went unpresented, or worse, that promising concepts were abandoned before clients could properly evaluate them. AI-powered rendering is fundamentally changing this dynamic, enabling architects to move from sketch to photorealistic visualization in minutes rather than days.
+
+## Try the workflow with an architectural sketch
+
+Open [AI Exterior Design](/ai-exterior-design), sign in, and select **Image to Image**. Download the sketch below or use your own architectural sketch or grayscale model export. Confirm the image preview appears before generating, so the tool has the geometry to work from.
+
+**Before · Architectural concept sketch**
+
+![Architectural concept sketch of a curved pavilion with an oval opening above a recessed glazed entrance](/images/archi/Archi_sketch_image2.jpg)
+
+**After · Exterior rendering**
+
+![Rendered curved pavilion with a textured concrete shell, the oval opening, recessed glazing, and warm daylight](/images/archi/Archi_Render_image2_1.jpg)
+
+The opening above the entrance and the two sweeping sides of the shell are visible in both images. The rendering adds concrete texture, glass reflections, and directional light. This is an existing ArchiQuill showcase pair. The prompt below is a starting point for trying the workflow.
+
+```text
+Render the uploaded architectural sketch as a realistic exterior photograph.
+Keep the original camera angle, the full outline of the curved shell, the oval
+opening near the upper right, and the recessed glazed entrance beneath it.
+Preserve the proportions and location of each opening. Add warm gray textured
+concrete, subtle reflections in the existing glass, and soft late-afternoon
+light. Keep the foreground clear and retain the original building silhouette.
+```
+
+## Fix windows or facade geometry that changed
+
+Use the original input as your reference on each retry. Compare the building outline and roof first, then check openings one floor and one facade at a time. On this residential example, start with the two separate middle-floor openings on the front facade and the narrow vertical window just around the right corner.
+
+**Before · Grayscale residential model**
+
+![Grayscale model of a pitched-roof house with two middle-floor openings on the front and a narrow window on the right wall](/images/archi/design-freedom-sketch.jpg)
+
+**After · Residential exterior rendering**
+
+![Rendered house with the pitched roof and separate front openings visible, finished with horizontal cladding and warm daylight](/images/archi/design-freedom-render.jpg)
+
+- **Windows are missing, merged, or resized.** Re-upload the original. Name the floor and facade, describe the count and spacing, and strengthen faint window outlines in the input if needed.
+- **The roofline, setback, or wall moved.** Return to the original and simplify the prompt to geometry plus one material. If the outline still drifts, export a cleaner view with the full roof and building corners visible, then retry from that view.
+- **The geometry is right but the finish is off.** Keep the geometry instructions and change just one material or lighting choice per retry. Compare each result against the original before using it in a presentation.
+
+For the house above, try this shorter prompt when the front openings get merged or shifted.
+
+```text
+Use the uploaded grayscale model as the geometry reference. Keep the same
+viewpoint, pitched roof, facade planes, and floor lines. Keep the two separate
+middle-floor openings on the front facade, including the solid wall between
+them. Keep the narrow vertical window on the right facade near the front
+corner. Preserve the number, size, and position of all other openings.
+Render the existing horizontal cladding in light warm gray under soft daylight.
+```
 
 ## The Traditional Rendering Bottleneck
 

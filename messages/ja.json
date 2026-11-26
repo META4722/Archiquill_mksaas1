@@ -1,0 +1,1907 @@
+{
+  "Metadata": {
+    "name": "ArchiQuill",
+    "title": "ArchiQuill – AI建築パース作成ツール",
+    "description": "建築スケッチや3Dモデルから、AIで建築パースを作成できます。"
+  },
+  "Common": {
+    "imageToImage": "画像から生成",
+    "textToImage": "テキストから生成",
+    "prompt": "プロンプト",
+    "premium": "プレミアム",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "signUp": "新規登録",
+    "language": "言語を切り替える",
+    "mode": {
+      "label": "トグルモード",
+      "light": "ライト",
+      "dark": "ダーク",
+      "system": "システム設定"
+    },
+    "theme": {
+      "label": "テーマを切り替える",
+      "default": "デフォルト",
+      "blue": "ブルージュ",
+      "green": "グリーングリーン",
+      "amber": "アンバー",
+      "neutral": "ニュートラル"
+    },
+    "copy": "コピー",
+    "saving": "保存...",
+    "save": "保存する",
+    "loading": "ローディング...",
+    "cancel": "キャンセル",
+    "logoutFailed": "ログアウト失敗",
+    "table": {
+      "totalRecords": "全{count}件",
+      "noResults": "結果はありません",
+      "loading": "ローディング...",
+      "columns": "列",
+      "rowsPerPage": "ページあたりの行数",
+      "page": "ページ",
+      "firstPage": "最初のページ",
+      "lastPage": "最後のページ",
+      "nextPage": "次のページ",
+      "previousPage": "前のページ",
+      "ascending": "昇順",
+      "descending": "降順"
+    }
+  },
+  "PricingPage": {
+    "title": "利用料金",
+    "description": "シンプルで透明な価格設定。クレジットは無駄を一切しません。",
+    "subtitle": "シンプルで透明な価格設定。クレジットは無駄を一切しません。",
+    "monthly": "月払い",
+    "yearly": "年払い",
+    "yearlyBadge": "20%割引",
+    "trustLine": "クレジットは繰り越し可能・いつでも解約可能・追加料金なし",
+    "PricingCard": {
+      "freePrice": "$0",
+      "perMonth": "/月",
+      "perYear": "/年",
+      "billedYearly": "年単位の請求",
+      "popular": "人気カテゴリー",
+      "currentPlan": "現在の計画",
+      "yourCurrentPlan": "現在の計画",
+      "getStartedForFree": "無料で始める",
+      "getLifetimeAccess": "ライフタイムアクセス",
+      "getStarted": "始める",
+      "notAvailable": "ご利用いただけません",
+      "daysTrial": "{days}日間無料でお試し"
+    },
+    "CheckoutButton": {
+      "loading": "ローディング...",
+      "checkoutFailed": "チェックアウトページを開くことができません"
+    }
+  },
+  "PricePlans": {
+    "free": {
+      "name": "無料無料",
+      "description": "クレジットカード不要",
+      "features": {
+        "feature-1": "サインアップで20クレジット",
+        "feature-2": "2つの自由な設計",
+        "feature-3": "すべてのAI設計ツール",
+        "feature-4": "コミュニティサポート"
+      },
+      "limits": {
+        "limit-1": "限定生産",
+        "limit-2": "輸出の透かし"
+      }
+    },
+    "basic": {
+      "name": "スターター",
+      "description": "趣味者や時折使用のために",
+      "features": {
+        "feature-1": "50クレジット / 月",
+        "feature-2": "≈ 1 ヶ月あたりの 50 の設計",
+        "feature-3": "クレジットロールオーバー",
+        "feature-4": "すべてのAI設計ツール",
+        "feature-5": "ウォーターマークなし",
+        "feature-6": "メールサポート"
+      }
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "プロフェッショナルとパワーユーザーのために",
+      "features": {
+        "feature-1": "150 クレジット / 月",
+        "feature-2": "≈ 1ヶ月あたりの150の設計",
+        "feature-3": "クレジットロールオーバー",
+        "feature-4": "すべてのAI設計ツール",
+        "feature-5": "ウォーターマークなし",
+        "feature-6": "より高速な生成",
+        "feature-7": "優先サポート"
+      }
+    },
+    "studio": {
+      "name": "スタジオ",
+      "description": "チームと大量のユーザーのために",
+      "features": {
+        "feature-1": "250クレジット/月",
+        "feature-2": "≈ 1ヶ月あたりの250の設計",
+        "feature-3": "クレジットロールオーバー",
+        "feature-4": "すべてのAI設計ツール",
+        "feature-5": "ウォーターマークなし",
+        "feature-6": "最速生成",
+        "feature-7": "専用サポート"
+      }
+    }
+  },
+  "CreditPackages": {
+    "basic": {
+      "name": "基本情報",
+      "description": "基本クレジットパッケージの説明"
+    },
+    "standard": {
+      "name": "スタンダード",
+      "description": "標準クレジットパッケージの説明"
+    },
+    "premium": {
+      "name": "プレミアム",
+      "description": "プレミアムクレジットパッケージの説明"
+    },
+    "enterprise": {
+      "name": "エンタープライズ",
+      "description": "企業クレジットパッケージの説明"
+    }
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "申し訳ありませんが、お探しのページは存在しません。",
+    "backToHome": "帰宅まで"
+  },
+  "ErrorPage": {
+    "title": "おっと! 何かが間違っていた!",
+    "tryAgain": "もう一度お試しください。",
+    "backToHome": "帰宅まで"
+  },
+  "AboutPage": {
+    "title": "新着情報",
+    "description": "ArchiQuill アーキテクチャのスケッチをAI技術を使用して秒単位でプロレンダリングに変換します。",
+    "authorName": "ArchiQuill",
+    "authorBio": "AIパワード建築レンダリング",
+    "introduction": "ArchiQuill スケッチを視覚化に変えるAIを搭載した建築レンダリングプラットフォームです。レンダリングプロセスを自動化し、作業時間を秒単位に変えることで設計に焦点を合わせるお手伝いをします。",
+    "talkWithMe": "お問い合わせ",
+    "followMe": "Xで私たちに従ってください"
+  },
+  "ChangelogPage": {
+    "title": "変更履歴",
+    "description": "当社の製品の最新変更を最新の状態に保つ",
+    "subtitle": "当社の製品の最新変更を最新の状態に保つ"
+  },
+  "RoadmapPage": {
+    "title": "ロードマップ",
+    "description": "今後の計画と今後の機能をご覧ください",
+    "subtitle": "今後の計画と今後の機能をご覧ください"
+  },
+  "ContactPage": {
+    "title": "連絡方法",
+    "description": "お客様のビジネスに最適なプランを見つけるお手伝いをいたします。",
+    "subtitle": "お客様のビジネスに最適なプランを見つけるお手伝いをいたします。",
+    "form": {
+      "title": "お問い合わせ",
+      "description": "ご質問やご意見などございましたら、弊社チームまでお寄せください。",
+      "name": "お名前 (必須)",
+      "email": "電子メール",
+      "message": "メッセージ",
+      "submit": "参加申し込み",
+      "submitting": "提出する...",
+      "success": "首尾よく送られるメッセージ",
+      "fail": "メッセージを送信できなかった",
+      "nameMinLength": "名前は少なくとも3文字でなければなりません",
+      "nameMaxLength": "お名前は30文字を超えてはならない",
+      "emailValidation": "有効なメールアドレスを入力してください。",
+      "messageMinLength": "メッセージは10文字以上でなければなりません。",
+      "messageMaxLength": "メッセージが500文字を超えることはありません"
+    }
+  },
+  "WaitlistPage": {
+    "title": "ウェイトリスト",
+    "description": "当社の製品の発売のためのウェイトリストに参加してください",
+    "subtitle": "当社の製品の発売のためのウェイトリストに参加してください",
+    "form": {
+      "title": "ウェイトリストに参加する",
+      "description": "商品発売時にお知らせ致します。",
+      "email": "電子メール",
+      "subscribe": "会員規約",
+      "subscribing": "サブスクライブ...",
+      "success": "正常に購読",
+      "fail": "購読不能",
+      "emailValidation": "有効なメールアドレスを入力してください。"
+    }
+  },
+  "Newsletter": {
+    "title": "ニュースレター",
+    "subtitle": "コミュニティに参加する",
+    "description": "最新のニュースとアップデートのニュースレターを購読",
+    "form": {
+      "email": "電子メール",
+      "subscribe": "会員規約",
+      "subscribing": "サブスクライブ...",
+      "success": "正常に購読",
+      "fail": "購読不能",
+      "emailValidation": "有効なメールアドレスを入力してください。"
+    }
+  },
+  "AuthPage": {
+    "login": {
+      "title": "ログイン",
+      "welcomeBack": "おかえりなさい",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "signIn": "ログイン",
+      "signUpHint": "アカウントをお持ちでない方は新規登録",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "verificationResent": "確認メールを再送しました。受信トレイから確認してログインを完了してください。",
+      "loginFailed": "サインアップできません。もう一度お試しください。",
+      "socialLoginFailed": "サインインを開始できません。もう一度お試しください。",
+      "signInWithGoogle": "Googleでログイン",
+      "signInWithGitHub": "GitHubでログイン",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを隠す",
+      "or": "または",
+      "emailRequired": "メールアドレスを入力してください",
+      "passwordRequired": "パスワードを入力してください",
+      "captchaInvalid": "Captcha が失敗した検証",
+      "captchaError": "Captcha 検証エラー",
+      "emailAlreadyExists": "このメールアドレスは既に登録済みです。パスワードでログインしてください。"
+    },
+    "register": {
+      "title": "新規登録",
+      "createAccount": "アカウントを作成",
+      "name": "お名前",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "signUp": "新規登録",
+      "signInHint": "アカウントをお持ちの方はログイン",
+      "checkEmail": "受信トレイをご確認ください",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを隠す",
+      "nameRequired": "お名前を入力してください。",
+      "emailRequired": "メールでのお問い合わせ",
+      "passwordRequired": "パスワードを入力してください",
+      "captchaInvalid": "Captcha が失敗した検証",
+      "captchaError": "Captcha 検証エラー"
+    },
+    "forgotPassword": {
+      "title": "パスワードを忘れた場合",
+      "email": "電子メール",
+      "send": "リセットリンクを送信",
+      "backToLogin": "ログインに戻る",
+      "checkEmail": "メールでのお問い合わせ",
+      "emailRequired": "メールでのお問い合わせ"
+    },
+    "resetPassword": {
+      "title": "パスワードの再設定",
+      "password": "パスワード",
+      "reset": "パスワードの再設定",
+      "backToLogin": "ログインに戻る",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを隠す",
+      "minLength": "パスワードは8文字以上でなければなりません"
+    },
+    "error": {
+      "title": "おっと! 何かが間違っていた!",
+      "tryAgain": "是非一度お試しください。",
+      "backToLogin": "ログインに戻る",
+      "checkEmail": "メールでのお問い合わせ"
+    },
+    "common": {
+      "termsOfService": "サービス利用規約",
+      "privacyPolicy": "プライバシーポリシー",
+      "byClickingContinue": "続行すると、次の内容に同意したことになります。 ",
+      "and": " と "
+    }
+  },
+  "BlogPage": {
+    "title": "ブログ",
+    "description": "ArchiQuillの最新情報と使い方",
+    "subtitle": "ArchiQuillの最新情報と使い方",
+    "author": "投稿ナビゲーション",
+    "categories": "カテゴリー",
+    "tableOfContents": "コンテンツの表",
+    "readTime": "読了目安 {minutes}分",
+    "all": "すべて すべて",
+    "noPostsFound": "記事がありません",
+    "allPosts": "すべての記事",
+    "morePosts": "より多くの投稿"
+  },
+  "DocsPage": {
+    "toc": "コンテンツの表",
+    "search": "ドキュメントを検索する",
+    "lastUpdate": "更新履歴",
+    "searchNoResult": "結果はありません",
+    "previousPage": "過去の投稿",
+    "nextPage": "次へ »",
+    "chooseLanguage": "言語を選択",
+    "title": "MkSaaS ドキュメント",
+    "homepage": "ホームページリニューアル"
+  },
+  "PremiumContent": {
+    "title": "プレミアムコンテンツのロック解除",
+    "description": "プロプランを購読して、すべてのプレミアムコンテンツと排他的なコンテンツにアクセスしてください。",
+    "upgradeCta": "今すぐアップグレード",
+    "benefit1": "すべてのプレミアムコンテンツ",
+    "benefit2": "独占コンテンツ",
+    "benefit3": "いつでもキャンセル",
+    "signIn": "サインイン",
+    "loginRequired": "読み続けるためにサインイン",
+    "loginDescription": "これはプレミアムコンテンツです。アカウントにサインインして、フルコンテンツにアクセスしてください。",
+    "checkingAccess": "アクセスを確認する",
+    "loadingContent": "完全なコンテンツを読み込む..."
+  },
+  "Marketing": {
+    "navbar": {
+      "features": {
+        "title": "おすすめ商品"
+      },
+      "pricing": {
+        "title": "利用料金"
+      },
+      "blog": {
+        "title": "Blog"
+      },
+      "docs": {
+        "title": "ドキュメント"
+      },
+      "ai": {
+        "title": "AIツール",
+        "items": {
+          "landscape": {
+            "title": "AIランドスケープデザイン",
+            "description": "風景のスケッチをフォトリアルなレンダリングに変える"
+          },
+          "garden": {
+            "title": "AIガーデンデザイン",
+            "description": "あなたのコンセプトから美しい庭の視覚化を生成します"
+          },
+          "text": {
+            "title": "AIテキスト",
+            "description": "AI を使用して素晴らしいテキストを書く方法を表示する"
+          },
+          "image": {
+            "title": "AIイメージ",
+            "description": "美しい画像を生成するためにAIを使用する方法を表示する"
+          },
+          "chat": {
+            "title": "AIチャット",
+            "description": "顧客とチャットするためにAIを使用する方法を表示する"
+          },
+          "video": {
+            "title": "AI動画",
+            "description": "驚くべきビデオを生成するためにAIを使用する方法を表示する"
+          },
+          "audio": {
+            "title": "AIオーディオ",
+            "description": "素晴らしいオーディオを生成するためにAIを使用する方法を表示する"
+          },
+          "interior": {
+            "title": "AIインテリアデザイン",
+            "description": "部屋のコンセプトを美しいインテリアの視覚化に変える"
+          },
+          "exterior": {
+            "title": "AI建築外観デザイン",
+            "description": "スケッチからフォトリアルな建物の外部レンダリングを生成"
+          },
+          "backgroundRemoval": {
+            "title": "AI背景除去",
+            "description": "AIで画像を瞬時に削除する"
+          }
+        }
+      },
+      "pages": {
+        "title": "ページトップへ",
+        "items": {
+          "about": {
+            "title": "新着情報",
+            "description": "当社のミッション、価値観について詳しく知る"
+          },
+          "contact": {
+            "title": "連絡方法",
+            "description": "サポートやお問い合わせのために、当社のチームにご連絡ください。"
+          },
+          "waitlist": {
+            "title": "ウェイトリスト",
+            "description": "最新のニュースとアップデートのウェイトリストに参加する"
+          },
+          "changelog": {
+            "title": "変更履歴",
+            "description": "当社の製品に関する最新の更新情報を見る"
+          },
+          "roadmap": {
+            "title": "ロードマップ",
+            "description": "今後の計画と今後の機能をご覧ください"
+          },
+          "cookiePolicy": {
+            "title": "Cookie ポリシー",
+            "description": "弊社ウェブサイトでクッキーを使用する方法"
+          },
+          "privacyPolicy": {
+            "title": "プライバシーポリシー",
+            "description": "データを保護・処理する方法"
+          },
+          "termsOfService": {
+            "title": "サービス利用規約",
+            "description": "お客様と当社との間の法的合意"
+          }
+        }
+      },
+      "blocks": {
+        "title": "ブロック",
+        "items": {
+          "magicui": {
+            "title": "MagicUIブロック"
+          },
+          "hero-section": {
+            "title": "ヒーローブロック"
+          },
+          "logo-cloud": {
+            "title": "ロゴクラウドブロック"
+          },
+          "integrations": {
+            "title": "インテグレーションブロック"
+          },
+          "features": {
+            "title": "特徴 ブロック"
+          },
+          "content": {
+            "title": "コンテンツブロック"
+          },
+          "stats": {
+            "title": "統計ブロック"
+          },
+          "team": {
+            "title": "チームブロック"
+          },
+          "testimonials": {
+            "title": "お客様の声ブロック"
+          },
+          "callToAction": {
+            "title": "アクションブロックへの呼び出し"
+          },
+          "footer": {
+            "title": "フッターブロック"
+          },
+          "pricing": {
+            "title": "価格ブロック"
+          },
+          "comparator": {
+            "title": "コンパレータブロック"
+          },
+          "faq": {
+            "title": "よくある質問ブロック"
+          },
+          "login": {
+            "title": "ログインブロック"
+          },
+          "signup": {
+            "title": "サインアップブロック"
+          },
+          "forgot-password": {
+            "title": "パスワードブロックを忘れた場合"
+          },
+          "contact": {
+            "title": "コンタクトブロック"
+          }
+        }
+      }
+    },
+    "footer": {
+      "tagline": "建築スケッチをAI搭載技術で数秒でプロレンダリングに変える",
+      "product": {
+        "title": "産品展示",
+        "items": {
+          "features": "おすすめ商品",
+          "pricing": "利用料金",
+          "faq": "FAQ"
+        }
+      },
+      "resources": {
+        "title": "リソース",
+        "items": {
+          "blog": "Blog",
+          "docs": "ドキュメント",
+          "changelog": "変更履歴",
+          "roadmap": "ロードマップ"
+        }
+      },
+      "company": {
+        "title": "会社案内",
+        "items": {
+          "about": "新着情報",
+          "contact": "連絡方法",
+          "waitlist": "ウェイトリスト"
+        }
+      },
+      "legal": {
+        "title": "法律上の注意",
+        "items": {
+          "cookiePolicy": "Cookie ポリシー",
+          "privacyPolicy": "プライバシーポリシー",
+          "termsOfService": "サービス利用規約"
+        }
+      }
+    },
+    "avatar": {
+      "dashboard": "ダッシュボード",
+      "profile": "プロフィール",
+      "billing": "請求する",
+      "credits": "クレジット",
+      "settings": "コンテンツ",
+      "logout": "ログアウト"
+    }
+  },
+  "Dashboard": {
+    "home": {
+      "title": "ホーム ＞",
+      "welcome": "おかえりなさい、{name}さん",
+      "description": "美しいデザインをAIツールで作り始める",
+      "aiTools": {
+        "title": "AIデザインツール",
+        "subtitle": "クリエイティブな旅を始めるAIツールを選ぶ",
+        "landscape": {
+          "title": "AIランドスケープデザイン",
+          "description": "スケッチをプロのランドスケープレンダリングに変える"
+        },
+        "garden": {
+          "title": "AIガーデンデザイン",
+          "description": "さまざまなスタイルで美しい庭のデザインを生成"
+        },
+        "more": {
+          "title": "より多くのAIツール",
+          "description": "よりエキサイティングなAIデザイン機能で調整される"
+        }
+      },
+      "credits": {
+        "available": "利用可能なクレジット",
+        "buy": "クレジットを購入する"
+      },
+      "stats": {
+        "generatedThisMonth": "今月の発生",
+        "creditsUsed": "使用されるクレジット",
+        "savedWorks": "保存された作品"
+      },
+      "aiToolCard": {
+        "comingSoon": "近日公開",
+        "credits": "クレジット",
+        "startCreating": "作成を開始"
+      },
+      "unifiedGeneration": {
+        "toolGrid": {
+          "title": "AIデザインツール",
+          "subtitle": "作成を開始するツールを選択します。",
+          "exterior": "外部リンク",
+          "interior": "インテリア",
+          "landscape": "ランドスケープ",
+          "garden": "ガーデン"
+        },
+        "styles": {
+          "photorealistic": "フォトレフィリスティック",
+          "artistic": "アーティスト",
+          "conceptual": "コンセプト",
+          "technical": "技術情報"
+        },
+        "controls": {
+          "styleLabel": "レンダリング様式",
+          "uploadLabel": "アップロードイメージ(イメージツーイメージのオプション)",
+          "uploadTitle": "クリックまたはドラッグしてアップロードする",
+          "uploadDescription": "JPEG, PNG, または WebP (最大10MB)",
+          "uploadButton": "ファイルの選択",
+          "uploading": "アップロード...",
+          "promptLabel": "デザインを記述する",
+          "promptPlaceholder": {
+            "default": "ツールを選択すると、開始する...",
+            "exterior": "あなたが作成したい外部のデザインを記述する(例えば、ガラスファサード、ミニマリストの入り口を持つモダンなヴィラ...)",
+            "interior": "作りたいインテリアデザインを記述する(例えば、暖かい照明、モダンなキッチン付きの居心地の良いリビングルーム...)",
+            "landscape": "あなたが作成したい風景のデザインを記述します(例えば、水機能を備えた禅の庭、通路のある近代的な公園...)",
+            "garden": "あなたが作成したい庭のデザインを記述します(例えば、カラフルな花の庭、上昇したベッドと植物園...)"
+          },
+          "aspectRatioLabel": "アスペクト比",
+          "generateButton": "生成する（{credits}クレジット）",
+          "generateButtonFree": "生成(無料)",
+          "generating": "生成する...",
+          "selectToolFirst": "上記のツールを選択してから、起動してください。"
+        },
+        "display": {
+          "loading": "デザインを生成します。...",
+          "empty": "生成された画像がここに表示されます",
+          "emptyDescription": "ツールを選択し、生成をクリックして作成を開始します",
+          "timing": "{time}秒で生成",
+          "download": "ダウンロード",
+          "share": "シェアする"
+        }
+      }
+    },
+    "dashboard": {
+      "title": "ダッシュボード"
+    },
+    "create": {
+      "title": "作成する"
+    },
+    "gallery": {
+      "title": "ギャラリー"
+    },
+    "admin": {
+      "title": "アドミン",
+      "users": {
+        "title": "ユーザ名",
+        "fakeData": "注意: デモ用の偽物データ、一部の機能が無効になっています",
+        "error": "ユーザーがアクセスできない",
+        "search": "ユーザーの検索",
+        "columns": {
+          "columns": "コラム",
+          "name": "お名前 (必須)",
+          "email": "電子メール",
+          "role": "役職紹介",
+          "createdAt": "制作実績",
+          "customerId": "顧客ID",
+          "status": "ステータス",
+          "banReason": "バン・レイソン",
+          "banExpires": "バン・エクスプレアーズ"
+        },
+        "admin": "アドミン",
+        "user": "ユーザ名",
+        "email": {
+          "verified": "電子メールの検証",
+          "unverified": "電子メール 未確認"
+        },
+        "emailCopied": "クリップボードにコピーしたメール",
+        "banned": "禁止事項",
+        "active": "アクティブ",
+        "joined": "参加する",
+        "updated": "更新情報",
+        "ban": {
+          "reason": "バン・レイソン",
+          "reasonPlaceholder": "このユーザを禁止する理由を入力してください",
+          "defaultReason": "スパミング",
+          "never": "決してない",
+          "expires": "バン・エクスプレアーズ",
+          "selectDate": "日付を選択",
+          "button": "バンユーザー",
+          "success": "ユーザは禁止されています",
+          "error": "ユーザを禁止する失敗"
+        },
+        "unban": {
+          "button": "Unban ユーザ",
+          "success": "ユーザは禁止されています",
+          "error": "ユーザを禁止しない失敗"
+        },
+        "close": "ふるさと"
+      }
+    },
+    "settings": {
+      "title": "コンテンツ",
+      "profile": {
+        "title": "プロフィール",
+        "description": "アカウント情報の管理",
+        "avatar": {
+          "title": "アバター",
+          "description": "アップロードボタンをクリックすると、カスタムワンをアップロードできます",
+          "recommendation": "アバターはオプションですが強くお勧めします",
+          "uploading": "アップロード...",
+          "uploadAvatar": "アバターをアップロードする",
+          "success": "Avatarが正常に更新されました",
+          "fail": "アバターを更新できなかった"
+        },
+        "name": {
+          "title": "お名前 (必須)",
+          "description": "表示名を入力してください。",
+          "placeholder": "お名前を入力してください",
+          "minLength": "3文字以上でご使用ください。",
+          "maxLength": "30文字以内で30文字以内でご使用ください。",
+          "hint": "お名前の3-30文字をご使用ください。",
+          "success": "名前 更新された首尾よく",
+          "fail": "更新名に失敗",
+          "saving": "保存...",
+          "save": "保存する"
+        }
+      },
+      "billing": {
+        "title": "請求する",
+        "description": "サブスクリプションと請求の詳細を管理する",
+        "status": {
+          "active": "アクティブ",
+          "trial": "トライアル",
+          "free": "無料無料",
+          "lifetime": "ライフタイム"
+        },
+        "interval": {
+          "month": "月 月 日",
+          "year": "年 年 年",
+          "oneTime": "ワンタイム"
+        },
+        "currentPlan": {
+          "title": "現在の計画",
+          "description": "現在のプランの詳細",
+          "noPlan": "アクティブプランはありません"
+        },
+        "CustomerPortalButton": {
+          "loading": "ローディング...",
+          "createCustomerPortalFailed": "開くことの失敗 Stripe 顧客ポータル"
+        },
+        "price": "価格:",
+        "periodStartDate": "期間の開始日:",
+        "periodEndDate": "期間終了日:",
+        "trialEnds": "試験端:",
+        "freePlanMessage": "現在、限られた機能を備えた無料プランにいます",
+        "lifetimeMessage": "すべてのプレミアム機能に生涯アクセス可能",
+        "manageSubscription": "サブスクリプションと請求の管理",
+        "manageBilling": "課金の管理",
+        "upgradePlan": "アップグレードプラン",
+        "retry": "リトリート",
+        "errorMessage": "データの入手が失敗",
+        "paymentSuccess": "支払の成功"
+      },
+      "payment": {
+        "processing": {
+          "title": "処理の支払",
+          "description": "ご入金確認をお待ち下さい。"
+        },
+        "success": {
+          "title": "支払の成功",
+          "description": "自動的にリダイレクトする..."
+        },
+        "failed": {
+          "title": "支払失敗した",
+          "description": "決済処理の課題がありました。"
+        },
+        "timeout": {
+          "title": "処理のタイムアウト",
+          "description": "決済処理は、想定以上に時間がかかること。"
+        },
+        "retry": "リトリート"
+      },
+      "credits": {
+        "title": "クレジット",
+        "description": "クレジット取引の管理",
+        "tabs": {
+          "balance": "バランス調整",
+          "transactions": "トランザクション"
+        },
+        "balance": {
+          "title": "クレジット残高",
+          "description": "クレジット残高",
+          "credits": "クレジット",
+          "creditsDescription": "残高は{credits}クレジットです",
+          "creditsExpired": "クレジットが期限切れ",
+          "creditsAdded": "クレジットがアカウントに追加されました",
+          "viewTransactions": "クレジット取引の表示",
+          "retry": "リトリート",
+          "expiringCredits": "今後{days}日以内に{credits}クレジットが失効します"
+        },
+        "packages": {
+          "title": "クレジットパッケージ",
+          "description": "弊社のサービスを利用する際の追加クレジットの購入",
+          "purchase": "購入方法",
+          "processing": "加工...",
+          "popular": "人気カテゴリー",
+          "completePurchase": "ご購入完了",
+          "failedToFetchCredits": "クレジットを取得する失敗",
+          "failedToCreatePaymentIntent": "支払いの意図を作成する失敗しました",
+          "failedToInitiatePayment": "支払いを開始できなかった",
+          "cancel": "キャンセル",
+          "purchaseFailed": "クレジットの購入が失敗しました",
+          "checkoutFailed": "チェックアウトセッションを作成できない",
+          "loading": "ローディング...",
+          "pay": "支払方法"
+        },
+        "transactions": {
+          "title": "クレジット取引",
+          "error": "クレジット取引の失敗",
+          "search": "クレジット取引を検索する...",
+          "paymentIdCopied": "支払い ID クリップボードにコピー",
+          "columns": {
+            "columns": "コラム",
+            "id": "会員ID",
+            "type": "タイプ:",
+            "description": "説明:",
+            "amount": "株式について",
+            "remainingAmount": "数量の残量",
+            "paymentId": "支払ID",
+            "expirationDate": "有効期限",
+            "expirationDateProcessedAt": "有効期限 で処理される",
+            "createdAt": "制作実績",
+            "updatedAt": "更新情報"
+          },
+          "types": {
+            "MONTHLY_REFRESH": "月間リフレッシュ",
+            "REGISTER_GIFT": "ギフト登録",
+            "PURCHASE": "クレジットの購入",
+            "USAGE": "消費クレジット",
+            "EXPIRE": "クレジットの有効期限",
+            "SUBSCRIPTION_RENEWAL": "サブスクリプションの更新",
+            "LIFETIME_MONTHLY": "ライフタイム 月間"
+          },
+          "detailViewer": {
+            "title": "クレジット取引詳細",
+            "close": "ふるさと"
+          },
+          "expired": "有効期限",
+          "never": "決してない"
+        }
+      },
+      "notification": {
+        "title": "インフォメーション",
+        "description": "通知設定の管理",
+        "newsletter": {
+          "title": "ニュースレター購読",
+          "description": "ニュースレターの購読設定を管理する",
+          "label": "ニュースレター購読",
+          "hint": "いつでもサブスクリプション設定を変更できます。",
+          "emailRequired": "ニュースレターを購読するには、電子メールが必要です。",
+          "subscribeSuccess": "ニュースレターを購読",
+          "subscribeFail": "ニュースレターを購読できなかった",
+          "unsubscribeSuccess": "ニュースレターを購読し、正常に解除",
+          "unsubscribeFail": "ニュースレターから購読を解除できなかった",
+          "error": "サブスクリプションの更新中にエラーが発生しました"
+        }
+      },
+      "security": {
+        "title": "セキュリティ",
+        "description": "セキュリティ設定の管理",
+        "updatePassword": {
+          "title": "パスワード変更",
+          "description": "現在のパスワードと新しいパスワードを入力してください",
+          "currentPassword": "現在のパスワード",
+          "currentRequired": "現在のパスワードが必要です。",
+          "newPassword": "新しいパスワード",
+          "newMinLength": "パスワードは8文字以上でなければなりません",
+          "hint": "パスワードは8文字以上でお願いします。",
+          "showPassword": "パスワードを表示",
+          "hidePassword": "パスワードを隠す",
+          "success": "パスワードが正常に更新されました",
+          "fail": "パスワードの更新失敗",
+          "saving": "保存...",
+          "save": "保存する"
+        },
+        "resetPassword": {
+          "title": "パスワードの再設定",
+          "description": "パスワードを再設定し、メールのログインを有効にします。",
+          "info": "パスワードを再設定すると、あなたのソーシャルログイン方法に加えて、電子メールとパスワードを使用してサインインすることができます。 パスワードをリセットするための指示付きのメールが届きます。",
+          "button": "パスワードの再設定"
+        },
+        "deleteAccount": {
+          "title": "アカウントの削除",
+          "description": "永続的にアカウントを削除し、すべてのコンテンツ",
+          "warning": "この行動はリバーシブルではありませんので、注意して続けてください。",
+          "button": "アカウントの削除",
+          "confirmTitle": "アカウントの削除",
+          "confirmDescription": "アカウントを削除したいですか? このアクションは元に戻すことはできません。",
+          "confirm": "削除",
+          "cancel": "キャンセル",
+          "deleting": "削除する...",
+          "success": "正常に削除されたアカウント",
+          "fail": "アカウントを削除できない"
+        }
+      }
+    },
+    "upgrade": {
+      "title": "アップグレード",
+      "description": "すべての機能にアクセスするためのProへのアップグレード",
+      "button": "アップグレード"
+    }
+  },
+  "Mail": {
+    "common": {
+      "team": "{name}チーム",
+      "copyright": "© {year} 無断転載を禁じます。"
+    },
+    "verifyEmail": {
+      "title": "{name}さん、こんにちは",
+      "body": "下記のリンクをクリックして、メールアドレスの確認を行ってください。",
+      "confirmEmail": "メール確認",
+      "subject": "電子メールの確認"
+    },
+    "forgotPassword": {
+      "title": "{name}さん、こんにちは",
+      "body": "下記のリンクをクリックしてパスワードをリセットしてください。",
+      "resetPassword": "パスワードの再設定",
+      "subject": "パスワードの再設定"
+    },
+    "subscribeNewsletter": {
+      "body": "ニュースレターを購読していただきありがとうございます。 最新のニュースとアップデートで最新情報をお届けします。",
+      "subject": "サブスクライブのありがとう"
+    },
+    "contactMessage": {
+      "name": "お名前：{name}",
+      "email": "メール：{email}",
+      "message": "メッセージ：{message}",
+      "subject": "ウェブサイトからのお問い合わせ"
+    }
+  },
+  "HomePage": {
+    "showcaseTools": {
+      "title": "作成を開始",
+      "description": "建築家やデザイナーのための複数のAIツールを発見",
+      "tryNow": "今すぐ試してみる",
+      "items": {
+        "1": {
+          "title": "レンダーへのスケッチ",
+          "description": "手描きのスケッチをフォトリアルなレンダリングに変える"
+        },
+        "2": {
+          "title": "レンダリングへの関連性",
+          "description": "高度図を詳細な3D視覚化に変換"
+        },
+        "3": {
+          "title": "外部デザイン",
+          "description": "美しい外部建築レンダリングを作成する"
+        },
+        "4": {
+          "title": "インテリアデザイン",
+          "description": "AI搭載のレンダリングでインテリア空間を視覚化"
+        },
+        "5": {
+          "title": "景観デザイン",
+          "description": "自然の要素で美しい風景をデザインする"
+        },
+        "6": {
+          "title": "ガーデンデザイン",
+          "description": "季節的な変化で庭を計画し、視覚化"
+        }
+      }
+    },
+    "software": {
+      "title": "デザインを現実に変える",
+      "description": "お気に入りのデザインソフトウェアから、AI搭載の精度で、美しく、フォトリアルなレンダリングに概念を変革します。",
+      "items": {
+        "1": "3Dモデリング",
+        "2": "CADの設計",
+        "3": "3Dアニメーション",
+        "4": "BIMデザイン",
+        "5": "モーショングラフィックス"
+      }
+    },
+    "showcaseFeatures": {
+      "title": "明確な創造性、設計を簡単作って下さい",
+      "description": "コンセプトからプレゼンテーションまで、AIのレンダリングが設計をサポートする方法をご覧ください。",
+      "items": {
+        "1": {
+          "title": "デザインフリーダム",
+          "description": "従来の設計ツールの制限なしに、クリエイティブの可能性を解き放ちます。AI主導のデザインシステムを通して、あらゆるアイデアを自由に表現し、ユニークでパーソナライズされたビジュアル作品を作成することができます。",
+          "details": [
+            "無制限の創造的表現空間",
+            "インテリジェントな設計提案と最適化",
+            "パーソナライズされたビジュアルスタイルのカスタマイズ"
+          ]
+        },
+        "2": {
+          "title": "速い考えの形成",
+          "description": "インスピレーションをコンクリート設計コンセプトに素早く変化させます。インテリジェントなアルゴリズムは、クリエイティブなインテントを理解し、設計のアイデアやソリューションを最短時間で完成させます。",
+          "details": [
+            "瞬間的なインスピレーションのキャプチャと変換",
+            "スマートコンセプト生成アルゴリズム",
+            "迅速なプロトタイピングツール"
+          ]
+        },
+        "3": {
+          "title": "アイデアを数分で生成",
+          "description": "コンセプトから完成品に至るまで、AIアシスタントは、クリエイティブなプロセス全体を通してお客様を結び、より効率的かつ楽しくデザインします。",
+          "details": [
+            "迅速なソリューション生成エンジン",
+            "AI支援設計ワークフロー",
+            "効率的なクリエイティブ体験"
+          ]
+        },
+        "4": {
+          "title": "リアルタイム AO マップレンダリング",
+          "description": "効率的なレンダリングワークフローのためのダイレクトAOマップレンダリング技術。複雑なポスト処理なしで直接高品質の周囲のオクルージョンマップを出力し、レンダリング効率と視覚品質を飛躍的に向上させます。",
+          "details": [
+            "後処理なしで出力されるAOの地図を指示して下さい",
+            "最適化された高効率レンダリングエンジン",
+            "リアルタイム包囲されたocclusion計算"
+          ]
+        }
+      }
+    },
+    "title": "ArchiQuill - デザインに戻る",
+    "description": "建築スケッチを数秒でプロレンダリングに変える。AIに力を入れたレンダリングツールは、建築家にとってもたらす。",
+    "hero": {
+      "headline": "AIでつくる写実的な建築パース",
+      "showcaseDescription": "建築スケッチから、数秒でプロ品質のパースを作成できます。",
+      "freePoints": "無料で20クレジットを受け取る",
+      "title": "ArchiQuill - デザインに戻る",
+      "description": "数秒で、建築スケッチをプロのレンダリングに変えます。Unleash architectsの創造性は、設計自体に焦点を合わせます。",
+      "introduction": "AI建築パース",
+      "primary": "無料トライアルを開始",
+      "secondary": "サンプルを見る"
+    },
+    "logocloud": {
+      "title": "お気に入りの企業はパートナーです。"
+    },
+    "integration": {
+      "title": "インテグレーション",
+      "subtitle": "お気に入りのツールと統合",
+      "description": "一般的なプラットフォームとサービスでシームレスに接続し、ワークフローを強化します。",
+      "learnMore": "もっと詳しく",
+      "items": {
+        "item-1": {
+          "title": "Googleのジェミニ",
+          "description": "アメット praesentium deserunt ex commodi Tempore fuga voluptatem."
+        },
+        "item-2": {
+          "title": "リプリット",
+          "description": "アメット praesentium deserunt ex commodi Tempore fuga voluptatem."
+        },
+        "item-3": {
+          "title": "マジックUI",
+          "description": "アメット praesentium deserunt ex commodi Tempore fuga voluptatem."
+        },
+        "item-4": {
+          "title": "VSコジウム",
+          "description": "アメット praesentium deserunt ex commodi Tempore fuga voluptatem."
+        },
+        "item-5": {
+          "title": "メディアウィキ",
+          "description": "アメット praesentium deserunt ex commodi Tempore fuga voluptatem."
+        },
+        "item-6": {
+          "title": "GoogleのPaLM",
+          "description": "アメット praesentium deserunt ex commodi Tempore fuga voluptatem."
+        }
+      }
+    },
+    "integration2": {
+      "title": "お気に入りのツールと統合",
+      "description": "一般的なプラットフォームとサービスでシームレスに接続し、ワークフローを強化します。",
+      "primaryButton": "始める",
+      "secondaryButton": "デモを見る"
+    },
+    "features": {
+      "title": "おすすめ商品",
+      "subtitle": "なぜアーキテクトが選ばれるのか ArchiQuill",
+      "description": "アーキテクチャワークフローをAI搭載レンダリングで変換し、時間を節約し、クライアントを感動させます。",
+      "items": {
+        "item-1": {
+          "title": "ライトニング・ファスト・レンダリング",
+          "description": "スケッチや3Dモデルから時間ではなく、時間ではなく、視覚的なレンダリングを生成します。 より多くの時間設計を費やすと、レンダリングが完成するまで待ち時間が少なくなります。"
+        },
+        "item-2": {
+          "title": "複数のデザインシナリオ",
+          "description": "風景、庭、外観、インテリアデザインシナリオを探索します。 現代のからクラシックまでさまざまな建築様式のサポート、あらゆる可能性を視覚化するのに役立ちます。"
+        },
+        "item-3": {
+          "title": "設計の意図を予約して下さい",
+          "description": "当社のAIは、アーキテクチャ言語を理解し、視覚化の質を高めながら、デザインを意図的に維持します。あなたのビジョンは、プレゼンテーションの品質を損なう間、不当にとどまります。"
+        },
+        "item-4": {
+          "title": "画像+テキスト入力",
+          "description": "スケッチや3Dモデルのスクリーンショットをアップロードし、テキストの説明に精通します。 正確な結果のための視覚的およびテキストガイダンスの完全な組み合わせ。"
+        }
+      }
+    },
+    "features2": {
+      "title": "特徴2",
+      "subtitle": "あなたのプロダクトの特徴",
+      "description": "製品の説明をここに書いてください。",
+      "feature-1": "プロダクト特徴 1",
+      "feature-2": "プロダクト特徴 2",
+      "feature-3": "製品の特徴 3",
+      "feature-4": "プロダクト特徴 4"
+    },
+    "features3": {
+      "title": "特徴3",
+      "subtitle": "あなたのプロダクトの特徴",
+      "description": "製品の説明をここに書いてください。",
+      "items": {
+        "item-1": {
+          "title": "プロダクト特徴 1",
+          "description": "機能の詳しい説明を書いてください。"
+        },
+        "item-2": {
+          "title": "プロダクト特徴 2",
+          "description": "特集2の詳しい説明を書いてください。"
+        },
+        "item-3": {
+          "title": "製品の特徴 3",
+          "description": "特集3の詳しい説明を書いてください。"
+        },
+        "item-4": {
+          "title": "プロダクト特徴 4",
+          "description": "特集4の詳しい説明を書いてください。"
+        },
+        "item-5": {
+          "title": "プロダクト特徴 5",
+          "description": "特集5の詳しい説明を書いてください。"
+        },
+        "item-6": {
+          "title": "プロダクト特徴 6",
+          "description": "特集6の詳しい説明を書いてください。"
+        }
+      }
+    },
+    "pricing": {
+      "title": "利用料金",
+      "subtitle": "利用料金",
+      "description": "あなたに最適なプランを選ぶ"
+    },
+    "faqs": {
+      "title": "FAQ",
+      "subtitle": "よくある質問",
+      "items": {
+        "item-1": {
+          "question": "入力画像の種類 ArchiQuill サポート?",
+          "answer": "ArchiQuill 手描きのスケッチ、CAD図面、3Dモデルのスクリーンショット、およびコンセプト図をサポートしています。 JPG、 PNGほとんどの一般的な画像フォーマットは完全に機能します。"
+        },
+        "item-2": {
+          "question": "レンダリングを生成するのにどれくらいの時間がかかりますか?",
+          "answer": "ほとんどのレンダリングは複雑さとサーバーの負荷に応じて10-30秒で生成されます。従来のレンダリングソフトウェアよりもはるかに高速です。"
+        },
+        "item-3": {
+          "question": "建築様式や素材の指定はできますか?",
+          "answer": "はい! テキストの説明を使用して、材料(石、木、ガラス)、スタイル(モダン、クラシック、ミニマリスト)、照明条件、および正確な制御のための景観機能を指定します。"
+        },
+        "item-4": {
+          "question": "どのようなシナリオが行われるのか ArchiQuill カバーか。",
+          "answer": "現在:ランドスケープデザインとガーデンデザイン。近日公開:外部アーキテクチャとインテリアデザイン。ユーザーフィードバックに基づいて、より多くのシナリオが追加されます。"
+        },
+        "item-5": {
+          "question": "助けが必要か、または提案がありますか?",
+          "answer": "弊社サポートチームにご連絡ください。 support@archiquill.com. フィードバックを聞きたい!"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "お客様の声",
+      "subtitle": "お客様の声",
+      "items": {
+        "item-1": {
+          "name": "ジョナサン・ヨーボ",
+          "role": "ソフトウェアエンジニア",
+          "image": "https://randomuser.me/api/portraits/men/1.jpg",
+          "quote": "MkSaaSは、頭を壊す必要はありません、本当に非特異的で非常に実用的です。 実際の金鉱山。"
+        },
+        "item-2": {
+          "name": "Yves カルム",
+          "role": "GDE - アンドロイド",
+          "image": "https://randomuser.me/api/portraits/men/6.jpg",
+          "quote": "ウェブデザインの経験がないと、MkSaaSのおかげで、Webサイト全体を再設計しました。"
+        },
+        "item-3": {
+          "name": "ユセル・ファルクサハン",
+          "role": "Tailkitsクリエイター",
+          "image": "https://randomuser.me/api/portraits/men/7.jpg",
+          "quote": "MkSaaSテンプレートで素晴らしい作業です。これは私が今まで見た最高の個人的なウェブサイトの一つです:)"
+        },
+        "item-4": {
+          "name": "匿名の作者",
+          "role": "製品マネージャー",
+          "image": "https://randomuser.me/api/portraits/men/8.jpg",
+          "quote": "MkSaaSテンプレートの1つをダウンロードしました。このテンプレートは、最初から理解するのは非常に明確で、コード/ブロックを完全に変更して、ページの目的に合わせて変更できます。"
+        },
+        "item-5": {
+          "name": "Shekinah Tshiokufila, クロアチア",
+          "role": "シニアソフトウェアエンジニア",
+          "image": "https://randomuser.me/api/portraits/men/4.jpg",
+          "quote": "MkSaaSは、Webデザインの標準を再定義しています。これらのブロックは、美しさを愛している人にとって簡単で効率的な方法を提供しますが、それを実装する時間がないかもしれません。"
+        },
+        "item-6": {
+          "name": "オケタ・フレッド",
+          "role": "フルスタック開発者",
+          "image": "https://randomuser.me/api/portraits/men/2.jpg",
+          "quote": "私は絶対にMkSaaSが大好きです! コンポーネントブロックは美しく設計され、使いやすいです。これにより、見栄えのよいウェブサイトが一風に作成できます。"
+        },
+        "item-7": {
+          "name": "ゼキ",
+          "role": "ChatExtendの創設者",
+          "image": "https://randomuser.me/api/portraits/men/5.jpg",
+          "quote": "MkSaaSは、シンプルさと汎用性の完璧な融合で、ユーザーフレンドリーで素晴らしいUIを作成することができます。"
+        },
+        "item-8": {
+          "name": "ジョセフ・キテーカ",
+          "role": "フルスタック開発者",
+          "image": "https://randomuser.me/api/portraits/men/9.jpg",
+          "quote": "MkSaaS は Web アプリケーションを開発する方法を変革しました。UI コンポーネント、ブロック、テンプレートの広範なコレクションは、ワークフローを大幅に加速しました。"
+        },
+        "item-9": {
+          "name": "カタブ・ウェダ",
+          "role": "マーキウイ・クリエイター",
+          "image": "https://randomuser.me/api/portraits/men/10.jpg",
+          "quote": "MkSaaS は、エレガントで清潔で、レスポンシブなテールウィンド css コンポーネントで、プロジェクトで素早く始めるのに非常に役立ちます。"
+        },
+        "item-10": {
+          "name": "ロドリゴ・アギラー",
+          "role": "Tailwind素晴らしいクリエイター",
+          "image": "https://randomuser.me/api/portraits/men/11.jpg",
+          "quote": "私はMkSaaS ❤️が大好きです。コンポーネントブロックは、使いやすく、使いやすく、美しくデザインされています。それは、いつでも見栄えの良いウェブサイトを持っていることは本当に簡単です。"
+        },
+        "item-11": {
+          "name": "エリック・アンパイア",
+          "role": "@GoogleDevExpert アンドロイド用",
+          "image": "https://randomuser.me/api/portraits/men/12.jpg",
+          "quote": "MkSaaSテンプレートは、Webデザインの経験なしで美しく機能的なウェブサイトを作成したい人のための完璧なソリューションです。"
+        },
+        "item-12": {
+          "name": "ローランド・トゥポン",
+          "role": "ソフトウェアエンジニア",
+          "image": "https://randomuser.me/api/portraits/men/13.jpg",
+          "quote": "MkSaaSは、あなたが奇跡を行うことができるWebデザインの非常に悪い知識であっても、非常にうまく設計されています。 あなた自身が魅了されるようにしましょう!"
+        }
+      }
+    },
+    "stats": {
+      "title": "ArchiQuill 数字で",
+      "subtitle": "建築設計事務所の信頼",
+      "description": "ワークフローをAI搭載のレンダリングで変換した数千人の建築家に加わりましょう",
+      "items": {
+        "item-1": {
+          "title": "Architects の使用 ArchiQuill"
+        },
+        "item-2": {
+          "title": "平均レンダリング時間(秒)"
+        },
+        "item-3": {
+          "title": "レンダリングの生成"
+        }
+      }
+    },
+    "calltoaction": {
+      "title": "ワークフローを変革する準備は?",
+      "description": "レンダリングおよび感動の顧客で時間を節約している世界中の建築家に加わりて下さい ArchiQuill",
+      "primaryButton": "無料トライアルを開始",
+      "secondaryButton": "サンプルを見る"
+    }
+  },
+  "AITextPage": {
+    "title": "AIテキストデモ",
+    "description": "重要な情報、機能、インサイトを抽出するAIでWebコンテンツを分析",
+    "content": "Webコンテンツアナライザー",
+    "subtitle": "コンテンツのAIを活用した分析を得るためのウェブサイトURLを入力してください",
+    "analyzer": {
+      "title": "Webコンテンツアナライザー",
+      "description": "構造化された情報抽出のためにAIを使用して任意のウェブサイトコンテンツを分析する",
+      "placeholder": "ウェブサイトのURLを入力してください(例: https://example.com)",
+      "button": "ウェブサイトを分析する",
+      "loading": {
+        "scraping": "ウェブサイトのコンテンツのスクレイピング...",
+        "analyzing": "AIでコンテンツを分析する..."
+      },
+      "results": {
+        "title": "分析結果",
+        "newAnalysis": "別のウェブサイトを分析する",
+        "sections": {
+          "title": "タイトル",
+          "description": "説明:",
+          "introduction": "導入事例",
+          "features": "おすすめ商品",
+          "pricing": "利用料金",
+          "useCases": "ユースケース",
+          "screenshot": "ウェブサイトのスクリーンショット"
+        }
+      },
+      "errors": {
+        "invalidUrl": "http:// または https:// から始まる有効な URL を入力してください。",
+        "analysisError": "ウェブサイトの分析に失敗しました。もう一度お試しください。",
+        "networkError": "ネットワークのエラー。接続を確認してもう一度お試しください。",
+        "insufficientCredits": "不十分なクレジットをご購入ください。"
+      }
+    },
+    "features": {
+      "scraping": {
+        "title": "スマートWebスクレイピング",
+        "description": "高度なWebスクレイピング技術は、任意のウェブサイトからクリーンで構造化されたコンテンツを抽出します"
+      },
+      "analysis": {
+        "title": "AIパワード解析",
+        "description": "インテリジェントなAI分析により、主要なインサイト、機能、構造化された情報が抽出"
+      },
+      "results": {
+        "title": "構成結果",
+        "description": "明確なセクションと実用的な洞察力で組織的、読みやすい結果を得る"
+      }
+    }
+  },
+  "AIImagePage": {
+    "title": "AIイメージ",
+    "description": "MkSaaSは、AI SaaSを日々、シンプルかつ楽に作ることができます。"
+  },
+  "AIChatPage": {
+    "title": "AIチャット",
+    "description": "MkSaaSは、AI SaaSを日々、シンプルかつ楽に作ることができます。"
+  },
+  "AIVideoPage": {
+    "title": "AI動画",
+    "description": "MkSaaSは、AI SaaSを日々、シンプルかつ楽に作ることができます。"
+  },
+  "AIAudioPage": {
+    "title": "AIオーディオ",
+    "description": "MkSaaSは、AI SaaSを日々、シンプルかつ楽に作ることができます。"
+  },
+  "AILandscapePage": {
+    "title": "AIランドスケープパース作成ツール",
+    "description": "シーンを視覚的にレンダリングする数秒で変換します。無料で、ログインは必要ありません。",
+    "metadata": {
+      "title": "無料AIランドスケープデザインジェネレーター | ログイン不要",
+      "description": "自由のための光現実的な風景のレンダリングを生成します。ログインは必要ありません。スケッチをプロのデザインに即座に変換します。"
+    },
+    "upload": {
+      "title": "あなたのスケッチをアップロードする",
+      "description": "ドラッグ&ドロップするか、アップロードをクリックするか()JPEG, PNG, WebP、最高10MB)",
+      "button": "ファイルの選択"
+    },
+    "styles": {
+      "title": "レンダリングスタイルを選択",
+      "photorealistic": {
+        "label": "フォトレフィリスティック",
+        "description": "自然照明とテクスチャで超リアルなレンダリング"
+      },
+      "artistic": {
+        "label": "アーティスト",
+        "description": "気密な気分と組成物でペイントスタイル"
+      },
+      "conceptual": {
+        "label": "コンセプト",
+        "description": "クリーンなプレゼンテーションでモダンなデザインを視覚化"
+      },
+      "technical": {
+        "label": "技術情報",
+        "description": "明確な細部の精密な技術的なデッサン"
+      }
+    },
+    "prompt": {
+      "label": "あなたのビジョンを記述する",
+      "placeholder": "例: 緑豊かな丘陵地、風化石の通路が小さな池につながり、成熟したオークの木とカラフルな野草の牧草地に囲まれた",
+      "hint": "プレス Enter を生成します。, Shift+Enter の新しい行",
+      "suggestions": {
+        "title": "提案",
+        "refresh": "リフレッシュ"
+      },
+      "submit": "レンダリングを生成",
+      "generating": "生成する..."
+    },
+    "result": {
+      "title": "生成されたレンダリング",
+      "generating": "あなたの風景のレンダリングを作成する...",
+      "error": "レンダリングを生成する失敗",
+      "timing": "{seconds}秒で生成",
+      "share": "シェアする",
+      "download": "ダウンロード"
+    },
+    "howItWorks": {
+      "title": "使い方は?",
+      "step1": {
+        "title": "Sketchをアップロードする",
+        "description": "あなたの風景のスケッチや手描きの概念をアップロード"
+      },
+      "step2": {
+        "title": "スタイルと説明を選択",
+        "description": "レンダリングスタイルを選択し、ビジョンを記述します。"
+      },
+      "step3": {
+        "title": "生成する",
+        "description": "AIがスケッチをプロのレンダリングに変換"
+      }
+    },
+    "features": {
+      "title": "なぜアーキテクトが選ばれるのか ArchiQuill",
+      "feature1": {
+        "title": "ライトニング 速い",
+        "description": "秒単位でプロレンダリングを生成"
+      },
+      "feature2": {
+        "title": "光現実的品質",
+        "description": "AI搭載のレンダリングにより、素晴らしい結果が得られます。"
+      },
+      "feature3": {
+        "title": "設計制御",
+        "description": "あなたの設計意図は保存され、高められます"
+      },
+      "feature4": {
+        "title": "費用効果が大きい",
+        "description": "レンダリング時間とコストの時間を節約"
+      }
+    },
+    "workflow": {
+      "title": "その他のAIは、デザインワークフローを強化することができます",
+      "description": "包括的なプロジェクトビジュアライゼーションのためのAIデザインツールの完全なスイートを発見",
+      "items": {
+        "0": {
+          "title": "AIガーデンデザイン",
+          "description": "AI の援助で見事な庭のデザインを作成します。住宅の造園、庭の計画、および複数のスタイルのオプションで屋外のスペースの視覚化に最適です。"
+        },
+        "1": {
+          "title": "AIの外部の設計",
+          "description": "建物の外観と正面のレンダリングを生成します。建築プレゼンテーション、材料の選択、クライアントにデザインコンセプトを提示するための理想的な。"
+        },
+        "2": {
+          "title": "AIインテリアデザイン",
+          "description": "インテリアコンセプトを美しく見える化。空間計画、家具のアレンジ、インテリアデザインプレゼンテーションの説得力のある演出に最適です。"
+        }
+      }
+    }
+  },
+  "AIGardenPage": {
+    "metadata": {
+      "title": "無料のAIガーデンデザインジェネレーター | ログイン不要 必須",
+      "description": "無料のAIジェネレーターで、驚くほど美しい庭のデザインを即座に作成します。ログインは必要ありません。アイデアを美しい視覚化に変えます。"
+    },
+    "hero": {
+      "badge": "AIパワードガーデンデザイン",
+      "title": "AIガーデンパース作成ツール",
+      "description": "庭の概念を複数のスタイルオプションで見事な視覚化に変えます。無料で、ログインは必要ありません。",
+      "features": {
+        "fast": "秒単位で生成",
+        "ai": "AIパワード",
+        "quality": "専門の質"
+      }
+    },
+    "playground": {
+      "title": "あなたの庭を作る",
+      "generate": "デザインを生成",
+      "generating": "生成する...",
+      "credits": "クレジット"
+    },
+    "styleSelect": {
+      "title": "ガーデンスタイル",
+      "selected": "選択する"
+    },
+    "upload": {
+      "label": "参考画像",
+      "optional": "オプション",
+      "title": "アップロード 参照のイメージ",
+      "description": "ドラッグ&ドロップするか、アップロードをクリックするか()JPEG, PNG, WebP、最高10MB)",
+      "button": "ファイルの選択"
+    },
+    "aspectRatio": {
+      "label": "アスペクト比"
+    },
+    "prompt": {
+      "label": "あなたの庭を記述する",
+      "placeholder": "例:白石がかったモダンな和の禅庭園、厳選された模様、ミニマルな岩のアレンジ、角に小さな竹の湯が特徴。",
+      "hint": "プレス Enter を生成します。, Shift+Enter の新しい行"
+    },
+    "display": {
+      "generating": "あなたの庭の設計を発生させます...",
+      "pleaseWait": "30〜60秒かかることがあります",
+      "empty": {
+        "title": "デザインなし",
+        "description": "スタイルを選択し、説明を追加し、あなたの庭のデザインを生成します"
+      },
+      "generated": "{count}件のデザインを生成しました",
+      "timing": "{seconds}秒で生成",
+      "download": "ダウンロード"
+    },
+    "howItWorks": {
+      "title": "使い方は?",
+      "steps": {
+        "1": {
+          "title": "スタイルを選択",
+          "description": "6つの美しい庭のスタイルから選ぶ"
+        },
+        "2": {
+          "title": "ビジョンを記述する",
+          "description": "参照イメージを追加(オプション)し、あなたの庭を記述"
+        },
+        "3": {
+          "title": "生成する",
+          "description": "AIは数秒で専門の庭の視覚化を作成します"
+        }
+      }
+    },
+    "features": {
+      "title": "庭のデザイナーのために完成して下さい",
+      "items": {
+        "0": {
+          "title": "複数の様式",
+          "description": "和の禅、英語のコテージ、モダン、トロピカル、地中海、デザートのスタイルからお選びいただけます。"
+        },
+        "1": {
+          "title": "即時可視化",
+          "description": "数秒で顧客の素晴らしい庭の概念を示す"
+        },
+        "2": {
+          "title": "プラントライブラリ",
+          "description": "AIは、植物種とその特性の数百を理解しています"
+        },
+        "3": {
+          "title": "費用効果が大きい",
+          "description": "設計時間と視覚化コストの時間を節約"
+        }
+      }
+    },
+    "gardenTypes": {
+      "title": "人気の庭の種類",
+      "description": "私たちのAIガーデンデザインジェネレータで異なる庭のデザインスタイルを探索",
+      "types": {
+        "small": {
+          "title": "小さな庭",
+          "description": "コンパクトなスペースに最適な美しい小さな庭のデザインを作成します。AIガーデンジェネレータは、あらゆるインチを巧みにレイアウト、垂直要素、および省スペース植物の選択で最大限活用できます。"
+        },
+        "shade": {
+          "title": "シェード・ガーデンズ",
+          "description": "AI支援で美しい陰の庭園をデザイン。日陰の植物、ホスタタス、フェレンス、森林の美学を特徴とするリアルなレンダリングを生成し、低照度エリアに最適です。"
+        },
+        "cottage": {
+          "title": "コテージ・ガーデンズ",
+          "description": "私たちのAIデザインツールで生活するために、英語のコテージガーデンの魅力を持参してください。 混合された境界線、上昇、伝統的なコテージガーデン植物とロマンチックな、非公式のレイアウトを生成します。"
+        },
+        "rock": {
+          "title": "ロックガーデンズ",
+          "description": "天然石を使ったアルパインとロックガーデンをデザイン。当社のAIジェネレーターは、干ばつ耐性植物、砂利道、劇的なボルダのアレンジで本物のロックガーデンデザインを作成します。"
+        },
+        "zen": {
+          "title": "禅庭園",
+          "description": "弊社のAIデザインジェネレーターで、トラニカルな日本の禅庭園を作成します。ラキッド・グラッスル、慎重に配置された岩、竹、瞑想スペースを備えたミニマリストのデザインを生成します。"
+        }
+      }
+    },
+    "workflow": {
+      "title": "その他のAIは、デザインワークフローを強化することができます",
+      "description": "プロジェクトのあらゆる面でAIデザインツールの完全スイートをご覧ください。",
+      "items": {
+        "0": {
+          "title": "AIランドスケープデザイン",
+          "description": "風景を写真に映し出します。大規模な景観建築プロジェクト、サイト計画、屋外スペースの視覚化に最適です。"
+        },
+        "1": {
+          "title": "AI 外部レンダリング",
+          "description": "スケッチから見事な外観の建物のレンダリングを生成します。 建築プレゼンテーション、ファサードデザイン、クライアントの視覚化に理想的で、現実的な材料と照明。"
+        },
+        "2": {
+          "title": "AIインテリアデザイン",
+          "description": "美しいインテリアデザインを瞬時に視覚化します。部屋のレイアウト、家具の配置、そしてデザインコンセプトをクライアントにフォトリアルな品質で提示するのに最適です。"
+        }
+      }
+    }
+  },
+  "Navigation": {
+    "home": "ホーム",
+    "create": "作成",
+    "gallery": "ギャラリー"
+  },
+  "DashboardHome": {
+    "title": "AIデザインツール",
+    "subtitle": "建築設計を始めるためのツールを選ぶ",
+    "startCreating": "作成を開始",
+    "tools": {
+      "exterior": {
+        "title": "外部レンダリング",
+        "description": "建物ファサードをフォトリアルなレンダリングに変える",
+        "features": {
+          "0": "専門の正面の視覚化",
+          "1": "リアルな素材と照明",
+          "2": "クライアントプレゼンテーションに最適"
+        }
+      },
+      "interior": {
+        "title": "インテリアデザイン",
+        "description": "美しいインテリア空間の視覚化を作成する",
+        "features": {
+          "0": "客室レイアウトと家具の配置",
+          "1": "光現実的な内部のレンダリング",
+          "2": "複数の設計様式の選択"
+        }
+      },
+      "landscape": {
+        "title": "景観デザイン",
+        "description": "美しい屋外スペースと庭をデザインする",
+        "features": {
+          "0": "屋外空間の視覚化",
+          "1": "植物および地形レンダリング",
+          "2": "季節限定のバリエーションサポート"
+        }
+      },
+      "garden": {
+        "title": "ガーデンデザイン",
+        "description": "緑豊かな庭を作り、デザインを植える",
+        "features": {
+          "0": "庭のレイアウトの詳細",
+          "1": "植物種視覚化",
+          "2": "ガーデンスタイルのカスタマイズ"
+        }
+      }
+    }
+  },
+  "Gallery": {
+    "title": "私の作品",
+    "subtitle": "AI 生成されたデザインを閲覧し、管理",
+    "empty": {
+      "title": "作品はまだありません",
+      "description": "AIツールで素晴らしい建築レンダリングを作成開始"
+    },
+    "generatedAt": "生成日：{date}",
+    "downloadImage": "画像のダウンロード",
+    "deleteImage": "削除",
+    "confirmDelete": "この画像を削除したいですか?"
+  },
+  "AIInteriorPage": {
+    "metadata": {
+      "title": "無料のAIインテリアデザインジェネレーター | ログイン不要 必須",
+      "description": "無料のAIジェネレーターで、驚くほど美しいインテリアデザインを瞬時に視覚化します。ログインは必要ありません。部屋のアイデアを美しいフォトリアルレンダリングに変えます。"
+    },
+    "hero": {
+      "title": "AIインテリアパース作成ツール",
+      "description": "インテリアのコンセプトを美しいフォトリアルな視覚化に変えます。無料で、ログインは必要ありません。"
+    },
+    "playground": {
+      "generate": "デザインを生成",
+      "generating": "生成する...",
+      "credits": "クレジット"
+    },
+    "upload": {
+      "label": "参考画像",
+      "title": "アップロード 参照のイメージ",
+      "description": "ドラッグ&ドロップするか、アップロードをクリックするか()JPEG, PNG, WebP、最高10MB)",
+      "button": "ファイルの選択"
+    },
+    "prompt": {
+      "placeholder": "例:床から天井までの窓、白い壁、自然なオーク材の床、暖かい灰色の低プロファイルのソファー、および声明のペンダント ライトが付いている現代最小主義の居間",
+      "hint": "プレス Enter を生成します。, Shift+Enter の新しい行"
+    },
+    "display": {
+      "generating": "あなたのインテリアデザインを生成...",
+      "pleaseWait": "30〜60秒かかることがあります",
+      "empty": {
+        "title": "デザインなし",
+        "description": "お部屋を退室し、インテリアデザインを演出"
+      },
+      "timing": "{seconds}秒で生成",
+      "download": "ダウンロード"
+    },
+    "howItWorks": {
+      "title": "使い方は?",
+      "steps": {
+        "1": {
+          "title": "お部屋を退室",
+          "description": "理想のインテリアスペースの詳細な説明を入力してください"
+        },
+        "2": {
+          "title": "参照を加える(任意)",
+          "description": "既存の部屋の写真をイメージツーイメージ変換にアップロード"
+        },
+        "3": {
+          "title": "生成する",
+          "description": "AIは、視覚化を秒単位で実現するフォトリアリスティックなインテリアを創り出す"
+        }
+      }
+    },
+    "features": {
+      "title": "インテリアデザイナーに最適",
+      "items": {
+        "0": {
+          "title": "複数の設計様式",
+          "description": "モダン、スカンジナビア、インダストリアル、ジャパンディ、ラグジュアリー、ボヘミアンスタイルからお選びいただけます。"
+        },
+        "1": {
+          "title": "即時クライアントプレゼンテーション",
+          "description": "クライアントの光現実的な部屋のコンセプトを秒単位で表示します, ない日"
+        },
+        "2": {
+          "title": "映像からイメージへ変換",
+          "description": "既存の部屋の写真をアップロードし、あらゆるスタイルでそれをreimagine"
+        },
+        "3": {
+          "title": "専門の質",
+          "description": "リアルな照明、素材、空間の深さでAIを生成したレンダリング"
+        }
+      }
+    },
+    "roomTypes": {
+      "title": "人気ルームタイプ",
+      "description": "AIジェネレーターで異なるインテリアデザインの可能性を探る",
+      "types": {
+        "living": {
+          "title": "リビングルームのデザイン",
+          "description": "当社のAIインテリアジェネレーターで、素晴らしいリビングルームのデザインを作成します。居心地の良いスカンジナビアから洗練されたモダンなミニマリズムまで、家具のアレンジ、カラースキーム、照明のセットアップを視覚化します。"
+        },
+        "bedroom": {
+          "title": "寝室の設計",
+          "description": "完璧なベッドルームリトリートをAIアシスタンスで設計します。ベッドレイアウト、ワードローブ構成、アクセントの壁、周囲の照明を特徴とする現実的なレンダリングを生成し、残りの聖域を演出します。"
+        },
+        "kitchen": {
+          "title": "キッチンデザイン",
+          "description": "自社のキッチンをAIを搭載したデザインビジュアライゼーションで再現。キャビネットスタイル、カウンタートップ素材、アイランドコンフィギュレーション、そしてリフォームにコミットする前に、アプライアンス配置を探索します。"
+        },
+        "bathroom": {
+          "title": "浴室の設計",
+          "description": "浴室をAIデザインコンセプトで変形させます。タイルパターン、フィクスチャー配置、虚栄心スタイル、スパのような特徴を視覚化し、理想的なバスルーム空間を作り出します。"
+        },
+        "office": {
+          "title": "ホームオフィスデザイン",
+          "description": "自社のAIツールで、生産性と感動的なホームオフィスをデザインします。スマートストレージソリューションと人間工学的なセットアップで、機能性と美学のバランスをとったレイアウトを生成します。"
+        }
+      }
+    },
+    "workflow": {
+      "title": "その他のAIデザインツール",
+      "description": "プロジェクトのあらゆる面でAIデザインツールの完全スイートをご覧ください。",
+      "items": {
+        "0": {
+          "title": "AIの外部の設計",
+          "description": "スケッチから見事な建物の外観レンダリングを生成します。 建築プレゼンテーション、ファサードデザイン、およびクライアントの視覚化のために、現実的な材料や照明で完成します。"
+        },
+        "1": {
+          "title": "AIランドスケープデザイン",
+          "description": "風景を写真に映し出します。大規模な景観建築プロジェクト、サイト計画、屋外スペースの視覚化に最適です。"
+        },
+        "2": {
+          "title": "AIガーデンデザイン",
+          "description": "美しい庭の視覚化を即座に作成します。 視覚的な品質と複数のスタイルオプションで顧客に概念を提示する庭のデザイナーに最適です。"
+        }
+      }
+    }
+  },
+  "AIExteriorPage": {
+    "metadata": {
+      "title": "無料のAIエクステリアデザインジェネレーター | ログイン不要 必須",
+      "description": "無料のAIジェネレーターで、瞬時に建物の外観レンダリングを作成します。ログインは必要ありません。アーキテクチャのスケッチをフォト現実的な視覚化に変換します。"
+    },
+    "hero": {
+      "title": "AI建築外観パース作成ツール",
+      "description": "建物のコンセプトを美しいフォトレアリスティスティックな外観レンダリングに変えます。無料で、ログインは必要ありません。"
+    },
+    "playground": {
+      "generate": "デザインを生成",
+      "generating": "生成する...",
+      "credits": "クレジット"
+    },
+    "upload": {
+      "label": "参考画像",
+      "title": "アップロード 参照のイメージ",
+      "description": "ドラッグ&ドロップするか、アップロードをクリックするか()JPEG, PNG, WebP、最高10MB)",
+      "button": "ファイルの選択"
+    },
+    "prompt": {
+      "placeholder": "例:大きな床から天井までの窓、フラットルーフ、白いスタッコの外面、木製デッキ、最小限の造園",
+      "hint": "プレス Enter を生成します。, Shift+Enter の新しい行"
+    },
+    "display": {
+      "generating": "あなたの外部の設計を発生させます...",
+      "pleaseWait": "30〜60秒かかることがあります",
+      "empty": {
+        "title": "デザインなし",
+        "description": "あなたの建物を記述し、あなたの外部の設計を発生させます"
+      },
+      "timing": "{seconds}秒で生成",
+      "download": "ダウンロード"
+    },
+    "howItWorks": {
+      "title": "使い方は?",
+      "steps": {
+        "1": {
+          "title": "あなたの建物を記述する",
+          "description": "あなたの建物の外部の概念の詳細な説明を入力してください"
+        },
+        "2": {
+          "title": "参照を加える(任意)",
+          "description": "既存の建物の写真をイメージツーイメージ変換にアップロードする"
+        },
+        "3": {
+          "title": "生成する",
+          "description": "AIは秒単位で視覚的な外部のレンダリングを作成します"
+        }
+      }
+    },
+    "features": {
+      "title": "建築家・デザイナーにパーフェクト",
+      "items": {
+        "0": {
+          "title": "複数の建築様式",
+          "description": "モダン、伝統、地中海、ファームハウス、産業、トロピカルなスタイルからお選びいただけます。"
+        },
+        "1": {
+          "title": "迅速なクライアントプレゼンテーション",
+          "description": "数週間ではなく数秒でクライアントのフォトリアルな建物のコンセプトを表示"
+        },
+        "2": {
+          "title": "ファサード変革",
+          "description": "既存の建物の写真をアップロードし、あらゆるスタイルでその外観を再現"
+        },
+        "3": {
+          "title": "リアルなレンダリングの質",
+          "description": "正確な材料、照明、環境の文脈を備えたAI生成レンダリング"
+        }
+      }
+    },
+    "buildingTypes": {
+      "title": "人気の建物タイプ",
+      "description": "当社のAIジェネレーターで異なる外部設計の可能性を探る",
+      "types": {
+        "residential": {
+          "title": "住宅用住宅",
+          "description": "人工知能の発電機で美しい住宅の外観をデザインします。ファサード材料、ウィンドウ構成、屋根のスタイル、および造園を現代から伝統まで視覚化します。"
+        },
+        "commercial": {
+          "title": "商業ビル",
+          "description": "商業ビルのレンダリングをAIで作り出す。 カーテンウォールシステム、エントランスデザイン、サイネージインテグレーション、オフィスや小売スペースの企業建築スタイルを探索する。"
+        },
+        "villa": {
+          "title": "高級ヴィラ",
+          "description": "人工知能を用いたフォトリアルなラグジュアリーヴィラのレンダリングを生成します。高級素材、無限プール、テラス、そしてハイエンドの住宅プロジェクトやリゾートスタイルの生活のために造園を視覚化します。"
+        },
+        "townhouse": {
+          "title": "タウンハウス&ロウハウス",
+          "description": "AI支援による集合住宅の外観の設計。都市住宅開発のためのファサードのバリエーション、素材の組み合わせ、ストリートスケープの構成を探索する。"
+        },
+        "renovation": {
+          "title": "リニューアル・改造",
+          "description": "地下を壊す前に、外部のリフォームコンセプトを視覚化します。既存の建物をアップロードし、AIを使用して新しいクラッディング材料、ウィンドウの交換、追加、および曲線のアピールの改善を探求します。"
+        }
+      }
+    },
+    "workflow": {
+      "title": "その他のAIデザインツール",
+      "description": "プロジェクトのあらゆる面でAIデザインツールの完全スイートをご覧ください。",
+      "items": {
+        "0": {
+          "title": "AIインテリアデザイン",
+          "description": "美しいインテリアデザインを瞬時に視覚化します。部屋のレイアウト、家具の配置、そしてデザインコンセプトをクライアントにフォトリアルな品質で提示するのに最適です。"
+        },
+        "1": {
+          "title": "AIランドスケープデザイン",
+          "description": "風景を写真に映し出します。大規模な景観建築プロジェクト、サイト計画、屋外スペースの視覚化に最適です。"
+        },
+        "2": {
+          "title": "AIガーデンデザイン",
+          "description": "美しい庭の視覚化を即座に作成します。 視覚的な品質と複数のスタイルオプションで顧客に概念を提示する庭のデザイナーに最適です。"
+        }
+      }
+    }
+  },
+  "AIBackgroundRemovalPage": {
+    "metadata": {
+      "title": "自由AIの背景除去 | オンラインで画像の背景を削除",
+      "description": "AIで画像を瞬時に削除します。無料のオンライン背景リムーバー — 必要な設計スキルはありません。製品写真、肖像画などに最適です。"
+    },
+    "hero": {
+      "title": "AIで画像の背景を削除",
+      "description": "AIで任意の画像背景を秒単位で削除します。写真のアップロードとクリーンで透明 PNG すぐに。"
+    },
+    "playground": {
+      "original": "オリジナルイメージ",
+      "result": "結果発表",
+      "uploadTitle": "画像をアップロードする",
+      "uploadHint": "ドラッグ&ドロップするか、アップロードをクリックするか()JPEG, PNG, WebP、最高10MB)",
+      "chooseFile": "ファイルの選択",
+      "uploading": "アップロード...",
+      "removeBackground": "背景を取り除く",
+      "processing": "背景を取除く...",
+      "processingTitle": "背景を取除く...",
+      "processingHint": "これは通常5〜15秒かかります",
+      "emptyTitle": "結果はここに表示されます",
+      "emptyHint": "画像をアップロードして背景を削除",
+      "download": "ダウンロード PNG"
+    },
+    "howItWorks": {
+      "title": "使い方は?",
+      "steps": {
+        "1": {
+          "title": "あなたの画像をアップロードする",
+          "description": "任意の写真をアップロード — 製品、肖像画、オブジェクト、またはその他のもの"
+        },
+        "2": {
+          "title": "AIが背景を取り除きます",
+          "description": "当社のAIモデルは正確に検出し、秒内の背景を削除します。"
+        },
+        "3": {
+          "title": "ダウンロード 透明 PNG",
+          "description": "きれいにしなさい PNG どこでも使用できる透明の背景"
+        }
+      }
+    },
+    "useCases": {
+      "title": "できること",
+      "description": "背景除去は、クリエイティブでプロフェッショナルなユースケースの幅広い範囲を開放",
+      "items": {
+        "ecommerce": {
+          "title": "製品写真",
+          "description": "あなたのオンラインストアのためのきれいな白い背景の製品イメージを作成します。 乱雑な背景を削除し、プロに製品を提示します。"
+        },
+        "portrait": {
+          "title": "ポートレート&ヘッドショット",
+          "description": "ポートレートやヘッドショットから背景を削除します。プロフェッショナルなプロファイル、ID写真、またはクリエイティブコンポジットの任意の背景に対象を置きます。"
+        },
+        "design": {
+          "title": "グラフィックデザイン",
+          "description": "デザインプロジェクトで使用するオブジェクトや被写体を抽出します。複数の写真から要素を結合し、コラージュを作成したり、マーケティング資料を作成したりします。"
+        },
+        "presentation": {
+          "title": "プレゼンテーションとスライド",
+          "description": "プレゼンテーションや文書にクリーンで背景のない画像を追加してください。 スライドを手動で編集せずに研磨します。"
+        }
+      }
+    }
+  }
+}

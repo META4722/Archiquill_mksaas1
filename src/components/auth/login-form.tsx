@@ -17,7 +17,7 @@ import { Input } from '@/components/ui/input';
 import { websiteConfig } from '@/config/website';
 import { LocaleLink } from '@/i18n/navigation';
 import { authClient } from '@/lib/auth-client';
-import { getUrlWithLocale } from '@/lib/urls/urls';
+import { getAuthCallbackPath } from '@/lib/urls/urls';
 import { cn } from '@/lib/utils';
 import { DEFAULT_LOGIN_REDIRECT, Routes } from '@/routes';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -44,14 +44,12 @@ export const LoginForm = ({
   const urlError = searchParams.get('error');
   const paramCallbackUrl = searchParams.get('callbackUrl');
   const emailParam = searchParams.get('email'); // Get email from URL params
-  // Use prop callback URL or param callback URL if provided, otherwise use the default login redirect
   const locale = useLocale();
-  const defaultCallbackUrl = getUrlWithLocale(DEFAULT_LOGIN_REDIRECT, locale);
-  // console.log('login form, propCallbackUrl', propCallbackUrl);
-  // console.log('login form, paramCallbackUrl', paramCallbackUrl);
-  // console.log('login form, defaultCallbackUrl', defaultCallbackUrl);
-  const callbackUrl = propCallbackUrl || paramCallbackUrl || defaultCallbackUrl;
-  console.log('login form, callbackUrl', callbackUrl);
+  const callbackUrl = getAuthCallbackPath(
+    propCallbackUrl || paramCallbackUrl,
+    DEFAULT_LOGIN_REDIRECT,
+    locale
+  );
 
   const [error, setError] = useState<string | undefined>('');
   const [success, setSuccess] = useState<string | undefined>('');
@@ -147,14 +145,12 @@ export const LoginForm = ({
           // console.log("login, response:", ctx.response);
           setIsPending(false);
         },
-        onSuccess: (ctx) => {
-          // console.log("login, success:", ctx.data);
-          // setSuccess("Login successful");
-          // router.push(callbackUrl || "/dashboard");
-        },
         onError: (ctx) => {
-          // console.error('login, error:', ctx.error);
-          setError(`${ctx.error.status}: ${ctx.error.message}`);
+          if (ctx.error.code === 'EMAIL_NOT_VERIFIED') {
+            setSuccess(t('verificationResent'));
+          } else {
+            setError(ctx.error.message || t('loginFailed'));
+          }
           // Reset captcha on login error
           if (captchaConfigured) {
             resetCaptcha();
@@ -172,7 +168,7 @@ export const LoginForm = ({
     <AuthCard
       headerLabel={t('welcomeBack')}
       bottomButtonLabel={t('signUpHint')}
-      bottomButtonHref={`${Routes.Register}`}
+      bottomButtonHref={`${Routes.Register}?callbackUrl=${encodeURIComponent(callbackUrl)}`}
       className={cn('', className)}
     >
       {credentialLoginEnabled && (

@@ -1,4 +1,4 @@
-import { routing } from '@/i18n/routing';
+import { LOCALES, routing } from '@/i18n/routing';
 import type { Locale } from 'next-intl';
 
 const serverBaseUrl =
@@ -34,55 +34,48 @@ export function getUrlWithLocale(url: string, locale?: Locale | null): string {
     : `${baseUrl}${url}`;
 }
 
-/**
- * Adds locale to the callbackURL parameter in authentication URLs
- *
- * Example:
- * Input: http://localhost:3000/api/auth/reset-password/token?callbackURL=/auth/reset-password
- * Output: http://localhost:3000/api/auth/reset-password/token?callbackURL=/zh/auth/reset-password
- *
- * Input: http://localhost:3000/api/auth/verify-email?token=eyJhbGciOiJIUzI1NiJ9&callbackURL=/dashboard
- * Output: http://localhost:3000/api/auth/verify-email?token=eyJhbGciOiJIUzI1NiJ9&callbackURL=/zh/dashboard
- *
- * @param url - The original URL with callbackURL parameter
- * @param locale - The locale to add to the callbackURL
- * @returns The URL with locale added to callbackURL if necessary
- */
+export function getAuthCallbackPath(
+  callback: string | null | undefined,
+  fallback: string,
+  locale: Locale
+): string {
+  const origin = new URL(getBaseUrl()).origin;
+  let target = new URL(fallback, origin);
+
+  if (callback) {
+    try {
+      const candidate = new URL(callback, origin);
+      if (
+        candidate.origin === origin &&
+        !candidate.username &&
+        !candidate.password &&
+        !candidate.pathname.startsWith('//')
+      ) {
+        target = candidate;
+      }
+    } catch {
+      // Use the default destination for malformed callback URLs.
+    }
+  }
+
+  const hasLocale = LOCALES.includes(target.pathname.split('/')[1]);
+  const prefix = shouldAppendLocale(locale) && !hasLocale ? `/${locale}` : '';
+  return `${prefix}${target.pathname}${target.search}${target.hash}`;
+}
+
 export function getUrlWithLocaleInCallbackUrl(
   url: string,
   locale: Locale
 ): string {
-  // If we shouldn't append locale, return original URL
-  if (!shouldAppendLocale(locale)) {
-    return url;
+  const verificationUrl = new URL(url);
+  const callback = verificationUrl.searchParams.get('callbackURL');
+  if (callback) {
+    verificationUrl.searchParams.set(
+      'callbackURL',
+      getAuthCallbackPath(callback, '/', locale)
+    );
   }
-
-  try {
-    // Parse the URL
-    const urlObj = new URL(url);
-
-    // Check if there's a callbackURL parameter
-    const callbackURL = urlObj.searchParams.get('callbackURL');
-
-    if (callbackURL) {
-      // Only modify the callbackURL if it doesn't already include the locale
-      if (!callbackURL.match(new RegExp(`^/${locale}(/|$)`))) {
-        // Add locale to the callbackURL
-        const localizedCallbackURL = callbackURL.startsWith('/')
-          ? `/${locale}${callbackURL}`
-          : `/${locale}/${callbackURL}`;
-
-        // Update the search parameter
-        urlObj.searchParams.set('callbackURL', localizedCallbackURL);
-      }
-    }
-
-    return urlObj.toString();
-  } catch (error) {
-    // If URL parsing fails, return the original URL
-    console.warn('Failed to parse URL for locale insertion:', url, error);
-    return url;
-  }
+  return verificationUrl.toString();
 }
 
 /**

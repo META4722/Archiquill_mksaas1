@@ -1,4 +1,3 @@
-import { betterFetch } from '@better-fetch/fetch';
 import createMiddleware from 'next-intl/middleware';
 import { type NextRequest, NextResponse } from 'next/server';
 import {
@@ -8,9 +7,10 @@ import {
   routing,
 } from './i18n/routing';
 import type { Session } from './lib/auth-types';
-import { getBaseUrl } from './lib/urls/urls';
+import { getAuthCallbackPath, getBaseUrl } from './lib/urls/urls';
 import {
   DEFAULT_LOGIN_REDIRECT,
+  Routes,
   protectedRoutes,
   routesNotAllowedByLoggedInUsers,
 } from './routes';
@@ -29,7 +29,6 @@ const intlMiddleware = createMiddleware(routing);
  */
 export default async function middleware(req: NextRequest) {
   const { nextUrl } = req;
-  console.log('>> middleware start, pathname', nextUrl.pathname);
 
   // Handle internal docs link redirection for internationalization
   // Check if this is a docs page without locale prefix
@@ -53,63 +52,81 @@ export default async function middleware(req: NextRequest) {
     }
   }
 
-  // do not use getSession() here, it will cause error related to edge runtime
-  // const session = await getSession();
-  const { data: session } = await betterFetch<Session>(
-    '/api/auth/get-session',
-    {
-      baseURL: getBaseUrl(),
-      headers: {
-        cookie: req.headers.get('cookie') || '', // Forward the cookies from the request
-      },
-    }
-  );
-  const isLoggedIn = !!session;
-  // console.log('middleware, isLoggedIn', isLoggedIn);
-
-  // Get the pathname of the request (e.g. /zh/dashboard to /dashboard)
   const pathnameWithoutLocale = getPathnameWithoutLocale(
     nextUrl.pathname,
     LOCALES
   );
-
-  // If the route can not be accessed by logged in users, redirect if the user is logged in
-  if (isLoggedIn) {
-    const isNotAllowedRoute = routesNotAllowedByLoggedInUsers.some((route) =>
-      new RegExp(`^${route}$`).test(pathnameWithoutLocale)
-    );
-    if (isNotAllowedRoute) {
-      console.log(
-        '<< middleware end, not allowed route, already logged in, redirecting to dashboard'
-      );
-      return NextResponse.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl));
-    }
-  }
-
-  const isProtectedRoute = protectedRoutes.some((route) =>
-    new RegExp(`^${route}$`).test(pathnameWithoutLocale)
+  const localePrefix = nextUrl.pathname.split('/')[1];
+  const locale = LOCALES.includes(localePrefix) ? localePrefix : DEFAULT_LOCALE;
+  const isAuthEntry = routesNotAllowedByLoggedInUsers.some(
+    (route) => route === pathnameWithoutLocale
   );
-  // console.log('middleware, isProtectedRoute', isProtectedRoute);
+  const isProtectedRoute = protectedRoutes.some(
+    (route) => route === pathnameWithoutLocale
+  );
 
-  // If the route is a protected route, redirect to login if user is not logged in
-  if (!isLoggedIn && isProtectedRoute) {
-    let callbackUrl = nextUrl.pathname;
-    if (nextUrl.search) {
-      callbackUrl += nextUrl.search;
-    }
-    const encodedCallbackUrl = encodeURIComponent(callbackUrl);
-    console.log(
-      '<< middleware end, not logged in, redirecting to login, callbackUrl',
-      callbackUrl
-    );
-    return NextResponse.redirect(
-      new URL(`/auth/login?callbackUrl=${encodedCallbackUrl}`, nextUrl)
-    );
+  if (!isAuthEntry && !isProtectedRoute) {
+    return intlMiddleware(req);
   }
 
-  // Apply intlMiddleware for all routes
-  console.log('<< middleware end, applying intlMiddleware');
-  return intlMiddleware(req);
+  const cookie = req.headers.get('cookie');
+  let session: Session | null = null;
+  let sessionCookies: string[] = [];
+
+  if (cookie) {
+    try {
+      const response = await fetch(
+        new URL('/api/auth/get-session', getBaseUrl()),
+        {
+          cache: 'no-store',
+          headers: { cookie },
+          redirect: 'error',
+        }
+      );
+      if (response.ok) {
+        session = await response.json();
+        sessionCookies = response.headers.getSetCookie();
+      }
+    } catch {
+      // Protected routes still require a valid session when the auth API fails.
+    }
+  }
+
+  let response: NextResponse;
+  if (session?.user && isAuthEntry) {
+    const destination = getAuthCallbackPath(
+      nextUrl.searchParams.get('callbackUrl'),
+      DEFAULT_LOGIN_REDIRECT,
+      locale
+    );
+    const destinationUrl = new URL(destination, nextUrl);
+    const destinationPath = getPathnameWithoutLocale(
+      destinationUrl.pathname,
+      LOCALES
+    );
+    response = NextResponse.redirect(
+      routesNotAllowedByLoggedInUsers.some((route) => route === destinationPath)
+        ? new URL(
+            getAuthCallbackPath(null, DEFAULT_LOGIN_REDIRECT, locale),
+            nextUrl
+          )
+        : destinationUrl
+    );
+  } else if (!session?.user && isProtectedRoute) {
+    const loginUrl = new URL(
+      getAuthCallbackPath(null, Routes.Login, locale),
+      nextUrl
+    );
+    loginUrl.searchParams.set('callbackUrl', nextUrl.pathname + nextUrl.search);
+    response = NextResponse.redirect(loginUrl);
+  } else {
+    response = intlMiddleware(req);
+  }
+
+  for (const value of sessionCookies) {
+    response.headers.append('Set-Cookie', value);
+  }
+  return response;
 }
 
 /**

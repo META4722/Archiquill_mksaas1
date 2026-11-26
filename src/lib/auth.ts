@@ -10,6 +10,7 @@ import { sendEmail } from '@/mail';
 import { subscribe } from '@/newsletter';
 import { type User, betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
+import { APIError } from 'better-auth/api';
 import { admin } from 'better-auth/plugins';
 import { parse as parseCookies } from 'cookie';
 import type { Locale } from 'next-intl';
@@ -47,7 +48,8 @@ export const auth = betterAuth({
     enabled: true,
     // https://www.better-auth.com/docs/concepts/email#2-require-email-verification
     // Disable email verification in development if RESEND_API_KEY is not configured
-    requireEmailVerification: process.env.NODE_ENV === 'production' || !!process.env.RESEND_API_KEY,
+    requireEmailVerification:
+      process.env.NODE_ENV === 'production' || !!process.env.RESEND_API_KEY,
     // https://www.better-auth.com/docs/authentication/email-password#forget-password
     async sendResetPassword({ user, url }, request) {
       const locale = getLocaleFromRequest(request);
@@ -68,24 +70,24 @@ export const auth = betterAuth({
     // https://www.better-auth.com/docs/concepts/email#auto-signin-after-verification
     autoSignInAfterVerification: true,
     // https://www.better-auth.com/docs/authentication/email-password#require-email-verification
-    sendVerificationEmail: async ({ user, url, token }, request) => {
+    sendOnSignIn: true,
+    sendVerificationEmail: async ({ user, url }, request) => {
       const locale = getLocaleFromRequest(request);
-      const localizedUrl = getUrlWithLocaleInCallbackUrl(url, locale);
+      const sent = await sendEmail({
+        to: user.email,
+        template: 'verifyEmail',
+        context: {
+          url: getUrlWithLocaleInCallbackUrl(url, locale),
+          name: user.name,
+        },
+        locale,
+      });
 
-      try {
-        await sendEmail({
-          to: user.email,
-          template: 'verifyEmail',
-          context: {
-            url: localizedUrl,
-            name: user.name,
-          },
-          locale,
+      if (!sent) {
+        throw new APIError('SERVICE_UNAVAILABLE', {
+          message:
+            'Unable to send verification email. Please try signing in again.',
         });
-      } catch (error) {
-        console.error('Failed to send verification email:', error);
-        // Don't throw - allow registration to continue even if email fails
-        // User can request a new verification email later
       }
     },
   },
@@ -160,7 +162,10 @@ export const auth = betterAuth({
  */
 export function getLocaleFromRequest(request?: Request): Locale {
   const cookies = parseCookies(request?.headers.get('cookie') ?? '');
-  return (cookies[LOCALE_COOKIE_NAME] as Locale) ?? routing.defaultLocale;
+  const locale = cookies[LOCALE_COOKIE_NAME];
+  return locale && routing.locales.includes(locale)
+    ? locale
+    : routing.defaultLocale;
 }
 
 /**

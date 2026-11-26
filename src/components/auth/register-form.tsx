@@ -16,7 +16,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { websiteConfig } from '@/config/website';
 import { authClient } from '@/lib/auth-client';
-import { getUrlWithLocale } from '@/lib/urls/urls';
+import { getAuthCallbackPath, getUrlWithLocale } from '@/lib/urls/urls';
 import { DEFAULT_LOGIN_REDIRECT, Routes } from '@/routes';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { EyeIcon, EyeOffIcon, Loader2Icon } from 'lucide-react';
@@ -38,14 +38,12 @@ export const RegisterForm = ({
   const t = useTranslations('AuthPage.register');
   const searchParams = useSearchParams();
   const paramCallbackUrl = searchParams.get('callbackUrl');
-  // Use prop callback URL or param callback URL if provided, otherwise use the default login redirect
   const locale = useLocale();
-  const defaultCallbackUrl = getUrlWithLocale(DEFAULT_LOGIN_REDIRECT, locale);
-  // console.log('register form, propCallbackUrl', propCallbackUrl);
-  // console.log('register form, paramCallbackUrl', paramCallbackUrl);
-  // console.log('register form, defaultCallbackUrl', defaultCallbackUrl);
-  const callbackUrl = propCallbackUrl || paramCallbackUrl || defaultCallbackUrl;
-  console.log('register form, callbackUrl', callbackUrl);
+  const callbackUrl = getAuthCallbackPath(
+    propCallbackUrl || paramCallbackUrl,
+    DEFAULT_LOGIN_REDIRECT,
+    locale
+  );
 
   const [error, setError] = useState<string | undefined>('');
   const [success, setSuccess] = useState<string | undefined>('');
@@ -147,13 +145,18 @@ export const RegisterForm = ({
         onSuccess: (ctx) => {
           // sign up success, user information stored in ctx.data
           // console.log("register, success:", ctx.data);
-          setSuccess(t('checkEmail'));
+          if (!ctx.data.token) {
+            setSuccess(t('checkEmail'));
+          }
 
           // add affonso affiliate
           // https://affonso.io/app/affiliate-program/connect
           if (websiteConfig.features.enableAffonsoAffiliate) {
             console.log('register, affonso affiliate:', values.email);
-            window.Affonso.signup(values.email);
+            window.Affonso?.signup(values.email);
+          }
+          if (ctx.data.token) {
+            window.location.assign(callbackUrl);
           }
         },
         onError: (ctx) => {
@@ -190,7 +193,7 @@ export const RegisterForm = ({
     <AuthCard
       headerLabel={t('createAccount')}
       bottomButtonLabel={t('signInHint')}
-      bottomButtonHref={`${Routes.Login}`}
+      bottomButtonHref={`${Routes.Login}?callbackUrl=${encodeURIComponent(callbackUrl)}`}
     >
       {credentialLoginEnabled && (
         <Form {...form}>

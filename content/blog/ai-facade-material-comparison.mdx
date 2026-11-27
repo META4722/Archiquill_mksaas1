@@ -1,0 +1,52 @@
+---
+title: How to Compare Facade Materials With AI Using One 3D Model
+description: Compare facade materials with AI using the same grayscale model. Test timber, brick, and stucco under consistent lighting and check for changes to windows and rooflines.
+date: '2026-11-27'
+author: archiquill
+published: true
+categories:
+  - Architectural Rendering
+  - AI Workflow
+  - Design Visualization
+image: /images/blog/ai-facade-material-comparison.jpg
+---
+
+A timber facade at sunset can look warmer than a brick facade photographed under cloud cover. That makes for two attractive images and a difficult design decision. To compare facade materials with AI, start with the same grayscale model, camera angle, and lighting. Change one material at a time so you can see what each finish contributes.
+
+![Four views of the same house showing the clay reference, horizontal timber, red brick, and ivory stucco](/images/blog/ai-facade-material-comparison.jpg)
+
+Clockwise from the top left are the clay reference, horizontal timber, ivory stucco, and red brick. The roof silhouette, viewpoint, and main openings look consistent across panels, with small differences in details such as window frames.
+
+## Set up a reference view
+
+Export a three-quarter view that shows the entrance and a side wall. Choose a view where you can see how cladding meets the openings, wraps the corner, and ends at the base of the wall. Use the same source image for every option.
+
+![Grayscale pitched-roof house model with two front openings and one narrow side window](/images/archi/design-freedom-sketch.jpg)
+
+In [AI Exterior Design](/ai-exterior-design), select **Image to Image** and upload your reference. Save the original beside the generated images so you can check whether the model moved an opening or changed the roof.
+
+For signed-in image-to-image generation, ArchiQuill uses **Google Gemini 2.5 Flash Image (Nano Banana)** by default. The comparison board above was made with ImageGen to illustrate how to lay out the results.
+
+## Run three variations with one prompt
+
+Use this prompt and replace the material phrase for each run:
+
+> Use the uploaded model as the geometry and camera reference. Keep the roof, entrance, window openings, wall planes, crop, and surroundings. Change only the main facade finish to natural horizontal timber cladding. Use soft overcast daylight. Keep trim and roofing consistent.
+
+Try **warm red brick with light mortar** and **matte off-white stucco** as the other two options. Keep lighting and framing fixed. If a render adds a window or changes the roofline, regenerate from the grayscale reference before putting it on the comparison board.
+
+## Check the results and pick a render
+
+Compare each output with the source image. Check the number and position of the windows, the roof silhouette, and the camera angle. If one version drifts, regenerate that version from the original model and name the specific openings to preserve in the prompt.
+
+Place the three renders side by side at the same size. For timber, look for continuous board lines around the corner. For brick, check the scale of the bricks and mortar joints. For stucco, check whether shadows at the windows and recessed entrance still read clearly. For more help with geometry drift, see the [sketch-to-render workflow](/blog/sketch-to-photorealistic-rendering-ai-workflow).
+
+## FAQ
+
+### Can I compare facade materials with AI from a SketchUp screenshot?
+
+Yes. Export a clean grayscale view with visible openings and wall boundaries. Reuse the same export for each option and check every output against the source.
+
+### Can I use a rendered color to specify a product?
+
+Use the render to shortlist a finish. Confirm color, texture, and assembly details with physical samples and manufacturer documentation before specifying a product.

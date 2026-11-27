@@ -123,6 +123,10 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'files.evolink.ai',
+      },
+      {
+        protocol: 'https',
         hostname: 'img.archiquill.com',
       },
       {
